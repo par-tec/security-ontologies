@@ -1,0 +1,35 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://owaspsamm.org/model/maturity/1> a <https://owaspsamm.org/model/MaturityLevel> ;
+    dcterms:identifier "0a1dc80f84964f2fa776c5d8e932353a" ;
+    dcat:seeAlso <https://owaspsamm.org/model/0a1dc80f84964f2fa776c5d8e932353a> .
+
+<https://owaspsamm.org/model/maturity/2> a <https://owaspsamm.org/model/MaturityLevel> ;
+    dcterms:identifier "47dd82af343e4695a0385418af4398d1" ;
+    dcat:seeAlso <https://owaspsamm.org/model/47dd82af343e4695a0385418af4398d1> .
+
+<https://owaspsamm.org/model/maturity/3> a <https://owaspsamm.org/model/MaturityLevel> ;
+    dcterms:identifier "7bbfe31d447e48759ef0f2af25c31b43" ;
+    dcat:seeAlso <https://owaspsamm.org/model/7bbfe31d447e48759ef0f2af25c31b43> .
+
+<https://owaspsamm.org/model/0a1dc80f84964f2fa776c5d8e932353a> a <https://owaspsamm.org/model/MaturityLevel> ;
+    rdfs:label 1 ;
+    dcterms:description "The first maturity level aims at achieving an ad-hoc, best effort implementation of a particular activity within a stream." ;
+    dcterms:identifier "0a1dc80f84964f2fa776c5d8e932353a" ;
+    skos:altLabel 1 .
+
+<https://owaspsamm.org/model/47dd82af343e4695a0385418af4398d1> a <https://owaspsamm.org/model/MaturityLevel> ;
+    rdfs:label 2 ;
+    dcterms:description "The second maturity level aims to establish a consistent, repeatable process that can be relied on." ;
+    dcterms:identifier "47dd82af343e4695a0385418af4398d1" ;
+    skos:altLabel 2 .
+
+<https://owaspsamm.org/model/7bbfe31d447e48759ef0f2af25c31b43> a <https://owaspsamm.org/model/MaturityLevel> ;
+    rdfs:label 3 ;
+    dcterms:description "The third maturity level aims to maximize effectiveness through continuous improvement, based on effective and timely feedback." ;
+    dcterms:identifier "7bbfe31d447e48759ef0f2af25c31b43" ;
+    skos:altLabel 3 .

@@ -1,0 +1,207 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://owaspsamm.org/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:32b3bdd85d3a4d53827960004f9d1c7e a ns1:Practice ;
+    rdfs:label "Strategy & Metrics" ;
+    dcterms:description """Software assurance entails many different activities and concerns. Without an overall plan, you might be spending a lot of effort to build in security, while in fact your efforts may be unaligned, disproportional or even counterproductive. The goal of the Strategy & Metrics (SM) practice is to build an efficient and effective plan for realizing your software security objectives within your organization.
+
+A software security program, that selects and prioritizes activities of the rest of the model, serves as the foundation for your efforts. The practice works on building the plan, maintaining and disseminating it.
+
+At the same time, you want to keep track of your security posture and program improvements. A metrics-driven approach is included to ensure an accurate view on your activities. To measure is to know.
+""" ;
+    dcterms:identifier "32b3bdd85d3a4d53827960004f9d1c7e" ;
+    rdfs:comment "This practice forms the basis of your secure software activities by building an overall plan." ;
+    skos:altLabel "SM" ;
+    ns1:hasFunction ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 ;
+    ns1:hasOrder 1 .
+
+ns1:40d7879025144dbbbf34ba8ea82f060d a ns1:Practice ;
+    rdfs:label "Secure Deployment" ;
+    dcterms:description """One of the final stages in delivering secure software is ensuring the security and integrity of developed applications are not compromised during deployment. The Secure Deployment (SD) practice focuses on this. To this end, the practice’s first stream focuses on removing manual error by automating the deployment process as much as possible, and making its success contingent upon the outcomes of integrated security verification checks. It also fosters Separation of Duties by making adequately trained, non-developers responsible for deployment.
+
+The second stream goes beyond the mechanics of deployment, and focuses on protecting the privacy and integrity of sensitive data, such as passwords, tokens, and other secrets, required for applications to operate in production environments. In its simplest form, suitable production secrets are moved from repositories and configuration files into adequately managed digital vaults. In more advanced forms, secrets are dynamically generated at deployment time and routine processes detect and mitigate the presence of any unprotected secrets in the environment.
+""" ;
+    dcterms:identifier "40d7879025144dbbbf34ba8ea82f060d" ;
+    rdfs:comment "This practice focuses on increasing the security of software deployments to the production environment and the supporting secrets." ;
+    skos:altLabel "SD" ;
+    ns1:hasFunction ns1:8aa8154b83434e73b3ca8c0e9b654417 ;
+    ns1:hasOrder 2 .
+
+ns1:4753e55e943c4d418303bf90d599c6b1 a ns1:Practice ;
+    rdfs:label "Security Architecture" ;
+    dcterms:description """The Security Architecture (SA) practice focuses on the security linked to components and technology you deal with during the architectural design of your software. Secure Architecture Design looks at the selection and composition of components that form the foundation of your solution, focusing on its security properties. Technology management looks at the security of supporting technologies used during development, deployment and operations, such as development stacks and tooling, deployment tooling, and operating systems and tooling.
+""" ;
+    dcterms:identifier "4753e55e943c4d418303bf90d599c6b1" ;
+    rdfs:comment "The security architecture practice focuses on managing architectural risks for the software solution." ;
+    skos:altLabel "SA" ;
+    ns1:hasFunction ns1:88c296acaae841a2b2fc5314bff44cb4 ;
+    ns1:hasOrder 3 .
+
+ns1:483a0a1b78264cafbc470ce72d557332 a ns1:Practice ;
+    rdfs:label "Education & Guidance" ;
+    dcterms:description """The Education & Guidance (EG) practice focuses on arming personnel involved in the software lifecycle with knowledge and resources to design, develop, and deploy secure software. With improved access to information, project teams can proactively identify and mitigate the specific security risks that apply to their organization.
+
+One major theme for improvement across the Objectives is providing training for employees and increasing their security awareness, either through instructor-led sessions or computer-based modules. As an organization progresses, it builds a broad base of training starting with developers and moving to other roles, culminating with the addition of role-based training to ensure applicability and effectiveness.
+
+In addition to training, this practice also requires the organization to make a significant investment in improving organizational culture to promote application security through collaboration between teams. Collaboration tools and increased transparency between technologies and tools support this approach to improve the security of the applications.
+""" ;
+    dcterms:identifier "483a0a1b78264cafbc470ce72d557332" ;
+    rdfs:comment "This practice focuses on increasing the knowledge in the organization regarding secure software." ;
+    skos:altLabel "EG" ;
+    ns1:hasFunction ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 ;
+    ns1:hasOrder 3 .
+
+ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 a ns1:Practice ;
+    rdfs:label "Environment Management" ;
+    dcterms:description """The organization's work on application security doesn't end once the application becomes operational. New security features and patches are regularly released for the various elements of the technology stack you're using, until they become obsolete or are no longer supported.
+
+Most of the technologies in any application stack are not secure by default. This is frequently intentional, to enhance backwards compatibility or ease of setup. For this reason, ensuring the secure operation of the organization's technology stack requires the consistent application of secure baseline configurations to all components. The Environment Management (EM) practice focuses on keeping your environment clean and secure.
+
+Vulnerabilities are discovered throughout the lifecycles of the technologies on which your organization relies, and new versions addressing them are released on various schedules. This makes it essential to monitor vulnerability reports and perform orderly, timely patching across all affected systems.
+""" ;
+    dcterms:identifier "53a9cd5c2d3643f3b71e4e9d92b811e2" ;
+    rdfs:comment "This practice describes proactive activities carried out to improve and maintain the security of the environments in which the organization's applications operate." ;
+    skos:altLabel "EM" ;
+    ns1:hasFunction ns1:942d679b0c9e41909f8bde728fdb1259 ;
+    ns1:hasOrder 2 .
+
+ns1:53f2da68c37a4ced8d5e767298fba589 a ns1:Practice ;
+    rdfs:label "Architecture Assessment" ;
+    dcterms:description """The Architecture Assessment (AA) practice ensures that the application and infrastructure architecture adequately meets all relevant security and compliance requirements, and sufficiently mitigates identified security threats. The first stream focuses on verifying that the security and compliance requirements identified in the Policy & Compliance and Security Requirements practices are met, first in an ad-hoc manner, then more systematically for each interface in the system. The second stream reviews the architecture, first for mitigations against typical threats, then against the specific threats identified in the Threat Assessment practice.
+
+In its more advanced form, the practice formalizes the security architecture review process, continuously evaluates the effectiveness of the architecture's security controls, their scalability and strategic alignment. Identified weaknesses and possible improvements are fed back to the Security Architecture practice to improve reference architectures.
+""" ;
+    dcterms:identifier "53f2da68c37a4ced8d5e767298fba589" ;
+    rdfs:comment "This practice focuses on validating the security and compliance of the software and supporting infrastructure architecture." ;
+    skos:altLabel "AA" ;
+    ns1:hasFunction ns1:fa340fa1816244d79f369ae82e998368 ;
+    ns1:hasOrder 1 .
+
+ns1:5702908efca4499e87a0239f32920d9b a ns1:Practice ;
+    rdfs:label "Security Requirements" ;
+    dcterms:description """The Security Requirements (SR) practice focuses on security requirements that are important
+in the context of secure software. A first type deals with typical software-related
+requirements, to specify objectives and expectations to protect the service and
+data at the core of the application. A second type deals with requirements relative to supplier organizations that are part of the development context of the application, in particular for outsourced development. It is important to
+streamline the expectations in terms of secure development because outsourced development
+can have significant impact on the security of the application. The security of
+3rd party (technical) libraries is part of the software supply chains stream (see
+Secure Build), and it is not included in this practice.
+""" ;
+    dcterms:identifier "5702908efca4499e87a0239f32920d9b" ;
+    rdfs:comment "This practice focuses on defining appropriate security requirements for your software and your software suppliers." ;
+    skos:altLabel "SR" ;
+    ns1:hasFunction ns1:88c296acaae841a2b2fc5314bff44cb4 ;
+    ns1:hasOrder 2 .
+
+ns1:66fb99798fe946e4979a2de98e9d6f8b a ns1:Practice ;
+    rdfs:label "Requirements-driven Testing" ;
+    dcterms:description """
+The goal of the Requirements-driven Testing (RT) practice is to ensure that the implemented security controls operate as expected and satisfy the project's stated security requirements. It does so by incrementally building a set of security test and regression cases and executing them regularly.
+
+A key aspect of this practice is its attention to both positive and negative testing. The former verifies that the application's security controls satisfy stated security requirements and validates their correct functioning. These requirements are typically functional in nature. Negative testing addresses the quality of the implementation of the security controls and aims to detect unexpected design flaws and implementation bugs through misuse and abuse testing. In its more advanced forms, the practice promotes security stress testing, such as denial of service, and strives to continuously improve application security by consistently automating security unit tests and creating security regression tests for all bugs identified and fixed.
+
+Although both the Requirements-driven Testing and Security Testing practices are concerned with security testing, the former focuses on verifying the correct implementation of security requirements, while the latter aims to uncover technical implementation weaknesses in an application, irrespective of requirements.
+""" ;
+    dcterms:identifier "66fb99798fe946e4979a2de98e9d6f8b" ;
+    rdfs:comment "This practice focuses on using both positive (control verification) and negative (misuse/abuse testing) security tests based on requirements (user stories)." ;
+    skos:altLabel "RT" ;
+    ns1:hasFunction ns1:fa340fa1816244d79f369ae82e998368 ;
+    ns1:hasOrder 2 .
+
+ns1:8f07145b5ea74388b2217895d5e7b5c2 a ns1:Practice ;
+    rdfs:label "Operational Management" ;
+    dcterms:description """The Operational Management (OM) practice focuses on activities to ensure security is maintained throughout operational support functions. Although these functions are not performed directly by an application, the overall security of the application and its data depends on their proper performance. Deploying an application on an unsupported operating system with unpatched vulnerabilities, or failing to store backup media securely, can make the protections built into that application irrelevant.
+
+The functions covered by this practice include, but are not limited to: system provisioning, administration, and decommissioning; database provisioning and administration; and data backup, restore, and archival.
+""" ;
+    dcterms:identifier "8f07145b5ea74388b2217895d5e7b5c2" ;
+    rdfs:comment "This practice focuses on operational support activities required to maintain security throughout the product lifecycle." ;
+    skos:altLabel "OM" ;
+    ns1:hasFunction ns1:942d679b0c9e41909f8bde728fdb1259 ;
+    ns1:hasOrder 3 .
+
+ns1:b2af112859d34cada6ce4cf44d393b94 a ns1:Practice ;
+    rdfs:label "Secure Build" ;
+    dcterms:description """The Secure Build (SB) practice emphasises the importance of building software in a standardised, repeatable manner, and of doing so using secure components, including 3rd party software dependencies.
+
+The first stream focuses on removing any subjectivity from the build process by striving for full automation. An automated build pipeline can include additional automated security checks such as SAST and DAST to gain further assurance and flag security regressions early by failing the build, for example.
+
+The second stream acknowledges the prevalence of software dependencies in modern applications. It aims to identify them and track their security status in order to contain the impact of their insecurity on an otherwise secure application. In an advanced form, it applies similar security checks to software dependencies as to the application itself.
+""" ;
+    dcterms:identifier "b2af112859d34cada6ce4cf44d393b94" ;
+    rdfs:comment "This practice focuses on creating a consistently repeatable build process and accounting for the security of application dependencies." ;
+    skos:altLabel "SB" ;
+    ns1:hasFunction ns1:8aa8154b83434e73b3ca8c0e9b654417 ;
+    ns1:hasOrder 1 .
+
+ns1:bb5488860c124b6e8076b023485023e1 a ns1:Practice ;
+    rdfs:label "Security Testing" ;
+    dcterms:description """The Security Testing (ST) practice leverages the fact that, while automated security testing is fast and scales well to numerous applications, in-depth testing based on good knowledge of an application and its business logic is often only possible via slower, manual expert security testing. Each stream therefore has one approach at its core.
+
+The first stream focuses on establishing a common security baseline to automatically detect so-called "low hanging fruit". Progressively customize the automated tests for each application and increase their frequency of execution to detect more bugs and regressions earlier, as close as possible to their inception. The more bugs the automated processes can detect, the more time experts have to use their knowledge and creativity to focus on more complex attack vectors and ensure in-depth application testing in the second stream. As manual review is slow and hard to scale, reviewers prioritize testing components based on their risk, recent relevant changes, or upcoming major releases. Organizations can also access external expertise by participating in bug bounty programs, for example.
+
+Unlike the Requirements-driven testing practice which focuses on verifying that applications correctly implement their requirements, the goal of this practice is to uncover technical and business-logic weaknesses in application and make them visible to management and business stakeholders, irrespective of requirements.
+""" ;
+    dcterms:identifier "bb5488860c124b6e8076b023485023e1" ;
+    rdfs:comment "This practice focuses on the detection and resolution of basic security issues through automation, allowing manual testing to focus on more complex attack vectors." ;
+    skos:altLabel "ST" ;
+    ns1:hasFunction ns1:fa340fa1816244d79f369ae82e998368 ;
+    ns1:hasOrder 3 .
+
+ns1:be9e7ddb98b84abe8b9e185b979ccf60 a ns1:Practice ;
+    rdfs:label "Policy & Compliance" ;
+    dcterms:description """The Policy & Compliance (PC) practice focuses on understanding and meeting external legal and regulatory requirements while driving internal security standards to ensure compliance in a way that’s aligned with the business purpose of the organization.
+
+A driving theme for improvement within this practice is describing organization’s standards and 3rd party obligations as application requirements, enabling efficient and automated audits that may be leveraged within the SDLC and continuously demonstrate that all expectations are met.
+
+In a sophisticated form, provision of this practice entails an organization-wide understanding of both internal standards and external compliance drivers while also maintaining low-latency checkpoints with project teams to ensure no project is operating outside expectations without visibility.
+""" ;
+    dcterms:identifier "be9e7ddb98b84abe8b9e185b979ccf60" ;
+    rdfs:comment "This practice drives the adherence to internal and external standards and regulations." ;
+    skos:altLabel "PC" ;
+    ns1:hasFunction ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 ;
+    ns1:hasOrder 2 .
+
+ns1:c13aa12c13d04362a3ca3385a8c580ee a ns1:Practice ;
+    rdfs:label "Incident Management" ;
+    dcterms:description """Once your organization has applications in operation, you're likely to face security incidents. In this model, we define a security incident as a breach, or the threat of an imminent breach, of at least one asset's security goals, whether due to malicious or negligent behavior. Examples of security incidents might include: a successful Denial of Service (DoS) attack against a cloud application, an application user accessing private data of another by abusing a security vulnerability, or an attacker modifying application source code. The Incident Management (IM) practice focuses on dealing with these in your organization.
+
+Historically, many security incidents have been detected months, or even years, after the initial breach. During the "dwell time" before an incident is detected, significant damage can occur, increasing the difficulty of recovery. Our first activity stream, Incident Detection, focuses on decreasing that dwell time.
+
+Once you have identified that you're suffering from a security incident, it's essential to respond in a disciplined, thorough manner to limit the damage, and return to normal operations as efficiently as possible. This is the focus of our second stream.
+""" ;
+    dcterms:identifier "c13aa12c13d04362a3ca3385a8c580ee" ;
+    rdfs:comment "This practice addresses activities carried out improve the organization's detection of, and response to, security incidents." ;
+    skos:altLabel "IM" ;
+    ns1:hasFunction ns1:942d679b0c9e41909f8bde728fdb1259 ;
+    ns1:hasOrder 1 .
+
+ns1:e17d573510904f65a1fe6040b56ad0b1 a ns1:Practice ;
+    rdfs:label "Defect Management" ;
+    dcterms:description """The Defect Management (DM) practice focuses on collecting, recording, and analyzing software security defects and enriching them with information to drive metrics-based decisions.
+
+The practice’s first stream deals with the process of handling and managing defects to ensure released software has a given assurance level. The second stream focuses on enriching the information about the defects and deriving metrics to guide decisions about the security of individual projects and of the security assurance program as a whole.
+
+In a sophisticated form, the practice requires formalised, independent defect management and real-time, correlated information to detect trends and influence security strategy.
+""" ;
+    dcterms:identifier "e17d573510904f65a1fe6040b56ad0b1" ;
+    rdfs:comment "This practice focuses on managing security defects in software and their associated metrics." ;
+    skos:altLabel "DM" ;
+    ns1:hasFunction ns1:8aa8154b83434e73b3ca8c0e9b654417 ;
+    ns1:hasOrder 3 .
+
+ns1:f9269aebfe2c4d5b9293ba42a40a93ac a ns1:Practice ;
+    rdfs:label "Threat Assessment" ;
+    dcterms:description """The Threat Assessment (TA) practice focuses on identifying and understanding of project-level risks based on the functionality of the software being developed and characteristics of the runtime environment. From details about threats and likely attacks against each project, the organization as a whole operates more effectively through better decisions about prioritization of initiatives for security. Additionally, decisions for risk acceptance are more informed, therefore better aligned to the business.
+
+By starting with simple threat models and building application risk profiles, an organization improves over time. Ultimately, a sophisticated organization would maintain this information in a way that is tightly coupled to the compensating factors and pass-through risks from external entities. This provides greater breadth of understanding for potential downstream impacts from security issues while keeping a close watch on the organization’s current performance against known threats.
+""" ;
+    dcterms:identifier "f9269aebfe2c4d5b9293ba42a40a93ac" ;
+    rdfs:comment "This practice focuses on identifying potential threats in applications." ;
+    skos:altLabel "TA" ;
+    ns1:hasFunction ns1:88c296acaae841a2b2fc5314bff44cb4 ;
+    ns1:hasOrder 1 .

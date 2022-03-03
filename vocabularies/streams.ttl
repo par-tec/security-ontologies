@@ -1,0 +1,287 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://owaspsamm.org/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:0e2c4c5620e24d7d8e979020ca414182 a ns1:Stream ;
+    rdfs:label "Organization and Culture" ;
+    dcterms:description "Organization and culture focuses on promoting the culture of application security within the organization as an important success factor of an SDLC project." ;
+    dcterms:identifier "0e2c4c5620e24d7d8e979020ca414182" ;
+    skos:altLabel "G-EG-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 .
+
+ns1:102fdab651834273abd67a3ec27aab05 a ns1:Stream ;
+    rdfs:label "Scalable Baseline" ;
+    dcterms:description """Scalable baseline focuses on the use of application-specific automated testing tools that integrate security validation into the build and deploy process. The goal of this stream is to favor width (a broad spectrum of applications) over depth of testing.
+""" ;
+    dcterms:identifier "102fdab651834273abd67a3ec27aab05" ;
+    skos:altLabel "V-ST-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 .
+
+ns1:17c90203f8354c3594eea22759e375a9 a ns1:Stream ;
+    rdfs:label "Application Risk Profile" ;
+    dcterms:description "An application risk profile helps to identify which applications can pose a serious threat to the organization if they were attacked or breached." ;
+    dcterms:identifier "17c90203f8354c3594eea22759e375a9" ;
+    skos:altLabel "D-TA-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac .
+
+ns1:1a7ad26d9e48411e95a63be79e1b90ea a ns1:Stream ;
+    rdfs:label "Patching and Updating" ;
+    dcterms:description """The activities in this stream focus on the organization's handling of patches and updates for all elements of the technology stack. For software developed by the organization, these activities are concerned with delivering patches and updates to customers, as well as applying them to organization-managed solutions (e.g., software as a service). For third-party elements, these activities are concerned with the organization's timely application of updates and patches received.
+""" ;
+    dcterms:identifier "1a7ad26d9e48411e95a63be79e1b90ea" ;
+    skos:altLabel "O-EM-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 .
+
+ns1:253b012094cf4e0988e08fd22609227d a ns1:Stream ;
+    rdfs:label "Architecture Design" ;
+    dcterms:description "The design of a software architecture can significantly impact the security posture of a software and the use of good security practices will improve the overall design." ;
+    dcterms:identifier "253b012094cf4e0988e08fd22609227d" ;
+    skos:altLabel "D-SA-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 .
+
+ns1:27a14a265c864eb790781cd1e2bf843b a ns1:Stream ;
+    rdfs:label "Misuse/Abuse Testing" ;
+    dcterms:description """Misuse/Abuse Testing leverages fuzzing, misuse/abuse cases, and the identification of any functionality or resources in the software that can be abused in order to identify weaknesses in features to attack an application.
+""" ;
+    dcterms:identifier "27a14a265c864eb790781cd1e2bf843b" ;
+    skos:altLabel "V-RT-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b .
+
+ns1:2919e1f19aec4f018da94a3e8733f37d a ns1:Stream ;
+    rdfs:label "Compliance Management" ;
+    dcterms:description "This stream focuses on identifying and providing compliance requirements to support integration into the SDLC." ;
+    dcterms:identifier "2919e1f19aec4f018da94a3e8733f37d" ;
+    skos:altLabel "G-PC-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 .
+
+ns1:2f1cac3c2e724823b3b48a7e797520b4 a ns1:Stream ;
+    rdfs:label "Measure and Improve" ;
+    dcterms:description "This stream aims to drive the validity, relevance, and improvement of the application security roadmap through measurements of performance within the organization." ;
+    dcterms:identifier "2f1cac3c2e724823b3b48a7e797520b4" ;
+    skos:altLabel "G-SM-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e .
+
+ns1:2f7b501627954c6cb03342196b2065a7 a ns1:Stream ;
+    rdfs:label "Software Dependencies" ;
+    dcterms:description "External libraries are a significant part of modern software. The activities in this stream help create a view of external libraries and ensure their security strength is adequate." ;
+    dcterms:identifier "2f7b501627954c6cb03342196b2065a7" ;
+    skos:altLabel "I-SB-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 .
+
+ns1:390bec725b8344a289d5386026925947 a ns1:Stream ;
+    rdfs:label "Incident Response" ;
+    dcterms:description """Incident Response starts the moment you acknowledge and verify the existence of a security incident. Your goal is to act in a coordinated and efficient way so that further damage is limited as much as possible. The activities in this stream focus on the organization's ability to respond appropriately and effectively to reported security incidents.
+""" ;
+    dcterms:identifier "390bec725b8344a289d5386026925947" ;
+    skos:altLabel "O-IM-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee .
+
+ns1:47bff9a57f0344eeb4b083f1c2b1bb7e a ns1:Stream ;
+    rdfs:label "Configuration Hardening" ;
+    dcterms:description """The activities in this stream focus on the organization's management of security-related configurations in all elements of the technology stack. The emphasis is on those elements (e.g., operating systems, containers, frameworks, services, appliances, and libraries) obtained from third parties, because their architecture and design are not under the organization's control.
+""" ;
+    dcterms:identifier "47bff9a57f0344eeb4b083f1c2b1bb7e" ;
+    skos:altLabel "O-EM-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 .
+
+ns1:55bf5184ff7d4b76a444e52a28c803d9 a ns1:Stream ;
+    rdfs:label "Metrics and Feedback" ;
+    dcterms:description "Defect tracking can drive the improvement of security activities within the organization through metrics and feedback." ;
+    dcterms:identifier "55bf5184ff7d4b76a444e52a28c803d9" ;
+    skos:altLabel "I-DM-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 .
+
+ns1:7344f4b153314dd8965361d23772aef1 a ns1:Stream ;
+    rdfs:label "Training and Awareness" ;
+    dcterms:description "Training and awareness focuses on increasing the overall knowledge around software security among the different stakeholders within the organization." ;
+    dcterms:identifier "7344f4b153314dd8965361d23772aef1" ;
+    skos:altLabel "G-EG-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 .
+
+ns1:77ca4b5e7ebc42558109829dffc2b80d a ns1:Stream ;
+    rdfs:label "Architecture Validation" ;
+    dcterms:description """Architecture validation confirms the security of the software and supporting architecture by identifying application and infrastructure architecture components and verifying their provision of security objectives and requirements.
+""" ;
+    dcterms:identifier "77ca4b5e7ebc42558109829dffc2b80d" ;
+    skos:altLabel "V-AA-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 .
+
+ns1:79754453c74b4143b20a57d0efdaab56 a ns1:Stream ;
+    rdfs:label "Technology Management" ;
+    dcterms:description "Technologies and frameworks are the cornerstones of any software solution. The security properties of these must be looked into to ensure an appropriate security level and to anticipate any potential issues herein." ;
+    dcterms:identifier "79754453c74b4143b20a57d0efdaab56" ;
+    skos:altLabel "D-SA-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 .
+
+ns1:7fb68bc660774b9080963c17761529a2 a ns1:Stream ;
+    rdfs:label "Software Requirements" ;
+    dcterms:description "Software requirements specify objectives and expectations to protect the service and data at the core of the application." ;
+    dcterms:identifier "7fb68bc660774b9080963c17761529a2" ;
+    skos:altLabel "D-SR-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b .
+
+ns1:8a64c7b0b35a458ea436260d5e414dfa a ns1:Stream ;
+    rdfs:label "Deep Understanding" ;
+    dcterms:description """Deep understanding focuses on performing manual security testing of high-risk components, using complex attack vectors with the goal of making advanced security testing an integral part of the development process. The goal of this stream is to favor testing depth (testing rigour) over testing width (the portfolio of applications).
+""" ;
+    dcterms:identifier "8a64c7b0b35a458ea436260d5e414dfa" ;
+    skos:altLabel "V-ST-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 .
+
+ns1:8a870a9b26724b4ba0dff177028b474a a ns1:Stream ;
+    rdfs:label "Build Process" ;
+    dcterms:description "A consistent build process ensures the software you are deploying is predictable and directly linked to the source code. Furthermore, you can take advantage of the software build process for various security activities." ;
+    dcterms:identifier "8a870a9b26724b4ba0dff177028b474a" ;
+    skos:altLabel "I-SB-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 .
+
+ns1:8c1dcd10821f4f2baed52fdc83d93cf6 a ns1:Stream ;
+    rdfs:label "Supplier Security" ;
+    dcterms:description "Supplier security deals with requirements that are relative to supplier organizations within the development context of the application, in particular for outsourced development." ;
+    dcterms:identifier "8c1dcd10821f4f2baed52fdc83d93cf6" ;
+    skos:altLabel "D-SR-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b .
+
+ns1:94bb47791e3d462cbf5f71ebb1a1327a a ns1:Stream ;
+    rdfs:label "Create and Promote" ;
+    dcterms:description "This stream is about creating and promoting an application security roadmap to set the objectives of the enterprise on this topic and increase alignment among stakeholders." ;
+    dcterms:identifier "94bb47791e3d462cbf5f71ebb1a1327a" ;
+    skos:altLabel "G-SM-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e .
+
+ns1:9a5f26d77f204467bdda7ffa09109d73 a ns1:Stream ;
+    rdfs:label "Secret Management" ;
+    dcterms:description "As the secure execution of any software system requires credentials, this stream ensures a proper handling of these sensitive data elements within the organization's environment." ;
+    dcterms:identifier "9a5f26d77f204467bdda7ffa09109d73" ;
+    skos:altLabel "I-SD-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d .
+
+ns1:9c6bf45a97ae4149a44c4a5d97ea6a40 a ns1:Stream ;
+    rdfs:label "Data Protection" ;
+    dcterms:description """The activities in this stream focus on ensuring the organization properly protects data in all aspects of their creation, handling, storage, and processing.
+""" ;
+    dcterms:identifier "9c6bf45a97ae4149a44c4a5d97ea6a40" ;
+    skos:altLabel "O-OM-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 .
+
+ns1:9ec70d6f7ddb4cb6b37928f9994c6049 a ns1:Stream ;
+    rdfs:label "Deployment Process" ;
+    dcterms:description "A repeatable and consistent deployment process ensures you only deploy correct software artifacts to production. It also paves the way for representative test environments prior to production." ;
+    dcterms:identifier "9ec70d6f7ddb4cb6b37928f9994c6049" ;
+    skos:altLabel "I-SD-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d .
+
+ns1:a0d2ec4c6daa43369c07644b8745a7bd a ns1:Stream ;
+    rdfs:label "System Decomissioning / Legacy Management" ;
+    dcterms:description """From the perspective of the organization as a consumer of resources, the activities in this stream focus on the identification, management, and tracking of systems, applications, application dependencies, and services that are no longer used, have reached end of life, or are no longer actively developed or supported. Removal of unused systems and services improves manageability of the environment and reduces the organization's attack surface, while affording direct and indirect cost savings (e.g., reduced license count, reduced logging volume, or reduced analyst effort).
+""" ;
+    dcterms:identifier "a0d2ec4c6daa43369c07644b8745a7bd" ;
+    skos:altLabel "O-OM-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 .
+
+ns1:a5b57fc5fa0441b7b23f599b506c5752 a ns1:Stream ;
+    rdfs:label "Defect Tracking" ;
+    dcterms:description "Defect tracking manages the collection and follow-up of all potential issues in a piece of software, from architectural flaws to coding issues and run-time vulnerabilities." ;
+    dcterms:identifier "a5b57fc5fa0441b7b23f599b506c5752" ;
+    skos:altLabel "I-DM-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 .
+
+ns1:b7487370a07543cbb02ddb60c055d92f a ns1:Stream ;
+    rdfs:label "Architecture Mitigation" ;
+    dcterms:description """Architecture mitigation focuses on ensuring that all threats identified during Threat Assessment are adequately mitigated, and existing reference architectures updated to address any unhandled threats.
+""" ;
+    dcterms:identifier "b7487370a07543cbb02ddb60c055d92f" ;
+    skos:altLabel "V-AA-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 .
+
+ns1:c404aa4f711e4f4e9e71faea22f7fb5c a ns1:Stream ;
+    rdfs:label "Policy & Standards" ;
+    dcterms:description "This stream focuses on maintaining policies and standards and providing them to support integration into the SDLC." ;
+    dcterms:identifier "c404aa4f711e4f4e9e71faea22f7fb5c" ;
+    skos:altLabel "G-PC-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 .
+
+ns1:ed5a9c3dd7884c88918a45dc9d231c5d a ns1:Stream ;
+    rdfs:label "Threat Modeling" ;
+    dcterms:description "Threat modeling is intended to help software development teams understand what risks exist in what is being built, what could go wrong, and how we the risks can be mitigated or remediated." ;
+    dcterms:identifier "ed5a9c3dd7884c88918a45dc9d231c5d" ;
+    skos:altLabel "D-TA-B" ;
+    ns1:hasLetter "B" ;
+    ns1:hasOrder 2 ;
+    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac .
+
+ns1:efb5d1f275504173899da345ef5bbe8e a ns1:Stream ;
+    rdfs:label "Control Verification" ;
+    dcterms:description """Control Verification validates that security controls and requirements are met through testing derived from requirements, and prevents the introduction of bugs into later releases through regression testing.
+""" ;
+    dcterms:identifier "efb5d1f275504173899da345ef5bbe8e" ;
+    skos:altLabel "V-RT-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b .
+
+ns1:ff8a6a08dc684f38ab74b9db9584f0a5 a ns1:Stream ;
+    rdfs:label "Incident Detection" ;
+    dcterms:description """Incident Detection refers to the process of determining an identified security-relevant event is, in fact, a security incident. The activities in this stream focus on the organization's ability to identify security incidents when they occur, and to initiate appropriate incident response activities.
+""" ;
+    dcterms:identifier "ff8a6a08dc684f38ab74b9db9584f0a5" ;
+    skos:altLabel "O-IM-A" ;
+    ns1:hasLetter "A" ;
+    ns1:hasOrder 1 ;
+    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee .

@@ -1,0 +1,1067 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pt: <https://par-tec.it/onto/enisa/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+<https://par-tec.it/onto/enisa/threat>
+      a       skos:ConceptScheme  ;
+      dct:title "Threat Taxonomy ENISA 2016"@en ;
+      rdfs:label "Threat Taxonomy ENISA 2016"@en ;
+      dct:description "This is the ENISA Threat Taxonomy 2016 "@en ;
+      dct:modified "2016-09-01"^^xsd:date ;
+      rdfs:seeAlso "https://www.enisa.europa.eu/topics/threat-risk-management/threats-and-trends/enisa-threat-landscape/threat-taxonomy/view" .
+
+<https://par-tec.it/onto/enisa/threat/10> a pt:ThreatDetail ;
+    rdfs:label "Theft of backups" ;
+    dct:description "Stealing media device, on which copies of essential information are kept." ;
+    dct:identifier "10" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/6> .
+
+<https://par-tec.it/onto/enisa/threat/101> a pt:ThreatDetail ;
+    rdfs:label "SPAM" ;
+    dct:description "" ;
+    dct:identifier "101" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/100> .
+
+<https://par-tec.it/onto/enisa/threat/102> a pt:ThreatDetail ;
+    rdfs:label "Unsolicited infected e-mails" ;
+    dct:description "" ;
+    dct:identifier "102" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/100> .
+
+<https://par-tec.it/onto/enisa/threat/104> a pt:ThreatDetail ;
+    rdfs:label "Distributed Denial of network service (DDoS) (network layer attack i.e. Protocol exploitation / Malformed packets / Flooding / Spoofing)" ;
+    dct:description "" ;
+    dct:identifier "104" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/103> .
+
+<https://par-tec.it/onto/enisa/threat/105> a pt:ThreatDetail ;
+    rdfs:label "Distributed Denial of application service (DDoS) (application layer attack i.e. Ping of Death / XDoS / WinNuke / HTTP Floods)" ;
+    dct:description "" ;
+    dct:identifier "105" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/103> .
+
+<https://par-tec.it/onto/enisa/threat/106> a pt:ThreatDetail ;
+    rdfs:label "Distributed DoS (DDoS) to both network and application services (amplification/reflection methods i.e. NTP/ DNS /…/ BitTorrent)" ;
+    dct:description "" ;
+    dct:identifier "106" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/103> .
+
+<https://par-tec.it/onto/enisa/threat/108> a pt:ThreatDetail ;
+    rdfs:label "Search Engine Poisoning" ;
+    dct:description "" ;
+    dct:identifier "108" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/109> a pt:ThreatDetail ;
+    rdfs:label "Exploitation of fake trust of social media" ;
+    dct:description "" ;
+    dct:identifier "109" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/11> a pt:Threat ;
+    rdfs:label "Information leakage/sharing" ;
+    dct:description "Sharing information with unauthorised entities. Loss of information confidentiality due to intentional human actions." ;
+    dct:identifier "11" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/110> a pt:ThreatDetail ;
+    rdfs:label "Worms/ Trojans" ;
+    dct:description "" ;
+    dct:identifier "110" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/111> a pt:ThreatDetail ;
+    rdfs:label "Rootkits" ;
+    dct:description "" ;
+    dct:identifier "111" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/112> a pt:ThreatDetail ;
+    rdfs:label "Mobile malware" ;
+    dct:description "" ;
+    dct:identifier "112" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/115> a pt:ThreatDetail ;
+    rdfs:label "Infected trusted mobile apps" ;
+    dct:description "" ;
+    dct:identifier "115" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/116> a pt:ThreatDetail ;
+    rdfs:label "Elevation of privileges" ;
+    dct:description "" ;
+    dct:identifier "116" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/117> a pt:ThreatDetail ;
+    rdfs:label "Web application attacks / injection attacks (Code injection: SQL, XSS)" ;
+    dct:description "" ;
+    dct:identifier "117" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/118> a pt:ThreatDetail ;
+    rdfs:label "Spyware or deceptive adware" ;
+    dct:description "" ;
+    dct:identifier "118" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/119> a pt:ThreatDetail ;
+    rdfs:label "Viruses" ;
+    dct:description "" ;
+    dct:identifier "119" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/12> a pt:Threat ;
+    rdfs:label "Unauthorized physical access / Unauthorised entry to premises" ;
+    dct:description "Unapproved access to facility." ;
+    dct:identifier "12" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/120> a pt:ThreatDetail ;
+    rdfs:label "Rogue security software/  Rogueware/ Scareware" ;
+    dct:description "" ;
+    dct:identifier "120" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/122> a pt:ThreatDetail ;
+    rdfs:label "Exploits/Exploit Kits" ;
+    dct:description "" ;
+    dct:identifier "122" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/107> .
+
+<https://par-tec.it/onto/enisa/threat/124> a pt:ThreatDetail ;
+    rdfs:label "Phishing attacks" ;
+    dct:description "" ;
+    dct:identifier "124" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/123> .
+
+<https://par-tec.it/onto/enisa/threat/125> a pt:ThreatDetail ;
+    rdfs:label "Spear phishing attacks" ;
+    dct:description "" ;
+    dct:identifier "125" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/123> .
+
+<https://par-tec.it/onto/enisa/threat/127> a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting mobile privacy and mobile applications" ;
+    dct:description "" ;
+    dct:identifier "127" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/126> .
+
+<https://par-tec.it/onto/enisa/threat/128> a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting web privacy and web applications" ;
+    dct:description "" ;
+    dct:identifier "128" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/126> .
+
+<https://par-tec.it/onto/enisa/threat/129> a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting network traffic" ;
+    dct:description "" ;
+    dct:identifier "129" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/126> .
+
+<https://par-tec.it/onto/enisa/threat/13> a pt:Threat ;
+    rdfs:label "Coercion, extortion or corruption" ;
+    dct:description "Actions caused by coercion, extortion or corruption" ;
+    dct:identifier "13" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/130> a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting cloud computing" ;
+    dct:description "" ;
+    dct:identifier "130" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/126> .
+
+<https://par-tec.it/onto/enisa/threat/132> a pt:ThreatDetail ;
+    rdfs:label "Loss of (integrity of) sensitive information" ;
+    dct:description "" ;
+    dct:identifier "132" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/131> .
+
+<https://par-tec.it/onto/enisa/threat/133> a pt:ThreatDetail ;
+    rdfs:label "Man in the middle/ Session hijacking " ;
+    dct:description "" ;
+    dct:identifier "133" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/131> .
+
+<https://par-tec.it/onto/enisa/threat/134> a pt:ThreatDetail ;
+    rdfs:label "Social Engineering / signed malware (e.g. install fake trust OS updates – signed malware)" ;
+    dct:description "" ;
+    dct:identifier "134" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/131> .
+
+<https://par-tec.it/onto/enisa/threat/135> a pt:ThreatDetail ;
+    rdfs:label "Fake SSL certificates" ;
+    dct:description "" ;
+    dct:identifier "135" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/131> .
+
+<https://par-tec.it/onto/enisa/threat/137> a pt:ThreatDetail ;
+    rdfs:label "Anonymous proxies" ;
+    dct:description "" ;
+    dct:identifier "137" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/136> .
+
+<https://par-tec.it/onto/enisa/threat/138> a pt:ThreatDetail ;
+    rdfs:label "Abuse of computing power of cloud to launch attacks (cybercrime as a service)" ;
+    dct:description "" ;
+    dct:identifier "138" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/136> .
+
+<https://par-tec.it/onto/enisa/threat/14> a pt:Threat ;
+    rdfs:label "Damage from the warfare" ;
+    dct:description "Threats of direct impact of warfare activities" ;
+    dct:identifier "14" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/140> a pt:ThreatDetail ;
+    rdfs:label "Access of web sites through chains of HTTP Proxies (Obfuscation)" ;
+    dct:description "" ;
+    dct:identifier "140" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/136> .
+
+<https://par-tec.it/onto/enisa/threat/141> a pt:ThreatDetail ;
+    rdfs:label "Access to device software" ;
+    dct:description "" ;
+    dct:identifier "141" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/136> .
+
+<https://par-tec.it/onto/enisa/threat/142> a pt:ThreatDetail ;
+    rdfs:label "Alternation of software" ;
+    dct:description "unauthorized modifications to code or data, attacking its integrity" ;
+    dct:identifier "142" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/136> .
+
+<https://par-tec.it/onto/enisa/threat/143> a pt:ThreatDetail ;
+    rdfs:label "Rogue hardware" ;
+    dct:description "" ;
+    dct:identifier "143" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/136> .
+
+<https://par-tec.it/onto/enisa/threat/145> a pt:ThreatDetail ;
+    rdfs:label "Repudiation of actions" ;
+    dct:description "" ;
+    dct:identifier "145" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/144> .
+
+<https://par-tec.it/onto/enisa/threat/146> a pt:ThreatDetail ;
+    rdfs:label """Address Space hijacking (IP prefixes)
+Routing table manipulation""" ;
+    dct:description "" ;
+    dct:identifier "146" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/144> .
+
+<https://par-tec.it/onto/enisa/threat/147> a pt:ThreatDetail ;
+    rdfs:label "DNS poisoning / DNS spoofing / DNS Manipulations " ;
+    dct:description "" ;
+    dct:identifier "147" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/144> .
+
+<https://par-tec.it/onto/enisa/threat/148> a pt:ThreatDetail ;
+    rdfs:label "Falsification of record" ;
+    dct:description "" ;
+    dct:identifier "148" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/144> .
+
+<https://par-tec.it/onto/enisa/threat/149> a pt:ThreatDetail ;
+    rdfs:label "AS hijacking" ;
+    dct:description "" ;
+    dct:identifier "149" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/144> .
+
+<https://par-tec.it/onto/enisa/threat/15> a pt:Threat ;
+    rdfs:label "Terrorists attack" ;
+    dct:description "Threats of bombing or other actions that counts as \"terrorists attacks\"" ;
+    dct:identifier "15" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/150> a pt:ThreatDetail ;
+    rdfs:label "AS manipulation" ;
+    dct:description "" ;
+    dct:identifier "150" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/144> .
+
+<https://par-tec.it/onto/enisa/threat/151> a pt:ThreatDetail ;
+    rdfs:label "Falsification of configurations" ;
+    dct:description "" ;
+    dct:identifier "151" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/144> .
+
+<https://par-tec.it/onto/enisa/threat/152> a pt:Threat ;
+    rdfs:label "Misuse of audit tools" ;
+    dct:description "Threat of nefarious actions with use of audit tools (discovery security weaknesses in information systems)" ;
+    dct:identifier "152" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/153> a pt:Threat ;
+    rdfs:label "Misuse of information/ information systems (including mobile apps)" ;
+    dct:description "Threat of nefarious action due to misuse of information / information systems" ;
+    dct:identifier "153" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/155> a pt:ThreatDetail ;
+    rdfs:label "Unauthorized use or administration of devices and systems" ;
+    dct:description "" ;
+    dct:identifier "155" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/154> .
+
+<https://par-tec.it/onto/enisa/threat/156> a pt:ThreatDetail ;
+    rdfs:label "Unauthorized use of software" ;
+    dct:description "" ;
+    dct:identifier "156" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/154> .
+
+<https://par-tec.it/onto/enisa/threat/157> a pt:ThreatDetail ;
+    rdfs:label "Unauthorized access to the information systems / networks (IMPI Protocol / DNS Register Hijacking)" ;
+    dct:description "" ;
+    dct:identifier "157" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/154> .
+
+<https://par-tec.it/onto/enisa/threat/158> a pt:ThreatDetail ;
+    rdfs:label "Network Intrusion" ;
+    dct:description "" ;
+    dct:identifier "158" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/154> .
+
+<https://par-tec.it/onto/enisa/threat/159> a pt:ThreatDetail ;
+    rdfs:label "Unauthorized changes of records" ;
+    dct:description "" ;
+    dct:identifier "159" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/154> .
+
+<https://par-tec.it/onto/enisa/threat/161> a pt:ThreatDetail ;
+    rdfs:label "Web based attacks (Drive-by download / malicious URLs / Browser based attacks)" ;
+    dct:description "" ;
+    dct:identifier "161" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/160> .
+
+<https://par-tec.it/onto/enisa/threat/162> a pt:Threat ;
+    rdfs:label "Compromising confidential information (data breaches)" ;
+    dct:description "" ;
+    dct:identifier "162" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/164> a pt:ThreatDetail ;
+    rdfs:label "False rumor and/or a fake warning" ;
+    dct:description "" ;
+    dct:identifier "164" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/163> .
+
+<https://par-tec.it/onto/enisa/threat/166> a pt:ThreatDetail ;
+    rdfs:label "Remote Command Execution" ;
+    dct:description "" ;
+    dct:identifier "166" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/165> .
+
+<https://par-tec.it/onto/enisa/threat/167> a pt:ThreatDetail ;
+    rdfs:label "Remote Access Tool (RAT)" ;
+    dct:description "" ;
+    dct:identifier "167" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/165> .
+
+<https://par-tec.it/onto/enisa/threat/168> a pt:ThreatDetail ;
+    rdfs:label "Botnets / Remote activity " ;
+    dct:description "" ;
+    dct:identifier "168" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/165> .
+
+<https://par-tec.it/onto/enisa/threat/17> a pt:Threat ;
+    rdfs:label "Information leakage/sharing due to human error" ;
+    dct:description "" ;
+    dct:identifier "17" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/170> a pt:ThreatDetail ;
+    rdfs:label "Mobile malware" ;
+    dct:description "" ;
+    dct:identifier "170" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/169> .
+
+<https://par-tec.it/onto/enisa/threat/171> a pt:ThreatDetail ;
+    rdfs:label "Spear phishing attacks" ;
+    dct:description "" ;
+    dct:identifier "171" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/169> .
+
+<https://par-tec.it/onto/enisa/threat/172> a pt:ThreatDetail ;
+    rdfs:label "Installation of sophisticated and targeted malware" ;
+    dct:description "" ;
+    dct:identifier "172" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/169> .
+
+<https://par-tec.it/onto/enisa/threat/173> a pt:ThreatDetail ;
+    rdfs:label "Watering Hole attacks" ;
+    dct:description "" ;
+    dct:identifier "173" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/169> .
+
+<https://par-tec.it/onto/enisa/threat/174> a pt:Threat ;
+    rdfs:label "Failed of bussines process" ;
+    dct:description "" ;
+    dct:identifier "174" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/175> a pt:Threat ;
+    rdfs:label "Brute force" ;
+    dct:description "" ;
+    dct:identifier "175" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/176> a pt:Threat ;
+    rdfs:label "Abuse of authorizations" ;
+    dct:description "" ;
+    dct:identifier "176" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/178> a pt:Threat ;
+    rdfs:label "Violation of laws or regulations / Breach of legislation" ;
+    dct:description "Threat of finacial or legal penatly or lost of trust of customers and collaborators due to violation of law or regulations" ;
+    dct:identifier "178" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/177> .
+
+<https://par-tec.it/onto/enisa/threat/180> a pt:ThreatDetail ;
+    rdfs:label "Failure to meet contractual requirements by third party" ;
+    dct:description "" ;
+    dct:identifier "180" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/179> .
+
+<https://par-tec.it/onto/enisa/threat/182> a pt:ThreatDetail ;
+    rdfs:label "Illegal usage of File Sharing services" ;
+    dct:description "" ;
+    dct:identifier "182" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/181> .
+
+<https://par-tec.it/onto/enisa/threat/183> a pt:Threat ;
+    rdfs:label "Abuse of personal data" ;
+    dct:description "Threat of illegal use personal data" ;
+    dct:identifier "183" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/177> .
+
+<https://par-tec.it/onto/enisa/threat/184> a pt:Threat ;
+    rdfs:label "Judiciary decisions/court orders" ;
+    dct:description "" ;
+    dct:identifier "184" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/177> .
+
+<https://par-tec.it/onto/enisa/threat/21> a pt:ThreatDetail ;
+    rdfs:label "Leaks of data via Web applications" ;
+    dct:description "Threat of leakage important information using web applications." ;
+    dct:identifier "21" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/19> .
+
+<https://par-tec.it/onto/enisa/threat/22> a pt:ThreatDetail ;
+    rdfs:label "Leaks of information transferred by network" ;
+    dct:description "Threat of leakage important information by unsecure network traffic." ;
+    dct:identifier "22" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/19> .
+
+<https://par-tec.it/onto/enisa/threat/24> a pt:ThreatDetail ;
+    rdfs:label "Loss of information due to  maintenance errs / operators errors" ;
+    dct:description "Threat of loss of information by incorrectly performed conservation of devices or systems" ;
+    dct:identifier "24" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/23> .
+
+<https://par-tec.it/onto/enisa/threat/25> a pt:ThreatDetail ;
+    rdfs:label "Loss of information due to  configuration/ installation error" ;
+    dct:description "Threat of loss of information by errors in installation or system configuration" ;
+    dct:identifier "25" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/23> .
+
+<https://par-tec.it/onto/enisa/threat/26> a pt:ThreatDetail ;
+    rdfs:label "Increasing recover time" ;
+    dct:description "Threat of loss of availability of information by errors in use od backup media and increasing information recovery time" ;
+    dct:identifier "26" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/23> .
+
+<https://par-tec.it/onto/enisa/threat/27> a pt:ThreatDetail ;
+    rdfs:label "Loss of information due to  user errors" ;
+    dct:description "" ;
+    dct:identifier "27" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/23> .
+
+<https://par-tec.it/onto/enisa/threat/28> a pt:Threat ;
+    rdfs:label "Using information from an unreliable source" ;
+    dct:description "Bad decision based on unreliable sources of information or unchecked information." ;
+    dct:identifier "28" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/29> a pt:Threat ;
+    rdfs:label "Unintentional change of data in an information system" ;
+    dct:description "Loss of information integrity due to human error (information system user mistake)" ;
+    dct:identifier "29" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/3> a pt:ThreatDetail ;
+    rdfs:label "Fraud by employees" ;
+    dct:description "Fraud made by employees or others who are in relation with entities, that have access to knowledge about entities' information and IT Assets" ;
+    dct:identifier "3" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/2> .
+
+<https://par-tec.it/onto/enisa/threat/30> a pt:Threat ;
+    rdfs:label "Inadequate design and planning or improperly adaptation" ;
+    dct:description "Threats caused by improperly IT Assets or business processes design (inadequate specifications of IT products, inadequate usability, insecure interfaces, policy/procedure flows, design errors)" ;
+    dct:identifier "30" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/32> a pt:ThreatDetail ;
+    rdfs:label "Security failure by third party" ;
+    dct:description "Threats of damage of IT Assets caused by breach security regulation by third party" ;
+    dct:identifier "32" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/31> .
+
+<https://par-tec.it/onto/enisa/threat/33> a pt:Threat ;
+    rdfs:label "Damages resulting from penetration testing" ;
+    dct:description "Threats to information systems caused by improperly / inprepare conducting of IT penetration testing" ;
+    dct:identifier "33" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/34> a pt:Threat ;
+    rdfs:label "Loss of information in the cloud" ;
+    dct:description "Threats of loosing information or data stored in the cloud" ;
+    dct:identifier "34" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/36> a pt:ThreatDetail ;
+    rdfs:label "Loss of integrity of certificates" ;
+    dct:description "Threat of lossing integrity of certificates used for authorisation services" ;
+    dct:identifier "36" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/35> .
+
+<https://par-tec.it/onto/enisa/threat/38> a pt:ThreatDetail ;
+    rdfs:label "Loss of devices/ mobile devices" ;
+    dct:description "Threat of loosing mobile devices." ;
+    dct:identifier "38" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/37> .
+
+<https://par-tec.it/onto/enisa/threat/39> a pt:ThreatDetail ;
+    rdfs:label "Loss of storage media " ;
+    dct:description "Threat of loosing data-storage medium." ;
+    dct:identifier "39" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/37> .
+
+<https://par-tec.it/onto/enisa/threat/4> a pt:Threat ;
+    rdfs:label "Sabotage" ;
+    dct:description "Intentional actions (non-fulfillment or defective fulfillment of personal duties) aimed to cause disruption or damage of IT Assets" ;
+    dct:identifier "4" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/40> a pt:ThreatDetail ;
+    rdfs:label "Loss of documentation of IT Infrastructure" ;
+    dct:description "Threat of loosing important documentation." ;
+    dct:identifier "40" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/37> .
+
+<https://par-tec.it/onto/enisa/threat/42> a pt:ThreatDetail ;
+    rdfs:label "Infection of removable media" ;
+    dct:description "Threat of loss of important data due to infection of removable media." ;
+    dct:identifier "42" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/41> .
+
+<https://par-tec.it/onto/enisa/threat/43> a pt:ThreatDetail ;
+    rdfs:label "Abuse of storage " ;
+    dct:description "Threat of loss of records by improperly/unauthorised use of storage devices" ;
+    dct:identifier "43" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/41> .
+
+<https://par-tec.it/onto/enisa/threat/45> a pt:Threat ;
+    rdfs:label "Disaster (natural earthquakes, floods, landslides, tsunamis, heavy rains, heavy snowfalls, heavy winds)" ;
+    dct:description "Large scale and large effects natural disasters" ;
+    dct:identifier "45" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/46> a pt:Threat ;
+    rdfs:label "Fire" ;
+    dct:description "Threat of fire " ;
+    dct:identifier "46" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/47> a pt:Threat ;
+    rdfs:label "Pollution, dust, corrosion" ;
+    dct:description "Threat of disruption of work of IT systems (hardware) dur to pollution, dust or corrosion (arising from the air)" ;
+    dct:identifier "47" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/48> a pt:Threat ;
+    rdfs:label "Thunder stroke" ;
+    dct:description "Threat of damage of IT hardware caused by the thunder strike (the electrical overvoltage)" ;
+    dct:identifier "48" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/49> a pt:Threat ;
+    rdfs:label "Water" ;
+    dct:description "Threat of damage of IT hardware caused by the water" ;
+    dct:identifier "49" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/5> a pt:Threat ;
+    rdfs:label "Vandalism" ;
+    dct:description "Act of physically damage of IT Assets" ;
+    dct:identifier "5" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/50> a pt:Threat ;
+    rdfs:label "Explosion" ;
+    dct:description "" ;
+    dct:identifier "50" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/51> a pt:Threat ;
+    rdfs:label "Dangerous radiation leak" ;
+    dct:description "" ;
+    dct:identifier "51" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/53> a pt:ThreatDetail ;
+    rdfs:label "Lost of data or accessibility of IT infrastructure in result of extensive humidity" ;
+    dct:description "" ;
+    dct:identifier "53" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/52> .
+
+<https://par-tec.it/onto/enisa/threat/54> a pt:ThreatDetail ;
+    rdfs:label "Lost of data or accessibility of IT infrastructure in result of extensive temperature" ;
+    dct:description "" ;
+    dct:identifier "54" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/52> .
+
+<https://par-tec.it/onto/enisa/threat/55> a pt:Threat ;
+    rdfs:label "Major events in the environment" ;
+    dct:description "" ;
+    dct:identifier "55" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/56> a pt:Threat ;
+    rdfs:label "Threats from space / Electromagnetic storm" ;
+    dct:description "Threats of the negative impact of solar radiation (harmful rays) to a satellites and radio wave communication systems - Electromagnetic storm" ;
+    dct:identifier "56" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/57> a pt:Threat ;
+    rdfs:label "Wildlife" ;
+    dct:description "" ;
+    dct:identifier "57" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/60> a pt:ThreatDetail ;
+    rdfs:label "Failure of defective data media" ;
+    dct:description "" ;
+    dct:identifier "60" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/59> .
+
+<https://par-tec.it/onto/enisa/threat/61> a pt:ThreatDetail ;
+    rdfs:label "Hardware failure" ;
+    dct:description "" ;
+    dct:identifier "61" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/59> .
+
+<https://par-tec.it/onto/enisa/threat/62> a pt:ThreatDetail ;
+    rdfs:label "Failure of applications and services" ;
+    dct:description "" ;
+    dct:identifier "62" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/59> .
+
+<https://par-tec.it/onto/enisa/threat/63> a pt:ThreatDetail ;
+    rdfs:label "Failure of parts of devices (connectors, plug in)" ;
+    dct:description "" ;
+    dct:identifier "63" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/59> .
+
+<https://par-tec.it/onto/enisa/threat/65> a pt:ThreatDetail ;
+    rdfs:label "Failure of cable networks" ;
+    dct:description "" ;
+    dct:identifier "65" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/64> .
+
+<https://par-tec.it/onto/enisa/threat/66> a pt:ThreatDetail ;
+    rdfs:label "Failure of wireless networks" ;
+    dct:description "" ;
+    dct:identifier "66" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/64> .
+
+<https://par-tec.it/onto/enisa/threat/67> a pt:ThreatDetail ;
+    rdfs:label "Failure of mobile networks" ;
+    dct:description "" ;
+    dct:identifier "67" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/64> .
+
+<https://par-tec.it/onto/enisa/threat/7> a pt:ThreatDetail ;
+    rdfs:label "Theft of mobile devices (smartphones/ tablets)" ;
+    dct:description "Taking of another person's property in the form of mobile devices for example smartphones, tablets." ;
+    dct:identifier "7" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/6> .
+
+<https://par-tec.it/onto/enisa/threat/70> a pt:ThreatDetail ;
+    rdfs:label "Failure or disruption of the power supply" ;
+    dct:description "" ;
+    dct:identifier "70" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/69> .
+
+<https://par-tec.it/onto/enisa/threat/71> a pt:ThreatDetail ;
+    rdfs:label "Failure of cooling infrastructure" ;
+    dct:description "" ;
+    dct:identifier "71" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/69> .
+
+<https://par-tec.it/onto/enisa/threat/72> a pt:Threat ;
+    rdfs:label "Failure or disruption of service providers (supply chain)" ;
+    dct:description "Threat of failure or disruption of thire party services required for proper operation of information systems" ;
+    dct:identifier "72" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/58> .
+
+<https://par-tec.it/onto/enisa/threat/73> a pt:Threat ;
+    rdfs:label "Malfunction of equipment (devices or systems)" ;
+    dct:description "Threat of malfunction of IT hardware and/or software assets or its parts" ;
+    dct:identifier "73" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/58> .
+
+<https://par-tec.it/onto/enisa/threat/76> a pt:ThreatDetail ;
+    rdfs:label "Loss of electricity" ;
+    dct:description "" ;
+    dct:identifier "76" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/75> .
+
+<https://par-tec.it/onto/enisa/threat/77> a pt:ThreatDetail ;
+    rdfs:label "Cooling outages" ;
+    dct:description "" ;
+    dct:identifier "77" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/75> .
+
+<https://par-tec.it/onto/enisa/threat/78> a pt:Threat ;
+    rdfs:label "Absence of personnel" ;
+    dct:description "Unavailability of key personnel and their competences" ;
+    dct:identifier "78" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/74> .
+
+<https://par-tec.it/onto/enisa/threat/79> a pt:Threat ;
+    rdfs:label "Strike" ;
+    dct:description "Unavailability of staff due strike (large scale absence of personnel)" ;
+    dct:identifier "79" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/74> .
+
+<https://par-tec.it/onto/enisa/threat/8> a pt:ThreatDetail ;
+    rdfs:label "Theft of fixed hardware " ;
+    dct:description "Taking of another person's hardware property (except mobile devices), which often contain business-sensitive data." ;
+    dct:identifier "8" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/6> .
+
+<https://par-tec.it/onto/enisa/threat/80> a pt:Threat ;
+    rdfs:label "Loss of support services" ;
+    dct:description "Unavailability of support services required for proper operation of information system" ;
+    dct:identifier "80" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/74> .
+
+<https://par-tec.it/onto/enisa/threat/81> a pt:Threat ;
+    rdfs:label "Internet outage" ;
+    dct:description "Unavailability of the Internet connection" ;
+    dct:identifier "81" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/74> .
+
+<https://par-tec.it/onto/enisa/threat/83> a pt:ThreatDetail ;
+    rdfs:label "Outage of cable networks" ;
+    dct:description "" ;
+    dct:identifier "83" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/82> .
+
+<https://par-tec.it/onto/enisa/threat/84> a pt:ThreatDetail ;
+    rdfs:label "Outage of wireless networks" ;
+    dct:description "" ;
+    dct:identifier "84" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/82> .
+
+<https://par-tec.it/onto/enisa/threat/85> a pt:ThreatDetail ;
+    rdfs:label "Outages of mobile networks" ;
+    dct:description "" ;
+    dct:identifier "85" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/82> .
+
+<https://par-tec.it/onto/enisa/threat/87> a pt:Threat ;
+    rdfs:label "War driving" ;
+    dct:description "Threat of locating and possible exploite connection to the wireless network" ;
+    dct:identifier "87" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/86> .
+
+<https://par-tec.it/onto/enisa/threat/88> a pt:Threat ;
+    rdfs:label "Intercepting compromising emissions" ;
+    dct:description "Threat of disclosure transmitted information using interception and analysis of compromising emission" ;
+    dct:identifier "88" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/86> .
+
+<https://par-tec.it/onto/enisa/threat/9> a pt:ThreatDetail ;
+    rdfs:label "Theft of documents" ;
+    dct:description "Stealing documents of private/company archives, often for the purpose of re-sale or to achieve personal benefits." ;
+    dct:identifier "9" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/6> .
+
+<https://par-tec.it/onto/enisa/threat/90> a pt:ThreatDetail ;
+    rdfs:label "Corporate Espionage" ;
+    dct:description "" ;
+    dct:identifier "90" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/89> .
+
+<https://par-tec.it/onto/enisa/threat/91> a pt:ThreatDetail ;
+    rdfs:label "Nation state espionage" ;
+    dct:description "" ;
+    dct:identifier "91" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/89> .
+
+<https://par-tec.it/onto/enisa/threat/92> a pt:ThreatDetail ;
+    rdfs:label "Information leakage due to unsecured Wi-Fi, rogue access points" ;
+    dct:description "" ;
+    dct:identifier "92" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/89> .
+
+<https://par-tec.it/onto/enisa/threat/93> a pt:Threat ;
+    rdfs:label "Interfering radiation" ;
+    dct:description "Threat of failure of IT hardware or transmission connection due to electromagnetic induction or electromagnetic radiation emitted from an another source" ;
+    dct:identifier "93" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/86> .
+
+<https://par-tec.it/onto/enisa/threat/94> a pt:Threat ;
+    rdfs:label "Replay of messages" ;
+    dct:description "Threat in which valid data transmission is maliciously or fraudulently repeated or delayed" ;
+    dct:identifier "94" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/86> .
+
+<https://par-tec.it/onto/enisa/threat/95> a pt:Threat ;
+    rdfs:label "Network Reconnaissance, Network traffic manipulation and Information gathering" ;
+    dct:description "Threat of identifying information about network to find security weaknesses" ;
+    dct:identifier "95" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/86> .
+
+<https://par-tec.it/onto/enisa/threat/96> a pt:Threat ;
+    rdfs:label "Man in the middle/ Session hijacking " ;
+    dct:description "Threats that relay on alters of communication between two parties" ;
+    dct:identifier "96" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/86> .
+
+<https://par-tec.it/onto/enisa/threat/99> a pt:ThreatDetail ;
+    rdfs:label "Credentials stealing trojans" ;
+    dct:description "" ;
+    dct:identifier "99" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/98> .
+
+<https://par-tec.it/onto/enisa/threat/160> a pt:Threat ;
+    rdfs:label "Unauthorized installation of software" ;
+    dct:description "Threat of unauthorized installation of software" ;
+    dct:identifier "160" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/163> a pt:Threat ;
+    rdfs:label "Hoax" ;
+    dct:description "Threat of disruption of work due to False rumor and/or a fake warning" ;
+    dct:identifier "163" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/179> a pt:Threat ;
+    rdfs:label "Failure to meet contractual requirements" ;
+    dct:description "Threat of finacial penatly or lost of trust of customers and collaborators due to failure to meet contractual requirements" ;
+    dct:identifier "179" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/177> .
+
+<https://par-tec.it/onto/enisa/threat/181> a pt:Threat ;
+    rdfs:label "Unauthorized use of IPR protected resources" ;
+    dct:description "Threat of finacial or legal penatly or lost of trust of customers and collaborators due to improper/illegal use of copyrights material" ;
+    dct:identifier "181" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/177> .
+
+<https://par-tec.it/onto/enisa/threat/2> a pt:Threat ;
+    rdfs:label "Fraud" ;
+    dct:description "Fraud made by human" ;
+    dct:identifier "2" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/31> a pt:Threat ;
+    rdfs:label "Damage caused by a third party " ;
+    dct:description "Threats of damage of IT Assets caused by third party " ;
+    dct:identifier "31" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/35> a pt:Threat ;
+    rdfs:label "Loss of (integrity of) sensitive information" ;
+    dct:description "Threats of loosing information or data (or changing) information classified as sensitive" ;
+    dct:identifier "35" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/98> a pt:Threat ;
+    rdfs:label "Identity theft (Identity Fraud/ Account) " ;
+    dct:description "Threat of identity theft action" ;
+    dct:identifier "98" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/100> a pt:Threat ;
+    rdfs:label "Receive of unsolicited E-mail " ;
+    dct:description "Threat of receive of unsolicited E-mail that affect for information security and efficienty of work" ;
+    dct:identifier "100" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/123> a pt:Threat ;
+    rdfs:label "Social Engineering" ;
+    dct:description "" ;
+    dct:identifier "123" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/19> a pt:Threat ;
+    rdfs:label " " ;
+    dct:description "Unintentional distribution of private or sensitive data to an unauthorized entity by staff member." ;
+    dct:identifier "19" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/41> a pt:Threat ;
+    rdfs:label "Destruction of records" ;
+    dct:description "Threats of the lack of availability (destruction) of data and records (information) stored in devices and storage media" ;
+    dct:identifier "41" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/52> a pt:Threat ;
+    rdfs:label "Unfavorable climatic conditions" ;
+    dct:description "Threat of disruption of work of IT systems due to climatic conditions that have the negative effect on hardware" ;
+    dct:identifier "52" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/44> .
+
+<https://par-tec.it/onto/enisa/threat/69> a pt:Threat ;
+    rdfs:label "Failure or disruption of main supply" ;
+    dct:description "Threat of failure or disruption of supply required for information systems" ;
+    dct:identifier "69" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/58> .
+
+<https://par-tec.it/onto/enisa/threat/75> a pt:Threat ;
+    rdfs:label "Loss of resources" ;
+    dct:description "Unavailability of resources (supply) required for proper operation of information system" ;
+    dct:identifier "75" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/74> .
+
+<https://par-tec.it/onto/enisa/threat/103> a pt:Threat ;
+    rdfs:label "Denial of service" ;
+    dct:description "Threat of Deny of service type attacks at information systems/services" ;
+    dct:identifier "103" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/165> a pt:Threat ;
+    rdfs:label "Remote activity (execution)" ;
+    dct:description "Threat of remote activity over controled IT Assets" ;
+    dct:identifier "165" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/37> a pt:Threat ;
+    rdfs:label "Loss of devices, storage media and documents" ;
+    dct:description "Threats of the lack of availability (loosing) of IT Assets and documents" ;
+    dct:identifier "37" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/64> a pt:Threat ;
+    rdfs:label "Failure or disruption of communication links (communication networks)" ;
+    dct:description "Threat of failure or malfunction of communications links " ;
+    dct:identifier "64" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/58> .
+
+<https://par-tec.it/onto/enisa/threat/82> a pt:Threat ;
+    rdfs:label "Network outage" ;
+    dct:description "Unavailability of communication links" ;
+    dct:identifier "82" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/74> .
+
+<https://par-tec.it/onto/enisa/threat/89> a pt:Threat ;
+    rdfs:label "Interception of information" ;
+    dct:description "Threat of interception of information improperly secured in transmission or improperly actions of staff" ;
+    dct:identifier "89" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/86> .
+
+<https://par-tec.it/onto/enisa/threat/126> a pt:Threat ;
+    rdfs:label "Abuse of Information Leakage" ;
+    dct:description "? What is difference between others Physical attack (deliberate/ intentional)?" ;
+    dct:identifier "126" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/131> a pt:Threat ;
+    rdfs:label "Generation and use of rogue certificates" ;
+    dct:description "Threat of use of rogue certificates" ;
+    dct:identifier "131" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/169> a pt:Threat ;
+    rdfs:label "Targeted attacks (APTs etc.)" ;
+    dct:description "" ;
+    dct:identifier "169" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/23> a pt:Threat ;
+    rdfs:label "Erroneous use or administration of devices and systems" ;
+    dct:description "Information leakage / sharing / damage caused by users IT Assets misuse (lack of awareness of application features) or wrong / improperly IT Assets configuration or management" ;
+    dct:identifier "23" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/16> .
+
+<https://par-tec.it/onto/enisa/threat/59> a pt:Threat ;
+    rdfs:label "Failure of devices or systems" ;
+    dct:description "Threat of failure of IT hardware and/or software assets or its parts" ;
+    dct:identifier "59" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/58> .
+
+<https://par-tec.it/onto/enisa/threat/6> a pt:Threat ;
+    rdfs:label "Theft (devices, storage media and documents)" ;
+    dct:description "Stealing of information or IT Assets. Robbery" ;
+    dct:identifier "6" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/1> .
+
+<https://par-tec.it/onto/enisa/threat/154> a pt:Threat ;
+    rdfs:label "Unauthorized activities" ;
+    dct:description "" ;
+    dct:identifier "154" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/177> a pt:ThreatCategory ;
+    rdfs:label "Legal" ;
+    dct:description "" ;
+    dct:identifier "177" .
+
+<https://par-tec.it/onto/enisa/threat/58> a pt:ThreatCategory ;
+    rdfs:label "Failures/ Malfunction" ;
+    dct:description "" ;
+    dct:identifier "58" .
+
+<https://par-tec.it/onto/enisa/threat/136> a pt:Threat ;
+    rdfs:label "Manipulation of hardware and software" ;
+    dct:description "Threat of unauthorized manipulation of hardware and software" ;
+    dct:identifier "136" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/74> a pt:ThreatCategory ;
+    rdfs:label "Outages" ;
+    dct:description "" ;
+    dct:identifier "74" .
+
+<https://par-tec.it/onto/enisa/threat/144> a pt:Threat ;
+    rdfs:label "Manipulation of information" ;
+    dct:description "Threat of intentional data manipulation to mislead information systems or somebody or to cover other nefarious activities (loss of integrity of information) " ;
+    dct:identifier "144" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/86> a pt:ThreatCategory ;
+    rdfs:label "Eavesdropping/ Interception/ Hijacking" ;
+    dct:description "Threats that relay on alters of communication between two parties" ;
+    dct:identifier "86" .
+
+<https://par-tec.it/onto/enisa/threat/1> a pt:ThreatCategory ;
+    rdfs:label "Physical attack (deliberate/ intentional)" ;
+    dct:description "Threats of intentional hostage human actions" ;
+    dct:identifier "1" .
+
+<https://par-tec.it/onto/enisa/threat/44> a pt:ThreatCategory ;
+    rdfs:label "Disaster (natural, environmental)" ;
+    dct:description "Threats of damage of information assets caused by natural or environmental elements" ;
+    dct:identifier "44" .
+
+<https://par-tec.it/onto/enisa/threat/107> a pt:Threat ;
+    rdfs:label "Malicious code/ software/ activity" ;
+    dct:description "Threat of malicious code or software execution" ;
+    dct:identifier "107" ;
+    rdfs:subClassOf <https://par-tec.it/onto/enisa/threat/97> .
+
+<https://par-tec.it/onto/enisa/threat/16> a pt:ThreatCategory ;
+    rdfs:label "Unintentional damage / loss of information or IT assets" ;
+    dct:description "Threats of unintentional human actions or errors" ;
+    dct:identifier "16" .
+
+<https://par-tec.it/onto/enisa/threat/97> a pt:ThreatCategory ;
+    rdfs:label "Nefarious Activity/ Abuse" ;
+    dct:description "" ;
+    dct:identifier "97" .

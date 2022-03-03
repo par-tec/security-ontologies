@@ -1,0 +1,58 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://owaspsamm.org/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 a ns1:BusinessFunction ;
+    rdfs:label "Governance" ;
+    dcterms:description """Governance focuses on the processes and activities related to how an organization manages overall software development activities. More specifically, this includes concerns that impact cross-functional groups involved in development, as well as business processes established at the organization level.
+""" ;
+    dcterms:identifier "102ad02df5dc4a8eb3837ef4ca2c1af4" ;
+    skos:altLabel "governance" ;
+    dcat:downloadURL "https://owaspsamm.org/model/governance" ;
+    ns1:hasOrder 1 ;
+    ns1:model "SAMM20" .
+
+ns1:88c296acaae841a2b2fc5314bff44cb4 a ns1:BusinessFunction ;
+    rdfs:label "Design" ;
+    dcterms:description """Design concerns the processes and activities related to how an organization defines goals and creates software within development projects. In general, this will include requirements gathering, high-level architecture specification and detailed design.
+""" ;
+    dcterms:identifier "88c296acaae841a2b2fc5314bff44cb4" ;
+    skos:altLabel "design" ;
+    dcat:downloadURL "https://owaspsamm.org/model/design" ;
+    ns1:hasOrder 2 ;
+    ns1:model "SAMM20" .
+
+ns1:8aa8154b83434e73b3ca8c0e9b654417 a ns1:BusinessFunction ;
+    rdfs:label "Implementation" ;
+    dcterms:description """Implementation is focused on the processes and activities related to how an organization builds and deploys software components and its related defects.
+
+Activities within the Implementation function have the most impact on the daily life of developers. The joint goal is to ship reliably working software with minimum defects.
+""" ;
+    dcterms:identifier "8aa8154b83434e73b3ca8c0e9b654417" ;
+    skos:altLabel "implementation" ;
+    dcat:downloadURL "https://owaspsamm.org/model/implementation" ;
+    ns1:hasOrder 3 ;
+    ns1:model "SAMM20" .
+
+ns1:942d679b0c9e41909f8bde728fdb1259 a ns1:BusinessFunction ;
+    rdfs:label "Operations" ;
+    dcterms:description """The Operations Business Function encompasses those activities necessary to ensure confidentiality, integrity, and availability are maintained throughout the operational lifetime of an application and its associated data. Increased maturity with regard to this Business Function provides greater assurance that the organization is resilient in the face of operational disruptions, and responsive to changes in the operational landscape.
+""" ;
+    dcterms:identifier "942d679b0c9e41909f8bde728fdb1259" ;
+    skos:altLabel "operations" ;
+    dcat:downloadURL "https://owaspsamm.org/model/operations" ;
+    ns1:hasOrder 5 ;
+    ns1:model "SAMM20" .
+
+ns1:fa340fa1816244d79f369ae82e998368 a ns1:BusinessFunction ;
+    rdfs:label "Verification" ;
+    dcterms:description """Verification focuses on the processes and activities related to how an organization checks and tests artifacts produced throughout software development. This typically includes quality assurance work such as testing, but it can also include other review and evaluation activities.
+""" ;
+    dcterms:identifier "fa340fa1816244d79f369ae82e998368" ;
+    skos:altLabel "verification" ;
+    dcat:downloadURL "https://owaspsamm.org/model/verification" ;
+    ns1:hasOrder 4 ;
+    ns1:model "SAMM20" .

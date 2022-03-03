@@ -1,0 +1,364 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://owaspsamm.org/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ns1:02e602c451d548e8a95433a46fe6b9d8 a ns1:PracticeLevel ;
+    rdfs:label "I-SB-3" ;
+    dcterms:description "Build process helps prevent known defects from entering the production environment." ;
+    dcterms:identifier "02e602c451d548e8a95433a46fe6b9d8" ;
+    skos:altLabel "I-SB-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 .
+
+ns1:1a55b2c4666f4336a3f5c12c5bb4a1e9 a ns1:PracticeLevel ;
+    rdfs:label "D-SR-2" ;
+    dcterms:description "Increase granularity of security requirements derived from business logic and known risks." ;
+    dcterms:identifier "1a55b2c4666f4336a3f5c12c5bb4a1e9" ;
+    skos:altLabel "D-SR-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b .
+
+ns1:1cb6e197ca8245eca65b0ecbdd784720 a ns1:PracticeLevel ;
+    rdfs:label "O-EM-3" ;
+    dcterms:description "Conformity with continuously improving process enforced" ;
+    dcterms:identifier "1cb6e197ca8245eca65b0ecbdd784720" ;
+    skos:altLabel "O-EM-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 .
+
+ns1:21a59897dbeb4d7fa4603a0f24362c2b a ns1:PracticeLevel ;
+    rdfs:label "D-TA-3" ;
+    dcterms:description "Proactive improvement of threat coverage throughout the organization." ;
+    dcterms:identifier "21a59897dbeb4d7fa4603a0f24362c2b" ;
+    skos:altLabel "D-TA-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac .
+
+ns1:2a059c7d07c34b9897e49e6295501608 a ns1:PracticeLevel ;
+    rdfs:label "O-OM-3" ;
+    dcterms:description "Active Monitoring and Response" ;
+    dcterms:identifier "2a059c7d07c34b9897e49e6295501608" ;
+    skos:altLabel "O-OM-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 .
+
+ns1:2a29c1f7d6954785b8d42d637a752f94 a ns1:PracticeLevel ;
+    rdfs:label "G-PC-2" ;
+    dcterms:description "Establish application-specific security and compliance baseline." ;
+    dcterms:identifier "2a29c1f7d6954785b8d42d637a752f94" ;
+    skos:altLabel "G-PC-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 .
+
+ns1:354292b7198b48bb8c4909e0d7e29f68 a ns1:PracticeLevel ;
+    rdfs:label "O-EM-2" ;
+    dcterms:description "Formal process with baselines in place" ;
+    dcterms:identifier "354292b7198b48bb8c4909e0d7e29f68" ;
+    skos:altLabel "O-EM-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 .
+
+ns1:38f3a2f7633c42b98eb160f36a2c0a7b a ns1:PracticeLevel ;
+    rdfs:label "G-EG-1" ;
+    dcterms:description "Offer staff access to resources around the topics of secure development and deployment." ;
+    dcterms:identifier "38f3a2f7633c42b98eb160f36a2c0a7b" ;
+    skos:altLabel "G-EG-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 .
+
+ns1:39bc5d271fae4ea8ba53db7de7b2712c a ns1:PracticeLevel ;
+    rdfs:label "V-AA-1" ;
+    dcterms:description "Review the architecture to ensure baseline mitigations are in place for typical risks." ;
+    dcterms:identifier "39bc5d271fae4ea8ba53db7de7b2712c" ;
+    skos:altLabel "V-AA-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 .
+
+ns1:3d035b6df77f4ee69577c9b4c9d64891 a ns1:PracticeLevel ;
+    rdfs:label "D-SR-1" ;
+    dcterms:description "Consider security explicitly during the software requirements process." ;
+    dcterms:identifier "3d035b6df77f4ee69577c9b4c9d64891" ;
+    skos:altLabel "D-SR-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b .
+
+ns1:3e6e9a2b696e48018830b44fa96f98b5 a ns1:PracticeLevel ;
+    rdfs:label "V-RT-2" ;
+    dcterms:description "Perform implementation review to discover application-specific risks against the security requirements." ;
+    dcterms:identifier "3e6e9a2b696e48018830b44fa96f98b5" ;
+    skos:altLabel "V-RT-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b .
+
+ns1:3e89d1fa6cba4516a3ec446faaab5b84 a ns1:PracticeLevel ;
+    rdfs:label "I-SD-2" ;
+    dcterms:description "Deployment processes include security verification milestones." ;
+    dcterms:identifier "3e89d1fa6cba4516a3ec446faaab5b84" ;
+    skos:altLabel "I-SD-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d .
+
+ns1:41c8e63716c34f1eaf09b8cad70cfbaf a ns1:PracticeLevel ;
+    rdfs:label "D-SA-2" ;
+    dcterms:description "Direct the software design process toward known secure services and secure-by-default designs." ;
+    dcterms:identifier "41c8e63716c34f1eaf09b8cad70cfbaf" ;
+    skos:altLabel "D-SA-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 .
+
+ns1:420074f071fb4ab6b6ee6ef44c4f4f1c a ns1:PracticeLevel ;
+    rdfs:label "G-SM-3" ;
+    dcterms:description "Align security efforts with the relevant organizational indicators and asset values." ;
+    dcterms:identifier "420074f071fb4ab6b6ee6ef44c4f4f1c" ;
+    skos:altLabel "G-SM-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e .
+
+ns1:437d447b3f11427592e938dbde53c7da a ns1:PracticeLevel ;
+    rdfs:label "G-PC-1" ;
+    dcterms:description "Identify and document governance and compliance drivers relevant to the organization." ;
+    dcterms:identifier "437d447b3f11427592e938dbde53c7da" ;
+    skos:altLabel "G-PC-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 .
+
+ns1:439406325e6645519c149da3e05a7d9d a ns1:PracticeLevel ;
+    rdfs:label "O-IM-2" ;
+    dcterms:description "Formal incident management process in place" ;
+    dcterms:identifier "439406325e6645519c149da3e05a7d9d" ;
+    skos:altLabel "O-IM-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee .
+
+ns1:46f16450b23d4c29a5cf19b056c2636e a ns1:PracticeLevel ;
+    rdfs:label "I-SB-2" ;
+    dcterms:description "Build process is optimized and fully integrated into the workflow." ;
+    dcterms:identifier "46f16450b23d4c29a5cf19b056c2636e" ;
+    skos:altLabel "I-SB-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 .
+
+ns1:4e54705272fa4f1f9977b1f9011f585d a ns1:PracticeLevel ;
+    rdfs:label "G-SM-1" ;
+    dcterms:description "Identify objectives and means of measuring effectiveness of the security program." ;
+    dcterms:identifier "4e54705272fa4f1f9977b1f9011f585d" ;
+    skos:altLabel "G-SM-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e .
+
+ns1:5015427608de428cba3c324772fb4191 a ns1:PracticeLevel ;
+    rdfs:label "I-SD-1" ;
+    dcterms:description "Deployment processes are fully documented." ;
+    dcterms:identifier "5015427608de428cba3c324772fb4191" ;
+    skos:altLabel "I-SD-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d .
+
+ns1:561e85a7fb114b1d976acce95d0b41ee a ns1:PracticeLevel ;
+    rdfs:label "G-SM-2" ;
+    dcterms:description "Establish a unified strategic roadmap for software security within the organization." ;
+    dcterms:identifier "561e85a7fb114b1d976acce95d0b41ee" ;
+    skos:altLabel "G-SM-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e .
+
+ns1:5a25ae9bc9134d6387128ea925c81845 a ns1:PracticeLevel ;
+    rdfs:label "I-DM-3" ;
+    dcterms:description "Defect tracking across multiple components is used to help reduce the number of new defects." ;
+    dcterms:identifier "5a25ae9bc9134d6387128ea925c81845" ;
+    skos:altLabel "I-DM-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 .
+
+ns1:61ae1e4268b24d7986805658c89b5e54 a ns1:PracticeLevel ;
+    rdfs:label "G-PC-3" ;
+    dcterms:description "Measure adherence to policies, standards, and 3rd-party requirements." ;
+    dcterms:identifier "61ae1e4268b24d7986805658c89b5e54" ;
+    skos:altLabel "G-PC-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 .
+
+ns1:6291462e1894467d807b913ef7da4beb a ns1:PracticeLevel ;
+    rdfs:label "V-ST-2" ;
+    dcterms:description "Make security testing during development more complete and efficient through automation complemented with regular manual security penetration tests." ;
+    dcterms:identifier "6291462e1894467d807b913ef7da4beb" ;
+    skos:altLabel "V-ST-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 .
+
+ns1:67fcd33f84364ef68fb88aba77de1a63 a ns1:PracticeLevel ;
+    rdfs:label "V-AA-2" ;
+    dcterms:description "Review the complete provision of security mechanisms in the architecture." ;
+    dcterms:identifier "67fcd33f84364ef68fb88aba77de1a63" ;
+    skos:altLabel "V-AA-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 .
+
+ns1:6fe1973911bf4e54b018da10a5aa80a1 a ns1:PracticeLevel ;
+    rdfs:label "O-IM-3" ;
+    dcterms:description "Mature incident management" ;
+    dcterms:identifier "6fe1973911bf4e54b018da10a5aa80a1" ;
+    skos:altLabel "O-IM-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee .
+
+ns1:76f8a2e68065467ba9bd2b5ac625490b a ns1:PracticeLevel ;
+    rdfs:label "O-OM-2" ;
+    dcterms:description "Managed, Responsive Processes" ;
+    dcterms:identifier "76f8a2e68065467ba9bd2b5ac625490b" ;
+    skos:altLabel "O-OM-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 .
+
+ns1:812abdd0a2b54366a497919f8463911a a ns1:PracticeLevel ;
+    rdfs:label "V-RT-3" ;
+    dcterms:description "Maintain the application security level after bug fixes, changes or during maintenance." ;
+    dcterms:identifier "812abdd0a2b54366a497919f8463911a" ;
+    skos:altLabel "V-RT-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b .
+
+ns1:817dd6acaf85496aa005393e0e6c3e70 a ns1:PracticeLevel ;
+    rdfs:label "O-IM-1" ;
+    dcterms:description "Best-effort incident detection and handling" ;
+    dcterms:identifier "817dd6acaf85496aa005393e0e6c3e70" ;
+    skos:altLabel "O-IM-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee .
+
+ns1:83ea8aaab3384b41b785107613ee4d86 a ns1:PracticeLevel ;
+    rdfs:label "V-AA-3" ;
+    dcterms:description "Review the architecture effectiveness and feedback results to improve the security architecture." ;
+    dcterms:identifier "83ea8aaab3384b41b785107613ee4d86" ;
+    skos:altLabel "V-AA-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 .
+
+ns1:8cb942eff46d41f38e6edc11849744a6 a ns1:PracticeLevel ;
+    rdfs:label "O-EM-1" ;
+    dcterms:description "Best-effort patching and hardening" ;
+    dcterms:identifier "8cb942eff46d41f38e6edc11849744a6" ;
+    skos:altLabel "O-EM-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 .
+
+ns1:97a46a074fe849a1af2c2d2d3dd09ba5 a ns1:PracticeLevel ;
+    rdfs:label "I-DM-1" ;
+    dcterms:description "All defects are tracked within each project." ;
+    dcterms:identifier "97a46a074fe849a1af2c2d2d3dd09ba5" ;
+    skos:altLabel "I-DM-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 .
+
+ns1:9d1e469966124c0fa80d1bc2fc223a0a a ns1:PracticeLevel ;
+    rdfs:label "D-SA-3" ;
+    dcterms:description "Formally control the software design process and validate utilization of secure components." ;
+    dcterms:identifier "9d1e469966124c0fa80d1bc2fc223a0a" ;
+    skos:altLabel "D-SA-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 .
+
+ns1:a11b78917dec4cfdad983cf6d1d17b61 a ns1:PracticeLevel ;
+    rdfs:label "D-SA-1" ;
+    dcterms:description "Insert consideration of proactive security guidance into the software design process." ;
+    dcterms:identifier "a11b78917dec4cfdad983cf6d1d17b61" ;
+    skos:altLabel "D-SA-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 .
+
+ns1:a3d4045d5c0c4bd4a875784759539f0c a ns1:PracticeLevel ;
+    rdfs:label "D-TA-1" ;
+    dcterms:description "Best-effort identification of high-level threats to the organization and individual projects." ;
+    dcterms:identifier "a3d4045d5c0c4bd4a875784759539f0c" ;
+    skos:altLabel "D-TA-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac .
+
+ns1:b29ab542cc674901a19cf5f3c0c4be18 a ns1:PracticeLevel ;
+    rdfs:label "I-SB-1" ;
+    dcterms:description "Build process is repeatable and consistent." ;
+    dcterms:identifier "b29ab542cc674901a19cf5f3c0c4be18" ;
+    skos:altLabel "I-SB-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 .
+
+ns1:b55c7a41eba747678a65651f5ccacaf2 a ns1:PracticeLevel ;
+    rdfs:label "I-DM-2" ;
+    dcterms:description "Defect tracking used to influence the deployment process." ;
+    dcterms:identifier "b55c7a41eba747678a65651f5ccacaf2" ;
+    skos:altLabel "I-DM-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 .
+
+ns1:d0a99f3db27e48aa9b2d6b58a9040f49 a ns1:PracticeLevel ;
+    rdfs:label "O-OM-1" ;
+    dcterms:description "Foundational Practices" ;
+    dcterms:identifier "d0a99f3db27e48aa9b2d6b58a9040f49" ;
+    skos:altLabel "O-OM-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 .
+
+ns1:d6cefe3e63d149299fb088010c24778b a ns1:PracticeLevel ;
+    rdfs:label "V-ST-1" ;
+    dcterms:description "Perform security testing (both manual and tool based) to discover security defects." ;
+    dcterms:identifier "d6cefe3e63d149299fb088010c24778b" ;
+    skos:altLabel "V-ST-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 .
+
+ns1:df5a0be1889a4b06835193892803dde5 a ns1:PracticeLevel ;
+    rdfs:label "V-RT-1" ;
+    dcterms:description "Opportunistically find basic vulnerabilities and other security issues." ;
+    dcterms:identifier "df5a0be1889a4b06835193892803dde5" ;
+    skos:altLabel "V-RT-1" ;
+    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
+    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b .
+
+ns1:e3cf1d3c27b74262b9f842f27ca86333 a ns1:PracticeLevel ;
+    rdfs:label "G-EG-3" ;
+    dcterms:description "Develop in-house training programs facilitated by developers across different teams." ;
+    dcterms:identifier "e3cf1d3c27b74262b9f842f27ca86333" ;
+    skos:altLabel "G-EG-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 .
+
+ns1:e5b6dc4f907c4986b8ba7923303cd665 a ns1:PracticeLevel ;
+    rdfs:label "D-TA-2" ;
+    dcterms:description "Standardization and enterprise-wide analysis of software-related threats within the organization." ;
+    dcterms:identifier "e5b6dc4f907c4986b8ba7923303cd665" ;
+    skos:altLabel "D-TA-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac .
+
+ns1:e8de5ea176cc455bba89f0e2d1ea1f16 a ns1:PracticeLevel ;
+    rdfs:label "G-EG-2" ;
+    dcterms:description "Educate all personnel in the software lifecycle with technology and role-specific guidance on secure development." ;
+    dcterms:identifier "e8de5ea176cc455bba89f0e2d1ea1f16" ;
+    skos:altLabel "G-EG-2" ;
+    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
+    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 .
+
+ns1:eac3184f8e2343b8b29047d023376da5 a ns1:PracticeLevel ;
+    rdfs:label "V-ST-3" ;
+    dcterms:description "Embed security testing as part of the development and deployment processes." ;
+    dcterms:identifier "eac3184f8e2343b8b29047d023376da5" ;
+    skos:altLabel "V-ST-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 .
+
+ns1:f8b6eebc0662477f9286aa4f6068e364 a ns1:PracticeLevel ;
+    rdfs:label "D-SR-3" ;
+    dcterms:description "Mandate security requirements process for all software projects and third-party dependencies." ;
+    dcterms:identifier "f8b6eebc0662477f9286aa4f6068e364" ;
+    skos:altLabel "D-SR-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b .
+
+ns1:fc5eb251c6ee4f3db04eb01b62d380ba a ns1:PracticeLevel ;
+    rdfs:label "I-SD-3" ;
+    dcterms:description "Deployment process is fully automated and incorporates automated verification of all critical milestones." ;
+    dcterms:identifier "fc5eb251c6ee4f3db04eb01b62d380ba" ;
+    skos:altLabel "I-SD-3" ;
+    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
+    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d .

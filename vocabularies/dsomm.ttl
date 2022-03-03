@@ -1,0 +1,666 @@
+@prefix ns1: <https://github.com/wurstbrot/DevSecOps-MaturityModel/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:ApplicationHardening a ns1:SubDimension ;
+    rdfs:label "Application Hardening" ;
+    ns1:dimension ns1:Implementation .
+
+ns1:Applicationtests a ns1:SubDimension ;
+    rdfs:label "Application tests" ;
+    ns1:dimension ns1:TestVerification .
+
+ns1:Build a ns1:SubDimension ;
+    rdfs:label "Build" ;
+    ns1:dimension ns1:BuildDeployment .
+
+ns1:Consolidation a ns1:SubDimension ;
+    rdfs:label "Consolidation" ;
+    ns1:dimension ns1:TestVerification .
+
+ns1:Deployment a ns1:SubDimension ;
+    rdfs:label "Deployment" ;
+    ns1:dimension ns1:BuildDeployment .
+
+ns1:Design a ns1:SubDimension ;
+    rdfs:label "Design" ;
+    ns1:dimension ns1:CultureOrganization .
+
+ns1:Dynamicdepthforapplications a ns1:SubDimension ;
+    rdfs:label "Dynamic depth for applications" ;
+    ns1:dimension ns1:TestVerification .
+
+ns1:Dynamicdepthforinfrastructure a ns1:SubDimension ;
+    rdfs:label "Dynamic depth for infrastructure" ;
+    ns1:dimension ns1:TestVerification .
+
+ns1:EducationGuidance a ns1:SubDimension ;
+    rdfs:label "Education and Guidance" ;
+    ns1:dimension ns1:CultureOrganization .
+
+ns1:InfrastructureHardening a ns1:SubDimension ;
+    rdfs:label "Infrastructure Hardening" ;
+    ns1:dimension ns1:Implementation .
+
+ns1:Logging a ns1:SubDimension ;
+    rdfs:label "Logging" ;
+    ns1:dimension ns1:InformationGathering .
+
+ns1:Monitoring a ns1:SubDimension ;
+    rdfs:label "Monitoring" ;
+    ns1:dimension ns1:InformationGathering .
+
+ns1:PatchManagement a ns1:SubDimension ;
+    rdfs:label "Patch Management" ;
+    ns1:dimension ns1:BuildDeployment .
+
+ns1:Process a ns1:SubDimension ;
+    rdfs:label "Process" ;
+    ns1:dimension ns1:CultureOrganization .
+
+ns1:Staticdepthforapplications a ns1:SubDimension ;
+    rdfs:label "Static depth for applications" ;
+    ns1:dimension ns1:TestVerification .
+
+ns1:Staticdepthforinfrastructure a ns1:SubDimension ;
+    rdfs:label "Static depth for infrastructure" ;
+    ns1:dimension ns1:TestVerification .
+
+ns1:Test-Intensity a ns1:SubDimension ;
+    rdfs:label "Test-Intensity" ;
+    ns1:dimension ns1:TestVerification .
+
+ns1:VersionControl a ns1:SubDimension ;
+    rdfs:label "Version Control" ;
+    ns1:dimension ns1:Implementation .
+
+ns1:a-complete-backup-of a ns1:SubDimension ;
+    rdfs:label "a-complete-backup-of" ;
+    ns1:dimension ns1:implementations .
+
+ns1:a-point-in-time-reco a ns1:SubDimension ;
+    rdfs:label "a-point-in-time-reco" ;
+    ns1:dimension ns1:implementations .
+
+ns1:ajax-spider a ns1:SubDimension ;
+    rdfs:label "ajax-spider" ;
+    ns1:dimension ns1:implementations .
+
+ns1:anchore-io a ns1:SubDimension ;
+    rdfs:label "anchore-io" ;
+    ns1:dimension ns1:implementations .
+
+ns1:ansible a ns1:SubDimension ;
+    rdfs:label "ansible" ;
+    ns1:dimension ns1:implementations .
+
+ns1:appscan-vscode-extension a ns1:SubDimension ;
+    rdfs:label "appscan-vscode-extension" ;
+    ns1:dimension ns1:implementations .
+
+ns1:arachni a ns1:SubDimension ;
+    rdfs:label "arachni" ;
+    ns1:dimension ns1:implementations .
+
+ns1:attack-matrix-cloud a ns1:SubDimension ;
+    rdfs:label "attack-matrix-cloud" ;
+    ns1:dimension ns1:implementations .
+
+ns1:attack-matrix-contai a ns1:SubDimension ;
+    rdfs:label "attack-matrix-contai" ;
+    ns1:dimension ns1:implementations .
+
+ns1:attack-matrix-kubern a ns1:SubDimension ;
+    rdfs:label "attack-matrix-kubern" ;
+    ns1:dimension ns1:implementations .
+
+ns1:authentication a ns1:SubDimension ;
+    rdfs:label "authentication" ;
+    ns1:dimension ns1:implementations .
+
+ns1:azuredevops a ns1:SubDimension ;
+    rdfs:label "azuredevops" ;
+    ns1:dimension ns1:implementations .
+
+ns1:bash a ns1:SubDimension ;
+    rdfs:label "bash" ;
+    ns1:dimension ns1:implementations .
+
+ns1:bdd-mobile-security a ns1:SubDimension ;
+    rdfs:label "bdd-mobile-security" ;
+    ns1:dimension ns1:implementations .
+
+ns1:blue-green-deploymen a ns1:SubDimension ;
+    rdfs:label "blue-green-deploymen" ;
+    ns1:dimension ns1:implementations .
+
+ns1:bridges a ns1:SubDimension ;
+    rdfs:label "bridges" ;
+    ns1:dimension ns1:implementations .
+
+ns1:build-it-break-it-fi a ns1:SubDimension ;
+    rdfs:label "build-it-break-it-fi" ;
+    ns1:dimension ns1:implementations .
+
+ns1:business-friendly-vulnerability-metrics a ns1:SubDimension ;
+    rdfs:label "business-friendly-vulnerability-metrics" ;
+    ns1:dimension ns1:implementations .
+
+ns1:checkmarx-vscode-extension a ns1:SubDimension ;
+    rdfs:label "checkmarx-vscode-extension" ;
+    ns1:dimension ns1:implementations .
+
+ns1:chef a ns1:SubDimension ;
+    rdfs:label "chef" ;
+    ns1:dimension ns1:implementations .
+
+ns1:ci-cd-tools a ns1:SubDimension ;
+    rdfs:label "ci-cd-tools" ;
+    ns1:dimension ns1:implementations .
+
+ns1:cis-docker-bench-for a ns1:SubDimension ;
+    rdfs:label "cis-docker-bench-for" ;
+    ns1:dimension ns1:implementations .
+
+ns1:cis-kubernetes-bench a ns1:SubDimension ;
+    rdfs:label "cis-kubernetes-bench" ;
+    ns1:dimension ns1:implementations .
+
+ns1:clair a ns1:SubDimension ;
+    rdfs:label "clair" ;
+    ns1:dimension ns1:implementations .
+
+ns1:clusterscanner a ns1:SubDimension ;
+    rdfs:label "clusterscanner" ;
+    ns1:dimension ns1:implementations .
+
+ns1:collected a ns1:SubDimension ;
+    rdfs:label "collected" ;
+    ns1:dimension ns1:implementations .
+
+ns1:container-technologi a ns1:SubDimension ;
+    rdfs:label "container-technologi" ;
+    ns1:dimension ns1:implementations .
+
+ns1:crypto a ns1:SubDimension ;
+    rdfs:label "crypto" ;
+    ns1:dimension ns1:implementations .
+
+ns1:curl a ns1:SubDimension ;
+    rdfs:label "curl" ;
+    ns1:dimension ns1:implementations .
+
+ns1:cwe25 a ns1:SubDimension ;
+    rdfs:label "cwe25" ;
+    ns1:dimension ns1:implementations .
+
+ns1:damn-vulnerable-web a ns1:SubDimension ;
+    rdfs:label "damn-vulnerable-web" ;
+    ns1:dimension ns1:implementations .
+
+ns1:dast a ns1:SubDimension ;
+    rdfs:label "dast" ;
+    ns1:dimension ns1:implementations .
+
+ns1:defend-the-core-kubernetes a ns1:SubDimension ;
+    rdfs:label "defend-the-core-kubernetes" ;
+    ns1:dimension ns1:implementations .
+
+ns1:dependabot a ns1:SubDimension ;
+    rdfs:label "dependabot" ;
+    ns1:dimension ns1:implementations .
+
+ns1:deployment-with-kube a ns1:SubDimension ;
+    rdfs:label "deployment-with-kube" ;
+    ns1:dimension ns1:implementations .
+
+ns1:description a ns1:SubDimension ;
+    rdfs:label "description" ;
+    ns1:dimension ns1:_meta .
+
+ns1:directory-service a ns1:SubDimension ;
+    rdfs:label "directory-service" ;
+    ns1:dimension ns1:implementations .
+
+ns1:distroless a ns1:SubDimension ;
+    rdfs:label "distroless" ;
+    ns1:dimension ns1:implementations .
+
+ns1:dive-to-inspect-a-co a ns1:SubDimension ;
+    rdfs:label "dive-to-inspect-a-co" ;
+    ns1:dimension ns1:implementations .
+
+ns1:docker a ns1:SubDimension ;
+    rdfs:label "docker" ;
+    ns1:dimension ns1:implementations .
+
+ns1:docker-content-trust a ns1:SubDimension ;
+    rdfs:label "docker-content-trust" ;
+    ns1:dimension ns1:implementations .
+
+ns1:dockerfile-with-hado a ns1:SubDimension ;
+    rdfs:label "dockerfile-with-hado" ;
+    ns1:dimension ns1:implementations .
+
+ns1:dockerfilelint a ns1:SubDimension ;
+    rdfs:label "dockerfilelint" ;
+    ns1:dimension ns1:implementations .
+
+ns1:don-t-forget-evil-u a ns1:SubDimension ;
+    rdfs:label "don-t-forget-evil-u" ;
+    ns1:dimension ns1:implementations .
+
+ns1:draw-io a ns1:SubDimension ;
+    rdfs:label "draw-io" ;
+    ns1:dimension ns1:implementations .
+
+ns1:elk-stack a ns1:SubDimension ;
+    rdfs:label "elk-stack" ;
+    ns1:dimension ns1:implementations .
+
+ns1:eslint a ns1:SubDimension ;
+    rdfs:label "eslint" ;
+    ns1:dimension ns1:implementations .
+
+ns1:example-all-docker a ns1:SubDimension ;
+    rdfs:label "example-all-docker" ;
+    ns1:dimension ns1:implementations .
+
+ns1:fedora-coreos a ns1:SubDimension ;
+    rdfs:label "fedora-coreos" ;
+    ns1:dimension ns1:implementations .
+
+ns1:findsecuritybugs a ns1:SubDimension ;
+    rdfs:label "findsecuritybugs" ;
+    ns1:dimension ns1:implementations .
+
+ns1:firewalls a ns1:SubDimension ;
+    rdfs:label "firewalls" ;
+    ns1:dimension ns1:implementations .
+
+ns1:fluentd a ns1:SubDimension ;
+    rdfs:label "fluentd" ;
+    ns1:dimension ns1:implementations .
+
+ns1:for-applications-ch a ns1:SubDimension ;
+    rdfs:label "for-applications-ch" ;
+    ns1:dimension ns1:implementations .
+
+ns1:for-example-for-cont a ns1:SubDimension ;
+    rdfs:label "for-example-for-cont" ;
+    ns1:dimension ns1:implementations .
+
+ns1:fortify-vscode-extension a ns1:SubDimension ;
+    rdfs:label "fortify-vscode-extension" ;
+    ns1:dimension ns1:implementations .
+
+ns1:github-policies a ns1:SubDimension ;
+    rdfs:label "github-policies" ;
+    ns1:dimension ns1:implementations .
+
+ns1:gitops a ns1:SubDimension ;
+    rdfs:label "gitops" ;
+    ns1:dimension ns1:implementations .
+
+ns1:go-pillage-registrie a ns1:SubDimension ;
+    rdfs:label "go-pillage-registrie" ;
+    ns1:dimension ns1:implementations .
+
+ns1:htc-hydra a ns1:SubDimension ;
+    rdfs:label "htc-hydra" ;
+    ns1:dimension ns1:implementations .
+
+ns1:http-basic-authentic a ns1:SubDimension ;
+    rdfs:label "http-basic-authentic" ;
+    ns1:dimension ns1:implementations .
+
+ns1:https-cheatsheetse a ns1:SubDimension ;
+    rdfs:label "https-cheatsheetse" ;
+    ns1:dimension ns1:implementations .
+
+ns1:https-github-com-a a ns1:SubDimension ;
+    rdfs:label "https-github-com-a" ;
+    ns1:dimension ns1:implementations .
+
+ns1:https-ht-transpare a ns1:SubDimension ;
+    rdfs:label "https-ht-transpare" ;
+    ns1:dimension ns1:implementations .
+
+ns1:httpunit a ns1:SubDimension ;
+    rdfs:label "httpunit" ;
+    ns1:dimension ns1:implementations .
+
+ns1:icon a ns1:SubDimension ;
+    rdfs:label "icon" ;
+    ns1:dimension ns1:_meta .
+
+ns1:in-toto a ns1:SubDimension ;
+    rdfs:label "in-toto" ;
+    ns1:dimension ns1:implementations .
+
+ns1:involve-security-sme a ns1:SubDimension ;
+    rdfs:label "involve-security-sme" ;
+    ns1:dimension ns1:implementations .
+
+ns1:istio a ns1:SubDimension ;
+    rdfs:label "istio" ;
+    ns1:dimension ns1:implementations .
+
+ns1:jenkins a ns1:SubDimension ;
+    rdfs:label "jenkins" ;
+    ns1:dimension ns1:implementations .
+
+ns1:jenkinsfile a ns1:SubDimension ;
+    rdfs:label "jenkinsfile" ;
+    ns1:dimension ns1:implementations .
+
+ns1:jsprime a ns1:SubDimension ;
+    rdfs:label "jsprime" ;
+    ns1:dimension ns1:implementations .
+
+ns1:junit a ns1:SubDimension ;
+    rdfs:label "junit" ;
+    ns1:dimension ns1:implementations .
+
+ns1:k8spurger a ns1:SubDimension ;
+    rdfs:label "k8spurger" ;
+    ns1:dimension ns1:implementations .
+
+ns1:karma a ns1:SubDimension ;
+    rdfs:label "karma" ;
+    ns1:dimension ns1:implementations .
+
+ns1:kube-bench a ns1:SubDimension ;
+    rdfs:label "kube-bench" ;
+    ns1:dimension ns1:implementations .
+
+ns1:kube-hunter a ns1:SubDimension ;
+    rdfs:label "kube-hunter" ;
+    ns1:dimension ns1:implementations .
+
+ns1:kubernetes-admission a ns1:SubDimension ;
+    rdfs:label "kubernetes-admission" ;
+    ns1:dimension ns1:implementations .
+
+ns1:kubescape a ns1:SubDimension ;
+    rdfs:label "kubescape" ;
+    ns1:dimension ns1:implementations .
+
+ns1:kubesec a ns1:SubDimension ;
+    rdfs:label "kubesec" ;
+    ns1:dimension ns1:implementations .
+
+ns1:label a ns1:SubDimension ;
+    rdfs:label "label" ;
+    ns1:dimension ns1:_meta .
+
+ns1:logparser-jenkins-pl a ns1:SubDimension ;
+    rdfs:label "logparser-jenkins-pl" ;
+    ns1:dimension ns1:implementations .
+
+ns1:logstash a ns1:SubDimension ;
+    rdfs:label "logstash" ;
+    ns1:dimension ns1:implementations .
+
+ns1:managing-secrets a ns1:SubDimension ;
+    rdfs:label "managing-secrets" ;
+    ns1:dimension ns1:implementations .
+
+ns1:miro-or-any-other-c a ns1:SubDimension ;
+    rdfs:label "miro-or-any-other-c" ;
+    ns1:dimension ns1:implementations .
+
+ns1:motivate-people a ns1:SubDimension ;
+    rdfs:label "motivate-people" ;
+    ns1:dimension ns1:implementations .
+
+ns1:netassert a ns1:SubDimension ;
+    rdfs:label "netassert" ;
+    ns1:dimension ns1:implementations .
+
+ns1:nmap a ns1:SubDimension ;
+    rdfs:label "nmap" ;
+    ns1:dimension ns1:implementations .
+
+ns1:npm-audit a ns1:SubDimension ;
+    rdfs:label "npm-audit" ;
+    ns1:dimension ns1:implementations .
+
+ns1:open-policy-agent a ns1:SubDimension ;
+    rdfs:label "open-policy-agent" ;
+    ns1:dimension ns1:implementations .
+
+ns1:openapi a ns1:SubDimension ;
+    rdfs:label "openapi" ;
+    ns1:dimension ns1:implementations .
+
+ns1:openscap a ns1:SubDimension ;
+    rdfs:label "openscap" ;
+    ns1:dimension ns1:implementations .
+
+ns1:openvas a ns1:SubDimension ;
+    rdfs:label "openvas" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-amass a ns1:SubDimension ;
+    rdfs:label "owasp-amass" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-asvs a ns1:SubDimension ;
+    rdfs:label "owasp-asvs" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-cheatsheet-ser a ns1:SubDimension ;
+    rdfs:label "owasp-cheatsheet-ser" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-code-pulse a ns1:SubDimension ;
+    rdfs:label "owasp-code-pulse" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-defect-dojo a ns1:SubDimension ;
+    rdfs:label "owasp-defect-dojo" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-defectdojo a ns1:SubDimension ;
+    rdfs:label "owasp-defectdojo" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-dependency-che a ns1:SubDimension ;
+    rdfs:label "owasp-dependency-che" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-juice-shop a ns1:SubDimension ;
+    rdfs:label "owasp-juice-shop" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-juiceshop a ns1:SubDimension ;
+    rdfs:label "owasp-juiceshop" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-logging-cheats a ns1:SubDimension ;
+    rdfs:label "owasp-logging-cheats" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-masvs a ns1:SubDimension ;
+    rdfs:label "owasp-masvs" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-samm a ns1:SubDimension ;
+    rdfs:label "owasp-samm" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-securecodebox a ns1:SubDimension ;
+    rdfs:label "owasp-securecodebox" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-security-champ a ns1:SubDimension ;
+    rdfs:label "owasp-security-champ" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-top-10-maturit a ns1:SubDimension ;
+    rdfs:label "owasp-top-10-maturit" ;
+    ns1:dimension ns1:implementations .
+
+ns1:owasp-zap a ns1:SubDimension ;
+    rdfs:label "owasp-zap" ;
+    ns1:dimension ns1:implementations .
+
+ns1:plugins a ns1:SubDimension ;
+    rdfs:label "plugins" ;
+    ns1:dimension ns1:implementations .
+
+ns1:pmd a ns1:SubDimension ;
+    rdfs:label "pmd" ;
+    ns1:dimension ns1:implementations .
+
+ns1:pre-commit-microsoft a ns1:SubDimension ;
+    rdfs:label "pre-commit-microsoft" ;
+    ns1:dimension ns1:implementations .
+
+ns1:pre-commit-synopsis a ns1:SubDimension ;
+    rdfs:label "pre-commit-synopsis" ;
+    ns1:dimension ns1:implementations .
+
+ns1:prometheus a ns1:SubDimension ;
+    rdfs:label "prometheus" ;
+    ns1:dimension ns1:implementations .
+
+ns1:puppet a ns1:SubDimension ;
+    rdfs:label "puppet" ;
+    ns1:dimension ns1:implementations .
+
+ns1:purify a ns1:SubDimension ;
+    rdfs:label "purify" ;
+    ns1:dimension ns1:implementations .
+
+ns1:registries-like-quay a ns1:SubDimension ;
+    rdfs:label "registries-like-quay" ;
+    ns1:dimension ns1:implementations .
+
+ns1:remove-direct-access a ns1:SubDimension ;
+    rdfs:label "remove-direct-access" ;
+    ns1:dimension ns1:implementations .
+
+ns1:retire-js a ns1:SubDimension ;
+    rdfs:label "retire-js" ;
+    ns1:dimension ns1:implementations .
+
+ns1:rolling-update a ns1:SubDimension ;
+    rdfs:label "rolling-update" ;
+    ns1:dimension ns1:implementations .
+
+ns1:rsyslog a ns1:SubDimension ;
+    rdfs:label "rsyslog" ;
+    ns1:dimension ns1:implementations .
+
+ns1:sample-concept-1 a ns1:SubDimension ;
+    rdfs:label "sample-concept-1" ;
+    ns1:dimension ns1:implementations .
+
+ns1:sast a ns1:SubDimension ;
+    rdfs:label "sast" ;
+    ns1:dimension ns1:implementations .
+
+ns1:seccomp a ns1:SubDimension ;
+    rdfs:label "seccomp" ;
+    ns1:dimension ns1:implementations .
+
+ns1:see-other-actions-e a ns1:SubDimension ;
+    rdfs:label "see-other-actions-e" ;
+    ns1:dimension ns1:implementations .
+
+ns1:sigmahq a ns1:SubDimension ;
+    rdfs:label "sigmahq" ;
+    ns1:dimension ns1:implementations .
+
+ns1:smartcard a ns1:SubDimension ;
+    rdfs:label "smartcard" ;
+    ns1:dimension ns1:implementations .
+
+ns1:sms a ns1:SubDimension ;
+    rdfs:label "sms" ;
+    ns1:dimension ns1:implementations .
+
+ns1:sonarqube a ns1:SubDimension ;
+    rdfs:label "sonarqube" ;
+    ns1:dimension ns1:implementations .
+
+ns1:strace a ns1:SubDimension ;
+    rdfs:label "strace" ;
+    ns1:dimension ns1:implementations .
+
+ns1:stylecop a ns1:SubDimension ;
+    rdfs:label "stylecop" ;
+    ns1:dimension ns1:implementations .
+
+ns1:threagile a ns1:SubDimension ;
+    rdfs:label "threagile" ;
+    ns1:dimension ns1:implementations .
+
+ns1:threat-matrix-for-storage a ns1:SubDimension ;
+    rdfs:label "threat-matrix-for-storage" ;
+    ns1:dimension ns1:implementations .
+
+ns1:threat-modeling-play a ns1:SubDimension ;
+    rdfs:label "threat-modeling-play" ;
+    ns1:dimension ns1:implementations .
+
+ns1:tools a ns1:SubDimension ;
+    rdfs:label "tools" ;
+    ns1:dimension ns1:_yaml_references .
+
+ns1:totp a ns1:SubDimension ;
+    rdfs:label "totp" ;
+    ns1:dimension ns1:implementations .
+
+ns1:trufflehog a ns1:SubDimension ;
+    rdfs:label "trufflehog" ;
+    ns1:dimension ns1:implementations .
+
+ns1:vpn a ns1:SubDimension ;
+    rdfs:label "vpn" ;
+    ns1:dimension ns1:implementations .
+
+ns1:vuls a ns1:SubDimension ;
+    rdfs:label "vuls" ;
+    ns1:dimension ns1:implementations .
+
+ns1:webserver a ns1:SubDimension ;
+    rdfs:label "webserver" ;
+    ns1:dimension ns1:implementations .
+
+ns1:whiteboard a ns1:SubDimension ;
+    rdfs:label "whiteboard" ;
+    ns1:dimension ns1:implementations .
+
+ns1:yubikey a ns1:SubDimension ;
+    rdfs:label "yubikey" ;
+    ns1:dimension ns1:implementations .
+
+ns1:zest a ns1:SubDimension ;
+    rdfs:label "zest" ;
+    ns1:dimension ns1:implementations .
+
+ns1:_yaml_references a ns1:Dimension ;
+    rdfs:label "_yaml_references" .
+
+ns1:InformationGathering a ns1:Dimension ;
+    rdfs:label "Information Gathering" .
+
+ns1:BuildDeployment a ns1:Dimension ;
+    rdfs:label "Build and Deployment" .
+
+ns1:CultureOrganization a ns1:Dimension ;
+    rdfs:label "Culture and Organization" .
+
+ns1:Implementation a ns1:Dimension ;
+    rdfs:label "Implementation" .
+
+ns1:_meta a ns1:Dimension ;
+    rdfs:label "_meta" .
+
+ns1:TestVerification a ns1:Dimension ;
+    rdfs:label "Test and Verification" .
+
+ns1:implementations a ns1:Dimension ;
+    rdfs:label "implementations" .
