@@ -1,0 +1,215 @@
+#
+# Mapping iso 27001
+#
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://owaspsamm.org/model/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix iso: <http://par-tec.it/onto/iso/231/2017/iso27001/> .
+@prefix iso27002_2013: <http://par-tec.it/onto/iso/27002/2013/> .
+@prefix control: <http://par-tec.it/onto/iso/27001/control/> .
+@prefix controlType: <http://par-tec.it/onto/iso/27001/control-type/> .
+@prefix category: <http://par-tec.it/onto/iso/27001/category/> .
+
+iso: a owl:Ontology ;
+    dcterms:creator <mailto:robipolli@gmail.com> ;
+    dcterms:description "ISO27001 Controls Ontology" ;
+    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> .
+
+.
+iso:Control a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Control" ;
+    rdfs:comment "Controls are the basic building blocks of the ISO 27001 standard." .
+.
+
+iso:ControlCategory a owl:Class;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Control Category" ;
+    rdfs:comment "Control categories are the basic building blocks of the ISO 27001 standard."
+.
+iso:ControlType a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Control Type" ;
+    rdfs:comment "Control types are the different types of controls that can be used in the ISO 27001 standard." .
+.
+
+iso:hasControlType a owl:ObjectProperty ;
+    rdfs:label "hasControlType" ;
+    rdfs:comment "The type of the control." ;
+    rdfs:domain iso:Control ;
+    rdfs:range controlType:ControlType .
+
+iso:hasControlCategory a owl:ObjectProperty ;
+    rdfs:label "hasControlCategory" ;
+    rdfs:comment "The category of the control." ;
+    rdfs:domain iso:Control ;
+    rdfs:range category:ControlCategory .
+
+iso:Preventive a iso:ControlType;
+    rdfs:label "Preventive" ;
+    rdfs:comment "Preventive controls are controls that prevent the occurrence of a risk." .
+.
+iso:Detective a iso:ControlType;
+    rdfs:label "Detective" ;
+    rdfs:comment "Detective controls are controls that detect the occurrence of a risk." .
+.
+iso:Corrective a iso:ControlType;
+    rdfs:label "Corrective" ;
+    rdfs:comment "Corrective controls are controls that correct a risk." .
+.
+
+iso:hasInformationSecurityProperty a owl:ObjectProperty ;
+    rdfs:label "hasInformationSecurityProperty" ;
+    rdfs:comment "The information security property of the control." ;
+    rdfs:domain iso:Control ;
+    rdfs:range iso:InformationSecurityProperty .
+
+iso:InformationSecurityProperty a owl:Class;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Information Security Properties" ;
+    rdfs:comment "Information security properties are the different properties that can be used in the ISO 27001 standard." .
+.
+
+iso:Confidentiality a iso:InformationSecurityProperty;
+    rdfs:label "Confidentiality" ;
+    rdfs:comment "Confidentiality properties are properties that protect the confidentiality of information."
+    .
+iso:Integrity a iso:InformationSecurityProperty;
+    rdfs:label "Integrity" ;
+    rdfs:comment "Integrity properties are properties that protect the integrity of information."
+    .
+iso:Availability a iso:InformationSecurityProperty;
+    rdfs:label "Availability" ;
+    rdfs:comment "Availability properties are properties that protect the availability of information."
+    .
+
+iso:CybersecurityConcepts a owl:Class;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Cybersecurity Concepts" ;
+    rdfs:comment "Cybersecurity concepts are the different concepts that can be used in the ISO 27001 standard."
+    .
+
+iso:Identify a iso:CybersecurityConcepts;
+    rdfs:label "Identify" ;
+    rdfs:comment "Identify concepts are concepts that identify information."
+    .
+iso:Protect a iso:CybersecurityConcepts;
+    rdfs:label "Protect" ;
+    rdfs:comment "Protect concepts are concepts that protect information."
+    .
+iso:Detect a iso:CybersecurityConcepts;
+    rdfs:label "Detect" ;
+    rdfs:comment "Detect concepts are concepts that detect information."
+    .
+iso:Respond a iso:CybersecurityConcepts;
+    rdfs:label "Respond" ;
+    rdfs:comment "Respond concepts are concepts that respond to information."
+    .
+iso:Recover a iso:CybersecurityConcepts;
+    rdfs:label "Recover" ;
+    rdfs:comment "Recover concepts are concepts that recover information."
+    .
+
+iso:OperationalCapability a owl:Class;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Operational Capabilities" ;
+    rdfs:comment "Operational capabilities are the different capabilities that can be used in the ISO 27001 standard."
+    .
+
+iso:Governance a iso:OperationalCapability;
+    rdfs:label "Governance" ;
+    rdfs:comment "Governance capabilities are capabilities that govern the operation of information systems."
+    .
+iso:AssetManagement a iso:OperationalCapability;
+    rdfs:label "Asset Management" ;
+    rdfs:comment "Asset management capabilities are capabilities that manage information assets."
+    .
+iso:InformationProtection a iso:OperationalCapability;
+    rdfs:label "Information Protection" ;
+    rdfs:comment "Information protection capabilities are capabilities that protect information."
+    .
+iso:HRSecurity a iso:OperationalCapability;
+    rdfs:label "Human Resources Security" ;
+    rdfs:comment "Human resources security capabilities are capabilities that protect human resources."
+    .
+iso:PhysicalSecurity a iso:OperationalCapability;
+    rdfs:label "Physical Security" ;
+    rdfs:comment "Physical security capabilities are capabilities that protect physical assets."
+    .
+iso:SystemNetworkSecurity a iso:OperationalCapability;
+    rdfs:label "System Network Security" ;
+    rdfs:comment "System network security capabilities are capabilities that protect system network assets."
+    .
+iso:ApplicationSecurity a iso:OperationalCapability;
+    rdfs:label "Application Security" ;
+    rdfs:comment "Application security capabilities are capabilities that protect applications."
+    .
+iso:SecureConfiguration a iso:OperationalCapability;
+    rdfs:label "Secure Configuration" ;
+    rdfs:comment "Secure configuration capabilities are capabilities that secure configuration."
+    .
+iso:IAM a iso:OperationalCapability;
+    rdfs:label "Identity and Access Management" ;
+    rdfs:comment "Identity and access management capabilities are capabilities that manage identities and access."
+    .
+iso:ThreatManagement a iso:OperationalCapability;
+    rdfs:label "Threat and Vulnerability Management" ;
+    rdfs:comment "Threat and Vulnerability management capabilities are capabilities that manage threats."
+    .
+iso:Continuity a iso:OperationalCapability;
+    rdfs:label "Continuity" ;
+    rdfs:comment "Continuity capabilities are capabilities that manage continuity."
+    .
+iso:SupplierSecurity a iso:OperationalCapability;
+    rdfs:label "Supplier and Relationship Security" ;
+    rdfs:comment "Supplier security capabilities are capabilities that manage supplier assets."
+    .
+iso:Compliance a iso:OperationalCapability;
+    rdfs:label "Legal andCompliance" ;
+    rdfs:comment "Compliance capabilities are capabilities that manage compliance."
+    .
+iso:EventManangement a iso:OperationalCapability;
+    rdfs:label "Event Management and Information" ;
+    rdfs:comment "Event management capabilities are capabilities that manage events."
+    .
+
+iso:SecurityDomain a owl:Class;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Security Domains" ;
+    rdfs:comment "Security domains are the different domains that can be used in the ISO 27001 standard."
+    .
+iso:Governance a iso:SecurityDomain;
+    rdfs:label "Governance and Ecosystem" ;
+    rdfs:comment "Governance and Ecosystem domain are domains that govern the operation of information systems."
+    .
+iso:Protection a iso:SecurityDomain;
+    rdfs:label "Protection and Risk" ;
+    rdfs:comment "Protection and Risk domain are domains that protect information."
+    .
+iso:Defence a iso:SecurityDomain ;
+    rdfs:label "Defence and Security" ;
+    rdfs:comment "Defence and Security domain are domains that protect information."
+    .
+iso:Resilience a iso:SecurityDomain ;
+    rdfs:label "Resilience and Recovery" ;
+    rdfs:comment "Resilience and Recovery domain are domains that manage resilience."
+    .
+
+control:5.1 a iso:Control ;
+  iso:hasCategory  category:5;
+    dcterms:identifier "5.1" ;
+    rdfs:label "Policies for information security" ;
+    dcterms:description "Information security policy and topic-specific policies should be defined, approved by management,
+published, communicated to and acknowledged by relevant personnel and relevant interested parties,
+and reviewed at planned intervals and if significant changes occur." ;
+    iso:purpose "To ensure continuing suitability, adequacy, effectiveness of management direction and support for
+information security in accordance with business requirements, legal, statutory, regulatory and
+contractual requirements." ;
+    rdfs:seeAlso iso27002_2013:05.1.1, iso27002_2013:05.1.2 ;
+    control:hasType
+.

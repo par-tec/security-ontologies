@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://par-tec.it/onto/iso/27001/latest/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:control-5.1 a ns1:Control ;
+    rdfs:label 5.1e+00 ;
+    ns1:controlCategory ns1:5 ;
+    ns1:correspondsTo ns1:control-05.1.1,
+        ns1:control-05.1.2 ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    dcterms:description """Information security policy and topic-specific policies should be defined, approved by management,
+published, communicated to and acknowledged by relevant personnel and relevant interested parties,
+and reviewed at planned intervals and if significant changes occur.""",
+        "None",
+        """To ensure continuing suitability, adequacy, effectiveness of management direction and support for
+information security in accordance with business requirements, legal, statutory, regulatory and
+contractual requirements.""" ;
+    dcterms:title "Policies for information security" .
+
+ns1:5 a ns1:ControlCategory ;
+    rdfs:label "Organizational" .
