@@ -1527,12 +1527,17 @@ ns1:hasFunction a owl:ObjectProperty ;
     rdfs:domain ns1:Practice ;
     rdfs:range ns1:BusinessFunction .
 
+ns1:hasLetter a owl:ObjectProperty ;
+    rdfs:domain ns1:Stream ;
+    rdfs:range ns1:StreamLetter .
+
 ns1:hasMaturityLevel a owl:ObjectProperty ;
     rdfs:domain ns1:PracticeLevel ;
     rdfs:range ns1:MaturityLevel .
 
 ns1:hasPractice a owl:ObjectProperty ;
-    rdfs:domain ns1:PracticeLevel ;
+    rdfs:domain ns1:PracticeLevel,
+        ns1:Stream ;
     rdfs:range ns1:Practice .
 
 ns1:hasPracticeLevel a owl:ObjectProperty ;
@@ -1554,6 +1559,8 @@ ns1:hasStream a owl:ObjectProperty ;
 <https://owaspsamm.org/model/maturity/3> a ns1:MaturityLevel ;
     dcterms:identifier "7bbfe31d447e48759ef0f2af25c31b43" ;
     dcat:seeAlso ns1:7bbfe31d447e48759ef0f2af25c31b43 .
+
+ns1:StreamLetter a owl:Class .
 
 ns1:02e602c451d548e8a95433a46fe6b9d8 a ns1:PracticeLevel ;
     rdfs:label "I-SB-3" ;

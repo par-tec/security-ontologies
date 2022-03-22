@@ -39,11 +39,25 @@ services:
     - virtuoso
     environment:
       LODVIEW_SPARQLENDPOINT: "http://virtuoso:8890/sparql"
-      LODVIEW_URISPACE: "https://w3id.org/italia"
+      LODVIEW_URISPACE: "http://d3fend.mitre.org/"
       LODVIEW_PUBLICURLPREFIX: "http://localhost:9891/"
     ports:
     - 9891:8080/tcp
 
+  cors:
+    image: nginx
+    depends_on:
+    - virtuoso
+    volumes:
+      - ./sparql/nginx.conf:/etc/nginx/conf.d/default.conf
+  lodlive:
+    image: lodlive:latest
+    depends_on:
+    - virtuoso
+    volumes:
+      - ./sparql/lodlive.profile.js:/usr/share/nginx/html/js/lodlive.profile.js
+#      - ./sparql/lodlive.core.js:/usr/share/nginx/html/js/lodlive.core.js
+#      - ./sparql/lodlive.app.js:/usr/share/nginx/html/js/lodlive.app.js
   webvowl:
     image: acdhch/webvowl
     depends_on:

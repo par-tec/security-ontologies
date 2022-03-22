@@ -252,6 +252,8 @@ ns1:Practice a owl:Class;
 .
 ns1:MaturityLevel a owl:Class
 .
+ns1:StreamLetter a owl:Class
+.
 ns1:PracticeLevel a owl:Class;
     # hasPractice
     # hasMaturityLevel
@@ -271,6 +273,7 @@ ns1:hasFunction a owl:ObjectProperty;
 ns1:hasPractice a owl:ObjectProperty;
     rdfs:range ns1:Practice;
     rdfs:domain ns1:PracticeLevel;
+    rdfs:domain ns1:Stream;
 .
 ns1:hasMaturityLevel a owl:ObjectProperty;
     rdfs:range ns1:MaturityLevel;
@@ -284,7 +287,10 @@ ns1:hasPracticeLevel a owl:ObjectProperty;
     rdfs:range ns1:PracticeLevel;
     rdfs:domain ns1:Activity;
 .
-
+ns1:hasLetter a owl:ObjectProperty;
+    rdfs:range ns1:StreamLetter;
+    rdfs:domain ns1:Stream;
+.
 
     """, format="text/turtle")
     parse_function(g)
