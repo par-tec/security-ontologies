@@ -1,0 +1,1089 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix enisa: <https://par-tec.it/onto/enisa/threat/2016/data/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pt: <https://par-tec.it/onto/enisa/threat/2016/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+enisa:10 a pt:ThreatDetail ;
+    rdfs:label "Theft of backups" ;
+    dct:description "Stealing media device, on which copies of essential information are kept." ;
+    dct:identifier "10" ;
+    pt:hasTreat enisa:6 .
+
+enisa:101 a pt:ThreatDetail ;
+    rdfs:label "SPAM" ;
+    dct:description "" ;
+    dct:identifier "101" ;
+    pt:hasTreat enisa:100 .
+
+enisa:102 a pt:ThreatDetail ;
+    rdfs:label "Unsolicited infected e-mails" ;
+    dct:description "" ;
+    dct:identifier "102" ;
+    pt:hasTreat enisa:100 .
+
+enisa:104 a pt:ThreatDetail ;
+    rdfs:label "Distributed Denial of network service (DDoS) (network layer attack i.e. Protocol exploitation / Malformed packets / Flooding / Spoofing)" ;
+    dct:description "" ;
+    dct:identifier "104" ;
+    pt:hasTreat enisa:103 .
+
+enisa:105 a pt:ThreatDetail ;
+    rdfs:label "Distributed Denial of application service (DDoS) (application layer attack i.e. Ping of Death / XDoS / WinNuke / HTTP Floods)" ;
+    dct:description "" ;
+    dct:identifier "105" ;
+    pt:hasTreat enisa:103 .
+
+enisa:106 a pt:ThreatDetail ;
+    rdfs:label "Distributed DoS (DDoS) to both network and application services (amplification/reflection methods i.e. NTP/ DNS /…/ BitTorrent)" ;
+    dct:description "" ;
+    dct:identifier "106" ;
+    pt:hasTreat enisa:103 .
+
+enisa:108 a pt:ThreatDetail ;
+    rdfs:label "Search Engine Poisoning" ;
+    dct:description "" ;
+    dct:identifier "108" ;
+    pt:hasTreat enisa:107 .
+
+enisa:109 a pt:ThreatDetail ;
+    rdfs:label "Exploitation of fake trust of social media" ;
+    dct:description "" ;
+    dct:identifier "109" ;
+    pt:hasTreat enisa:107 .
+
+enisa:11 a pt:Threat ;
+    rdfs:label "Information leakage/sharing" ;
+    dct:description "Sharing information with unauthorised entities. Loss of information confidentiality due to intentional human actions." ;
+    dct:identifier "11" ;
+    pt:hasCategory enisa:1 .
+
+enisa:110 a pt:ThreatDetail ;
+    rdfs:label "Worms/ Trojans" ;
+    dct:description "" ;
+    dct:identifier "110" ;
+    pt:hasTreat enisa:107 .
+
+enisa:111 a pt:ThreatDetail ;
+    rdfs:label "Rootkits" ;
+    dct:description "" ;
+    dct:identifier "111" ;
+    pt:hasTreat enisa:107 .
+
+enisa:112 a pt:ThreatDetail ;
+    rdfs:label "Mobile malware" ;
+    dct:description "" ;
+    dct:identifier "112" ;
+    pt:hasTreat enisa:107 .
+
+enisa:115 a pt:ThreatDetail ;
+    rdfs:label "Infected trusted mobile apps" ;
+    dct:description "" ;
+    dct:identifier "115" ;
+    pt:hasTreat enisa:107 .
+
+enisa:116 a pt:ThreatDetail ;
+    rdfs:label "Elevation of privileges" ;
+    dct:description "" ;
+    dct:identifier "116" ;
+    pt:hasTreat enisa:107 .
+
+enisa:117 a pt:ThreatDetail ;
+    rdfs:label "Web application attacks / injection attacks (Code injection: SQL, XSS)" ;
+    dct:description "" ;
+    dct:identifier "117" ;
+    pt:hasTreat enisa:107 .
+
+enisa:118 a pt:ThreatDetail ;
+    rdfs:label "Spyware or deceptive adware" ;
+    dct:description "" ;
+    dct:identifier "118" ;
+    pt:hasTreat enisa:107 .
+
+enisa:119 a pt:ThreatDetail ;
+    rdfs:label "Viruses" ;
+    dct:description "" ;
+    dct:identifier "119" ;
+    pt:hasTreat enisa:107 .
+
+enisa:12 a pt:Threat ;
+    rdfs:label "Unauthorized physical access / Unauthorised entry to premises" ;
+    dct:description "Unapproved access to facility." ;
+    dct:identifier "12" ;
+    pt:hasCategory enisa:1 .
+
+enisa:120 a pt:ThreatDetail ;
+    rdfs:label "Rogue security software/  Rogueware/ Scareware" ;
+    dct:description "" ;
+    dct:identifier "120" ;
+    pt:hasTreat enisa:107 .
+
+enisa:122 a pt:ThreatDetail ;
+    rdfs:label "Exploits/Exploit Kits" ;
+    dct:description "" ;
+    dct:identifier "122" ;
+    pt:hasTreat enisa:107 .
+
+enisa:124 a pt:ThreatDetail ;
+    rdfs:label "Phishing attacks" ;
+    dct:description "" ;
+    dct:identifier "124" ;
+    pt:hasTreat enisa:123 .
+
+enisa:125 a pt:ThreatDetail ;
+    rdfs:label "Spear phishing attacks" ;
+    dct:description "" ;
+    dct:identifier "125" ;
+    pt:hasTreat enisa:123 .
+
+enisa:127 a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting mobile privacy and mobile applications" ;
+    dct:description "" ;
+    dct:identifier "127" ;
+    pt:hasTreat enisa:126 .
+
+enisa:128 a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting web privacy and web applications" ;
+    dct:description "" ;
+    dct:identifier "128" ;
+    pt:hasTreat enisa:126 .
+
+enisa:129 a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting network traffic" ;
+    dct:description "" ;
+    dct:identifier "129" ;
+    pt:hasTreat enisa:126 .
+
+enisa:13 a pt:Threat ;
+    rdfs:label "Coercion, extortion or corruption" ;
+    dct:description "Actions caused by coercion, extortion or corruption" ;
+    dct:identifier "13" ;
+    pt:hasCategory enisa:1 .
+
+enisa:130 a pt:ThreatDetail ;
+    rdfs:label "Leakage affecting cloud computing" ;
+    dct:description "" ;
+    dct:identifier "130" ;
+    pt:hasTreat enisa:126 .
+
+enisa:132 a pt:ThreatDetail ;
+    rdfs:label "Loss of (integrity of) sensitive information" ;
+    dct:description "" ;
+    dct:identifier "132" ;
+    pt:hasTreat enisa:131 .
+
+enisa:133 a pt:ThreatDetail ;
+    rdfs:label "Man in the middle/ Session hijacking " ;
+    dct:description "" ;
+    dct:identifier "133" ;
+    pt:hasTreat enisa:131 .
+
+enisa:134 a pt:ThreatDetail ;
+    rdfs:label "Social Engineering / signed malware (e.g. install fake trust OS updates – signed malware)" ;
+    dct:description "" ;
+    dct:identifier "134" ;
+    pt:hasTreat enisa:131 .
+
+enisa:135 a pt:ThreatDetail ;
+    rdfs:label "Fake SSL certificates" ;
+    dct:description "" ;
+    dct:identifier "135" ;
+    pt:hasTreat enisa:131 .
+
+enisa:137 a pt:ThreatDetail ;
+    rdfs:label "Anonymous proxies" ;
+    dct:description "" ;
+    dct:identifier "137" ;
+    pt:hasTreat enisa:136 .
+
+enisa:138 a pt:ThreatDetail ;
+    rdfs:label "Abuse of computing power of cloud to launch attacks (cybercrime as a service)" ;
+    dct:description "" ;
+    dct:identifier "138" ;
+    pt:hasTreat enisa:136 .
+
+enisa:14 a pt:Threat ;
+    rdfs:label "Damage from the warfare" ;
+    dct:description "Threats of direct impact of warfare activities" ;
+    dct:identifier "14" ;
+    pt:hasCategory enisa:1 .
+
+enisa:140 a pt:ThreatDetail ;
+    rdfs:label "Access of web sites through chains of HTTP Proxies (Obfuscation)" ;
+    dct:description "" ;
+    dct:identifier "140" ;
+    pt:hasTreat enisa:136 .
+
+enisa:141 a pt:ThreatDetail ;
+    rdfs:label "Access to device software" ;
+    dct:description "" ;
+    dct:identifier "141" ;
+    pt:hasTreat enisa:136 .
+
+enisa:142 a pt:ThreatDetail ;
+    rdfs:label "Alternation of software" ;
+    dct:description "unauthorized modifications to code or data, attacking its integrity" ;
+    dct:identifier "142" ;
+    pt:hasTreat enisa:136 .
+
+enisa:143 a pt:ThreatDetail ;
+    rdfs:label "Rogue hardware" ;
+    dct:description "" ;
+    dct:identifier "143" ;
+    pt:hasTreat enisa:136 .
+
+enisa:145 a pt:ThreatDetail ;
+    rdfs:label "Repudiation of actions" ;
+    dct:description "" ;
+    dct:identifier "145" ;
+    pt:hasTreat enisa:144 .
+
+enisa:146 a pt:ThreatDetail ;
+    rdfs:label """Address Space hijacking (IP prefixes)
+Routing table manipulation""" ;
+    dct:description "" ;
+    dct:identifier "146" ;
+    pt:hasTreat enisa:144 .
+
+enisa:147 a pt:ThreatDetail ;
+    rdfs:label "DNS poisoning / DNS spoofing / DNS Manipulations " ;
+    dct:description "" ;
+    dct:identifier "147" ;
+    pt:hasTreat enisa:144 .
+
+enisa:148 a pt:ThreatDetail ;
+    rdfs:label "Falsification of record" ;
+    dct:description "" ;
+    dct:identifier "148" ;
+    pt:hasTreat enisa:144 .
+
+enisa:149 a pt:ThreatDetail ;
+    rdfs:label "AS hijacking" ;
+    dct:description "" ;
+    dct:identifier "149" ;
+    pt:hasTreat enisa:144 .
+
+enisa:15 a pt:Threat ;
+    rdfs:label "Terrorists attack" ;
+    dct:description "Threats of bombing or other actions that counts as \"terrorists attacks\"" ;
+    dct:identifier "15" ;
+    pt:hasCategory enisa:1 .
+
+enisa:150 a pt:ThreatDetail ;
+    rdfs:label "AS manipulation" ;
+    dct:description "" ;
+    dct:identifier "150" ;
+    pt:hasTreat enisa:144 .
+
+enisa:151 a pt:ThreatDetail ;
+    rdfs:label "Falsification of configurations" ;
+    dct:description "" ;
+    dct:identifier "151" ;
+    pt:hasTreat enisa:144 .
+
+enisa:152 a pt:Threat ;
+    rdfs:label "Misuse of audit tools" ;
+    dct:description "Threat of nefarious actions with use of audit tools (discovery security weaknesses in information systems)" ;
+    dct:identifier "152" ;
+    pt:hasCategory enisa:97 .
+
+enisa:153 a pt:Threat ;
+    rdfs:label "Misuse of information/ information systems (including mobile apps)" ;
+    dct:description "Threat of nefarious action due to misuse of information / information systems" ;
+    dct:identifier "153" ;
+    pt:hasCategory enisa:97 .
+
+enisa:155 a pt:ThreatDetail ;
+    rdfs:label "Unauthorized use or administration of devices and systems" ;
+    dct:description "" ;
+    dct:identifier "155" ;
+    pt:hasTreat enisa:154 .
+
+enisa:156 a pt:ThreatDetail ;
+    rdfs:label "Unauthorized use of software" ;
+    dct:description "" ;
+    dct:identifier "156" ;
+    pt:hasTreat enisa:154 .
+
+enisa:157 a pt:ThreatDetail ;
+    rdfs:label "Unauthorized access to the information systems / networks (IMPI Protocol / DNS Register Hijacking)" ;
+    dct:description "" ;
+    dct:identifier "157" ;
+    pt:hasTreat enisa:154 .
+
+enisa:158 a pt:ThreatDetail ;
+    rdfs:label "Network Intrusion" ;
+    dct:description "" ;
+    dct:identifier "158" ;
+    pt:hasTreat enisa:154 .
+
+enisa:159 a pt:ThreatDetail ;
+    rdfs:label "Unauthorized changes of records" ;
+    dct:description "" ;
+    dct:identifier "159" ;
+    pt:hasTreat enisa:154 .
+
+enisa:161 a pt:ThreatDetail ;
+    rdfs:label "Web based attacks (Drive-by download / malicious URLs / Browser based attacks)" ;
+    dct:description "" ;
+    dct:identifier "161" ;
+    pt:hasTreat enisa:160 .
+
+enisa:162 a pt:Threat ;
+    rdfs:label "Compromising confidential information (data breaches)" ;
+    dct:description "" ;
+    dct:identifier "162" ;
+    pt:hasCategory enisa:97 .
+
+enisa:164 a pt:ThreatDetail ;
+    rdfs:label "False rumor and/or a fake warning" ;
+    dct:description "" ;
+    dct:identifier "164" ;
+    pt:hasTreat enisa:163 .
+
+enisa:166 a pt:ThreatDetail ;
+    rdfs:label "Remote Command Execution" ;
+    dct:description "" ;
+    dct:identifier "166" ;
+    pt:hasTreat enisa:165 .
+
+enisa:167 a pt:ThreatDetail ;
+    rdfs:label "Remote Access Tool (RAT)" ;
+    dct:description "" ;
+    dct:identifier "167" ;
+    pt:hasTreat enisa:165 .
+
+enisa:168 a pt:ThreatDetail ;
+    rdfs:label "Botnets / Remote activity " ;
+    dct:description "" ;
+    dct:identifier "168" ;
+    pt:hasTreat enisa:165 .
+
+enisa:17 a pt:Threat ;
+    rdfs:label "Information leakage/sharing due to human error" ;
+    dct:description "" ;
+    dct:identifier "17" ;
+    pt:hasCategory enisa:16 .
+
+enisa:170 a pt:ThreatDetail ;
+    rdfs:label "Mobile malware" ;
+    dct:description "" ;
+    dct:identifier "170" ;
+    pt:hasTreat enisa:169 .
+
+enisa:171 a pt:ThreatDetail ;
+    rdfs:label "Spear phishing attacks" ;
+    dct:description "" ;
+    dct:identifier "171" ;
+    pt:hasTreat enisa:169 .
+
+enisa:172 a pt:ThreatDetail ;
+    rdfs:label "Installation of sophisticated and targeted malware" ;
+    dct:description "" ;
+    dct:identifier "172" ;
+    pt:hasTreat enisa:169 .
+
+enisa:173 a pt:ThreatDetail ;
+    rdfs:label "Watering Hole attacks" ;
+    dct:description "" ;
+    dct:identifier "173" ;
+    pt:hasTreat enisa:169 .
+
+enisa:174 a pt:Threat ;
+    rdfs:label "Failed of bussines process" ;
+    dct:description "" ;
+    dct:identifier "174" ;
+    pt:hasCategory enisa:97 .
+
+enisa:175 a pt:Threat ;
+    rdfs:label "Brute force" ;
+    dct:description "" ;
+    dct:identifier "175" ;
+    pt:hasCategory enisa:97 .
+
+enisa:176 a pt:Threat ;
+    rdfs:label "Abuse of authorizations" ;
+    dct:description "" ;
+    dct:identifier "176" ;
+    pt:hasCategory enisa:97 .
+
+enisa:178 a pt:Threat ;
+    rdfs:label "Violation of laws or regulations / Breach of legislation" ;
+    dct:description "Threat of finacial or legal penatly or lost of trust of customers and collaborators due to violation of law or regulations" ;
+    dct:identifier "178" ;
+    pt:hasCategory enisa:177 .
+
+enisa:180 a pt:ThreatDetail ;
+    rdfs:label "Failure to meet contractual requirements by third party" ;
+    dct:description "" ;
+    dct:identifier "180" ;
+    pt:hasTreat enisa:179 .
+
+enisa:182 a pt:ThreatDetail ;
+    rdfs:label "Illegal usage of File Sharing services" ;
+    dct:description "" ;
+    dct:identifier "182" ;
+    pt:hasTreat enisa:181 .
+
+enisa:183 a pt:Threat ;
+    rdfs:label "Abuse of personal data" ;
+    dct:description "Threat of illegal use personal data" ;
+    dct:identifier "183" ;
+    pt:hasCategory enisa:177 .
+
+enisa:184 a pt:Threat ;
+    rdfs:label "Judiciary decisions/court orders" ;
+    dct:description "" ;
+    dct:identifier "184" ;
+    pt:hasCategory enisa:177 .
+
+enisa:21 a pt:ThreatDetail ;
+    rdfs:label "Leaks of data via Web applications" ;
+    dct:description "Threat of leakage important information using web applications." ;
+    dct:identifier "21" ;
+    pt:hasTreat enisa:19 .
+
+enisa:22 a pt:ThreatDetail ;
+    rdfs:label "Leaks of information transferred by network" ;
+    dct:description "Threat of leakage important information by unsecure network traffic." ;
+    dct:identifier "22" ;
+    pt:hasTreat enisa:19 .
+
+enisa:24 a pt:ThreatDetail ;
+    rdfs:label "Loss of information due to  maintenance errs / operators errors" ;
+    dct:description "Threat of loss of information by incorrectly performed conservation of devices or systems" ;
+    dct:identifier "24" ;
+    pt:hasTreat enisa:23 .
+
+enisa:25 a pt:ThreatDetail ;
+    rdfs:label "Loss of information due to  configuration/ installation error" ;
+    dct:description "Threat of loss of information by errors in installation or system configuration" ;
+    dct:identifier "25" ;
+    pt:hasTreat enisa:23 .
+
+enisa:26 a pt:ThreatDetail ;
+    rdfs:label "Increasing recover time" ;
+    dct:description "Threat of loss of availability of information by errors in use od backup media and increasing information recovery time" ;
+    dct:identifier "26" ;
+    pt:hasTreat enisa:23 .
+
+enisa:27 a pt:ThreatDetail ;
+    rdfs:label "Loss of information due to  user errors" ;
+    dct:description "" ;
+    dct:identifier "27" ;
+    pt:hasTreat enisa:23 .
+
+enisa:28 a pt:Threat ;
+    rdfs:label "Using information from an unreliable source" ;
+    dct:description "Bad decision based on unreliable sources of information or unchecked information." ;
+    dct:identifier "28" ;
+    pt:hasCategory enisa:16 .
+
+enisa:29 a pt:Threat ;
+    rdfs:label "Unintentional change of data in an information system" ;
+    dct:description "Loss of information integrity due to human error (information system user mistake)" ;
+    dct:identifier "29" ;
+    pt:hasCategory enisa:16 .
+
+enisa:3 a pt:ThreatDetail ;
+    rdfs:label "Fraud by employees" ;
+    dct:description "Fraud made by employees or others who are in relation with entities, that have access to knowledge about entities' information and IT Assets" ;
+    dct:identifier "3" ;
+    pt:hasTreat enisa:2 .
+
+enisa:30 a pt:Threat ;
+    rdfs:label "Inadequate design and planning or improperly adaptation" ;
+    dct:description "Threats caused by improperly IT Assets or business processes design (inadequate specifications of IT products, inadequate usability, insecure interfaces, policy/procedure flows, design errors)" ;
+    dct:identifier "30" ;
+    pt:hasCategory enisa:16 .
+
+enisa:32 a pt:ThreatDetail ;
+    rdfs:label "Security failure by third party" ;
+    dct:description "Threats of damage of IT Assets caused by breach security regulation by third party" ;
+    dct:identifier "32" ;
+    pt:hasTreat enisa:31 .
+
+enisa:33 a pt:Threat ;
+    rdfs:label "Damages resulting from penetration testing" ;
+    dct:description "Threats to information systems caused by improperly / inprepare conducting of IT penetration testing" ;
+    dct:identifier "33" ;
+    pt:hasCategory enisa:16 .
+
+enisa:34 a pt:Threat ;
+    rdfs:label "Loss of information in the cloud" ;
+    dct:description "Threats of loosing information or data stored in the cloud" ;
+    dct:identifier "34" ;
+    pt:hasCategory enisa:16 .
+
+enisa:36 a pt:ThreatDetail ;
+    rdfs:label "Loss of integrity of certificates" ;
+    dct:description "Threat of lossing integrity of certificates used for authorisation services" ;
+    dct:identifier "36" ;
+    pt:hasTreat enisa:35 .
+
+enisa:38 a pt:ThreatDetail ;
+    rdfs:label "Loss of devices/ mobile devices" ;
+    dct:description "Threat of loosing mobile devices." ;
+    dct:identifier "38" ;
+    pt:hasTreat enisa:37 .
+
+enisa:39 a pt:ThreatDetail ;
+    rdfs:label "Loss of storage media " ;
+    dct:description "Threat of loosing data-storage medium." ;
+    dct:identifier "39" ;
+    pt:hasTreat enisa:37 .
+
+enisa:4 a pt:Threat ;
+    rdfs:label "Sabotage" ;
+    dct:description "Intentional actions (non-fulfillment or defective fulfillment of personal duties) aimed to cause disruption or damage of IT Assets" ;
+    dct:identifier "4" ;
+    pt:hasCategory enisa:1 .
+
+enisa:40 a pt:ThreatDetail ;
+    rdfs:label "Loss of documentation of IT Infrastructure" ;
+    dct:description "Threat of loosing important documentation." ;
+    dct:identifier "40" ;
+    pt:hasTreat enisa:37 .
+
+enisa:42 a pt:ThreatDetail ;
+    rdfs:label "Infection of removable media" ;
+    dct:description "Threat of loss of important data due to infection of removable media." ;
+    dct:identifier "42" ;
+    pt:hasTreat enisa:41 .
+
+enisa:43 a pt:ThreatDetail ;
+    rdfs:label "Abuse of storage " ;
+    dct:description "Threat of loss of records by improperly/unauthorised use of storage devices" ;
+    dct:identifier "43" ;
+    pt:hasTreat enisa:41 .
+
+enisa:45 a pt:Threat ;
+    rdfs:label "Disaster (natural earthquakes, floods, landslides, tsunamis, heavy rains, heavy snowfalls, heavy winds)" ;
+    dct:description "Large scale and large effects natural disasters" ;
+    dct:identifier "45" ;
+    pt:hasCategory enisa:44 .
+
+enisa:46 a pt:Threat ;
+    rdfs:label "Fire" ;
+    dct:description "Threat of fire " ;
+    dct:identifier "46" ;
+    pt:hasCategory enisa:44 .
+
+enisa:47 a pt:Threat ;
+    rdfs:label "Pollution, dust, corrosion" ;
+    dct:description "Threat of disruption of work of IT systems (hardware) dur to pollution, dust or corrosion (arising from the air)" ;
+    dct:identifier "47" ;
+    pt:hasCategory enisa:44 .
+
+enisa:48 a pt:Threat ;
+    rdfs:label "Thunder stroke" ;
+    dct:description "Threat of damage of IT hardware caused by the thunder strike (the electrical overvoltage)" ;
+    dct:identifier "48" ;
+    pt:hasCategory enisa:44 .
+
+enisa:49 a pt:Threat ;
+    rdfs:label "Water" ;
+    dct:description "Threat of damage of IT hardware caused by the water" ;
+    dct:identifier "49" ;
+    pt:hasCategory enisa:44 .
+
+enisa:5 a pt:Threat ;
+    rdfs:label "Vandalism" ;
+    dct:description "Act of physically damage of IT Assets" ;
+    dct:identifier "5" ;
+    pt:hasCategory enisa:1 .
+
+enisa:50 a pt:Threat ;
+    rdfs:label "Explosion" ;
+    dct:description "" ;
+    dct:identifier "50" ;
+    pt:hasCategory enisa:44 .
+
+enisa:51 a pt:Threat ;
+    rdfs:label "Dangerous radiation leak" ;
+    dct:description "" ;
+    dct:identifier "51" ;
+    pt:hasCategory enisa:44 .
+
+enisa:53 a pt:ThreatDetail ;
+    rdfs:label "Lost of data or accessibility of IT infrastructure in result of extensive humidity" ;
+    dct:description "" ;
+    dct:identifier "53" ;
+    pt:hasTreat enisa:52 .
+
+enisa:54 a pt:ThreatDetail ;
+    rdfs:label "Lost of data or accessibility of IT infrastructure in result of extensive temperature" ;
+    dct:description "" ;
+    dct:identifier "54" ;
+    pt:hasTreat enisa:52 .
+
+enisa:55 a pt:Threat ;
+    rdfs:label "Major events in the environment" ;
+    dct:description "" ;
+    dct:identifier "55" ;
+    pt:hasCategory enisa:44 .
+
+enisa:56 a pt:Threat ;
+    rdfs:label "Threats from space / Electromagnetic storm" ;
+    dct:description "Threats of the negative impact of solar radiation (harmful rays) to a satellites and radio wave communication systems - Electromagnetic storm" ;
+    dct:identifier "56" ;
+    pt:hasCategory enisa:44 .
+
+enisa:57 a pt:Threat ;
+    rdfs:label "Wildlife" ;
+    dct:description "" ;
+    dct:identifier "57" ;
+    pt:hasCategory enisa:44 .
+
+enisa:60 a pt:ThreatDetail ;
+    rdfs:label "Failure of defective data media" ;
+    dct:description "" ;
+    dct:identifier "60" ;
+    pt:hasTreat enisa:59 .
+
+enisa:61 a pt:ThreatDetail ;
+    rdfs:label "Hardware failure" ;
+    dct:description "" ;
+    dct:identifier "61" ;
+    pt:hasTreat enisa:59 .
+
+enisa:62 a pt:ThreatDetail ;
+    rdfs:label "Failure of applications and services" ;
+    dct:description "" ;
+    dct:identifier "62" ;
+    pt:hasTreat enisa:59 .
+
+enisa:63 a pt:ThreatDetail ;
+    rdfs:label "Failure of parts of devices (connectors, plug in)" ;
+    dct:description "" ;
+    dct:identifier "63" ;
+    pt:hasTreat enisa:59 .
+
+enisa:65 a pt:ThreatDetail ;
+    rdfs:label "Failure of cable networks" ;
+    dct:description "" ;
+    dct:identifier "65" ;
+    pt:hasTreat enisa:64 .
+
+enisa:66 a pt:ThreatDetail ;
+    rdfs:label "Failure of wireless networks" ;
+    dct:description "" ;
+    dct:identifier "66" ;
+    pt:hasTreat enisa:64 .
+
+enisa:67 a pt:ThreatDetail ;
+    rdfs:label "Failure of mobile networks" ;
+    dct:description "" ;
+    dct:identifier "67" ;
+    pt:hasTreat enisa:64 .
+
+enisa:7 a pt:ThreatDetail ;
+    rdfs:label "Theft of mobile devices (smartphones/ tablets)" ;
+    dct:description "Taking of another person's property in the form of mobile devices for example smartphones, tablets." ;
+    dct:identifier "7" ;
+    pt:hasTreat enisa:6 .
+
+enisa:70 a pt:ThreatDetail ;
+    rdfs:label "Failure or disruption of the power supply" ;
+    dct:description "" ;
+    dct:identifier "70" ;
+    pt:hasTreat enisa:69 .
+
+enisa:71 a pt:ThreatDetail ;
+    rdfs:label "Failure of cooling infrastructure" ;
+    dct:description "" ;
+    dct:identifier "71" ;
+    pt:hasTreat enisa:69 .
+
+enisa:72 a pt:Threat ;
+    rdfs:label "Failure or disruption of service providers (supply chain)" ;
+    dct:description "Threat of failure or disruption of thire party services required for proper operation of information systems" ;
+    dct:identifier "72" ;
+    pt:hasCategory enisa:58 .
+
+enisa:73 a pt:Threat ;
+    rdfs:label "Malfunction of equipment (devices or systems)" ;
+    dct:description "Threat of malfunction of IT hardware and/or software assets or its parts" ;
+    dct:identifier "73" ;
+    pt:hasCategory enisa:58 .
+
+enisa:76 a pt:ThreatDetail ;
+    rdfs:label "Loss of electricity" ;
+    dct:description "" ;
+    dct:identifier "76" ;
+    pt:hasTreat enisa:75 .
+
+enisa:77 a pt:ThreatDetail ;
+    rdfs:label "Cooling outages" ;
+    dct:description "" ;
+    dct:identifier "77" ;
+    pt:hasTreat enisa:75 .
+
+enisa:78 a pt:Threat ;
+    rdfs:label "Absence of personnel" ;
+    dct:description "Unavailability of key personnel and their competences" ;
+    dct:identifier "78" ;
+    pt:hasCategory enisa:74 .
+
+enisa:79 a pt:Threat ;
+    rdfs:label "Strike" ;
+    dct:description "Unavailability of staff due strike (large scale absence of personnel)" ;
+    dct:identifier "79" ;
+    pt:hasCategory enisa:74 .
+
+enisa:8 a pt:ThreatDetail ;
+    rdfs:label "Theft of fixed hardware " ;
+    dct:description "Taking of another person's hardware property (except mobile devices), which often contain business-sensitive data." ;
+    dct:identifier "8" ;
+    pt:hasTreat enisa:6 .
+
+enisa:80 a pt:Threat ;
+    rdfs:label "Loss of support services" ;
+    dct:description "Unavailability of support services required for proper operation of information system" ;
+    dct:identifier "80" ;
+    pt:hasCategory enisa:74 .
+
+enisa:81 a pt:Threat ;
+    rdfs:label "Internet outage" ;
+    dct:description "Unavailability of the Internet connection" ;
+    dct:identifier "81" ;
+    pt:hasCategory enisa:74 .
+
+enisa:83 a pt:ThreatDetail ;
+    rdfs:label "Outage of cable networks" ;
+    dct:description "" ;
+    dct:identifier "83" ;
+    pt:hasTreat enisa:82 .
+
+enisa:84 a pt:ThreatDetail ;
+    rdfs:label "Outage of wireless networks" ;
+    dct:description "" ;
+    dct:identifier "84" ;
+    pt:hasTreat enisa:82 .
+
+enisa:85 a pt:ThreatDetail ;
+    rdfs:label "Outages of mobile networks" ;
+    dct:description "" ;
+    dct:identifier "85" ;
+    pt:hasTreat enisa:82 .
+
+enisa:87 a pt:Threat ;
+    rdfs:label "War driving" ;
+    dct:description "Threat of locating and possible exploite connection to the wireless network" ;
+    dct:identifier "87" ;
+    pt:hasCategory enisa:86 .
+
+enisa:88 a pt:Threat ;
+    rdfs:label "Intercepting compromising emissions" ;
+    dct:description "Threat of disclosure transmitted information using interception and analysis of compromising emission" ;
+    dct:identifier "88" ;
+    pt:hasCategory enisa:86 .
+
+enisa:9 a pt:ThreatDetail ;
+    rdfs:label "Theft of documents" ;
+    dct:description "Stealing documents of private/company archives, often for the purpose of re-sale or to achieve personal benefits." ;
+    dct:identifier "9" ;
+    pt:hasTreat enisa:6 .
+
+enisa:90 a pt:ThreatDetail ;
+    rdfs:label "Corporate Espionage" ;
+    dct:description "" ;
+    dct:identifier "90" ;
+    pt:hasTreat enisa:89 .
+
+enisa:91 a pt:ThreatDetail ;
+    rdfs:label "Nation state espionage" ;
+    dct:description "" ;
+    dct:identifier "91" ;
+    pt:hasTreat enisa:89 .
+
+enisa:92 a pt:ThreatDetail ;
+    rdfs:label "Information leakage due to unsecured Wi-Fi, rogue access points" ;
+    dct:description "" ;
+    dct:identifier "92" ;
+    pt:hasTreat enisa:89 .
+
+enisa:93 a pt:Threat ;
+    rdfs:label "Interfering radiation" ;
+    dct:description "Threat of failure of IT hardware or transmission connection due to electromagnetic induction or electromagnetic radiation emitted from an another source" ;
+    dct:identifier "93" ;
+    pt:hasCategory enisa:86 .
+
+enisa:94 a pt:Threat ;
+    rdfs:label "Replay of messages" ;
+    dct:description "Threat in which valid data transmission is maliciously or fraudulently repeated or delayed" ;
+    dct:identifier "94" ;
+    pt:hasCategory enisa:86 .
+
+enisa:95 a pt:Threat ;
+    rdfs:label "Network Reconnaissance, Network traffic manipulation and Information gathering" ;
+    dct:description "Threat of identifying information about network to find security weaknesses" ;
+    dct:identifier "95" ;
+    pt:hasCategory enisa:86 .
+
+enisa:96 a pt:Threat ;
+    rdfs:label "Man in the middle/ Session hijacking " ;
+    dct:description "Threats that relay on alters of communication between two parties" ;
+    dct:identifier "96" ;
+    pt:hasCategory enisa:86 .
+
+enisa:99 a pt:ThreatDetail ;
+    rdfs:label "Credentials stealing trojans" ;
+    dct:description "" ;
+    dct:identifier "99" ;
+    pt:hasTreat enisa:98 .
+
+pt:hasCategory a owl:ObjectProperty ;
+    rdfs:label "hasCategory"@en ;
+    rdfs:comment "A threat has a category."@en ;
+    rdfs:domain pt:Threat ;
+    rdfs:range pt:ThreatCategory .
+
+enisa:160 a pt:Threat ;
+    rdfs:label "Unauthorized installation of software" ;
+    dct:description "Threat of unauthorized installation of software" ;
+    dct:identifier "160" ;
+    pt:hasCategory enisa:97 .
+
+enisa:163 a pt:Threat ;
+    rdfs:label "Hoax" ;
+    dct:description "Threat of disruption of work due to False rumor and/or a fake warning" ;
+    dct:identifier "163" ;
+    pt:hasCategory enisa:97 .
+
+enisa:179 a pt:Threat ;
+    rdfs:label "Failure to meet contractual requirements" ;
+    dct:description "Threat of finacial penatly or lost of trust of customers and collaborators due to failure to meet contractual requirements" ;
+    dct:identifier "179" ;
+    pt:hasCategory enisa:177 .
+
+enisa:181 a pt:Threat ;
+    rdfs:label "Unauthorized use of IPR protected resources" ;
+    dct:description "Threat of finacial or legal penatly or lost of trust of customers and collaborators due to improper/illegal use of copyrights material" ;
+    dct:identifier "181" ;
+    pt:hasCategory enisa:177 .
+
+enisa:2 a pt:Threat ;
+    rdfs:label "Fraud" ;
+    dct:description "Fraud made by human" ;
+    dct:identifier "2" ;
+    pt:hasCategory enisa:1 .
+
+enisa:31 a pt:Threat ;
+    rdfs:label "Damage caused by a third party " ;
+    dct:description "Threats of damage of IT Assets caused by third party " ;
+    dct:identifier "31" ;
+    pt:hasCategory enisa:16 .
+
+enisa:35 a pt:Threat ;
+    rdfs:label "Loss of (integrity of) sensitive information" ;
+    dct:description "Threats of loosing information or data (or changing) information classified as sensitive" ;
+    dct:identifier "35" ;
+    pt:hasCategory enisa:16 .
+
+enisa:98 a pt:Threat ;
+    rdfs:label "Identity theft (Identity Fraud/ Account) " ;
+    dct:description "Threat of identity theft action" ;
+    dct:identifier "98" ;
+    pt:hasCategory enisa:97 .
+
+pt:hasThreat a owl:ObjectProperty ;
+    rdfs:label "hasThreat"@en ;
+    rdfs:comment "A threat detail has a threat."@en ;
+    rdfs:domain pt:ThreatDetail ;
+    rdfs:range pt:Threat .
+
+enisa:100 a pt:Threat ;
+    rdfs:label "Receive of unsolicited E-mail " ;
+    dct:description "Threat of receive of unsolicited E-mail that affect for information security and efficienty of work" ;
+    dct:identifier "100" ;
+    pt:hasCategory enisa:97 .
+
+enisa:123 a pt:Threat ;
+    rdfs:label "Social Engineering" ;
+    dct:description "" ;
+    dct:identifier "123" ;
+    pt:hasCategory enisa:97 .
+
+enisa:19 a pt:Threat ;
+    rdfs:label " " ;
+    dct:description "Unintentional distribution of private or sensitive data to an unauthorized entity by staff member." ;
+    dct:identifier "19" ;
+    pt:hasCategory enisa:16 .
+
+enisa:41 a pt:Threat ;
+    rdfs:label "Destruction of records" ;
+    dct:description "Threats of the lack of availability (destruction) of data and records (information) stored in devices and storage media" ;
+    dct:identifier "41" ;
+    pt:hasCategory enisa:16 .
+
+enisa:52 a pt:Threat ;
+    rdfs:label "Unfavorable climatic conditions" ;
+    dct:description "Threat of disruption of work of IT systems due to climatic conditions that have the negative effect on hardware" ;
+    dct:identifier "52" ;
+    pt:hasCategory enisa:44 .
+
+enisa:69 a pt:Threat ;
+    rdfs:label "Failure or disruption of main supply" ;
+    dct:description "Threat of failure or disruption of supply required for information systems" ;
+    dct:identifier "69" ;
+    pt:hasCategory enisa:58 .
+
+enisa:75 a pt:Threat ;
+    rdfs:label "Loss of resources" ;
+    dct:description "Unavailability of resources (supply) required for proper operation of information system" ;
+    dct:identifier "75" ;
+    pt:hasCategory enisa:74 .
+
+enisa:103 a pt:Threat ;
+    rdfs:label "Denial of service" ;
+    dct:description "Threat of Deny of service type attacks at information systems/services" ;
+    dct:identifier "103" ;
+    pt:hasCategory enisa:97 .
+
+enisa:165 a pt:Threat ;
+    rdfs:label "Remote activity (execution)" ;
+    dct:description "Threat of remote activity over controled IT Assets" ;
+    dct:identifier "165" ;
+    pt:hasCategory enisa:97 .
+
+enisa:37 a pt:Threat ;
+    rdfs:label "Loss of devices, storage media and documents" ;
+    dct:description "Threats of the lack of availability (loosing) of IT Assets and documents" ;
+    dct:identifier "37" ;
+    pt:hasCategory enisa:16 .
+
+enisa:64 a pt:Threat ;
+    rdfs:label "Failure or disruption of communication links (communication networks)" ;
+    dct:description "Threat of failure or malfunction of communications links " ;
+    dct:identifier "64" ;
+    pt:hasCategory enisa:58 .
+
+enisa:82 a pt:Threat ;
+    rdfs:label "Network outage" ;
+    dct:description "Unavailability of communication links" ;
+    dct:identifier "82" ;
+    pt:hasCategory enisa:74 .
+
+enisa:89 a pt:Threat ;
+    rdfs:label "Interception of information" ;
+    dct:description "Threat of interception of information improperly secured in transmission or improperly actions of staff" ;
+    dct:identifier "89" ;
+    pt:hasCategory enisa:86 .
+
+enisa:126 a pt:Threat ;
+    rdfs:label "Abuse of Information Leakage" ;
+    dct:description "? What is difference between others Physical attack (deliberate/ intentional)?" ;
+    dct:identifier "126" ;
+    pt:hasCategory enisa:97 .
+
+enisa:131 a pt:Threat ;
+    rdfs:label "Generation and use of rogue certificates" ;
+    dct:description "Threat of use of rogue certificates" ;
+    dct:identifier "131" ;
+    pt:hasCategory enisa:97 .
+
+enisa:169 a pt:Threat ;
+    rdfs:label "Targeted attacks (APTs etc.)" ;
+    dct:description "" ;
+    dct:identifier "169" ;
+    pt:hasCategory enisa:97 .
+
+enisa:23 a pt:Threat ;
+    rdfs:label "Erroneous use or administration of devices and systems" ;
+    dct:description "Information leakage / sharing / damage caused by users IT Assets misuse (lack of awareness of application features) or wrong / improperly IT Assets configuration or management" ;
+    dct:identifier "23" ;
+    pt:hasCategory enisa:16 .
+
+enisa:59 a pt:Threat ;
+    rdfs:label "Failure of devices or systems" ;
+    dct:description "Threat of failure of IT hardware and/or software assets or its parts" ;
+    dct:identifier "59" ;
+    pt:hasCategory enisa:58 .
+
+enisa:6 a pt:Threat ;
+    rdfs:label "Theft (devices, storage media and documents)" ;
+    dct:description "Stealing of information or IT Assets. Robbery" ;
+    dct:identifier "6" ;
+    pt:hasCategory enisa:1 .
+
+enisa:154 a pt:Threat ;
+    rdfs:label "Unauthorized activities" ;
+    dct:description "" ;
+    dct:identifier "154" ;
+    pt:hasCategory enisa:97 .
+
+enisa:177 a pt:ThreatCategory ;
+    rdfs:label "Legal" ;
+    dct:description "" ;
+    dct:identifier "177" .
+
+enisa:58 a pt:ThreatCategory ;
+    rdfs:label "Failures/ Malfunction" ;
+    dct:description "" ;
+    dct:identifier "58" .
+
+enisa:136 a pt:Threat ;
+    rdfs:label "Manipulation of hardware and software" ;
+    dct:description "Threat of unauthorized manipulation of hardware and software" ;
+    dct:identifier "136" ;
+    pt:hasCategory enisa:97 .
+
+enisa:74 a pt:ThreatCategory ;
+    rdfs:label "Outages" ;
+    dct:description "" ;
+    dct:identifier "74" .
+
+enisa:144 a pt:Threat ;
+    rdfs:label "Manipulation of information" ;
+    dct:description "Threat of intentional data manipulation to mislead information systems or somebody or to cover other nefarious activities (loss of integrity of information) " ;
+    dct:identifier "144" ;
+    pt:hasCategory enisa:97 .
+
+enisa:86 a pt:ThreatCategory ;
+    rdfs:label "Eavesdropping/ Interception/ Hijacking" ;
+    dct:description "Threats that relay on alters of communication between two parties" ;
+    dct:identifier "86" .
+
+enisa:1 a pt:ThreatCategory ;
+    rdfs:label "Physical attack (deliberate/ intentional)" ;
+    dct:description "Threats of intentional hostage human actions" ;
+    dct:identifier "1" .
+
+pt:ThreatCategory a owl:Class ;
+    rdfs:label "ThreatCategory"@en ;
+    rdfs:comment "A threat category groups various threats."@en .
+
+enisa:44 a pt:ThreatCategory ;
+    rdfs:label "Disaster (natural, environmental)" ;
+    dct:description "Threats of damage of information assets caused by natural or environmental elements" ;
+    dct:identifier "44" .
+
+enisa:107 a pt:Threat ;
+    rdfs:label "Malicious code/ software/ activity" ;
+    dct:description "Threat of malicious code or software execution" ;
+    dct:identifier "107" ;
+    pt:hasCategory enisa:97 .
+
+enisa:16 a pt:ThreatCategory ;
+    rdfs:label "Unintentional damage / loss of information or IT assets" ;
+    dct:description "Threats of unintentional human actions or errors" ;
+    dct:identifier "16" .
+
+enisa:97 a pt:ThreatCategory ;
+    rdfs:label "Nefarious Activity/ Abuse" ;
+    dct:description "" ;
+    dct:identifier "97" .
+
+pt:Threat a owl:Class ;
+    rdfs:label "Threat"@en ;
+    rdfs:comment "A threat is a specific threat."@en ;
+    rdfs:subClassOf pt:ThreatCategory .
+
+pt:ThreatDetail a owl:Class ;
+    rdfs:label "Threat detail"@en ;
+    rdfs:comment "A threat detail declines a specific threat."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty pt:hasThreat ;
+            owl:someValuesFrom pt:Threat ],
+        pt:Threat .

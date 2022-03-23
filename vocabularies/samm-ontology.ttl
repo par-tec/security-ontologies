@@ -1,0 +1,57 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix samm: <https://owaspsamm.org/model/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://owaspsamm.org/model/> a owl:Ontology ;
+    dcterms:description "OWASP SAMM Ontology" ;
+    dcterms:creator <mailto:robipolli@gmail.com> ;
+    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/>
+.
+
+samm:BusinessFunction a owl:Class
+.
+samm:Practice a owl:Class;
+    # hasFunction
+.
+samm:MaturityLevel a owl:Class
+.
+samm:StreamLetter a owl:Class
+.
+samm:PracticeLevel a owl:Class;
+    # hasPractice
+    # hasMaturityLevel
+.
+samm:Stream a owl:Class
+    # hasPractice
+.
+samm:Activity a owl:Class;
+    # hasPracticeLevel
+    # hasStream
+.
+
+samm:hasFunction a owl:ObjectProperty;
+    rdfs:range samm:BusinessFunction;
+    rdfs:domain samm:Practice
+.
+samm:hasPractice a owl:ObjectProperty;
+    rdfs:range samm:Practice;
+    rdfs:domain samm:PracticeLevel;
+    rdfs:domain samm:Stream;
+.
+samm:hasMaturityLevel a owl:ObjectProperty;
+    rdfs:range samm:MaturityLevel;
+    rdfs:domain samm:PracticeLevel;
+.
+samm:hasStream a owl:ObjectProperty;
+    rdfs:range samm:Stream;
+    rdfs:domain samm:Activity;
+.
+samm:hasPracticeLevel a owl:ObjectProperty;
+    rdfs:range samm:PracticeLevel;
+    rdfs:domain samm:Activity;
+.
+samm:hasLetter a owl:ObjectProperty;
+    rdfs:range samm:StreamLetter;
+    rdfs:domain samm:Stream;
+.

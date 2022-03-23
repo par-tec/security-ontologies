@@ -1,0 +1,40 @@
+#
+# ENISA Threat Ontology
+#
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix enisa: <https://par-tec.it/onto/enisa/threat/2016/data/> .
+@prefix pt: <https://par-tec.it/onto/enisa/threat/2016/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+pt:ThreatDetail a owl:Class ;
+    rdfs:subClassOf pt:Threat ;
+    rdfs:label "Threat detail"@en ;
+    rdfs:comment "A threat detail declines a specific threat."@en ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty pt:hasThreat ;
+        owl:someValuesFrom pt:Threat
+    ] .
+
+pt:Threat a owl:Class ;
+    rdfs:subClassOf pt:ThreatCategory ;
+    rdfs:label "Threat"@en ;
+    rdfs:comment "A threat is a specific threat."@en .
+
+
+pt:ThreatCategory a owl:Class ;
+    rdfs:label "ThreatCategory"@en ;
+    rdfs:comment "A threat category groups various threats."@en .
+
+pt:hasCategory a owl:ObjectProperty ;
+    rdfs:label "hasCategory"@en ;
+    rdfs:comment "A threat has a category."@en ;
+    rdfs:domain pt:Threat ;
+    rdfs:range pt:ThreatCategory .
+
+pt:hasThreat a owl:ObjectProperty ;
+    rdfs:label "hasThreat"@en ;
+    rdfs:comment "A threat detail has a threat."@en ;
+    rdfs:domain pt:ThreatDetail ;
+    rdfs:range pt:Threat .
