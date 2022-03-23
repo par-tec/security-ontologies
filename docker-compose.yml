@@ -50,6 +50,8 @@ services:
     - virtuoso
     volumes:
       - ./sparql/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8890:80/tcp"
   lodlive:
     image: lodlive:latest
     depends_on:

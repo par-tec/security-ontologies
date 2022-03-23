@@ -1,0 +1,1629 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://par-tec.it/onto/iso/27001/latest/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:control-5.1 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-05.1.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-05.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Governance,
+        ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose """To ensure continuing suitability, adequacy, effectiveness of management direction and support for
+information security in accordance with business requirements, legal, statutory, regulatory and
+contractual requirements.""" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        """Information security policy and topic-specific policies should be defined, approved by management,
+published, communicated to and acknowledged by relevant personnel and relevant interested parties,
+and reviewed at planned intervals and if significant changes occur.""" ;
+    dcterms:identifier "control-5.1" ;
+    dcterms:title "Policies for information security" .
+
+ns1:control-5.10 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-08.1.3>,
+        <http://par-tec.it/onto/iso/27002/2013/control-08.2.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:InformationProtection ;
+    ns1:hasPurpose "To ensure information and other associated assets are appropriately protected, used and handled" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Rules for the acceptable use and procedures for the handling of information and other associated assets should be identified, documented and implemented" ;
+    dcterms:identifier "control-5.10" ;
+    dcterms:title "Acceptable use of information and associated assets" .
+
+ns1:control-5.11 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-08.1.4> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement ;
+    ns1:hasPurpose "To protect the organization’s assets as part of the process of changing or terminating employment or contract" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Personnel and other interested parties as appropriate should return all the organization's assets in their possession upon change or termination of their employment, contract or agreement" ;
+    dcterms:identifier "control-5.11" ;
+    dcterms:title " Return of assets" .
+
+ns1:control-5.12 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-08.2.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:InformationProtection ;
+    ns1:hasPurpose "To ensure identification and understanding of protection needs of information in accordance with its importance to the organization" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information should be classified according to the information security needs of the organization based on confidentiality, integrity, availability and relevant interested party requirements" ;
+    dcterms:identifier "control-5.12" ;
+    dcterms:title " Classification of information" .
+
+ns1:control-5.13 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-08.2.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:InformationProtection ;
+    ns1:hasPurpose "To facilitate the communication of classification of information and support automation of information processing and management" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "An appropriate set of procedures for information labelling should be developed and implemented in accordance with the information classification scheme adopted by the organization" ;
+    dcterms:identifier "control-5.13" ;
+    dcterms:title " Labelling of information" .
+
+ns1:control-5.14 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-13.2.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-13.2.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-13.2.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:InformationProtection ;
+    ns1:hasPurpose "To maintain the security of information transferred within an organization and with any external interested party" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information transfer rules, procedures, or agreements, both within the organization and between the organization and other parties, should be in place for all types of transfer facilities" ;
+    dcterms:identifier "control-5.14" ;
+    dcterms:title " Information transfer" .
+
+ns1:control-5.15 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.1.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-09.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:IAM ;
+    ns1:hasPurpose "To  ensure  authorized  access  and  to  prevent  unauthorized  access  to  information  and  other associated assets" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Rules to control physical and logical access to information and other associated assets should be established and implemented based on business and information security requirements" ;
+    dcterms:identifier "control-5.15" ;
+    dcterms:title " Access control" .
+
+ns1:control-5.16 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.2.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:IAM ;
+    ns1:hasPurpose "To  allow  for  the  unique  identification  of  individuals  and  systems  accessing  the  organisation's information and other associated assets, and to enable appropriate assignment of access rights" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The full lifecycle of identities should be managed" ;
+    dcterms:identifier "control-5.16" ;
+    dcterms:title " Identity management" .
+
+ns1:control-5.17 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.2.4>,
+        <http://par-tec.it/onto/iso/27002/2013/control-09.3.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-09.4.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:IAM ;
+    ns1:hasPurpose "To ensure proper entity authentication and prevent failures of authentication processes" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Allocation  and  management  of  authentication  information  should  be  controlled  by  a  management process, including advising personnel of appropriate handling of authentication information" ;
+    dcterms:identifier "control-5.17" ;
+    dcterms:title " Authentication information" .
+
+ns1:control-5.18 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.2.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-09.2.5>,
+        <http://par-tec.it/onto/iso/27002/2013/control-09.2.6> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:IAM ;
+    ns1:hasPurpose "To ensure only authorized access to information and other associated assets" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Access rights to information and other associated assets should be provisioned, reviewed, modified and removed in accordance with the organization’s topic-specific policy and rules on access control" ;
+    dcterms:identifier "control-5.18" ;
+    dcterms:title " Access rights" .
+
+ns1:control-5.19 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-15.1.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SupplierSecurity ;
+    ns1:hasPurpose "To maintain an agreed level of information security in supplier relationships" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Processes and procedures should be identified and implemented to manage the information security risks associated with the use of supplier's products or services" ;
+    dcterms:identifier "control-5.19" ;
+    dcterms:title "Information security in supplier relationships" .
+
+ns1:control-5.2 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-06.1.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Governance,
+        ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose """To establish a defined, approved and understood structure for the implementation, operation and
+management of information security within the organization""" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection,
+        ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        """Information security roles and responsibilities should be defined and allocated according to the
+organization needs""" ;
+    dcterms:identifier "control-5.2" ;
+    dcterms:title "Information security roles and responsibilities" .
+
+ns1:control-5.20 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-15.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SupplierSecurity ;
+    ns1:hasPurpose "To ensure information security of the organization in supplier relationships" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Relevant information security requirements should be established and agreed with each supplier based on the type of supplier relationship" ;
+    dcterms:identifier "control-5.20" ;
+    dcterms:title "Addressing information security within supplier agreements" .
+
+ns1:control-5.21 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-15.1.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SupplierSecurity ;
+    ns1:hasPurpose "To ensure information security of the organization in ICT supply chain" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Processes and procedures should be defined and implemented to address information security risks associated with ICT services and product supply chain" ;
+    dcterms:identifier "control-5.21" ;
+    dcterms:title "Managing information security in the ICT supply chain" .
+
+ns1:control-5.22 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-15.2.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-15.2.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SupplierSecurity ;
+    ns1:hasPurpose "To  maintain  an  agreed  level  of  information  security  and  service  delivery  in  line  with  supplier agreements" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization should regularly monitor, review, evaluate and manage change in supplier information security practices and service delivery" ;
+    dcterms:identifier "control-5.22" ;
+    dcterms:title "Monitoring, review and change management of supplier services" .
+
+ns1:control-5.23 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SupplierSecurity ;
+    ns1:hasPurpose "To specify and manage information security for the use of cloud services" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Processes for acquisition, use, management and exit from cloud services should be established in accordance with the organization’s information security requirements" ;
+    dcterms:identifier "control-5.23" ;
+    dcterms:title "Information security for use of cloud services" .
+
+ns1:control-5.24 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-16.1.1> ;
+    ns1:hasControlType ns1:Corrective ;
+    ns1:hasCybersecurityConcept ns1:Recover,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To ensure quick, effective, consistent and orderly response to information security incidents, including communication on information security events" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization should plan and prepare for managing information security incidents by defining, establishing and communicating information security incident management processes, roles and responsibilities" ;
+    dcterms:identifier "control-5.24" ;
+    dcterms:title "Information security incident management responsibilities and preparation" .
+
+ns1:control-5.25 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-16.1.4> ;
+    ns1:hasControlType ns1:Detective ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To ensure effective categorization and prioritization of information security events" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization should assess information security events and decide if they are to be categorized as information security incidents" ;
+    dcterms:identifier "control-5.25" ;
+    dcterms:title "Assessment and decision on information security events" .
+
+ns1:control-5.26 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-16.1.5> ;
+    ns1:hasControlType ns1:Corrective ;
+    ns1:hasCybersecurityConcept ns1:Recover,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To ensure efficient and effective response to information security incidents" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information security incidents should be responded to in accordance with the documented procedures" ;
+    dcterms:identifier "control-5.26" ;
+    dcterms:title "Response to information security incidents" .
+
+ns1:control-5.27 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-16.1.6> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To reduce the likelihood or impact of future incidents" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "Knowledge gained from information security incidents should be used to strengthen and improve the control environment" ;
+    dcterms:identifier "control-5.27" ;
+    dcterms:title "Learning from information security incidents" .
+
+ns1:control-5.28 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-16.1.7> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Detective ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To ensure a consistent and effective management of evidence related to information security incidents for the purposes of disciplinary and legal action" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization should establish and implement procedures for the identification, collection, acquisition and preservation of information from information security incidents" ;
+    dcterms:identifier "control-5.28" ;
+    dcterms:title " Collection of evidence" .
+
+ns1:control-5.29 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-17.1.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-17.1.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-17.1.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:Continuity ;
+    ns1:hasPurpose "To provide information and other associated asset with adequate protection during disruption" ;
+    ns1:hasSecurityDomain ns1:Protection,
+        ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization should plan how to maintain information security at an appropriate level during disruption" ;
+    dcterms:identifier "control-5.29" ;
+    dcterms:title "Information security during disruption" .
+
+ns1:control-5.3 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-06.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Governance,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose "To reduce the risk of fraud, error and bypassing of information security controls" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "Conflicting duties and areas of responsibility should be segregated" ;
+    dcterms:identifier "control-5.3" ;
+    dcterms:title "Segregation of duties" .
+
+ns1:control-5.30 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Corrective ;
+    ns1:hasCybersecurityConcept ns1:Protect,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability ;
+    ns1:hasOperationalCapability ns1:Continuity ;
+    ns1:hasPurpose "To ensure the availability of the organization’s information and other associated assets in the event of a disruption" ;
+    ns1:hasSecurityDomain ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        "ICT readiness should be planned, implemented, maintained and tested based on business continuity objectives and ICT continuity requirements" ;
+    dcterms:identifier "control-5.30" ;
+    dcterms:title "ICT readiness for business continuity" .
+
+ns1:control-5.31 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-18.1.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-18.1.5> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:Compliance ;
+    ns1:hasPurpose "To  ensure  compliance  with  legal,  statutory,  regulatory  or  contractual  requirements  related  to information security" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information  security  relevant  legal,  statutory,  regulatory  and  contractual  requirements  and  the organization’s approach to meet these requirements should be identified, documented and kept up to date" ;
+    dcterms:identifier "control-5.31" ;
+    dcterms:title "Identification of legal, statutory, regulatory and contractual requirements" .
+
+ns1:control-5.32 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-18.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:Compliance ;
+    ns1:hasPurpose "To  ensure  compliance  with  legal,  statutory,  regulatory  and  contractual  requirements  related  to intellectual property rights and use of proprietary products" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "Organizations should implement appropriate procedures should be implemented to protect intellectual property rights" ;
+    dcterms:identifier "control-5.32" ;
+    dcterms:title "Intellectual property rights" .
+
+ns1:control-5.33 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-18.1.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:Compliance,
+        ns1:InformationProtection ;
+    ns1:hasPurpose "To ensure compliance with legal, statutory, regulatory or contractual requirements related to the protection of records" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "Records should be protected from loss, destruction, falsification, unauthorized access and unauthorized release, in accordance with legal, statutory, regulatory, contractual and business requirements" ;
+    dcterms:identifier "control-5.33" ;
+    dcterms:title " Protection of records" .
+
+ns1:control-5.34 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-18.1.4> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:Compliance,
+        ns1:InformationProtection ;
+    ns1:hasPurpose "To ensure compliance with legal, statutory, regulatory or contractual requirements related to the information security aspects of the protection of PII" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization should identify and meet the requirements regarding preservation of privacy and protection of PII according to applicable laws and regulations and contractual requirements" ;
+    dcterms:identifier "control-5.34" ;
+    dcterms:title " Privacy and protection of PII" .
+
+ns1:control-5.35 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-18.2.1> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose "To ensure the continuing suitability, adequacy and effectiveness of the organization’s approach to managing information security" ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization’s approach to managing information security and its implementation including people process and technology should be reviewed independently at planned intervals, or when significant changes occur" ;
+    dcterms:identifier "control-5.35" ;
+    dcterms:title "Independent review of information security" .
+
+ns1:control-5.36 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-18.2.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-18.2.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:Compliance ;
+    ns1:hasPurpose "To ensure that information security is implemented and operated in accordance with the organizational policies topic-specific policies and standards" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "Compliance with the organization’s information security policy, topic-specific policies and standards should be regularly reviewed" ;
+    dcterms:identifier "control-5.36" ;
+    dcterms:title "Compliance with policies and standards for information security" .
+
+ns1:control-5.37 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.1.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:Continuity,
+        ns1:PhysicalSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure the correct and secure operation of information processing facilities" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Operating procedures for information processing facilities should be documented and made available to personnel who need them" ;
+    dcterms:identifier "control-5.37" ;
+    dcterms:title " Documented operating procedures" .
+
+ns1:control-5.4 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-07.2.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Governance,
+        ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose """To ensure management understand their role in information security and undertake actions aiming to
+ensure all personnel are aware of and fulfil their information security responsibilities""" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        """Management should be a role model for information security and require all personnel to apply
+information security in accordance with the established information security policy, topic-specific
+policies and procedures of the organization""" ;
+    dcterms:identifier "control-5.4" ;
+    dcterms:title "Management responsibilities" .
+
+ns1:control-5.5 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-06.1.3> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Governance,
+        ns1:Protect,
+        ns1:Recover,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose """To ensure appropriate flow of information takes place with respect to information security between
+the organization and relevant legal, regulatory and supervisory authorities""" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        "The organization should establish and maintain contact with relevant authorities" ;
+    dcterms:identifier "control-5.5" ;
+    dcterms:title " Contact with authorities" .
+
+ns1:control-5.6 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-06.1.4> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Governance,
+        ns1:Protect,
+        ns1:Recover,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose "To ensure appropriate flow of information takes place with respect to information security" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        """The organization should establish and maintain contact with special interest groups or other specialist
+security forums and professional associations""" ;
+    dcterms:identifier "control-5.6" ;
+    dcterms:title "Contact with special interest groups" .
+
+ns1:control-5.7 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Detective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ThreatManagement ;
+    ns1:hasPurpose """To provide awareness of the threat environment that can impact the organization so that the
+organization can take appropriate mitigation actions""" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        """Information relating to information security threats should be collected and analysed to produce threat
+intelligence""" ;
+    dcterms:identifier "control-5.7" ;
+    dcterms:title "Threat intelligence" .
+
+ns1:control-5.8 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-06.1.5>,
+        <http://par-tec.it/onto/iso/27002/2013/control-14.1.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Governance,
+        ns1:Identify,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasPurpose "To ensure information security risks related to projects and deliverables are efficiently and effectively included in project management activities throughout the project lifecycle" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information security should be integrated into the organization's project management activities" ;
+    dcterms:identifier "control-5.8" ;
+    dcterms:title "Information security in project management" .
+
+ns1:control-5.9 a ns1:Control ;
+    ns1:controlCategory ns1:category-5 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-08.1.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-08.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Identify ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement ;
+    ns1:hasPurpose "To identify the organization's information and other associated assets in order to preserve their information security and assign appropriate ownership" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        """An inventory of information and other associated assets, including owners, should be developed and
+maintained
+""" ;
+    dcterms:identifier "control-5.9" ;
+    dcterms:title "Inventory of information and other associated assets" .
+
+ns1:control-6.1 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-07.1.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:HRSecurity ;
+    ns1:hasPurpose "To ensure all personnel are eligible and suitable for the roles for which they are considered and remain eligible and suitable during their employment" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "Background verification checks on all candidates to become personnel should be carried out prior to joining the organization and on an ongoing basis in accordance with applicable laws, regulations and ethics, and be proportional to the business requirements, the classification of the information to be accessed and the perceived risks" ;
+    dcterms:identifier "control-6.1" ;
+    dcterms:title " Screening" .
+
+ns1:control-6.2 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-07.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:HRSecurity ;
+    ns1:hasPurpose "To ensure personnel understand their information security responsibilities for the roles for which they are considered" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "The   employment   contractual   agreements   should   state   the   personnel’s   and   the   organization’s responsibilities for information security" ;
+    dcterms:identifier "control-6.2" ;
+    dcterms:title "Terms and conditions of employment" .
+
+ns1:control-6.3 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-07.2.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:HRSecurity ;
+    ns1:hasPurpose "To ensure personnel and relevant interested parties are aware of and fulfil their information security responsibilities" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "Personnel of the organization and relevant interested parties should receive appropriate information security awareness, education and training and regular updates of organizational policies and procedures, as relevant for their job function" ;
+    dcterms:identifier "control-6.3" ;
+    dcterms:title "Information security awareness, education and training" .
+
+ns1:control-6.4 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-07.2.3> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:HRSecurity ;
+    ns1:hasPurpose "To ensure personnel and other relevant interested parties understand the consequences of information security breaches, and non-compliant activities are deterred" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "A disciplinary process should be formalized and communicated to take actions against personnel and other relevant interested parties who have committed an information security policy violation" ;
+    dcterms:identifier "control-6.4" ;
+    dcterms:title " Disciplinary process" .
+
+ns1:control-6.5 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-07.3.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:HRSecurity ;
+    ns1:hasPurpose "To protect the organization’s interests as part of the process of changing or terminating employment or contract" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information security responsibilities and duties that remain valid after termination or change of employment should be defined, enforced and communicated to relevant personnel and other interested parties" ;
+    dcterms:identifier "control-6.5" ;
+    dcterms:title "Responsibilities after termination or change of employment" .
+
+ns1:control-6.6 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-13.2.4> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality ;
+    ns1:hasOperationalCapability ns1:HRSecurity,
+        ns1:InformationProtection,
+        ns1:SupplierSecurity ;
+    ns1:hasPurpose "To maintain confidentiality of information accessible by personnel or external parties" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem ;
+    dcterms:description "NaN"^^xsd:double,
+        "Confidentiality or non-disclosure agreements reflecting the organization’s needs for the protection of information should be identified, documented, regularly reviewed and signed by personnel and other relevant interested parties" ;
+    dcterms:identifier "control-6.6" ;
+    dcterms:title " Confidentiality or non-disclosure agreements" .
+
+ns1:control-6.7 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-06.2.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:PhysicalSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure the security of information when personnel are working remotely" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Security measures should be implemented when personnel are working remotely to protect information accessed, processed or stored outside the organization's premises" ;
+    dcterms:identifier "control-6.7" ;
+    dcterms:title " Remote working" .
+
+ns1:control-6.8 a ns1:Control ;
+    ns1:controlCategory ns1:category-6 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-16.1.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-16.1.3> ;
+    ns1:hasControlType ns1:Detective ;
+    ns1:hasCybersecurityConcept ns1:Detect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To  support  timely,  consistent  and  effective  reporting  of  information  security  events  that  can  be identified by personnel" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "The  organization  should  provide  a  mechanism  for  personnel  to  report  observed  or  suspected information security events through appropriate channels in a timely manner" ;
+    dcterms:identifier "control-6.8" ;
+    dcterms:title " Information security event reporting" .
+
+ns1:control-7.1 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.1.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To prevent unauthorized physical access, damage and interference to the organization’s information and other associated assets" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Security perimeters should be defined and used to protect areas that contain either sensitive or critical information and other associated assets" ;
+    dcterms:identifier "control-7.1" ;
+    dcterms:title " Physical security perimeter" .
+
+ns1:control-7.10 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-08.3.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-08.3.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-08.3.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To ensure only authorized disclosure, modification, removal or destruction of information stored on media" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Storage media should be managed through its lifecycle of acquisition, use, transportation and disposal in accordance with the organization’s classification scheme and handling requirements" ;
+    dcterms:identifier "control-7.10" ;
+    dcterms:title " Storage media" .
+
+ns1:control-7.11 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.2.2> ;
+    ns1:hasControlType ns1:Detective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To prevent loss, damage or compromise of information and other associated assets due to the failure and disruption of supporting utilities or interruption to the organization’s operations" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information processing facilities should be protected from power failures and other disruptions caused by failures in supporting utilities" ;
+    dcterms:identifier "control-7.11" ;
+    dcterms:title "Supporting utilities" .
+
+ns1:control-7.12 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.2.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To  prevent  loss,  damage,  theft  or  compromise  of  information  and  other  associated  assets  and interruption to the organization’s operations due to failure in power and communications cabling" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Cables carrying power, data or supporting information services should be protected from interception, interference or damage" ;
+    dcterms:identifier "control-7.12" ;
+    dcterms:title " Cabling security" .
+
+ns1:control-7.13 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.2.4> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To  prevent  loss,  damage,  theft  or  compromise  of  information  and  other  associated  assets  and interruption to the organization’s operations" ;
+    ns1:hasSecurityDomain ns1:Protection,
+        ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        "Equipment should be maintained correctly" ;
+    dcterms:identifier "control-7.13" ;
+    dcterms:title " Equipment maintenance" .
+
+ns1:control-7.14 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.2.7> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To prevent leakage of information from equipment to be disposed or re-used" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Items of equipment containing storage media should be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or re-use" ;
+    dcterms:identifier "control-7.14" ;
+    dcterms:title "Secure disposal or re-use of equipment" .
+
+ns1:control-7.2 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.1.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-11.1.6> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To ensure only authorized physical access to the organization’s information and other associated assets occurs" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Secure areas should be protected by appropriate entry controls and access points" ;
+    dcterms:identifier "control-7.2" ;
+    dcterms:title " Physical entry controls" .
+
+ns1:control-7.3 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.1.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To prevent unauthorized physical access, damage and interference to the organization’s information and other associated assets in offices, rooms and facilities" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Physical security for offices, rooms, and facilities should be designed and implemented" ;
+    dcterms:identifier "control-7.3" ;
+    dcterms:title "Securing offices, rooms and facilities" .
+
+ns1:control-7.4 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Detective ;
+    ns1:hasCybersecurityConcept ns1:Detect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To detect and deter unauthorized physical access" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Premises should be continuously monitored for unauthorized physical access" ;
+    dcterms:identifier "control-7.4" ;
+    dcterms:title "Physical security monitoring" .
+
+ns1:control-7.5 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.1.4> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To prevent or reduce the impacts of events originating from physical and environmental threats" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Protection against physical and environmental threats, such as natural disasters and other intentional or unintentional physical threats to infrastructure should be designed and implemented" ;
+    dcterms:identifier "control-7.5" ;
+    dcterms:title "Protecting against physical and environmental threats" .
+
+ns1:control-7.6 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.1.5> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To prevent damage and interference to the organization’s information and other associated assets in secure areas" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Procedures for working in secure areas should be designed and implemented" ;
+    dcterms:identifier "control-7.6" ;
+    dcterms:title " Working in secure areas" .
+
+ns1:control-7.7 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.2.9> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality ;
+    ns1:hasOperationalCapability ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To reduce the risks of unauthorized access, loss of and damage to information on the desks, screens and in other accessible locations during and outside normal working hours" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Clear  desk  rules  for  papers  and  removable  storage  media  and  clear  screen  rules  for  information processing facilities should be defined and enforced" ;
+    dcterms:identifier "control-7.7" ;
+    dcterms:title "Clear desk and clear screen" .
+
+ns1:control-7.8 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.2.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To reduce the risks from environmental threats and hazards, and opportunities for unauthorized access" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Equipment should be sited securely and protected" ;
+    dcterms:identifier "control-7.8" ;
+    dcterms:title "Equipment siting and protection" .
+
+ns1:control-7.9 a ns1:Control ;
+    ns1:controlCategory ns1:category-7 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-11.2.6> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:PhysicalSecurity ;
+    ns1:hasPurpose "To prevent loss, damage, theft or compromise of off-site assets and interruption to the organization’s operations" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Off-site assets should be protected taking into account the different risks" ;
+    dcterms:identifier "control-7.9" ;
+    dcterms:title "Security of assets off-premises" .
+
+ns1:control-8.1 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-06.2.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-11.2.8> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:InformationProtection ;
+    ns1:hasPurpose "To protect information against the risks introduced by using user endpoint devices" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information stored on, processed by or accessible via user endpoint devices should be protected" ;
+    dcterms:identifier "control-8.1" ;
+    dcterms:title " User endpoint devices" .
+
+ns1:control-8.10 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality ;
+    ns1:hasOperationalCapability ns1:InformationProtection ;
+    ns1:hasPurpose "To  prevent  unnecessary  exposure  of  sensitive  information  and  to  comply  with  legal,  statutory, regulatory and contractual requirements for data deletion" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information stored in information systems and devices should be deleted when no longer required" ;
+    dcterms:identifier "control-8.10" ;
+    dcterms:title "Information deletion" .
+
+ns1:control-8.11 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality ;
+    ns1:hasOperationalCapability ns1:InformationProtection ;
+    ns1:hasPurpose "To limit the exposure of sensitive data including personally identifiable information, and to comply with legal, statutory, regulatory and contractual requirements" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Data masking should be used in accordance with the organization’s topic-specific policy on access control and business requirement, taking legal requirements into consideration" ;
+    dcterms:identifier "control-8.11" ;
+    dcterms:title " Data masking" .
+
+ns1:control-8.12 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Detective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality ;
+    ns1:hasOperationalCapability ns1:InformationProtection ;
+    ns1:hasPurpose "To detect and prevent the unauthorized disclosure and extraction of information by individuals or systems" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Data leakage prevention measures should be applied to systems, networks and endpoint devices that process, store or transmit sensitive information" ;
+    dcterms:identifier "control-8.12" ;
+    dcterms:title "Data leakage prevention" .
+
+ns1:control-8.13 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.3.1> ;
+    ns1:hasControlType ns1:Corrective ;
+    ns1:hasCybersecurityConcept ns1:Recover ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:Continuity ;
+    ns1:hasPurpose "To enable recovery from loss of data or systems" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Backup copies of information, software and systems should be maintained and regularly tested in accordance with the agreed topic-specific policy on backup" ;
+    dcterms:identifier "control-8.13" ;
+    dcterms:title "Information backup" .
+
+ns1:control-8.14 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-17.2.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability ;
+    ns1:hasOperationalCapability ns1:AssetManagement,
+        ns1:Continuity ;
+    ns1:hasPurpose "To ensure the continuous operation of information processing facilities" ;
+    ns1:hasSecurityDomain ns1:Protection,
+        ns1:Resilience ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information processing facilities should be implemented with redundancy sufficient to meet availability requirements" ;
+    dcterms:identifier "control-8.14" ;
+    dcterms:title "Redundancy of information processing facilities" .
+
+ns1:control-8.15 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.4.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-12.4.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-12.4.3> ;
+    ns1:hasControlType ns1:Detective ;
+    ns1:hasCybersecurityConcept ns1:Detect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To record events, generate evidence, ensure the integrity of log information, prevent against unauthorized access, identify information security events that can lead to an information security incident and to support investigations" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Logs that record activities, exceptions, faults and other relevant events should be produced, protected, stored and analysed" ;
+    dcterms:identifier "control-8.15" ;
+    dcterms:title " Logging" .
+
+ns1:control-8.16 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Detective ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Respond ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To detect anomalous behaviour and potential information security incidents" ;
+    ns1:hasSecurityDomain ns1:Defence ;
+    dcterms:description "NaN"^^xsd:double,
+        "Networks, systems and applications should be monitored for anomalous behaviour and appropriate actions taken to evaluate potential information security incidents" ;
+    dcterms:identifier "control-8.16" ;
+    dcterms:title " Monitoring activities" .
+
+ns1:control-8.17 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.4.4> ;
+    ns1:hasControlType ns1:Detective ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:EventManangement ;
+    ns1:hasPurpose "To enable the correlation and analysis of security-related events and other recorded data, and to support investigations into information security incidents" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The clocks of information processing systems used by the organization should be synchronized to approved time sources" ;
+    dcterms:identifier "control-8.17" ;
+    dcterms:title " Clock synchronization" .
+
+ns1:control-8.18 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.4.4> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SecureConfiguration,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure the use of utility programs does not harm system and application controls for information security" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The use of utility programs that might be capable of overriding system and application controls should be restricted and tightly controlled" ;
+    dcterms:identifier "control-8.18" ;
+    dcterms:title " Use of privileged utility programs" .
+
+ns1:control-8.19 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.5.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-12.6.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SecureConfiguration ;
+    ns1:hasPurpose "To ensure the integrity of operational systems and prevent exploitation of technical vulnerabilities" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Procedures  and  measures  should  be  implemented  to  securely  manage  software  installation  on operational systems" ;
+    dcterms:identifier "control-8.19" ;
+    dcterms:title "Installation of software on operational systems" .
+
+ns1:control-8.2 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.2.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:IAM ;
+    ns1:hasPurpose "To ensure only authorized users, software components and services are provided with privileged access rights" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The allocation and use of privileged access rights should be restricted and managed" ;
+    dcterms:identifier "control-8.2" ;
+    dcterms:title " Privileged access rights" .
+
+ns1:control-8.20 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-13.1.1> ;
+    ns1:hasControlType ns1:Detective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To  ensure  the  protection  of  information  in  networks  and  its  supporting  information  processing facilities" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Networks should be managed and controlled to protect information in systems and applications" ;
+    dcterms:identifier "control-8.20" ;
+    dcterms:title " Network controls" .
+
+ns1:control-8.21 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-13.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure security in the use of network services" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Security mechanisms, service levels, and service requirements of network services should be identified, implemented and monitored" ;
+    dcterms:identifier "control-8.21" ;
+    dcterms:title "Security of network services" .
+
+ns1:control-8.22 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To protect systems from being compromised by malware and to prevent access to unauthorized web resources" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Access to external websites should be managed to reduce exposure to malicious content" ;
+    dcterms:identifier "control-8.22" ;
+    dcterms:title " Web filtering" .
+
+ns1:control-8.23 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-13.1.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To split the network in security boundaries and to control traffic between them based on business needs" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Groups  of  information  services,  users,  and  information  systems  should  be  segregated  in  the organization’s networks" ;
+    dcterms:identifier "control-8.23" ;
+    dcterms:title " Segregation in networks" .
+
+ns1:control-8.24 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-10.1.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-10.1.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SecureConfiguration ;
+    ns1:hasPurpose "To ensure proper and effective use of cryptography to protect the confidentiality, authenticity or integrity of information in compliance with legal, statutory, regulatory or contractual requirements related to cryptography" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Rules for the effective use of cryptography, including cryptographic key management, should be defined and implemented" ;
+    dcterms:identifier "control-8.24" ;
+    dcterms:title "Use of cryptography" .
+
+ns1:control-8.25 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-14.2.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure information security is designed and implemented within the secure development lifecycle of software and systems" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Rules for the secure development of software and systems should be established and applied" ;
+    dcterms:identifier "control-8.25" ;
+    dcterms:title " Secure development lifecycle" .
+
+ns1:control-8.26 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-14.1.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-14.1.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure all information security requirements are identified and addressed when developing or acquiring applications" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information security requirements should be identified, specified and approved when developing or acquiring applications" ;
+    dcterms:identifier "control-8.26" ;
+    dcterms:title " Application security requirements" .
+
+ns1:control-8.27 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-14.2.5> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To  ensure  information  systems  are  securely  designed,  implemented  and  operated  within  the development lifecycle" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Principles for engineering secure systems should be established, documented, maintained and applied to any information system development activities" ;
+    dcterms:identifier "control-8.27" ;
+    dcterms:title " Secure system architecture and engineering principles" .
+
+ns1:control-8.28 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure software is written securely thereby reducing the number of potential information security vulnerabilities in the software" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Secure coding principles should be applied to software development" ;
+    dcterms:identifier "control-8.28" ;
+    dcterms:title " Secure coding" .
+
+ns1:control-8.29 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-14.2.8>,
+        <http://par-tec.it/onto/iso/27002/2013/control-14.2.9> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:EventManangement,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To validate if information security requirements are met when deployed to the production environment" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Security testing processes should be defined and implemented in the development lifecycle" ;
+    dcterms:identifier "control-8.29" ;
+    dcterms:title " Security testing in development and acceptance" .
+
+ns1:control-8.3 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.4.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:IAM ;
+    ns1:hasPurpose "To  ensure  only  authorized  access  and  to  prevent  unauthorized  access  to  information  and  other associated assets" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Access  to  information  and  other  associated  assets  should  be  restricted  in  accordance  with  the established topic-specific policy on access control" ;
+    dcterms:identifier "control-8.3" ;
+    dcterms:title "Information access restriction" .
+
+ns1:control-8.30 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-14.2.7> ;
+    ns1:hasControlType ns1:Detective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Identify,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:SupplierSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure information security measures required by the organization are implemented in outsourced system development" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The  organization  should  direct,  monitor  and  review  the  activities  related  to  outsourced  system development" ;
+    dcterms:identifier "control-8.30" ;
+    dcterms:title "  Outsourced development" .
+
+ns1:control-8.31 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.1.4>,
+        <http://par-tec.it/onto/iso/27002/2013/control-14.2.6> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To protect the production environment and data from compromise by development and test activities" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Development, testing, and production environments should be separated and secured" ;
+    dcterms:identifier "control-8.31" ;
+    dcterms:title "Separation of development, test and production environments" .
+
+ns1:control-8.32 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.1.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-14.2.2>,
+        <http://par-tec.it/onto/iso/27002/2013/control-14.2.3>,
+        <http://par-tec.it/onto/iso/27002/2013/control-14.2.4> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To preserve information security when executing changes" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Changes to information processing facilities and information systems should be subject to change management procedures" ;
+    dcterms:identifier "control-8.32" ;
+    dcterms:title " Change management" .
+
+ns1:control-8.33 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-14.3.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:InformationProtection ;
+    ns1:hasPurpose "To ensure relevance of testing and protection of operational information used for testing" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Test information should be appropriately selected, protected and managed" ;
+    dcterms:identifier "control-8.33" ;
+    dcterms:title "Test information" .
+
+ns1:control-8.34 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.7.1> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:InformationProtection,
+        ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To minimize the impact of audit and other assurance activities on operational systems and business processes" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Audit  tests  and  other  assurance  activities  involving  assessment  of  operational  systems  should  be planned and agreed between the tester and appropriate management" ;
+    dcterms:identifier "control-8.34" ;
+    dcterms:title "Protection of information systems during audit and testing" .
+
+ns1:control-8.4 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.4.5> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ApplicationSecurity,
+        ns1:IAM ;
+    ns1:hasPurpose "To prevent the introduction of unauthorized functionality, avoid unintentional or malicious changes and to maintain the confidentiality of valuable intellectual property" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Read and write access to source code, development tools and software libraries should be appropriately managed" ;
+    dcterms:identifier "control-8.4" ;
+    dcterms:title " Access to source code" .
+
+ns1:control-8.5 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-09.4.2> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:IAM ;
+    ns1:hasPurpose "To ensure a user or an entity is securely authenticated when access to systems, applications, and services is granted" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Secure  authentication  technologies  and  procedures  should  be  implemented  based  on  information access restrictions and the topic-specific policy on access control" ;
+    dcterms:identifier "control-8.5" ;
+    dcterms:title " Secure authentication" .
+
+ns1:control-8.6 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.1.3> ;
+    ns1:hasControlType ns1:Detective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Identify,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability ;
+    ns1:hasOperationalCapability ns1:Continuity ;
+    ns1:hasPurpose "To ensure the required capacity of information processing facilities" ;
+    ns1:hasSecurityDomain ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "The use of resources should be monitored and adjusted in line with current and expected capacity requirements" ;
+    dcterms:identifier "control-8.6" ;
+    dcterms:title " Capacity management" .
+
+ns1:control-8.7 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.2.1> ;
+    ns1:hasControlType ns1:Corrective,
+        ns1:Detective,
+        ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Detect,
+        ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SystemNetworkSecurity ;
+    ns1:hasPurpose "To ensure information and other associated assets are protected against malware" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Protection against malware should be implemented, supported by appropriate user awareness" ;
+    dcterms:identifier "control-8.7" ;
+    dcterms:title "Protection against malware" .
+
+ns1:control-8.8 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-12.6.1>,
+        <http://par-tec.it/onto/iso/27002/2013/control-18.2.3> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:ThreatManagement ;
+    ns1:hasPurpose "To prevent exploitation of technical vulnerabilities" ;
+    ns1:hasSecurityDomain ns1:Defence,
+        ns1:GovernanceEcosystem,
+        ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Information about technical vulnerabilities of information systems in use should be obtained, the organization’s exposure to such vulnerabilities should be evaluated and appropriate measures should be taken" ;
+    dcterms:identifier "control-8.8" ;
+    dcterms:title " Management of technical vulnerabilities" .
+
+ns1:control-8.9 a ns1:Control ;
+    ns1:controlCategory ns1:category-8 ;
+    ns1:correspondsTo <http://par-tec.it/onto/iso/27002/2013/control-New> ;
+    ns1:hasControlType ns1:Preventive ;
+    ns1:hasCybersecurityConcept ns1:Protect ;
+    ns1:hasInformationSecurityProperty ns1:Availability,
+        ns1:Confidentiality,
+        ns1:Integrity ;
+    ns1:hasOperationalCapability ns1:SecureConfiguration ;
+    ns1:hasPurpose "To  ensure  hardware,  software,  services  and  networks  function  correctly  with  required  security settings, and configuration is not altered by unauthorized or incorrect changes" ;
+    ns1:hasSecurityDomain ns1:Protection ;
+    dcterms:description "NaN"^^xsd:double,
+        "Configurations, including security configurations, of hardware, software, services and networks should be established, documented, implemented, monitored and reviewed" ;
+    dcterms:identifier "control-8.9" ;
+    dcterms:title " Configuration management" .
+
+ns1:category-6 a ns1:ControlCategory ;
+    rdfs:label "People" .
+
+ns1:category-7 a ns1:ControlCategory ;
+    rdfs:label "Physical" .
+
+ns1:category-8 a ns1:ControlCategory ;
+    rdfs:label "Technological" .
+
+ns1:category-5 a ns1:ControlCategory ;
+    rdfs:label "Organizational" .

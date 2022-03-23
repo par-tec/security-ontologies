@@ -34,7 +34,7 @@ def test_parse_function():
 
 
 def parse_function(g):
-    for f in (BASEDIR/"business_functions").glob("*.yml"):
+    for f in (BASEDIR / "business_functions").glob("*.yml"):
         data = yaml.safe_load(f.read_text())
         id_ = data["id"]
         uri = URIRef(f"{NS_OS}{id_}")
@@ -79,7 +79,7 @@ def test_parse_stream():
 
 
 def parse_stream(g):
-    for f in (BASEDIR/"streams").glob("*.yml"):
+    for f in (BASEDIR / "streams").glob("*.yml"):
         data = yaml.safe_load(f.read_text())
         id_ = data["id"]
         altLabel = f.name.replace(".yml", "")
@@ -108,7 +108,7 @@ def test_parse_practice_level():
 def parse_practice_level(g):
     # links to practice, maturitylevel
     #
-    for f in (BASEDIR/"practice_levels").glob("*.yml"):
+    for f in (BASEDIR / "practice_levels").glob("*.yml"):
         data = yaml.safe_load(f.read_text())
         id_ = data["id"]
         name = f.name.replace(".yml", "")
@@ -140,7 +140,7 @@ def test_parse_practice():
 def parse_practice(g):
     # links to Maturity Level
     #
-    for f in (BASEDIR/"security_practices").glob("*.yml"):
+    for f in (BASEDIR / "security_practices").glob("*.yml"):
         data = yaml.safe_load(f.read_text())
         id_ = data["id"]
 
@@ -159,6 +159,8 @@ def parse_practice(g):
         # Relation solver.
         if function_name := g.value(function_uri, SKOS.altLabel):
             g.add((uri, RDFS.seeAlso, URIRef(f"{NS_OS}{function_name}/{practice_uri}")))
+
+
 def test_parse_activity():
     g = Graph()
     parse_activity(g)
@@ -169,44 +171,52 @@ def parse_activity(g):
     # links to Maturity Level
     #
     """
-    ---
-# ===========================================================
-# OWASP SAMM Activity Description
-# ===========================================================
-stream: 253b012094cf4e0988e08fd22609227d
-level: a11b78917dec4cfdad983cf6d1d17b61
-id: 27bb61f3c6344359b021caeaef5ab07e
-title: Adhere to basic security principles
-benefit: Sets of security basic principles available to product teams
-shortDescription: Teams are trained on the use of basic security principles during
-  design
-longDescription: |
-  During design, technical staff on the product team use a short checklist of security principles. Typically, security principles include defense in depth, securing the weakest link, use of secure defaults, simplicity in design of security functionality, secure failure, balance of security and usability, running with least privilege, avoidance of security by obscurity, etc.
+        ---
+    # ===========================================================
+    # OWASP SAMM Activity Description
+    # ===========================================================
+    stream: 253b012094cf4e0988e08fd22609227d
+    level: a11b78917dec4cfdad983cf6d1d17b61
+    id: 27bb61f3c6344359b021caeaef5ab07e
+    title: Adhere to basic security principles
+    benefit: Sets of security basic principles available to product teams
+    shortDescription: Teams are trained on the use of basic security principles during
+      design
+    longDescription: |
+      During design, technical staff on the product team use a short checklist
+       of security principles. Typically, security principles include defense in depth,
+       securing the weakest link, use of secure defaults, simplicity in design of security functionality,
+        secure failure, balance of security and usability, running with least privilege,
+         avoidance of security by obscurity, etc.
 
-  For perimeter interfaces, the team considers each principle in the context of the overall system and identify features that can be added to bolster security at each such interface. Limit these such that they only take a small amount of extra effort beyond the normal implementation cost of functional requirements. Note anything larger, and schedule it for future releases.
+      For perimeter interfaces, the team considers each principle in the context of
+       the overall system and identify features that can be added to bolster security
+       at each such interface. Limit these such that they only take a small amount of
+       extra effort beyond the normal implementation cost of functional requirements.
+        Note anything larger, and schedule it for future releases.
 
-  Train each product team with security awareness before this process, and incorporate more security-savvy staff to aid in making design decisions.
+      Train each product team with security awareness before this process,
+      and incorporate more security-savvy staff to aid in making design decisions.
 
-#The output of this particular activity
-results:
+    #The output of this particular activity
+    results:
 
-#The different metrics that can be used to measure the success of the activity
-metrics:
+    #The different metrics that can be used to measure the success of the activity
+    metrics:
 
-#A description of the costs required to implement the activity
-costs:
-#The (standard) roles involved in the implementation of this activity
-personnel:
+    #A description of the costs required to implement the activity
+    costs:
+    #The (standard) roles involved in the implementation of this activity
+    personnel:
 
-#Internal notes that might help the author
-notes:
+    #Internal notes that might help the author
+    notes:
 
-#References to other activities that are prerequesites to implement this one.
-relatedActivities:
-#Type Classification of the Document
-type: Activity
-"""
-    for f in (BASEDIR/"activities").glob("*.yml"):
+    #References to other activities that are prerequesites to implement this one.
+    relatedActivities:
+    #Type Classification of the Document
+    type: Activity"""
+    for f in (BASEDIR / "activities").glob("*.yml"):
         data = yaml.safe_load(f.read_text())
         id_ = data["id"]
 
@@ -233,7 +243,8 @@ type: Activity
 
 def test_parse_all():
     g = Graph()
-    g.parse(data="""
+    g.parse(
+        data="""
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <https://owaspsamm.org/model/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -292,7 +303,9 @@ ns1:hasLetter a owl:ObjectProperty;
     rdfs:domain ns1:Stream;
 .
 
-    """, format="text/turtle")
+    """,
+        format="text/turtle",
+    )
     parse_function(g)
     parse_maturity(g)
     parse_practice(g)
