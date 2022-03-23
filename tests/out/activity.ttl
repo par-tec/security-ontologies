@@ -1,15 +1,7 @@
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <https://owaspsamm.org/model/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-ns1: a owl:Ontology ;
-    dcterms:creator <mailto:robipolli@gmail.com> ;
-    dcterms:description "OWASP SAMM Ontology" ;
-    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> .
 
 ns1:0082a76b1a3744d9ab0443bd2168e13d a ns1:Activity ;
     rdfs:label "Define basic security metrics" ;
@@ -32,7 +24,6 @@ Document metrics and include descriptions of best and most efficient methods for
 """ ;
     dcterms:identifier "0082a76b1a3744d9ab0443bd2168e13d" ;
     rdfs:comment "Define metrics with insight into the effectiveness and efficiency of the Application Security Program." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/strategy-and-metrics/stream-b> ;
     skos:altLabel "G-SM-1-B" ;
     ns1:benefit "Basic insights into your AppSec program's effectiveness and efficiency" ;
     ns1:hasPracticeLevel ns1:4e54705272fa4f1f9977b1f9011f585d ;
@@ -56,7 +47,6 @@ Training is mandatory for all employees and contractors involved with software d
 """ ;
     dcterms:identifier "05073fb130c74143a12a6ba74a44c580" ;
     rdfs:comment "Offer technology and role-specific guidance, including security nuances of each language and platform" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/education-and-guidance/stream-a> ;
     skos:altLabel "G-EG-2-A" ;
     ns1:benefit "Relevant employee roles trained according to their specific role" ;
     ns1:hasPracticeLevel ns1:e8de5ea176cc455bba89f0e2d1ea1f16 ;
@@ -72,7 +62,6 @@ Manually approve the deployment at least once during an automated deployment. Wh
 """ ;
     dcterms:identifier "05a3e75c6c654ae58a115cbf4295662b" ;
     rdfs:comment "Automatically verify integrity of all deployed software, indenendently on whether it's internally or externally developed." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-deployment/stream-a> ;
     skos:altLabel "I-SD-3-A" ;
     ns1:benefit "Assured integrity of artifacts being deployed to production" ;
     ns1:hasPracticeLevel ns1:fc5eb251c6ee4f3db04eb01b62d380ba ;
@@ -90,7 +79,6 @@ Teams share their awareness of available updates, and their experiences with pat
 """ ;
     dcterms:identifier "0721d5bd5d67479991b5b52f33dcd7b1" ;
     rdfs:comment "Perform best-effort patching of system and application components." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/environment-management/stream-b> ;
     skos:altLabel "O-EM-1-B" ;
     ns1:benefit "Mitigation of well-known issues in third-party components" ;
     ns1:hasPracticeLevel ns1:8cb942eff46d41f38e6edc11849744a6 ;
@@ -106,7 +94,6 @@ Test scripts help reinforce application security requirements through clear expe
 """ ;
     dcterms:identifier "09f4b814a3444b329a7c9c7f54152ffe" ;
     rdfs:comment "Develop security requirements applicable to all applications." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/policy-and-compliance/stream-a> ;
     skos:altLabel "G-PC-2-A" ;
     ns1:benefit "Common understanding of how to reach compliance with security policies for product teams" ;
     ns1:hasPracticeLevel ns1:2a29c1f7d6954785b8d42d637a752f94 ;
@@ -120,7 +107,6 @@ Note any security-related functionality in the architecture and review its corre
 """ ;
     dcterms:identifier "0f611af10f974da497e7f3defe0c4f12" ;
     rdfs:comment "Identify application and infrastructure architecture components and review for basic security provisioning" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/architecture-assessment/stream-a> ;
     skos:altLabel "V-AA-1-A" ;
     ns1:benefit "Understanding of high-level architecture and sensible security measures" ;
     ns1:hasPracticeLevel ns1:39bc5d271fae4ea8ba53db7de7b2712c ;
@@ -138,7 +124,6 @@ The quality of the incident detection does not depend on the time or day of the 
 """ ;
     dcterms:identifier "11dd0c95f8914b6cb850a27f0557a9dd" ;
     rdfs:comment "Use a proactively managed process for detection of incidents." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/incident-management/stream-a> ;
     skos:altLabel "O-IM-3-A" ;
     ns1:benefit "Ability to timely detect security incidents" ;
     ns1:hasPracticeLevel ns1:6fe1973911bf4e54b018da10a5aa80a1 ;
@@ -163,7 +148,6 @@ Share the most prominent or interesting technical details about security defects
 """ ;
     dcterms:identifier "15d73a64818c43019504c8d938ca2434" ;
     rdfs:comment "Collect standardized defect management metrics and use these also for prioritization of centrally driven initiatives." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/defect-management/stream-b> ;
     skos:altLabel "I-DM-2-B" ;
     ns1:benefit "Improved learning from security defects in your organization" ;
     ns1:hasPracticeLevel ns1:b55c7a41eba747678a65651f5ccacaf2 ;
@@ -177,7 +161,6 @@ Manage customer/user migration from older versions of your products for each pro
 """ ;
     dcterms:identifier "1a398709b9d3407dbf9db7eeff6e916c" ;
     rdfs:comment "Decomission unused applications and services as identified. Manage customer upgrades/migrations individually." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/operational-management/stream-b> ;
     skos:altLabel "O-OM-1-B" ;
     ns1:benefit "Identification of unused of software assets or components" ;
     ns1:hasPracticeLevel ns1:d0a99f3db27e48aa9b2d6b58a9040f49 ;
@@ -193,7 +176,6 @@ When requirements are specified, it is important to ensure that these requiremen
 """ ;
     dcterms:identifier "1cc77725cb2349f394477838668f6184" ;
     rdfs:comment "Structured security requirements are available and utilized by developer teams." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-requirements/stream-a> ;
     skos:altLabel "D-SR-2-A" ;
     ns1:benefit "Alignment of security requirements with other types of requirements" ;
     ns1:hasPracticeLevel ns1:1a55b2c4666f4336a3f5c12c5bb4a1e9 ;
@@ -211,7 +193,6 @@ Your most important tool to start threat modeling is a whiteboard, smartboard, o
 """ ;
     dcterms:identifier "1ceadbb5a0024e2599821e7ce756f3a4" ;
     rdfs:comment "Perform best-effort, risk-based threat modeling using brainstorming and existing diagrams with simple threat checklists." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/threat-assessment/stream-b> ;
     skos:altLabel "D-TA-1-B" ;
     ns1:benefit "Identification of architectural design flaws in your applications" ;
     ns1:hasPracticeLevel ns1:a3d4045d5c0c4bd4a875784759539f0c ;
@@ -227,7 +208,6 @@ Account for and audit all deployments to all stages. Have a system in place to r
 """ ;
     dcterms:identifier "1f3a9306778f4539a437d9f19232cda7" ;
     rdfs:comment "Automate the deployment process over all stages and introduce sensible security verification tests." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-deployment/stream-a> ;
     skos:altLabel "I-SD-2-A" ;
     ns1:benefit "Efficient deployment process with integrated security tools" ;
     ns1:hasPracticeLevel ns1:3e89d1fa6cba4516a3ec446faaab5b84 ;
@@ -243,7 +223,6 @@ Train each product team with security awareness before this process, and incorpo
 """ ;
     dcterms:identifier "27bb61f3c6344359b021caeaef5ab07e" ;
     rdfs:comment "Teams are trained on the use of basic security principles during design" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-architecture/stream-a> ;
     skos:altLabel "D-SA-1-A" ;
     ns1:benefit "Sets of security basic principles available to product teams" ;
     ns1:hasPracticeLevel ns1:a11b78917dec4cfdad983cf6d1d17b61 ;
@@ -257,7 +236,6 @@ Identify the most important technologies, frameworks, tools and integrations bei
 """ ;
     dcterms:identifier "27cdd2a336a44e56a42632c7a78fcf4f" ;
     rdfs:comment "Elicit technologies, frameworks and integrations within the overall solution to identify risk." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-architecture/stream-b> ;
     skos:altLabel "D-SA-1-B" ;
     ns1:benefit "Transparency of technologies that introduce security risk" ;
     ns1:hasPracticeLevel ns1:a11b78917dec4cfdad983cf6d1d17b61 ;
@@ -273,7 +251,6 @@ Handle code signing on a separate centralized server which does not expose the c
 """ ;
     dcterms:identifier "281369f491da4d4c84b0729e344e2c93" ;
     rdfs:comment "Define mandatory security checks in the build process and ensure that building non-compliant artifacts fails." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-build/stream-a> ;
     skos:altLabel "I-SB-3-A" ;
     ns1:benefit "Assurance that you build software complying with a security baseline" ;
     ns1:hasPracticeLevel ns1:02e602c451d548e8a95433a46fe6b9d8 ;
@@ -289,7 +266,6 @@ It is important that your suppliers understand and align to the risk appetite an
 """ ;
     dcterms:identifier "2b01696356ed4652accf093f6c6a47ee" ;
     rdfs:comment "Evaluate the supplier based on organizational security requirements." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-requirements/stream-b> ;
     skos:altLabel "D-SR-1-B" ;
     ns1:benefit "Transparency of security practices of your software suppliers" ;
     ns1:hasPracticeLevel ns1:3d035b6df77f4ee69577c9b4c9d64891 ;
@@ -305,7 +281,6 @@ Even if you don't have any formal SLAs for fixing low severity defects, ensure t
 """ ;
     dcterms:identifier "2bf0e192a904444b8a2f38c33256e80a" ;
     rdfs:comment "Rate all security defects over the whole organization consistently and define SLAs for particular severity classes." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/defect-management/stream-a> ;
     skos:altLabel "I-DM-2-A" ;
     ns1:benefit "Consistent classification of security defects with clear expectations of their handling" ;
     ns1:hasPracticeLevel ns1:b55c7a41eba747678a65651f5ccacaf2 ;
@@ -321,7 +296,6 @@ In a mature implementation of this practice, train and continuously update teams
 """ ;
     dcterms:identifier "2f63f92c414546b58d035ece110d479f" ;
     rdfs:comment "Periodically review application risk profiles at regular intervals to ensure accuracy and reflect current state." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/threat-assessment/stream-a> ;
     skos:altLabel "D-TA-3-A" ;
     ns1:benefit "Timely update of the application classification in case of changes" ;
     ns1:hasPracticeLevel ns1:21a59897dbeb4d7fa4603a0f24362c2b ;
@@ -341,7 +315,6 @@ Periodically review your baseline management process, incorporating feedback and
 """ ;
     dcterms:identifier "3156ab7b516e4550893427face9f86bc" ;
     rdfs:comment "Actively monitor configurations for non-conformance to baselines, and handle detected occurrences as security defects." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/environment-management/stream-a> ;
     skos:altLabel "O-EM-3-A" ;
     ns1:benefit "Clear view on component configurations to avoid non-conformities" ;
     ns1:hasPracticeLevel ns1:1cb6e197ca8245eca65b0ecbdd784720 ;
@@ -359,7 +332,6 @@ Prior to release or mass deployment, stakeholders review results of security tes
 """ ;
     dcterms:identifier "346ed576f0a94147ba2b8148abc3c73a" ;
     rdfs:comment "Conduct manual penetration testing" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/security-testing/stream-b> ;
     skos:altLabel "V-ST-2-B" ;
     ns1:benefit "Understanding of application resilience from black-box perspective" ;
     ns1:hasPracticeLevel ns1:6291462e1894467d807b913ef7da4beb ;
@@ -373,7 +345,6 @@ Requirements include enough information for developers to understand functional 
 """ ;
     dcterms:identifier "38932fe4024e4ec89646a82e0b4e651e" ;
     rdfs:comment "Publish compliance-specific application requirements and test guidance." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/policy-and-compliance/stream-b> ;
     skos:altLabel "G-PC-2-B" ;
     ns1:benefit "Common understanding how to reach compliance with external compliance drivers for product teams" ;
     ns1:hasPracticeLevel ns1:2a29c1f7d6954785b8d42d637a752f94 ;
@@ -387,7 +358,6 @@ Typical threats in an architecture can relate to incorrect assumptions in, or ov
 """ ;
     dcterms:identifier "3ae763a70854421984dfa70980e1bf68" ;
     rdfs:comment "Ad-hoc review of the architecture for unmitigated security threats." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/architecture-assessment/stream-b> ;
     skos:altLabel "V-AA-1-B" ;
     ns1:benefit "Assures that the architecture protects against typical security threats." ;
     ns1:hasPracticeLevel ns1:39bc5d271fae4ea8ba53db7de7b2712c ;
@@ -401,7 +371,6 @@ Verify several factors with project teams. Identify use of non-recommended techn
 """ ;
     dcterms:identifier "3afce608ad7c42deb37a04d6b86e5c33" ;
     rdfs:comment "Impose the use of standard technologies on all software development." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-architecture/stream-b> ;
     skos:altLabel "D-SA-3-B" ;
     ns1:benefit "Limited attack surface due to usage of vetted technologies" ;
     ns1:hasPracticeLevel ns1:9d1e469966124c0fa80d1bc2fc223a0a ;
@@ -420,7 +389,6 @@ When defining the overall metrics strategy, keep the end-goal in mind and define
 """ ;
     dcterms:identifier "43d347fd280845718f16ccc811e5d942" ;
     rdfs:comment "Influence the strategy based on the metrics and organizational needs." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/strategy-and-metrics/stream-b> ;
     skos:altLabel "G-SM-3-B" ;
     ns1:benefit "Continuous improvement of your program according to results" ;
     ns1:hasPracticeLevel ns1:420074f071fb4ab6b6ee6ef44c4f4f1c ;
@@ -436,7 +404,6 @@ Make the system used to store and process the secrets and credentials robust fro
 """ ;
     dcterms:identifier "4729b4bd6dca4d58a68cb854ad4409a6" ;
     rdfs:comment "Inject secrets dynamically during deployment process from hardened storages and audit all human access to them." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-deployment/stream-b> ;
     skos:altLabel "I-SD-2-B" ;
     ns1:benefit "Detection of potential leakage of production secrets" ;
     ns1:hasPracticeLevel ns1:3e89d1fa6cba4516a3ec446faaab5b84 ;
@@ -454,7 +421,6 @@ Consider and implement security test correlation tools to automate the matching 
 """ ;
     dcterms:identifier "4f6a06796d0840debcc775ea1af65679" ;
     rdfs:comment "Integrate automated security testing into the build and deploy process" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/security-testing/stream-a> ;
     skos:altLabel "V-ST-3-A" ;
     ns1:benefit "Identification of automatically identifiable vulnerabilities in earliest possible stages" ;
     ns1:hasPracticeLevel ns1:eac3184f8e2343b8b29047d023376da5 ;
@@ -472,7 +438,6 @@ Based on this input, Security Officers leverage the classification to define the
 """ ;
     dcterms:identifier "529d528265c94447954a57f5be425f54" ;
     rdfs:comment "Understand the risk for all applications in the organization by centralizing the risk profile inventory for stakeholders." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/threat-assessment/stream-a> ;
     skos:altLabel "D-TA-2-A" ;
     ns1:benefit "Solid understanding of the risk level of your application portfolio" ;
     ns1:hasPracticeLevel ns1:e5b6dc4f907c4986b8ba7923303cd665 ;
@@ -490,7 +455,6 @@ When you determine an event is a security incident (with sufficiently high confi
 """ ;
     dcterms:identifier "5bcb52375a0f4085bb12266c9ecfa84d" ;
     rdfs:comment "Follow an established, well-documented process for incident detection, with emphasis on automated log evaluation." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/incident-management/stream-a> ;
     skos:altLabel "O-IM-2-A" ;
     ns1:benefit "Timely and consistent detection of expected security incidents" ;
     ns1:hasPracticeLevel ns1:439406325e6645519c149da3e05a7d9d ;
@@ -504,7 +468,6 @@ Once you have implemented this for a few suppliers, work towards a standard agre
 """ ;
     dcterms:identifier "5d5e3d9beab9498ca1ce66d3a53a81c6" ;
     rdfs:comment "Build security into supplier agreements in order to ensure compliance with organizational requirements." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-requirements/stream-b> ;
     skos:altLabel "D-SR-2-B" ;
     ns1:benefit "Clearly defined security responsibilities of your software suppliers" ;
     ns1:hasPracticeLevel ns1:1a55b2c4666f4336a3f5c12c5bb4a1e9 ;
@@ -520,7 +483,6 @@ Senior developers and architects create this list, including input from managers
 """ ;
     dcterms:identifier "5e1dd310e28449058046c7af0fe46fce" ;
     rdfs:comment "Standardize technologies and frameworks to be used throughout the different applications" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-architecture/stream-b> ;
     skos:altLabel "D-SA-2-B" ;
     ns1:benefit "Technologies with appropriate security level available to product teams" ;
     ns1:hasPracticeLevel ns1:41c8e63716c34f1eaf09b8cad70cfbaf ;
@@ -536,7 +498,6 @@ Engage with customers and user groups for your products at or approaching end of
 """ ;
     dcterms:identifier "60d7a0a61dd142d5a87009bc5b93df56" ;
     rdfs:comment "Develop repeatable decommissioning processes for unused systems/services, and for migration from legacy dependencies. Manage legacy migration roadmaps for customers." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/operational-management/stream-b> ;
     skos:altLabel "O-OM-2-B" ;
     ns1:benefit "Standardized decommisioning process decreasing the risk of forgetting components" ;
     ns1:hasPracticeLevel ns1:76f8a2e68065467ba9bd2b5ac625490b ;
@@ -552,7 +513,6 @@ Enrich your previously created threat model such that each threat and its estima
 """ ;
     dcterms:identifier "62237ae79ab84a6687de2885b1e3d608" ;
     rdfs:comment "Analyze the architecture for known threats." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/architecture-assessment/stream-b> ;
     skos:altLabel "V-AA-2-B" ;
     ns1:benefit "All identified threats to the application are adequately handled." ;
     ns1:hasPracticeLevel ns1:67fcd33f84364ef68fb88aba77de1a63 ;
@@ -570,7 +530,6 @@ Feed the output of threat modeling to the defect management process for adequate
 """ ;
     dcterms:identifier "649b693315234a94928e42f3e308deac" ;
     rdfs:comment "Standardize threat modeling training, processes, and tools to scale across the organization." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/threat-assessment/stream-b> ;
     skos:altLabel "D-TA-2-B" ;
     ns1:benefit "Clear expectations of the quality of threat modeling activities" ;
     ns1:hasPracticeLevel ns1:e5b6dc4f907c4986b8ba7923303cd665 ;
@@ -586,7 +545,6 @@ For standards, incorporate requirements set forth by policies, and focus on tech
 """ ;
     dcterms:identifier "6e7a618abd564df5bb784ca54893bbee" ;
     rdfs:comment "Determine a security baseline representing organization’s policies and standards." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/policy-and-compliance/stream-a> ;
     skos:altLabel "G-PC-1-A" ;
     ns1:benefit "Clear expectation of minimum security level in the organization" ;
     ns1:hasPracticeLevel ns1:437d447b3f11427592e938dbde53c7da ;
@@ -602,7 +560,6 @@ For security functional tests, use unit level tests for the functionality of sec
 """ ;
     dcterms:identifier "7003146cf1a1450293001754fe74787d" ;
     rdfs:comment "Perform regression testing (with security unit tests)" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/requirements-driven-testing/stream-a> ;
     skos:altLabel "V-RT-3-A" ;
     ns1:benefit "Timely and reliable detection of violations to security requirements" ;
     ns1:hasPracticeLevel ns1:812abdd0a2b54366a497919f8463911a ;
@@ -618,7 +575,6 @@ Store sensitive credentials and secrets for production systems with encryption-a
 """ ;
     dcterms:identifier "77a5f467ffe140e2a2839bb522e82c4e" ;
     rdfs:comment "Introduce basic protection measures to limit access to your production secrets." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-deployment/stream-b> ;
     skos:altLabel "I-SD-1-B" ;
     ns1:benefit "Defined and limited access to your production secrets" ;
     ns1:hasPracticeLevel ns1:5015427608de428cba3c324772fb4191 ;
@@ -634,7 +590,6 @@ At this level of maturity, you don't yet have a formal process for managing conf
 """ ;
     dcterms:identifier "786b3d7b39cd49a88090554a275f04a6" ;
     rdfs:comment "Perform best-effort hardening of configurations, based on readily available information." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/environment-management/stream-a> ;
     skos:altLabel "O-EM-1-A" ;
     ns1:benefit "Hardened basic configuration settings of your components" ;
     ns1:hasPracticeLevel ns1:8cb942eff46d41f38e6edc11849744a6 ;
@@ -648,7 +603,6 @@ The advantage of fuzz testing is the simplicity of the test design, and its lack
 """ ;
     dcterms:identifier "81ef5625583646bf8bc3fad53e4eff55" ;
     rdfs:comment "Perform security fuzzing testing" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/requirements-driven-testing/stream-b> ;
     skos:altLabel "V-RT-1-B" ;
     ns1:benefit "Insight into behaviour of your applications when dealing with unexpected input" ;
     ns1:hasPracticeLevel ns1:df5a0be1889a4b06835193892803dde5 ;
@@ -664,7 +618,6 @@ Based on your Data Protection Policy, establish processes and procedures for pro
 """ ;
     dcterms:identifier "82a962e3dcc44b1086760de517aaa3c1" ;
     rdfs:comment "Develop data catalog and establish data protection policy." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/operational-management/stream-a> ;
     skos:altLabel "O-OM-2-A" ;
     ns1:benefit "Standardized handling of different classes of sensitive data" ;
     ns1:hasPracticeLevel ns1:76f8a2e68065467ba9bd2b5ac625490b ;
@@ -680,7 +633,6 @@ In larger environments, derive configurations of instances from a locally mainta
 """ ;
     dcterms:identifier "84dcbc954d954d95b1fb37e032f05402" ;
     rdfs:comment "Perform consistent hardening of configurations, following established baselines and guidance." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/environment-management/stream-a> ;
     skos:altLabel "O-EM-2-A" ;
     ns1:benefit "Consistent hardening of technology stack components in your organization" ;
     ns1:hasPracticeLevel ns1:354292b7198b48bb8c4909e0d7e29f68 ;
@@ -696,7 +648,6 @@ Since many compliance standards are focused around security best-practices, many
 """ ;
     dcterms:identifier "852c76292e8a41de92205b31cb3f4e49" ;
     rdfs:comment "Identify 3rd-party compliance drivers and requirements and map to existing policies and standards." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/policy-and-compliance/stream-b> ;
     skos:altLabel "G-PC-1-B" ;
     ns1:benefit "Security policies and standards aligned with external compliance drivers" ;
     ns1:hasPracticeLevel ns1:437d447b3f11427592e938dbde53c7da ;
@@ -720,7 +671,6 @@ React timely and appropriately to non-conformities by handling these as defects.
 """ ;
     dcterms:identifier "857a43e335ba467598eca99d48ea0076" ;
     rdfs:comment "Evaluate used dependencies and ensure timely reaction to situations posing risk to your applications." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-build/stream-b> ;
     skos:altLabel "I-SB-2-B" ;
     ns1:benefit "Full transparency of known security issues in dependencies" ;
     ns1:hasPracticeLevel ns1:46f16450b23d4c29a5cf19b056c2636e ;
@@ -734,7 +684,6 @@ Establish a product support plan, providing clear timelines for ending support o
 """ ;
     dcterms:identifier "8ab46d242edd413d99a6c1991aef2416" ;
     rdfs:comment "Proactively manage migration roadmaps, for both unsupported end-of-life dependencies, and legacy versions of delivered software." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/operational-management/stream-b> ;
     skos:altLabel "O-OM-3-B" ;
     ns1:benefit "Full visibility into lifecycle of all software assets" ;
     ns1:hasPracticeLevel ns1:2a059c7d07c34b9897e49e6295501608 ;
@@ -750,7 +699,6 @@ Security objectives can relate to specific security functionality you need to ad
 """ ;
     dcterms:identifier "91086153b98b46928e36dd031b27bdc2" ;
     rdfs:comment "High-level application security objectives are mapped to functional requirements." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-requirements/stream-a> ;
     skos:altLabel "D-SR-1-A" ;
     ns1:benefit "Understanding of key security requirements during development" ;
     ns1:hasPracticeLevel ns1:3d035b6df77f4ee69577c9b4c9d64891 ;
@@ -770,7 +718,6 @@ Select appropriate tools based on several factors, including depth and accuracy 
 """ ;
     dcterms:identifier "921ff24f0b9f4df9a5129aa2f8a4a570" ;
     rdfs:comment "Utilize automated security testing tools" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/security-testing/stream-a> ;
     skos:altLabel "V-ST-1-A" ;
     ns1:benefit "Detection of common easy-to-find vulnerabilities" ;
     ns1:hasPracticeLevel ns1:d6cefe3e63d149299fb088010c24778b ;
@@ -786,7 +733,6 @@ Training is mandatory for all employees and contractors involved with software d
 """ ;
     dcterms:identifier "93ccc4cdf5d841e3986f3684467b2bf1" ;
     rdfs:comment "Provide security awareness training for all personnel involved in software development" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/education-and-guidance/stream-a> ;
     skos:altLabel "G-EG-1-A" ;
     ns1:benefit "Basic security awareness for all relevant employees" ;
     ns1:hasPracticeLevel ns1:38f3a2f7633c42b98eb160f36a2c0a7b ;
@@ -807,7 +753,6 @@ Introduce at least rudimentary qualitative classificiation of security defects s
 """ ;
     dcterms:identifier "93dff7be5f954f8d87d24f4261002508" ;
     rdfs:comment "Introduce a structured tracking of security defects and make knowledgeable decisions based on this information." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/defect-management/stream-a> ;
     skos:altLabel "I-DM-1-A" ;
     ns1:benefit "Transparency of known security defects impacting particular applications" ;
     ns1:hasPracticeLevel ns1:97a46a074fe849a1af2c2d2d3dd09ba5 ;
@@ -825,7 +770,6 @@ Have personnel with access to the production environment go through at least a m
 """ ;
     dcterms:identifier "994bcac2bb7c4cc59a0faa365a0b58a0" ;
     rdfs:comment "Formalize the deployment process and secure the used tooling and processes." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-deployment/stream-a> ;
     skos:altLabel "I-SD-1-A" ;
     ns1:benefit "Limited risk of human error during deployment process minimizing security issues" ;
     ns1:hasPracticeLevel ns1:5015427608de428cba3c324772fb4191 ;
@@ -841,7 +785,6 @@ Often, it is most effective to use the project team’s time to build applicatio
 """ ;
     dcterms:identifier "9951bda24b624cc684a2851f9d56c5d8" ;
     rdfs:comment "Derive test cases from known security requirements" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/requirements-driven-testing/stream-a> ;
     skos:altLabel "V-RT-2-A" ;
     ns1:benefit "Integration of security requirements into test scenarios" ;
     ns1:hasPracticeLevel ns1:3e6e9a2b696e48018830b44fa96f98b5 ;
@@ -855,7 +798,6 @@ The security testing validates the relevant software security controls. Perform 
 """ ;
     dcterms:identifier "99989f86dabc4a7a87fbe6a274c99ca3" ;
     rdfs:comment "Test for software security controls" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/requirements-driven-testing/stream-a> ;
     skos:altLabel "V-RT-1-A" ;
     ns1:benefit "Verified effectiveness of your standard security controls" ;
     ns1:hasPracticeLevel ns1:df5a0be1889a4b06835193892803dde5 ;
@@ -875,7 +817,6 @@ To increase adoption of these patterns, link them to the shared security service
 """ ;
     dcterms:identifier "9b6a86278ba14a9098d3d60a9a78d6c5" ;
     rdfs:comment "Establish common design patterns and security solutions for adoption." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-architecture/stream-a> ;
     skos:altLabel "D-SA-2-A" ;
     ns1:benefit "Reusable security services available for product teams" ;
     ns1:hasPracticeLevel ns1:41c8e63716c34f1eaf09b8cad70cfbaf ;
@@ -889,7 +830,6 @@ Feed any findings back into defect management to trigger further improvements to
 """ ;
     dcterms:identifier "9d0433c5133c4a4c9c16ae84abe9a235" ;
     rdfs:comment "Review of the architecture components' effectiveness" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/architecture-assessment/stream-a> ;
     skos:altLabel "V-AA-3-A" ;
     ns1:benefit "Assurance of effectiveness of architecture controls" ;
     ns1:hasPracticeLevel ns1:83ea8aaab3384b41b785107613ee4d86 ;
@@ -907,7 +847,6 @@ Review issues resulting from employees not following established standards, poli
 """ ;
     dcterms:identifier "a061ed8a5b1c4899bc95d9b1a10a469d" ;
     rdfs:comment "Standardized in-house guidance around the organization’s secure software development standards." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/education-and-guidance/stream-a> ;
     skos:altLabel "G-EG-3-A" ;
     ns1:benefit "Adequate security knowledge of all employees ensured prior to working on critical tasks" ;
     ns1:hasPracticeLevel ns1:e3cf1d3c27b74262b9f842f27ca86333 ;
@@ -919,7 +858,6 @@ ns1:a11da5bb4d3c475d9e9c53b104032e65 a ns1:Activity ;
 """ ;
     dcterms:identifier "a11da5bb4d3c475d9e9c53b104032e65" ;
     rdfs:comment "Feed the architecture review results back into the enterprise architecture, organization design principles & patterns, security solutions and reference architectures." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/architecture-assessment/stream-b> ;
     skos:altLabel "V-AA-3-B" ;
     ns1:benefit "Continuous improvement of enterprise architecture based on architecture reviews" ;
     ns1:hasPracticeLevel ns1:83ea8aaab3384b41b785107613ee4d86 ;
@@ -935,7 +873,6 @@ The Secure Software Center of Excellence and Application Security teams review t
 """ ;
     dcterms:identifier "a3720e84d6a24a8ba235c25ce6afc5c7" ;
     rdfs:comment "Build a secure software community including all organization people involved in software security." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/education-and-guidance/stream-b> ;
     skos:altLabel "G-EG-3-B" ;
     ns1:benefit "Collective development of security know-how among all product teams" ;
     ns1:hasPracticeLevel ns1:e3cf1d3c27b74262b9f842f27ca86333 ;
@@ -953,7 +890,6 @@ Security champions and the central secure software group continuously review res
 """ ;
     dcterms:identifier "a395d69917b947b28d5995738d716283" ;
     rdfs:comment "Integrate security testing into development process" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/security-testing/stream-b> ;
     skos:altLabel "V-ST-3-B" ;
     ns1:benefit "Identification of manually identifiable security issues in earliest possible stages" ;
     ns1:hasPracticeLevel ns1:eac3184f8e2343b8b29047d023376da5 ;
@@ -969,7 +905,6 @@ Don't rely on routine notifications from component vendors to learn about vulner
 """ ;
     dcterms:identifier "a573c126b3e345fba9d1d94c8158cf60" ;
     rdfs:comment "Actively monitor update status and manage missing patches as security defects. Proactively obtain vulnerability and update information for components." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/environment-management/stream-b> ;
     skos:altLabel "O-EM-3-B" ;
     ns1:benefit "Clear view on component patch state to avoid non-conformities" ;
     ns1:hasPracticeLevel ns1:1cb6e197ca8245eca65b0ecbdd784720 ;
@@ -983,7 +918,6 @@ In case suppliers cannot meet the objectives that you have set, implement compen
 """ ;
     dcterms:identifier "a9f56795ac84426c9e45f9471e82a8d7" ;
     rdfs:comment "Ensure proper security coverage for external suppliers by providing clear objectives." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-requirements/stream-b> ;
     skos:altLabel "D-SR-3-B" ;
     ns1:benefit "Alignment of software development practices with suppliers to limit security risks" ;
     ns1:hasPracticeLevel ns1:f8b6eebc0662477f9286aa4f6068e364 ;
@@ -999,7 +933,6 @@ Monitor weaknesses or gaps in the set of security solutions available in your or
 """ ;
     dcterms:identifier "aa962032982a4d53bd34cd8771558df1" ;
     rdfs:comment "Reference architectures are utilized and continuously evaluated for adoption and appropriateness." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-architecture/stream-a> ;
     skos:altLabel "D-SA-3-A" ;
     ns1:benefit "Full transparency of quality and usability of centrally provided security solutions" ;
     ns1:hasPracticeLevel ns1:9d1e469966124c0fa80d1bc2fc223a0a ;
@@ -1015,7 +948,6 @@ When security incidents happen, document all actions taken. Protect this informa
 """ ;
     dcterms:identifier "b082664b8815407d825b82cf23fa88ea" ;
     rdfs:comment "Identify roles and responsibilities for incident response." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/incident-management/stream-b> ;
     skos:altLabel "O-IM-1-B" ;
     ns1:benefit "Ability to efficiently solve most common security incidents" ;
     ns1:hasPracticeLevel ns1:817dd6acaf85496aa005393e0e6c3e70 ;
@@ -1031,7 +963,6 @@ During development cycles where high-risk code is changed and reviewed, developm
 """ ;
     dcterms:identifier "b3b20a75740c4880a21ad9aa0c1298c7" ;
     rdfs:comment "Perform manual security testing of high-risk components" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/security-testing/stream-b> ;
     skos:altLabel "V-ST-1-B" ;
     ns1:benefit "Detection of manually identifiable vulnerabilities in critical components" ;
     ns1:hasPracticeLevel ns1:d6cefe3e63d149299fb088010c24778b ;
@@ -1047,7 +978,6 @@ In the event receive a notification for a critical vulnerability in a component,
 """ ;
     dcterms:identifier "b7f1d18fbe724a148f039ce036de98ef" ;
     rdfs:comment "Perform regular patching of system and application components, across the full stack. Ensure timely delivery of patches to customers." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/environment-management/stream-b> ;
     skos:altLabel "O-EM-2-B" ;
     ns1:benefit "Consistent and proactive patching of technology stack components" ;
     ns1:hasPracticeLevel ns1:354292b7198b48bb8c4909e0d7e29f68 ;
@@ -1067,7 +997,6 @@ Establish and share points of contact for formal creation of security incidents.
 """ ;
     dcterms:identifier "b8dfd23d66224ac88d3ce41cf83ed15e" ;
     rdfs:comment "Use available log data to perform best-effort detection of possible security incidents." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/incident-management/stream-a> ;
     skos:altLabel "O-IM-1-A" ;
     ns1:benefit "Ability to detect the most obvious security incidents" ;
     ns1:hasPracticeLevel ns1:817dd6acaf85496aa005393e0e6c3e70 ;
@@ -1085,7 +1014,6 @@ Finally, add appropriate automated security checks (e.g. using SAST tools) in th
 """ ;
     dcterms:identifier "bcc960e835aa4ad58a9d39a272cbf6f1" ;
     rdfs:comment "Automate your build pipeline and secure the used tooling. Add security checks in the build pipeline." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-build/stream-a> ;
     skos:altLabel "I-SB-2-A" ;
     ns1:benefit "Efficient build process with integrated security tools" ;
     ns1:hasPracticeLevel ns1:46f16450b23d4c29a5cf19b056c2636e ;
@@ -1107,7 +1035,6 @@ Check the records to discover any dependencies with known vulnerabilities and up
 """ ;
     dcterms:identifier "bed0489cae4e4401b1d44d56ad36c109" ;
     rdfs:comment "Create records with Bill of Materials of your applications and opportunistically analyze these." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-build/stream-b> ;
     skos:altLabel "I-SB-1-B" ;
     ns1:benefit "Available information on known security issues in dependencies" ;
     ns1:hasPracticeLevel ns1:b29ab542cc674901a19cf5f3c0c4be18 ;
@@ -1127,7 +1054,6 @@ Ensure that build tools are routinely patched and properly hardened.
 """ ;
     dcterms:identifier "bf536a9305134a769adbd414652054ee" ;
     rdfs:comment "Create a formal definition of the build process so that it becomes consistent and repeatable." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-build/stream-a> ;
     skos:altLabel "I-SB-1-A" ;
     ns1:benefit "Limited risk of human error during build process minimizing security issues" ;
     ns1:hasPracticeLevel ns1:b29ab542cc674901a19cf5f3c0c4be18 ;
@@ -1141,7 +1067,6 @@ Implement basic controls, to prevent propagation of unsanitized sensitive data f
 """ ;
     dcterms:identifier "c16a12399dc94cc889d7e9e66e0ae2a0" ;
     rdfs:comment "Implement basic data protection practices" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/operational-management/stream-a> ;
     skos:altLabel "O-OM-1-A" ;
     ns1:benefit "Understanding of sensitivity of processed data with derived quick-win measures" ;
     ns1:hasPracticeLevel ns1:d0a99f3db27e48aa9b2d6b58a9040f49 ;
@@ -1157,7 +1082,6 @@ For the program to be successful, the application security team obtains buy-in f
 """ ;
     dcterms:identifier "c1778728d66e4b83b59a42405a90598a" ;
     rdfs:comment "Publish a unified strategy for application security." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/strategy-and-metrics/stream-a> ;
     skos:altLabel "G-SM-2-A" ;
     ns1:benefit "Available and agreed upon roadmap of your AppSec program" ;
     ns1:hasPracticeLevel ns1:561e85a7fb114b1d976acce95d0b41ee ;
@@ -1173,7 +1097,6 @@ Fully document KPIs and distribute them to the teams contributing to the success
 """ ;
     dcterms:identifier "c1aef0137df1400cbdd3c660b609b7b2" ;
     rdfs:comment "Set targets and KPI’s for measuring the program effectiveness." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/strategy-and-metrics/stream-b> ;
     skos:altLabel "G-SM-2-B" ;
     ns1:benefit "Transparency on your AppSec program's performance" ;
     ns1:hasPracticeLevel ns1:561e85a7fb114b1d976acce95d0b41ee ;
@@ -1187,7 +1110,6 @@ Next, use a scheme to classify applications according to this risk. A simple, qu
 """ ;
     dcterms:identifier "c6da6525773644d0a18b3a927caf6dd2" ;
     rdfs:comment "A basic assessment of the application risk is performed to understand likelihood and impact of an attack." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/threat-assessment/stream-a> ;
     skos:altLabel "D-TA-1-A" ;
     ns1:benefit "Ability to classify applications according to risk" ;
     ns1:hasPracticeLevel ns1:a3d4045d5c0c4bd4a875784759539f0c ;
@@ -1205,7 +1127,6 @@ Reviews and update the data catalog regularly, to maintain its accurate reflecti
 """ ;
     dcterms:identifier "cd80066899014962a37af7ab34c83003" ;
     rdfs:comment "Automate detection of policy non-compliance, and audit compliance periodically. Regularly review and update to data catalog and data protection policy." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/operational-management/stream-a> ;
     skos:altLabel "O-OM-3-A" ;
     ns1:benefit "Technically enforced compliance with your data protection policy" ;
     ns1:hasPracticeLevel ns1:2a059c7d07c34b9897e49e6295501608 ;
@@ -1221,7 +1142,6 @@ The framework also gives clear guidance on the quality of requirements and forma
 """ ;
     dcterms:identifier "ce13df2e0dfb455588bf75135f1a718e" ;
     rdfs:comment "Build a requirements framework for product teams to utilize." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-requirements/stream-a> ;
     skos:altLabel "D-SR-3-A" ;
     ns1:benefit "Efficient and effective handling of security requirements in your organization" ;
     ns1:hasPracticeLevel ns1:f8b6eebc0662477f9286aa4f6068e364 ;
@@ -1237,7 +1157,6 @@ Track all identified issues and their state using your defect tracking system. I
 """ ;
     dcterms:identifier "d09a731835304ea8aeb4c21565e45c4b" ;
     rdfs:comment "Analyze used dependencies for security issues in a comparable way to your own code." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-build/stream-b> ;
     skos:altLabel "I-SB-3-B" ;
     ns1:benefit "Handling of security issues in dependencies comparable to those in your own code" ;
     ns1:hasPracticeLevel ns1:02e602c451d548e8a95433a46fe6b9d8 ;
@@ -1256,7 +1175,6 @@ Identify and carry out sensible quick win activities which you can derive from t
 """ ;
     dcterms:identifier "d1cb54f1ddd3432480513df320fc0ff8" ;
     rdfs:comment "Regularly go over previously recorded security defects and derive quick wins from basic metrics." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/defect-management/stream-b> ;
     skos:altLabel "I-DM-1-B" ;
     ns1:benefit "Identification of quick wins derived from available defect information" ;
     ns1:hasPracticeLevel ns1:97a46a074fe849a1af2c2d2d3dd09ba5 ;
@@ -1272,7 +1190,6 @@ The group provides subject matter expertise, helping information security teams 
 """ ;
     dcterms:identifier "d61764610f8741de894c1751f5c041ae" ;
     rdfs:comment "Develop a secure software center of excellence promoting thought leadership among developers and architects." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/education-and-guidance/stream-b> ;
     skos:altLabel "G-EG-2-B" ;
     ns1:benefit "Specific security best practices tailored to the organization" ;
     ns1:hasPracticeLevel ns1:e8de5ea176cc455bba89f0e2d1ea1f16 ;
@@ -1291,7 +1208,6 @@ Ensure a knowledgeable and properly trained incident response team is available 
 """ ;
     dcterms:identifier "d6dd8813c5074350b5614b92f2dec60d" ;
     rdfs:comment "Establish a formal incident response process and ensure staff are properly trained in performing their roles." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/incident-management/stream-b> ;
     skos:altLabel "O-IM-2-B" ;
     ns1:benefit "Understanding and efficient handling of most security incidents" ;
     ns1:hasPracticeLevel ns1:439406325e6645519c149da3e05a7d9d ;
@@ -1308,7 +1224,6 @@ Integrate your defect management system with the automated tooling introduced by
 """ ;
     dcterms:identifier "d955a7b3fbfc4b6aa5b327af9e01c377" ;
     rdfs:comment "Enforce the predefined SLAs and integrate your defect management system with other relevant tooling." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/defect-management/stream-a> ;
     skos:altLabel "I-DM-3-A" ;
     ns1:benefit "Assurance that security defects are handled within predefined SLAs" ;
     ns1:hasPracticeLevel ns1:5a25ae9bc9134d6387128ea925c81845 ;
@@ -1324,7 +1239,6 @@ Denial of service attacks typically result in application resource starvation or
 """ ;
     dcterms:identifier "d975bb1ce1dd4d61a6039b0a4a05926e" ;
     rdfs:comment "Denial of service and security stress testing" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/requirements-driven-testing/stream-b> ;
     skos:altLabel "V-RT-3-B" ;
     ns1:benefit "Transparency of resilience against denial of service attacks" ;
     ns1:hasPracticeLevel ns1:812abdd0a2b54366a497919f8463911a ;
@@ -1340,7 +1254,6 @@ The organization develops dashboards and measurements for management and teams r
 """ ;
     dcterms:identifier "e092ac0ccb8c4fccb6cd662f974dc107" ;
     rdfs:comment "Align the application security program to support the organization’s growth." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/strategy-and-metrics/stream-a> ;
     skos:altLabel "G-SM-3-A" ;
     ns1:benefit "Continuous AppSec program alignment with the organization's business goals" ;
     ns1:hasPracticeLevel ns1:420074f071fb4ab6b6ee6ef44c4f4f1c ;
@@ -1356,7 +1269,6 @@ Review compliance gaps requiring significant expenses or development with the su
 """ ;
     dcterms:identifier "e7ba346fabdc44beb47e2c67c14a6726" ;
     rdfs:comment "Measure and report on individual application’s compliance with 3rd party requirements." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/policy-and-compliance/stream-b> ;
     skos:altLabel "G-PC-3-B" ;
     ns1:benefit "Understanding of your organization’s compliance with external compliance drivers" ;
     ns1:hasPracticeLevel ns1:61ae1e4268b24d7986805658c89b5e54 ;
@@ -1372,7 +1284,6 @@ You automate parts of your threat modeling process with threat modeling tools. Y
 """ ;
     dcterms:identifier "e931a744c2864bef85a3fa75ce7e214f" ;
     rdfs:comment "Continuously optimization and automation of your threat modeling methodology." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/threat-assessment/stream-b> ;
     skos:altLabel "D-TA-3-B" ;
     ns1:benefit "Assurance of continuous improvement of threat modeling activities" ;
     ns1:hasPracticeLevel ns1:21a59897dbeb4d7fa4603a0f24362c2b ;
@@ -1386,7 +1297,6 @@ Perform this type of analysis on both internal interfaces, e.g. between tiers, a
 """ ;
     dcterms:identifier "eba4b86963f44fa59b0b9389a1cfc59b" ;
     rdfs:comment "Validate the architecture security mechanisms" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/architecture-assessment/stream-a> ;
     skos:altLabel "V-AA-2-A" ;
     ns1:benefit "Consistent architecture review process across your organization" ;
     ns1:hasPracticeLevel ns1:67fcd33f84364ef68fb88aba77de1a63 ;
@@ -1402,7 +1312,6 @@ In addition to assisting Information Security, “Security Champions” provide 
 """ ;
     dcterms:identifier "ebd3782abc4343509981c52192904a42" ;
     rdfs:comment "Identify a “Security Champion” within each development team." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/education-and-guidance/stream-b> ;
     skos:altLabel "G-EG-1-B" ;
     ns1:benefit "Basic embedding of security in the development organization" ;
     ns1:hasPracticeLevel ns1:38f3a2f7633c42b98eb160f36a2c0a7b ;
@@ -1418,7 +1327,6 @@ The baseline and individual risk factors should be published and made available 
 """ ;
     dcterms:identifier "ef0b56870b734b13868697017a9b605e" ;
     rdfs:comment "Identify organization drivers as they relate to the organization’s risk tolerance." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/strategy-and-metrics/stream-a> ;
     skos:altLabel "G-SM-1-A" ;
     ns1:benefit "Common understanding of your organization's security posture" ;
     ns1:hasPracticeLevel ns1:4e54705272fa4f1f9977b1f9011f585d ;
@@ -1439,7 +1347,6 @@ Aggregate the data with your threat intelligence and incident management metrics
 """ ;
     dcterms:identifier "f2a309b82fbc46cfb2f11c9cde20dc0a" ;
     rdfs:comment "Continuously improve your security defect management metrics and correlate it with other sources." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/defect-management/stream-b> ;
     skos:altLabel "I-DM-3-B" ;
     ns1:benefit "Optimized security strategy based on defect information" ;
     ns1:hasPracticeLevel ns1:5a25ae9bc9134d6387128ea925c81845 ;
@@ -1457,7 +1364,6 @@ Define, gather, evaluate, and act upon metrics on the incident response process,
 """ ;
     dcterms:identifier "f692ee8f87c1499681490cc1647c0df4" ;
     rdfs:comment "Employ a dedicated, well-trained incident response team." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/incident-management/stream-b> ;
     skos:altLabel "O-IM-3-B" ;
     ns1:benefit "Efficient incident response independent of time, location, or type of incident" ;
     ns1:hasPracticeLevel ns1:6fe1973911bf4e54b018da10a5aa80a1 ;
@@ -1475,7 +1381,6 @@ Strategically, it is better to reliably detect a limited subset of security issu
 """ ;
     dcterms:identifier "fb6f258a2e424ee9a919341758222a7a" ;
     rdfs:comment "Employ application-specific security testing automation" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/security-testing/stream-a> ;
     skos:altLabel "V-ST-2-A" ;
     ns1:benefit "Detection of organization-specific easy-to-find vulnerabilites" ;
     ns1:hasPracticeLevel ns1:6291462e1894467d807b913ef7da4beb ;
@@ -1489,7 +1394,6 @@ Abuse of functionality, sometimes referred to as a “business logic attack”, 
 """ ;
     dcterms:identifier "fd4d1ac720374b13a25ab1381045b731" ;
     rdfs:comment "Create and test abuse cases and business logic flaw test" ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/requirements-driven-testing/stream-b> ;
     skos:altLabel "V-RT-2-B" ;
     ns1:benefit "Detection of application business logic flaws" ;
     ns1:hasPracticeLevel ns1:3e6e9a2b696e48018830b44fa96f98b5 ;
@@ -1503,7 +1407,6 @@ Encourage non-compliant teams to review available resources such as security req
 """ ;
     dcterms:identifier "fe7afe5fc04742bcbe476d4ba37d8091" ;
     rdfs:comment "Measure and report on the status of individual application’s adherence to policies and standards." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/policy-and-compliance/stream-a> ;
     skos:altLabel "G-PC-3-A" ;
     ns1:benefit "Understanding of your organization’s compliance with policies and standards" ;
     ns1:hasPracticeLevel ns1:61ae1e4268b24d7986805658c89b5e54 ;
@@ -1517,1108 +1420,7 @@ Ensure that all access to secrets (both reading and writing) is logged in a cent
 """ ;
     dcterms:identifier "fed0d75c064c4a979a5b7b98adfdedbf" ;
     rdfs:comment "Improve the lifecycle of application secrets by regularly generating them and by ensuring proper use." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-deployment/stream-b> ;
     skos:altLabel "I-SD-3-B" ;
     ns1:benefit "Minimized possibility and timely detection of production secret abuse" ;
     ns1:hasPracticeLevel ns1:fc5eb251c6ee4f3db04eb01b62d380ba ;
     ns1:hasStream ns1:9a5f26d77f204467bdda7ffa09109d73 .
-
-ns1:hasFunction a owl:ObjectProperty ;
-    rdfs:domain ns1:Practice ;
-    rdfs:range ns1:BusinessFunction .
-
-ns1:hasLetter a owl:ObjectProperty ;
-    rdfs:domain ns1:Stream ;
-    rdfs:range ns1:StreamLetter .
-
-ns1:hasMaturityLevel a owl:ObjectProperty ;
-    rdfs:domain ns1:PracticeLevel ;
-    rdfs:range ns1:MaturityLevel .
-
-ns1:hasPractice a owl:ObjectProperty ;
-    rdfs:domain ns1:PracticeLevel,
-        ns1:Stream ;
-    rdfs:range ns1:Practice .
-
-ns1:hasPracticeLevel a owl:ObjectProperty ;
-    rdfs:domain ns1:Activity ;
-    rdfs:range ns1:PracticeLevel .
-
-ns1:hasStream a owl:ObjectProperty ;
-    rdfs:domain ns1:Activity ;
-    rdfs:range ns1:Stream .
-
-<https://owaspsamm.org/model/maturity/1> a ns1:MaturityLevel ;
-    dcterms:identifier "0a1dc80f84964f2fa776c5d8e932353a" ;
-    dcat:seeAlso ns1:0a1dc80f84964f2fa776c5d8e932353a .
-
-<https://owaspsamm.org/model/maturity/2> a ns1:MaturityLevel ;
-    dcterms:identifier "47dd82af343e4695a0385418af4398d1" ;
-    dcat:seeAlso ns1:47dd82af343e4695a0385418af4398d1 .
-
-<https://owaspsamm.org/model/maturity/3> a ns1:MaturityLevel ;
-    dcterms:identifier "7bbfe31d447e48759ef0f2af25c31b43" ;
-    dcat:seeAlso ns1:7bbfe31d447e48759ef0f2af25c31b43 .
-
-ns1:StreamLetter a owl:Class .
-
-ns1:02e602c451d548e8a95433a46fe6b9d8 a ns1:PracticeLevel ;
-    rdfs:label "I-SB-3" ;
-    dcterms:description "Build process helps prevent known defects from entering the production environment." ;
-    dcterms:identifier "02e602c451d548e8a95433a46fe6b9d8" ;
-    skos:altLabel "I-SB-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "SB" .
-
-ns1:1a55b2c4666f4336a3f5c12c5bb4a1e9 a ns1:PracticeLevel ;
-    rdfs:label "D-SR-2" ;
-    dcterms:description "Increase granularity of security requirements derived from business logic and known risks." ;
-    dcterms:identifier "1a55b2c4666f4336a3f5c12c5bb4a1e9" ;
-    skos:altLabel "D-SR-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "SR" .
-
-ns1:1cb6e197ca8245eca65b0ecbdd784720 a ns1:PracticeLevel ;
-    rdfs:label "O-EM-3" ;
-    dcterms:description "Conformity with continuously improving process enforced" ;
-    dcterms:identifier "1cb6e197ca8245eca65b0ecbdd784720" ;
-    skos:altLabel "O-EM-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "EM" .
-
-ns1:21a59897dbeb4d7fa4603a0f24362c2b a ns1:PracticeLevel ;
-    rdfs:label "D-TA-3" ;
-    dcterms:description "Proactive improvement of threat coverage throughout the organization." ;
-    dcterms:identifier "21a59897dbeb4d7fa4603a0f24362c2b" ;
-    skos:altLabel "D-TA-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "TA" .
-
-ns1:2a059c7d07c34b9897e49e6295501608 a ns1:PracticeLevel ;
-    rdfs:label "O-OM-3" ;
-    dcterms:description "Active Monitoring and Response" ;
-    dcterms:identifier "2a059c7d07c34b9897e49e6295501608" ;
-    skos:altLabel "O-OM-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "OM" .
-
-ns1:2a29c1f7d6954785b8d42d637a752f94 a ns1:PracticeLevel ;
-    rdfs:label "G-PC-2" ;
-    dcterms:description "Establish application-specific security and compliance baseline." ;
-    dcterms:identifier "2a29c1f7d6954785b8d42d637a752f94" ;
-    skos:altLabel "G-PC-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "PC" .
-
-ns1:354292b7198b48bb8c4909e0d7e29f68 a ns1:PracticeLevel ;
-    rdfs:label "O-EM-2" ;
-    dcterms:description "Formal process with baselines in place" ;
-    dcterms:identifier "354292b7198b48bb8c4909e0d7e29f68" ;
-    skos:altLabel "O-EM-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "EM" .
-
-ns1:38f3a2f7633c42b98eb160f36a2c0a7b a ns1:PracticeLevel ;
-    rdfs:label "G-EG-1" ;
-    dcterms:description "Offer staff access to resources around the topics of secure development and deployment." ;
-    dcterms:identifier "38f3a2f7633c42b98eb160f36a2c0a7b" ;
-    skos:altLabel "G-EG-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "EG" .
-
-ns1:39bc5d271fae4ea8ba53db7de7b2712c a ns1:PracticeLevel ;
-    rdfs:label "V-AA-1" ;
-    dcterms:description "Review the architecture to ensure baseline mitigations are in place for typical risks." ;
-    dcterms:identifier "39bc5d271fae4ea8ba53db7de7b2712c" ;
-    skos:altLabel "V-AA-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "AA" .
-
-ns1:3d035b6df77f4ee69577c9b4c9d64891 a ns1:PracticeLevel ;
-    rdfs:label "D-SR-1" ;
-    dcterms:description "Consider security explicitly during the software requirements process." ;
-    dcterms:identifier "3d035b6df77f4ee69577c9b4c9d64891" ;
-    skos:altLabel "D-SR-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "SR" .
-
-ns1:3e6e9a2b696e48018830b44fa96f98b5 a ns1:PracticeLevel ;
-    rdfs:label "V-RT-2" ;
-    dcterms:description "Perform implementation review to discover application-specific risks against the security requirements." ;
-    dcterms:identifier "3e6e9a2b696e48018830b44fa96f98b5" ;
-    skos:altLabel "V-RT-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "RT" .
-
-ns1:3e89d1fa6cba4516a3ec446faaab5b84 a ns1:PracticeLevel ;
-    rdfs:label "I-SD-2" ;
-    dcterms:description "Deployment processes include security verification milestones." ;
-    dcterms:identifier "3e89d1fa6cba4516a3ec446faaab5b84" ;
-    skos:altLabel "I-SD-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "SD" .
-
-ns1:41c8e63716c34f1eaf09b8cad70cfbaf a ns1:PracticeLevel ;
-    rdfs:label "D-SA-2" ;
-    dcterms:description "Direct the software design process toward known secure services and secure-by-default designs." ;
-    dcterms:identifier "41c8e63716c34f1eaf09b8cad70cfbaf" ;
-    skos:altLabel "D-SA-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "SA" .
-
-ns1:420074f071fb4ab6b6ee6ef44c4f4f1c a ns1:PracticeLevel ;
-    rdfs:label "G-SM-3" ;
-    dcterms:description "Align security efforts with the relevant organizational indicators and asset values." ;
-    dcterms:identifier "420074f071fb4ab6b6ee6ef44c4f4f1c" ;
-    skos:altLabel "G-SM-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "SM" .
-
-ns1:437d447b3f11427592e938dbde53c7da a ns1:PracticeLevel ;
-    rdfs:label "G-PC-1" ;
-    dcterms:description "Identify and document governance and compliance drivers relevant to the organization." ;
-    dcterms:identifier "437d447b3f11427592e938dbde53c7da" ;
-    skos:altLabel "G-PC-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "PC" .
-
-ns1:439406325e6645519c149da3e05a7d9d a ns1:PracticeLevel ;
-    rdfs:label "O-IM-2" ;
-    dcterms:description "Formal incident management process in place" ;
-    dcterms:identifier "439406325e6645519c149da3e05a7d9d" ;
-    skos:altLabel "O-IM-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "IM" .
-
-ns1:46f16450b23d4c29a5cf19b056c2636e a ns1:PracticeLevel ;
-    rdfs:label "I-SB-2" ;
-    dcterms:description "Build process is optimized and fully integrated into the workflow." ;
-    dcterms:identifier "46f16450b23d4c29a5cf19b056c2636e" ;
-    skos:altLabel "I-SB-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "SB" .
-
-ns1:4e54705272fa4f1f9977b1f9011f585d a ns1:PracticeLevel ;
-    rdfs:label "G-SM-1" ;
-    dcterms:description "Identify objectives and means of measuring effectiveness of the security program." ;
-    dcterms:identifier "4e54705272fa4f1f9977b1f9011f585d" ;
-    skos:altLabel "G-SM-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "SM" .
-
-ns1:5015427608de428cba3c324772fb4191 a ns1:PracticeLevel ;
-    rdfs:label "I-SD-1" ;
-    dcterms:description "Deployment processes are fully documented." ;
-    dcterms:identifier "5015427608de428cba3c324772fb4191" ;
-    skos:altLabel "I-SD-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "SD" .
-
-ns1:561e85a7fb114b1d976acce95d0b41ee a ns1:PracticeLevel ;
-    rdfs:label "G-SM-2" ;
-    dcterms:description "Establish a unified strategic roadmap for software security within the organization." ;
-    dcterms:identifier "561e85a7fb114b1d976acce95d0b41ee" ;
-    skos:altLabel "G-SM-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "SM" .
-
-ns1:5a25ae9bc9134d6387128ea925c81845 a ns1:PracticeLevel ;
-    rdfs:label "I-DM-3" ;
-    dcterms:description "Defect tracking across multiple components is used to help reduce the number of new defects." ;
-    dcterms:identifier "5a25ae9bc9134d6387128ea925c81845" ;
-    skos:altLabel "I-DM-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "DM" .
-
-ns1:61ae1e4268b24d7986805658c89b5e54 a ns1:PracticeLevel ;
-    rdfs:label "G-PC-3" ;
-    dcterms:description "Measure adherence to policies, standards, and 3rd-party requirements." ;
-    dcterms:identifier "61ae1e4268b24d7986805658c89b5e54" ;
-    skos:altLabel "G-PC-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "PC" .
-
-ns1:6291462e1894467d807b913ef7da4beb a ns1:PracticeLevel ;
-    rdfs:label "V-ST-2" ;
-    dcterms:description "Make security testing during development more complete and efficient through automation complemented with regular manual security penetration tests." ;
-    dcterms:identifier "6291462e1894467d807b913ef7da4beb" ;
-    skos:altLabel "V-ST-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "ST" .
-
-ns1:67fcd33f84364ef68fb88aba77de1a63 a ns1:PracticeLevel ;
-    rdfs:label "V-AA-2" ;
-    dcterms:description "Review the complete provision of security mechanisms in the architecture." ;
-    dcterms:identifier "67fcd33f84364ef68fb88aba77de1a63" ;
-    skos:altLabel "V-AA-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "AA" .
-
-ns1:6fe1973911bf4e54b018da10a5aa80a1 a ns1:PracticeLevel ;
-    rdfs:label "O-IM-3" ;
-    dcterms:description "Mature incident management" ;
-    dcterms:identifier "6fe1973911bf4e54b018da10a5aa80a1" ;
-    skos:altLabel "O-IM-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "IM" .
-
-ns1:76f8a2e68065467ba9bd2b5ac625490b a ns1:PracticeLevel ;
-    rdfs:label "O-OM-2" ;
-    dcterms:description "Managed, Responsive Processes" ;
-    dcterms:identifier "76f8a2e68065467ba9bd2b5ac625490b" ;
-    skos:altLabel "O-OM-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "OM" .
-
-ns1:812abdd0a2b54366a497919f8463911a a ns1:PracticeLevel ;
-    rdfs:label "V-RT-3" ;
-    dcterms:description "Maintain the application security level after bug fixes, changes or during maintenance." ;
-    dcterms:identifier "812abdd0a2b54366a497919f8463911a" ;
-    skos:altLabel "V-RT-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "RT" .
-
-ns1:817dd6acaf85496aa005393e0e6c3e70 a ns1:PracticeLevel ;
-    rdfs:label "O-IM-1" ;
-    dcterms:description "Best-effort incident detection and handling" ;
-    dcterms:identifier "817dd6acaf85496aa005393e0e6c3e70" ;
-    skos:altLabel "O-IM-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "IM" .
-
-ns1:83ea8aaab3384b41b785107613ee4d86 a ns1:PracticeLevel ;
-    rdfs:label "V-AA-3" ;
-    dcterms:description "Review the architecture effectiveness and feedback results to improve the security architecture." ;
-    dcterms:identifier "83ea8aaab3384b41b785107613ee4d86" ;
-    skos:altLabel "V-AA-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "AA" .
-
-ns1:8cb942eff46d41f38e6edc11849744a6 a ns1:PracticeLevel ;
-    rdfs:label "O-EM-1" ;
-    dcterms:description "Best-effort patching and hardening" ;
-    dcterms:identifier "8cb942eff46d41f38e6edc11849744a6" ;
-    skos:altLabel "O-EM-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "EM" .
-
-ns1:97a46a074fe849a1af2c2d2d3dd09ba5 a ns1:PracticeLevel ;
-    rdfs:label "I-DM-1" ;
-    dcterms:description "All defects are tracked within each project." ;
-    dcterms:identifier "97a46a074fe849a1af2c2d2d3dd09ba5" ;
-    skos:altLabel "I-DM-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "DM" .
-
-ns1:9d1e469966124c0fa80d1bc2fc223a0a a ns1:PracticeLevel ;
-    rdfs:label "D-SA-3" ;
-    dcterms:description "Formally control the software design process and validate utilization of secure components." ;
-    dcterms:identifier "9d1e469966124c0fa80d1bc2fc223a0a" ;
-    skos:altLabel "D-SA-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "SA" .
-
-ns1:a11b78917dec4cfdad983cf6d1d17b61 a ns1:PracticeLevel ;
-    rdfs:label "D-SA-1" ;
-    dcterms:description "Insert consideration of proactive security guidance into the software design process." ;
-    dcterms:identifier "a11b78917dec4cfdad983cf6d1d17b61" ;
-    skos:altLabel "D-SA-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "SA" .
-
-ns1:a3d4045d5c0c4bd4a875784759539f0c a ns1:PracticeLevel ;
-    rdfs:label "D-TA-1" ;
-    dcterms:description "Best-effort identification of high-level threats to the organization and individual projects." ;
-    dcterms:identifier "a3d4045d5c0c4bd4a875784759539f0c" ;
-    skos:altLabel "D-TA-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "TA" .
-
-ns1:b29ab542cc674901a19cf5f3c0c4be18 a ns1:PracticeLevel ;
-    rdfs:label "I-SB-1" ;
-    dcterms:description "Build process is repeatable and consistent." ;
-    dcterms:identifier "b29ab542cc674901a19cf5f3c0c4be18" ;
-    skos:altLabel "I-SB-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "SB" .
-
-ns1:b55c7a41eba747678a65651f5ccacaf2 a ns1:PracticeLevel ;
-    rdfs:label "I-DM-2" ;
-    dcterms:description "Defect tracking used to influence the deployment process." ;
-    dcterms:identifier "b55c7a41eba747678a65651f5ccacaf2" ;
-    skos:altLabel "I-DM-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "DM" .
-
-ns1:d0a99f3db27e48aa9b2d6b58a9040f49 a ns1:PracticeLevel ;
-    rdfs:label "O-OM-1" ;
-    dcterms:description "Foundational Practices" ;
-    dcterms:identifier "d0a99f3db27e48aa9b2d6b58a9040f49" ;
-    skos:altLabel "O-OM-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "OM" .
-
-ns1:d6cefe3e63d149299fb088010c24778b a ns1:PracticeLevel ;
-    rdfs:label "V-ST-1" ;
-    dcterms:description "Perform security testing (both manual and tool based) to discover security defects." ;
-    dcterms:identifier "d6cefe3e63d149299fb088010c24778b" ;
-    skos:altLabel "V-ST-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "ST" .
-
-ns1:df5a0be1889a4b06835193892803dde5 a ns1:PracticeLevel ;
-    rdfs:label "V-RT-1" ;
-    dcterms:description "Opportunistically find basic vulnerabilities and other security issues." ;
-    dcterms:identifier "df5a0be1889a4b06835193892803dde5" ;
-    skos:altLabel "V-RT-1" ;
-    ns1:hasMaturityLevel ns1:0a1dc80f84964f2fa776c5d8e932353a ;
-    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b ;
-    ns1:maturitylevel 1 ;
-    ns1:practice "RT" .
-
-ns1:e3cf1d3c27b74262b9f842f27ca86333 a ns1:PracticeLevel ;
-    rdfs:label "G-EG-3" ;
-    dcterms:description "Develop in-house training programs facilitated by developers across different teams." ;
-    dcterms:identifier "e3cf1d3c27b74262b9f842f27ca86333" ;
-    skos:altLabel "G-EG-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "EG" .
-
-ns1:e5b6dc4f907c4986b8ba7923303cd665 a ns1:PracticeLevel ;
-    rdfs:label "D-TA-2" ;
-    dcterms:description "Standardization and enterprise-wide analysis of software-related threats within the organization." ;
-    dcterms:identifier "e5b6dc4f907c4986b8ba7923303cd665" ;
-    skos:altLabel "D-TA-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "TA" .
-
-ns1:e8de5ea176cc455bba89f0e2d1ea1f16 a ns1:PracticeLevel ;
-    rdfs:label "G-EG-2" ;
-    dcterms:description "Educate all personnel in the software lifecycle with technology and role-specific guidance on secure development." ;
-    dcterms:identifier "e8de5ea176cc455bba89f0e2d1ea1f16" ;
-    skos:altLabel "G-EG-2" ;
-    ns1:hasMaturityLevel ns1:47dd82af343e4695a0385418af4398d1 ;
-    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 ;
-    ns1:maturitylevel 2 ;
-    ns1:practice "EG" .
-
-ns1:eac3184f8e2343b8b29047d023376da5 a ns1:PracticeLevel ;
-    rdfs:label "V-ST-3" ;
-    dcterms:description "Embed security testing as part of the development and deployment processes." ;
-    dcterms:identifier "eac3184f8e2343b8b29047d023376da5" ;
-    skos:altLabel "V-ST-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "ST" .
-
-ns1:f8b6eebc0662477f9286aa4f6068e364 a ns1:PracticeLevel ;
-    rdfs:label "D-SR-3" ;
-    dcterms:description "Mandate security requirements process for all software projects and third-party dependencies." ;
-    dcterms:identifier "f8b6eebc0662477f9286aa4f6068e364" ;
-    skos:altLabel "D-SR-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "SR" .
-
-ns1:fc5eb251c6ee4f3db04eb01b62d380ba a ns1:PracticeLevel ;
-    rdfs:label "I-SD-3" ;
-    dcterms:description "Deployment process is fully automated and incorporates automated verification of all critical milestones." ;
-    dcterms:identifier "fc5eb251c6ee4f3db04eb01b62d380ba" ;
-    skos:altLabel "I-SD-3" ;
-    ns1:hasMaturityLevel ns1:7bbfe31d447e48759ef0f2af25c31b43 ;
-    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d ;
-    ns1:maturitylevel 3 ;
-    ns1:practice "SD" .
-
-ns1:0e2c4c5620e24d7d8e979020ca414182 a ns1:Stream ;
-    rdfs:label "Organization and Culture" ;
-    dcterms:description "Organization and culture focuses on promoting the culture of application security within the organization as an important success factor of an SDLC project." ;
-    dcterms:identifier "0e2c4c5620e24d7d8e979020ca414182" ;
-    skos:altLabel "G-EG-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 ;
-    ns1:practice "EG" .
-
-ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 a ns1:BusinessFunction ;
-    rdfs:label "Governance" ;
-    dcterms:description """Governance focuses on the processes and activities related to how an organization manages overall software development activities. More specifically, this includes concerns that impact cross-functional groups involved in development, as well as business processes established at the organization level.
-""" ;
-    dcterms:identifier "102ad02df5dc4a8eb3837ef4ca2c1af4" ;
-    skos:altLabel "governance" ;
-    dcat:downloadURL "https://owaspsamm.org/model/governance" ;
-    ns1:hasOrder 1 ;
-    ns1:model "SAMM20" .
-
-ns1:102fdab651834273abd67a3ec27aab05 a ns1:Stream ;
-    rdfs:label "Scalable Baseline" ;
-    dcterms:description """Scalable baseline focuses on the use of application-specific automated testing tools that integrate security validation into the build and deploy process. The goal of this stream is to favor width (a broad spectrum of applications) over depth of testing.
-""" ;
-    dcterms:identifier "102fdab651834273abd67a3ec27aab05" ;
-    skos:altLabel "V-ST-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 ;
-    ns1:practice "ST" .
-
-ns1:17c90203f8354c3594eea22759e375a9 a ns1:Stream ;
-    rdfs:label "Application Risk Profile" ;
-    dcterms:description "An application risk profile helps to identify which applications can pose a serious threat to the organization if they were attacked or breached." ;
-    dcterms:identifier "17c90203f8354c3594eea22759e375a9" ;
-    skos:altLabel "D-TA-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac ;
-    ns1:practice "TA" .
-
-ns1:1a7ad26d9e48411e95a63be79e1b90ea a ns1:Stream ;
-    rdfs:label "Patching and Updating" ;
-    dcterms:description """The activities in this stream focus on the organization's handling of patches and updates for all elements of the technology stack. For software developed by the organization, these activities are concerned with delivering patches and updates to customers, as well as applying them to organization-managed solutions (e.g., software as a service). For third-party elements, these activities are concerned with the organization's timely application of updates and patches received.
-""" ;
-    dcterms:identifier "1a7ad26d9e48411e95a63be79e1b90ea" ;
-    skos:altLabel "O-EM-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 ;
-    ns1:practice "EM" .
-
-ns1:253b012094cf4e0988e08fd22609227d a ns1:Stream ;
-    rdfs:label "Architecture Design" ;
-    dcterms:description "The design of a software architecture can significantly impact the security posture of a software and the use of good security practices will improve the overall design." ;
-    dcterms:identifier "253b012094cf4e0988e08fd22609227d" ;
-    skos:altLabel "D-SA-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 ;
-    ns1:practice "SA" .
-
-ns1:27a14a265c864eb790781cd1e2bf843b a ns1:Stream ;
-    rdfs:label "Misuse/Abuse Testing" ;
-    dcterms:description """Misuse/Abuse Testing leverages fuzzing, misuse/abuse cases, and the identification of any functionality or resources in the software that can be abused in order to identify weaknesses in features to attack an application.
-""" ;
-    dcterms:identifier "27a14a265c864eb790781cd1e2bf843b" ;
-    skos:altLabel "V-RT-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b ;
-    ns1:practice "RT" .
-
-ns1:2919e1f19aec4f018da94a3e8733f37d a ns1:Stream ;
-    rdfs:label "Compliance Management" ;
-    dcterms:description "This stream focuses on identifying and providing compliance requirements to support integration into the SDLC." ;
-    dcterms:identifier "2919e1f19aec4f018da94a3e8733f37d" ;
-    skos:altLabel "G-PC-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 ;
-    ns1:practice "PC" .
-
-ns1:2f1cac3c2e724823b3b48a7e797520b4 a ns1:Stream ;
-    rdfs:label "Measure and Improve" ;
-    dcterms:description "This stream aims to drive the validity, relevance, and improvement of the application security roadmap through measurements of performance within the organization." ;
-    dcterms:identifier "2f1cac3c2e724823b3b48a7e797520b4" ;
-    skos:altLabel "G-SM-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e ;
-    ns1:practice "SM" .
-
-ns1:2f7b501627954c6cb03342196b2065a7 a ns1:Stream ;
-    rdfs:label "Software Dependencies" ;
-    dcterms:description "External libraries are a significant part of modern software. The activities in this stream help create a view of external libraries and ensure their security strength is adequate." ;
-    dcterms:identifier "2f7b501627954c6cb03342196b2065a7" ;
-    skos:altLabel "I-SB-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 ;
-    ns1:practice "SB" .
-
-ns1:390bec725b8344a289d5386026925947 a ns1:Stream ;
-    rdfs:label "Incident Response" ;
-    dcterms:description """Incident Response starts the moment you acknowledge and verify the existence of a security incident. Your goal is to act in a coordinated and efficient way so that further damage is limited as much as possible. The activities in this stream focus on the organization's ability to respond appropriately and effectively to reported security incidents.
-""" ;
-    dcterms:identifier "390bec725b8344a289d5386026925947" ;
-    skos:altLabel "O-IM-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee ;
-    ns1:practice "IM" .
-
-ns1:47bff9a57f0344eeb4b083f1c2b1bb7e a ns1:Stream ;
-    rdfs:label "Configuration Hardening" ;
-    dcterms:description """The activities in this stream focus on the organization's management of security-related configurations in all elements of the technology stack. The emphasis is on those elements (e.g., operating systems, containers, frameworks, services, appliances, and libraries) obtained from third parties, because their architecture and design are not under the organization's control.
-""" ;
-    dcterms:identifier "47bff9a57f0344eeb4b083f1c2b1bb7e" ;
-    skos:altLabel "O-EM-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 ;
-    ns1:practice "EM" .
-
-ns1:55bf5184ff7d4b76a444e52a28c803d9 a ns1:Stream ;
-    rdfs:label "Metrics and Feedback" ;
-    dcterms:description "Defect tracking can drive the improvement of security activities within the organization through metrics and feedback." ;
-    dcterms:identifier "55bf5184ff7d4b76a444e52a28c803d9" ;
-    skos:altLabel "I-DM-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 ;
-    ns1:practice "DM" .
-
-ns1:7344f4b153314dd8965361d23772aef1 a ns1:Stream ;
-    rdfs:label "Training and Awareness" ;
-    dcterms:description "Training and awareness focuses on increasing the overall knowledge around software security among the different stakeholders within the organization." ;
-    dcterms:identifier "7344f4b153314dd8965361d23772aef1" ;
-    skos:altLabel "G-EG-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:483a0a1b78264cafbc470ce72d557332 ;
-    ns1:practice "EG" .
-
-ns1:77ca4b5e7ebc42558109829dffc2b80d a ns1:Stream ;
-    rdfs:label "Architecture Validation" ;
-    dcterms:description """Architecture validation confirms the security of the software and supporting architecture by identifying application and infrastructure architecture components and verifying their provision of security objectives and requirements.
-""" ;
-    dcterms:identifier "77ca4b5e7ebc42558109829dffc2b80d" ;
-    skos:altLabel "V-AA-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 ;
-    ns1:practice "AA" .
-
-ns1:79754453c74b4143b20a57d0efdaab56 a ns1:Stream ;
-    rdfs:label "Technology Management" ;
-    dcterms:description "Technologies and frameworks are the cornerstones of any software solution. The security properties of these must be looked into to ensure an appropriate security level and to anticipate any potential issues herein." ;
-    dcterms:identifier "79754453c74b4143b20a57d0efdaab56" ;
-    skos:altLabel "D-SA-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:4753e55e943c4d418303bf90d599c6b1 ;
-    ns1:practice "SA" .
-
-ns1:7fb68bc660774b9080963c17761529a2 a ns1:Stream ;
-    rdfs:label "Software Requirements" ;
-    dcterms:description "Software requirements specify objectives and expectations to protect the service and data at the core of the application." ;
-    dcterms:identifier "7fb68bc660774b9080963c17761529a2" ;
-    skos:altLabel "D-SR-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b ;
-    ns1:practice "SR" .
-
-ns1:88c296acaae841a2b2fc5314bff44cb4 a ns1:BusinessFunction ;
-    rdfs:label "Design" ;
-    dcterms:description """Design concerns the processes and activities related to how an organization defines goals and creates software within development projects. In general, this will include requirements gathering, high-level architecture specification and detailed design.
-""" ;
-    dcterms:identifier "88c296acaae841a2b2fc5314bff44cb4" ;
-    skos:altLabel "design" ;
-    dcat:downloadURL "https://owaspsamm.org/model/design" ;
-    ns1:hasOrder 2 ;
-    ns1:model "SAMM20" .
-
-ns1:8a64c7b0b35a458ea436260d5e414dfa a ns1:Stream ;
-    rdfs:label "Deep Understanding" ;
-    dcterms:description """Deep understanding focuses on performing manual security testing of high-risk components, using complex attack vectors with the goal of making advanced security testing an integral part of the development process. The goal of this stream is to favor testing depth (testing rigour) over testing width (the portfolio of applications).
-""" ;
-    dcterms:identifier "8a64c7b0b35a458ea436260d5e414dfa" ;
-    skos:altLabel "V-ST-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:bb5488860c124b6e8076b023485023e1 ;
-    ns1:practice "ST" .
-
-ns1:8a870a9b26724b4ba0dff177028b474a a ns1:Stream ;
-    rdfs:label "Build Process" ;
-    dcterms:description "A consistent build process ensures the software you are deploying is predictable and directly linked to the source code. Furthermore, you can take advantage of the software build process for various security activities." ;
-    dcterms:identifier "8a870a9b26724b4ba0dff177028b474a" ;
-    skos:altLabel "I-SB-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:b2af112859d34cada6ce4cf44d393b94 ;
-    ns1:practice "SB" .
-
-ns1:8aa8154b83434e73b3ca8c0e9b654417 a ns1:BusinessFunction ;
-    rdfs:label "Implementation" ;
-    dcterms:description """Implementation is focused on the processes and activities related to how an organization builds and deploys software components and its related defects.
-
-Activities within the Implementation function have the most impact on the daily life of developers. The joint goal is to ship reliably working software with minimum defects.
-""" ;
-    dcterms:identifier "8aa8154b83434e73b3ca8c0e9b654417" ;
-    skos:altLabel "implementation" ;
-    dcat:downloadURL "https://owaspsamm.org/model/implementation" ;
-    ns1:hasOrder 3 ;
-    ns1:model "SAMM20" .
-
-ns1:8c1dcd10821f4f2baed52fdc83d93cf6 a ns1:Stream ;
-    rdfs:label "Supplier Security" ;
-    dcterms:description "Supplier security deals with requirements that are relative to supplier organizations within the development context of the application, in particular for outsourced development." ;
-    dcterms:identifier "8c1dcd10821f4f2baed52fdc83d93cf6" ;
-    skos:altLabel "D-SR-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:5702908efca4499e87a0239f32920d9b ;
-    ns1:practice "SR" .
-
-ns1:942d679b0c9e41909f8bde728fdb1259 a ns1:BusinessFunction ;
-    rdfs:label "Operations" ;
-    dcterms:description """The Operations Business Function encompasses those activities necessary to ensure confidentiality, integrity, and availability are maintained throughout the operational lifetime of an application and its associated data. Increased maturity with regard to this Business Function provides greater assurance that the organization is resilient in the face of operational disruptions, and responsive to changes in the operational landscape.
-""" ;
-    dcterms:identifier "942d679b0c9e41909f8bde728fdb1259" ;
-    skos:altLabel "operations" ;
-    dcat:downloadURL "https://owaspsamm.org/model/operations" ;
-    ns1:hasOrder 5 ;
-    ns1:model "SAMM20" .
-
-ns1:94bb47791e3d462cbf5f71ebb1a1327a a ns1:Stream ;
-    rdfs:label "Create and Promote" ;
-    dcterms:description "This stream is about creating and promoting an application security roadmap to set the objectives of the enterprise on this topic and increase alignment among stakeholders." ;
-    dcterms:identifier "94bb47791e3d462cbf5f71ebb1a1327a" ;
-    skos:altLabel "G-SM-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:32b3bdd85d3a4d53827960004f9d1c7e ;
-    ns1:practice "SM" .
-
-ns1:9a5f26d77f204467bdda7ffa09109d73 a ns1:Stream ;
-    rdfs:label "Secret Management" ;
-    dcterms:description "As the secure execution of any software system requires credentials, this stream ensures a proper handling of these sensitive data elements within the organization's environment." ;
-    dcterms:identifier "9a5f26d77f204467bdda7ffa09109d73" ;
-    skos:altLabel "I-SD-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d ;
-    ns1:practice "SD" .
-
-ns1:9c6bf45a97ae4149a44c4a5d97ea6a40 a ns1:Stream ;
-    rdfs:label "Data Protection" ;
-    dcterms:description """The activities in this stream focus on ensuring the organization properly protects data in all aspects of their creation, handling, storage, and processing.
-""" ;
-    dcterms:identifier "9c6bf45a97ae4149a44c4a5d97ea6a40" ;
-    skos:altLabel "O-OM-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 ;
-    ns1:practice "OM" .
-
-ns1:9ec70d6f7ddb4cb6b37928f9994c6049 a ns1:Stream ;
-    rdfs:label "Deployment Process" ;
-    dcterms:description "A repeatable and consistent deployment process ensures you only deploy correct software artifacts to production. It also paves the way for representative test environments prior to production." ;
-    dcterms:identifier "9ec70d6f7ddb4cb6b37928f9994c6049" ;
-    skos:altLabel "I-SD-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:40d7879025144dbbbf34ba8ea82f060d ;
-    ns1:practice "SD" .
-
-ns1:a0d2ec4c6daa43369c07644b8745a7bd a ns1:Stream ;
-    rdfs:label "System Decomissioning / Legacy Management" ;
-    dcterms:description """From the perspective of the organization as a consumer of resources, the activities in this stream focus on the identification, management, and tracking of systems, applications, application dependencies, and services that are no longer used, have reached end of life, or are no longer actively developed or supported. Removal of unused systems and services improves manageability of the environment and reduces the organization's attack surface, while affording direct and indirect cost savings (e.g., reduced license count, reduced logging volume, or reduced analyst effort).
-""" ;
-    dcterms:identifier "a0d2ec4c6daa43369c07644b8745a7bd" ;
-    skos:altLabel "O-OM-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:8f07145b5ea74388b2217895d5e7b5c2 ;
-    ns1:practice "OM" .
-
-ns1:a5b57fc5fa0441b7b23f599b506c5752 a ns1:Stream ;
-    rdfs:label "Defect Tracking" ;
-    dcterms:description "Defect tracking manages the collection and follow-up of all potential issues in a piece of software, from architectural flaws to coding issues and run-time vulnerabilities." ;
-    dcterms:identifier "a5b57fc5fa0441b7b23f599b506c5752" ;
-    skos:altLabel "I-DM-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:e17d573510904f65a1fe6040b56ad0b1 ;
-    ns1:practice "DM" .
-
-ns1:b7487370a07543cbb02ddb60c055d92f a ns1:Stream ;
-    rdfs:label "Architecture Mitigation" ;
-    dcterms:description """Architecture mitigation focuses on ensuring that all threats identified during Threat Assessment are adequately mitigated, and existing reference architectures updated to address any unhandled threats.
-""" ;
-    dcterms:identifier "b7487370a07543cbb02ddb60c055d92f" ;
-    skos:altLabel "V-AA-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:53f2da68c37a4ced8d5e767298fba589 ;
-    ns1:practice "AA" .
-
-ns1:c404aa4f711e4f4e9e71faea22f7fb5c a ns1:Stream ;
-    rdfs:label "Policy & Standards" ;
-    dcterms:description "This stream focuses on maintaining policies and standards and providing them to support integration into the SDLC." ;
-    dcterms:identifier "c404aa4f711e4f4e9e71faea22f7fb5c" ;
-    skos:altLabel "G-PC-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:be9e7ddb98b84abe8b9e185b979ccf60 ;
-    ns1:practice "PC" .
-
-ns1:ed5a9c3dd7884c88918a45dc9d231c5d a ns1:Stream ;
-    rdfs:label "Threat Modeling" ;
-    dcterms:description "Threat modeling is intended to help software development teams understand what risks exist in what is being built, what could go wrong, and how we the risks can be mitigated or remediated." ;
-    dcterms:identifier "ed5a9c3dd7884c88918a45dc9d231c5d" ;
-    skos:altLabel "D-TA-B" ;
-    ns1:hasLetter "B" ;
-    ns1:hasOrder 2 ;
-    ns1:hasPractice ns1:f9269aebfe2c4d5b9293ba42a40a93ac ;
-    ns1:practice "TA" .
-
-ns1:efb5d1f275504173899da345ef5bbe8e a ns1:Stream ;
-    rdfs:label "Control Verification" ;
-    dcterms:description """Control Verification validates that security controls and requirements are met through testing derived from requirements, and prevents the introduction of bugs into later releases through regression testing.
-""" ;
-    dcterms:identifier "efb5d1f275504173899da345ef5bbe8e" ;
-    skos:altLabel "V-RT-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:66fb99798fe946e4979a2de98e9d6f8b ;
-    ns1:practice "RT" .
-
-ns1:fa340fa1816244d79f369ae82e998368 a ns1:BusinessFunction ;
-    rdfs:label "Verification" ;
-    dcterms:description """Verification focuses on the processes and activities related to how an organization checks and tests artifacts produced throughout software development. This typically includes quality assurance work such as testing, but it can also include other review and evaluation activities.
-""" ;
-    dcterms:identifier "fa340fa1816244d79f369ae82e998368" ;
-    skos:altLabel "verification" ;
-    dcat:downloadURL "https://owaspsamm.org/model/verification" ;
-    ns1:hasOrder 4 ;
-    ns1:model "SAMM20" .
-
-ns1:ff8a6a08dc684f38ab74b9db9584f0a5 a ns1:Stream ;
-    rdfs:label "Incident Detection" ;
-    dcterms:description """Incident Detection refers to the process of determining an identified security-relevant event is, in fact, a security incident. The activities in this stream focus on the organization's ability to identify security incidents when they occur, and to initiate appropriate incident response activities.
-""" ;
-    dcterms:identifier "ff8a6a08dc684f38ab74b9db9584f0a5" ;
-    skos:altLabel "O-IM-A" ;
-    ns1:hasLetter "A" ;
-    ns1:hasOrder 1 ;
-    ns1:hasPractice ns1:c13aa12c13d04362a3ca3385a8c580ee ;
-    ns1:practice "IM" .
-
-ns1:32b3bdd85d3a4d53827960004f9d1c7e a ns1:Practice ;
-    rdfs:label "Strategy & Metrics" ;
-    dcterms:description """Software assurance entails many different activities and concerns. Without an overall plan, you might be spending a lot of effort to build in security, while in fact your efforts may be unaligned, disproportional or even counterproductive. The goal of the Strategy & Metrics (SM) practice is to build an efficient and effective plan for realizing your software security objectives within your organization.
-
-A software security program, that selects and prioritizes activities of the rest of the model, serves as the foundation for your efforts. The practice works on building the plan, maintaining and disseminating it.
-
-At the same time, you want to keep track of your security posture and program improvements. A metrics-driven approach is included to ensure an accurate view on your activities. To measure is to know.
-""" ;
-    dcterms:identifier "32b3bdd85d3a4d53827960004f9d1c7e" ;
-    rdfs:comment "This practice forms the basis of your secure software activities by building an overall plan." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/strategy-and-metrics> ;
-    skos:altLabel "SM" ;
-    ns1:hasFunction ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 ;
-    ns1:hasOrder 1 .
-
-ns1:40d7879025144dbbbf34ba8ea82f060d a ns1:Practice ;
-    rdfs:label "Secure Deployment" ;
-    dcterms:description """One of the final stages in delivering secure software is ensuring the security and integrity of developed applications are not compromised during deployment. The Secure Deployment (SD) practice focuses on this. To this end, the practice’s first stream focuses on removing manual error by automating the deployment process as much as possible, and making its success contingent upon the outcomes of integrated security verification checks. It also fosters Separation of Duties by making adequately trained, non-developers responsible for deployment.
-
-The second stream goes beyond the mechanics of deployment, and focuses on protecting the privacy and integrity of sensitive data, such as passwords, tokens, and other secrets, required for applications to operate in production environments. In its simplest form, suitable production secrets are moved from repositories and configuration files into adequately managed digital vaults. In more advanced forms, secrets are dynamically generated at deployment time and routine processes detect and mitigate the presence of any unprotected secrets in the environment.
-""" ;
-    dcterms:identifier "40d7879025144dbbbf34ba8ea82f060d" ;
-    rdfs:comment "This practice focuses on increasing the security of software deployments to the production environment and the supporting secrets." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-deployment> ;
-    skos:altLabel "SD" ;
-    ns1:hasFunction ns1:8aa8154b83434e73b3ca8c0e9b654417 ;
-    ns1:hasOrder 2 .
-
-ns1:4753e55e943c4d418303bf90d599c6b1 a ns1:Practice ;
-    rdfs:label "Security Architecture" ;
-    dcterms:description """The Security Architecture (SA) practice focuses on the security linked to components and technology you deal with during the architectural design of your software. Secure Architecture Design looks at the selection and composition of components that form the foundation of your solution, focusing on its security properties. Technology management looks at the security of supporting technologies used during development, deployment and operations, such as development stacks and tooling, deployment tooling, and operating systems and tooling.
-""" ;
-    dcterms:identifier "4753e55e943c4d418303bf90d599c6b1" ;
-    rdfs:comment "The security architecture practice focuses on managing architectural risks for the software solution." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-architecture> ;
-    skos:altLabel "SA" ;
-    ns1:hasFunction ns1:88c296acaae841a2b2fc5314bff44cb4 ;
-    ns1:hasOrder 3 .
-
-ns1:483a0a1b78264cafbc470ce72d557332 a ns1:Practice ;
-    rdfs:label "Education & Guidance" ;
-    dcterms:description """The Education & Guidance (EG) practice focuses on arming personnel involved in the software lifecycle with knowledge and resources to design, develop, and deploy secure software. With improved access to information, project teams can proactively identify and mitigate the specific security risks that apply to their organization.
-
-One major theme for improvement across the Objectives is providing training for employees and increasing their security awareness, either through instructor-led sessions or computer-based modules. As an organization progresses, it builds a broad base of training starting with developers and moving to other roles, culminating with the addition of role-based training to ensure applicability and effectiveness.
-
-In addition to training, this practice also requires the organization to make a significant investment in improving organizational culture to promote application security through collaboration between teams. Collaboration tools and increased transparency between technologies and tools support this approach to improve the security of the applications.
-""" ;
-    dcterms:identifier "483a0a1b78264cafbc470ce72d557332" ;
-    rdfs:comment "This practice focuses on increasing the knowledge in the organization regarding secure software." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/education-and-guidance> ;
-    skos:altLabel "EG" ;
-    ns1:hasFunction ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 ;
-    ns1:hasOrder 3 .
-
-ns1:53a9cd5c2d3643f3b71e4e9d92b811e2 a ns1:Practice ;
-    rdfs:label "Environment Management" ;
-    dcterms:description """The organization's work on application security doesn't end once the application becomes operational. New security features and patches are regularly released for the various elements of the technology stack you're using, until they become obsolete or are no longer supported.
-
-Most of the technologies in any application stack are not secure by default. This is frequently intentional, to enhance backwards compatibility or ease of setup. For this reason, ensuring the secure operation of the organization's technology stack requires the consistent application of secure baseline configurations to all components. The Environment Management (EM) practice focuses on keeping your environment clean and secure.
-
-Vulnerabilities are discovered throughout the lifecycles of the technologies on which your organization relies, and new versions addressing them are released on various schedules. This makes it essential to monitor vulnerability reports and perform orderly, timely patching across all affected systems.
-""" ;
-    dcterms:identifier "53a9cd5c2d3643f3b71e4e9d92b811e2" ;
-    rdfs:comment "This practice describes proactive activities carried out to improve and maintain the security of the environments in which the organization's applications operate." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/environment-management> ;
-    skos:altLabel "EM" ;
-    ns1:hasFunction ns1:942d679b0c9e41909f8bde728fdb1259 ;
-    ns1:hasOrder 2 .
-
-ns1:53f2da68c37a4ced8d5e767298fba589 a ns1:Practice ;
-    rdfs:label "Architecture Assessment" ;
-    dcterms:description """The Architecture Assessment (AA) practice ensures that the application and infrastructure architecture adequately meets all relevant security and compliance requirements, and sufficiently mitigates identified security threats. The first stream focuses on verifying that the security and compliance requirements identified in the Policy & Compliance and Security Requirements practices are met, first in an ad-hoc manner, then more systematically for each interface in the system. The second stream reviews the architecture, first for mitigations against typical threats, then against the specific threats identified in the Threat Assessment practice.
-
-In its more advanced form, the practice formalizes the security architecture review process, continuously evaluates the effectiveness of the architecture's security controls, their scalability and strategic alignment. Identified weaknesses and possible improvements are fed back to the Security Architecture practice to improve reference architectures.
-""" ;
-    dcterms:identifier "53f2da68c37a4ced8d5e767298fba589" ;
-    rdfs:comment "This practice focuses on validating the security and compliance of the software and supporting infrastructure architecture." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/architecture-assessment> ;
-    skos:altLabel "AA" ;
-    ns1:hasFunction ns1:fa340fa1816244d79f369ae82e998368 ;
-    ns1:hasOrder 1 .
-
-ns1:5702908efca4499e87a0239f32920d9b a ns1:Practice ;
-    rdfs:label "Security Requirements" ;
-    dcterms:description """The Security Requirements (SR) practice focuses on security requirements that are important
-in the context of secure software. A first type deals with typical software-related
-requirements, to specify objectives and expectations to protect the service and
-data at the core of the application. A second type deals with requirements relative to supplier organizations that are part of the development context of the application, in particular for outsourced development. It is important to
-streamline the expectations in terms of secure development because outsourced development
-can have significant impact on the security of the application. The security of
-3rd party (technical) libraries is part of the software supply chains stream (see
-Secure Build), and it is not included in this practice.
-""" ;
-    dcterms:identifier "5702908efca4499e87a0239f32920d9b" ;
-    rdfs:comment "This practice focuses on defining appropriate security requirements for your software and your software suppliers." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/security-requirements> ;
-    skos:altLabel "SR" ;
-    ns1:hasFunction ns1:88c296acaae841a2b2fc5314bff44cb4 ;
-    ns1:hasOrder 2 .
-
-ns1:66fb99798fe946e4979a2de98e9d6f8b a ns1:Practice ;
-    rdfs:label "Requirements-driven Testing" ;
-    dcterms:description """
-The goal of the Requirements-driven Testing (RT) practice is to ensure that the implemented security controls operate as expected and satisfy the project's stated security requirements. It does so by incrementally building a set of security test and regression cases and executing them regularly.
-
-A key aspect of this practice is its attention to both positive and negative testing. The former verifies that the application's security controls satisfy stated security requirements and validates their correct functioning. These requirements are typically functional in nature. Negative testing addresses the quality of the implementation of the security controls and aims to detect unexpected design flaws and implementation bugs through misuse and abuse testing. In its more advanced forms, the practice promotes security stress testing, such as denial of service, and strives to continuously improve application security by consistently automating security unit tests and creating security regression tests for all bugs identified and fixed.
-
-Although both the Requirements-driven Testing and Security Testing practices are concerned with security testing, the former focuses on verifying the correct implementation of security requirements, while the latter aims to uncover technical implementation weaknesses in an application, irrespective of requirements.
-""" ;
-    dcterms:identifier "66fb99798fe946e4979a2de98e9d6f8b" ;
-    rdfs:comment "This practice focuses on using both positive (control verification) and negative (misuse/abuse testing) security tests based on requirements (user stories)." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/requirements-driven-testing> ;
-    skos:altLabel "RT" ;
-    ns1:hasFunction ns1:fa340fa1816244d79f369ae82e998368 ;
-    ns1:hasOrder 2 .
-
-ns1:8f07145b5ea74388b2217895d5e7b5c2 a ns1:Practice ;
-    rdfs:label "Operational Management" ;
-    dcterms:description """The Operational Management (OM) practice focuses on activities to ensure security is maintained throughout operational support functions. Although these functions are not performed directly by an application, the overall security of the application and its data depends on their proper performance. Deploying an application on an unsupported operating system with unpatched vulnerabilities, or failing to store backup media securely, can make the protections built into that application irrelevant.
-
-The functions covered by this practice include, but are not limited to: system provisioning, administration, and decommissioning; database provisioning and administration; and data backup, restore, and archival.
-""" ;
-    dcterms:identifier "8f07145b5ea74388b2217895d5e7b5c2" ;
-    rdfs:comment "This practice focuses on operational support activities required to maintain security throughout the product lifecycle." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/operational-management> ;
-    skos:altLabel "OM" ;
-    ns1:hasFunction ns1:942d679b0c9e41909f8bde728fdb1259 ;
-    ns1:hasOrder 3 .
-
-ns1:b2af112859d34cada6ce4cf44d393b94 a ns1:Practice ;
-    rdfs:label "Secure Build" ;
-    dcterms:description """The Secure Build (SB) practice emphasises the importance of building software in a standardised, repeatable manner, and of doing so using secure components, including 3rd party software dependencies.
-
-The first stream focuses on removing any subjectivity from the build process by striving for full automation. An automated build pipeline can include additional automated security checks such as SAST and DAST to gain further assurance and flag security regressions early by failing the build, for example.
-
-The second stream acknowledges the prevalence of software dependencies in modern applications. It aims to identify them and track their security status in order to contain the impact of their insecurity on an otherwise secure application. In an advanced form, it applies similar security checks to software dependencies as to the application itself.
-""" ;
-    dcterms:identifier "b2af112859d34cada6ce4cf44d393b94" ;
-    rdfs:comment "This practice focuses on creating a consistently repeatable build process and accounting for the security of application dependencies." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/secure-build> ;
-    skos:altLabel "SB" ;
-    ns1:hasFunction ns1:8aa8154b83434e73b3ca8c0e9b654417 ;
-    ns1:hasOrder 1 .
-
-ns1:bb5488860c124b6e8076b023485023e1 a ns1:Practice ;
-    rdfs:label "Security Testing" ;
-    dcterms:description """The Security Testing (ST) practice leverages the fact that, while automated security testing is fast and scales well to numerous applications, in-depth testing based on good knowledge of an application and its business logic is often only possible via slower, manual expert security testing. Each stream therefore has one approach at its core.
-
-The first stream focuses on establishing a common security baseline to automatically detect so-called "low hanging fruit". Progressively customize the automated tests for each application and increase their frequency of execution to detect more bugs and regressions earlier, as close as possible to their inception. The more bugs the automated processes can detect, the more time experts have to use their knowledge and creativity to focus on more complex attack vectors and ensure in-depth application testing in the second stream. As manual review is slow and hard to scale, reviewers prioritize testing components based on their risk, recent relevant changes, or upcoming major releases. Organizations can also access external expertise by participating in bug bounty programs, for example.
-
-Unlike the Requirements-driven testing practice which focuses on verifying that applications correctly implement their requirements, the goal of this practice is to uncover technical and business-logic weaknesses in application and make them visible to management and business stakeholders, irrespective of requirements.
-""" ;
-    dcterms:identifier "bb5488860c124b6e8076b023485023e1" ;
-    rdfs:comment "This practice focuses on the detection and resolution of basic security issues through automation, allowing manual testing to focus on more complex attack vectors." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/verification/security-testing> ;
-    skos:altLabel "ST" ;
-    ns1:hasFunction ns1:fa340fa1816244d79f369ae82e998368 ;
-    ns1:hasOrder 3 .
-
-ns1:be9e7ddb98b84abe8b9e185b979ccf60 a ns1:Practice ;
-    rdfs:label "Policy & Compliance" ;
-    dcterms:description """The Policy & Compliance (PC) practice focuses on understanding and meeting external legal and regulatory requirements while driving internal security standards to ensure compliance in a way that’s aligned with the business purpose of the organization.
-
-A driving theme for improvement within this practice is describing organization’s standards and 3rd party obligations as application requirements, enabling efficient and automated audits that may be leveraged within the SDLC and continuously demonstrate that all expectations are met.
-
-In a sophisticated form, provision of this practice entails an organization-wide understanding of both internal standards and external compliance drivers while also maintaining low-latency checkpoints with project teams to ensure no project is operating outside expectations without visibility.
-""" ;
-    dcterms:identifier "be9e7ddb98b84abe8b9e185b979ccf60" ;
-    rdfs:comment "This practice drives the adherence to internal and external standards and regulations." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/governance/policy-and-compliance> ;
-    skos:altLabel "PC" ;
-    ns1:hasFunction ns1:102ad02df5dc4a8eb3837ef4ca2c1af4 ;
-    ns1:hasOrder 2 .
-
-ns1:c13aa12c13d04362a3ca3385a8c580ee a ns1:Practice ;
-    rdfs:label "Incident Management" ;
-    dcterms:description """Once your organization has applications in operation, you're likely to face security incidents. In this model, we define a security incident as a breach, or the threat of an imminent breach, of at least one asset's security goals, whether due to malicious or negligent behavior. Examples of security incidents might include: a successful Denial of Service (DoS) attack against a cloud application, an application user accessing private data of another by abusing a security vulnerability, or an attacker modifying application source code. The Incident Management (IM) practice focuses on dealing with these in your organization.
-
-Historically, many security incidents have been detected months, or even years, after the initial breach. During the "dwell time" before an incident is detected, significant damage can occur, increasing the difficulty of recovery. Our first activity stream, Incident Detection, focuses on decreasing that dwell time.
-
-Once you have identified that you're suffering from a security incident, it's essential to respond in a disciplined, thorough manner to limit the damage, and return to normal operations as efficiently as possible. This is the focus of our second stream.
-""" ;
-    dcterms:identifier "c13aa12c13d04362a3ca3385a8c580ee" ;
-    rdfs:comment "This practice addresses activities carried out improve the organization's detection of, and response to, security incidents." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/operations/incident-management> ;
-    skos:altLabel "IM" ;
-    ns1:hasFunction ns1:942d679b0c9e41909f8bde728fdb1259 ;
-    ns1:hasOrder 1 .
-
-ns1:e17d573510904f65a1fe6040b56ad0b1 a ns1:Practice ;
-    rdfs:label "Defect Management" ;
-    dcterms:description """The Defect Management (DM) practice focuses on collecting, recording, and analyzing software security defects and enriching them with information to drive metrics-based decisions.
-
-The practice’s first stream deals with the process of handling and managing defects to ensure released software has a given assurance level. The second stream focuses on enriching the information about the defects and deriving metrics to guide decisions about the security of individual projects and of the security assurance program as a whole.
-
-In a sophisticated form, the practice requires formalised, independent defect management and real-time, correlated information to detect trends and influence security strategy.
-""" ;
-    dcterms:identifier "e17d573510904f65a1fe6040b56ad0b1" ;
-    rdfs:comment "This practice focuses on managing security defects in software and their associated metrics." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/implementation/defect-management> ;
-    skos:altLabel "DM" ;
-    ns1:hasFunction ns1:8aa8154b83434e73b3ca8c0e9b654417 ;
-    ns1:hasOrder 3 .
-
-ns1:f9269aebfe2c4d5b9293ba42a40a93ac a ns1:Practice ;
-    rdfs:label "Threat Assessment" ;
-    dcterms:description """The Threat Assessment (TA) practice focuses on identifying and understanding of project-level risks based on the functionality of the software being developed and characteristics of the runtime environment. From details about threats and likely attacks against each project, the organization as a whole operates more effectively through better decisions about prioritization of initiatives for security. Additionally, decisions for risk acceptance are more informed, therefore better aligned to the business.
-
-By starting with simple threat models and building application risk profiles, an organization improves over time. Ultimately, a sophisticated organization would maintain this information in a way that is tightly coupled to the compensating factors and pass-through risks from external entities. This provides greater breadth of understanding for potential downstream impacts from security issues while keeping a close watch on the organization’s current performance against known threats.
-""" ;
-    dcterms:identifier "f9269aebfe2c4d5b9293ba42a40a93ac" ;
-    rdfs:comment "This practice focuses on identifying potential threats in applications." ;
-    rdfs:seeAlso <https://owaspsamm.org/model/design/threat-assessment> ;
-    skos:altLabel "TA" ;
-    ns1:hasFunction ns1:88c296acaae841a2b2fc5314bff44cb4 ;
-    ns1:hasOrder 1 .
-
-ns1:BusinessFunction a owl:Class .
-
-ns1:MaturityLevel a owl:Class .
-
-ns1:0a1dc80f84964f2fa776c5d8e932353a a ns1:MaturityLevel ;
-    rdfs:label 1 ;
-    dcterms:description "The first maturity level aims at achieving an ad-hoc, best effort implementation of a particular activity within a stream." ;
-    dcterms:identifier "0a1dc80f84964f2fa776c5d8e932353a" ;
-    skos:altLabel 1 .
-
-ns1:47dd82af343e4695a0385418af4398d1 a ns1:MaturityLevel ;
-    rdfs:label 2 ;
-    dcterms:description "The second maturity level aims to establish a consistent, repeatable process that can be relied on." ;
-    dcterms:identifier "47dd82af343e4695a0385418af4398d1" ;
-    skos:altLabel 2 .
-
-ns1:7bbfe31d447e48759ef0f2af25c31b43 a ns1:MaturityLevel ;
-    rdfs:label 3 ;
-    dcterms:description "The third maturity level aims to maximize effectiveness through continuous improvement, based on effective and timely feedback." ;
-    dcterms:identifier "7bbfe31d447e48759ef0f2af25c31b43" ;
-    skos:altLabel 3 .
-
-ns1:Practice a owl:Class .
-
-ns1:Stream a owl:Class .
-
-ns1:PracticeLevel a owl:Class .
-
-ns1:Activity a owl:Class .

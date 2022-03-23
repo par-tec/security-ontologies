@@ -30,7 +30,7 @@ BASEDIR = Path("external/samm-model")
 def test_parse_function():
     g = Graph()
     parse_function(g)
-    g.serialize(format="text/turtle", destination="vocabularies/functions.ttl")
+    g.serialize(format="text/turtle", destination="tests/out/functions.ttl")
 
 
 def parse_function(g):
@@ -51,7 +51,7 @@ def parse_function(g):
 def test_parse_maturity():
     g = Graph()
     parse_maturity(g)
-    g.serialize(format="text/turtle", destination="vocabularies/maturity-levels.ttl")
+    g.serialize(format="text/turtle", destination="tests/out/maturity-levels.ttl")
 
 
 def parse_maturity(g):
@@ -75,7 +75,7 @@ def parse_maturity(g):
 def test_parse_stream():
     g = Graph()
     parse_stream(g)
-    g.serialize(format="text/turtle", destination="vocabularies/streams.ttl")
+    g.serialize(format="text/turtle", destination="tests/out/streams.ttl")
 
 
 def parse_stream(g):
@@ -102,7 +102,7 @@ def parse_stream(g):
 def test_parse_practice_level():
     g = Graph()
     parse_practice_level(g)
-    g.serialize(format="text/turtle", destination="vocabularies/practices-level.ttl")
+    g.serialize(format="text/turtle", destination="tests/out/practices-level.ttl")
 
 
 def parse_practice_level(g):
@@ -134,7 +134,7 @@ def parse_practice_level(g):
 def test_parse_practice():
     g = Graph()
     parse_practice(g)
-    g.serialize(format="text/turtle", destination="vocabularies/practices.ttl")
+    g.serialize(format="text/turtle", destination="tests/out/practices.ttl")
 
 
 def parse_practice(g):
@@ -164,7 +164,7 @@ def parse_practice(g):
 def test_parse_activity():
     g = Graph()
     parse_activity(g)
-    g.serialize(format="text/turtle", destination="vocabularies/activity.ttl")
+    g.serialize(format="text/turtle", destination="tests/out/activity.ttl")
 
 
 def parse_activity(g):
@@ -243,69 +243,7 @@ def parse_activity(g):
 
 def test_parse_all():
     g = Graph()
-    g.parse(
-        data="""
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <https://owaspsamm.org/model/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<https://owaspsamm.org/model/> a owl:Ontology ;
-    dcterms:description "OWASP SAMM Ontology" ;
-    dcterms:creator <mailto:robipolli@gmail.com> ;
-    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/>
-.
-
-ns1:BusinessFunction a owl:Class
-.
-ns1:Practice a owl:Class;
-    # hasFunction
-.
-ns1:MaturityLevel a owl:Class
-.
-ns1:StreamLetter a owl:Class
-.
-ns1:PracticeLevel a owl:Class;
-    # hasPractice
-    # hasMaturityLevel
-.
-ns1:Stream a owl:Class
-    # hasPractice
-.
-ns1:Activity a owl:Class;
-    # hasPracticeLevel
-    # hasStream
-.
-
-ns1:hasFunction a owl:ObjectProperty;
-    rdfs:range ns1:BusinessFunction;
-    rdfs:domain ns1:Practice
-.
-ns1:hasPractice a owl:ObjectProperty;
-    rdfs:range ns1:Practice;
-    rdfs:domain ns1:PracticeLevel;
-    rdfs:domain ns1:Stream;
-.
-ns1:hasMaturityLevel a owl:ObjectProperty;
-    rdfs:range ns1:MaturityLevel;
-    rdfs:domain ns1:PracticeLevel;
-.
-ns1:hasStream a owl:ObjectProperty;
-    rdfs:range ns1:Stream;
-    rdfs:domain ns1:Activity;
-.
-ns1:hasPracticeLevel a owl:ObjectProperty;
-    rdfs:range ns1:PracticeLevel;
-    rdfs:domain ns1:Activity;
-.
-ns1:hasLetter a owl:ObjectProperty;
-    rdfs:range ns1:StreamLetter;
-    rdfs:domain ns1:Stream;
-.
-
-    """,
-        format="text/turtle",
-    )
+    g.parse("vocabularies/samm-ontology.ttl", format="text/turtle")
     parse_function(g)
     parse_maturity(g)
     parse_practice(g)
@@ -313,4 +251,4 @@ ns1:hasLetter a owl:ObjectProperty;
     parse_stream(g)
     parse_activity(g)
 
-    g.serialize(format="text/turtle", destination="vocabularies/all.ttl")
+    g.serialize(format="text/turtle", destination="vocabularies/samm.ttl")
