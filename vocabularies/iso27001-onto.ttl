@@ -281,25 +281,25 @@ iso:Resilience a iso:SecurityDomain ;
 #
 #
 
-Security domains is an attribute to view controls from the perspective of four information security
-domains:
-“Governance and Ecosystem” includes
-- “Information System Security Governance & Risk Management”
-- and “Ecosystem cybersecurity management” (including internal and external
-stakeholders);
+# Security domains is an attribute to view controls from the perspective of four information security
+# domains:
+# “Governance and Ecosystem” includes
+# - “Information System Security Governance & Risk Management”
+# - and “Ecosystem cybersecurity management” (including internal and external
+# stakeholders);
 
-“Protection” includes
-“IT Security Architecture”,
-“IT Security Administration”,
-“Identity and access management”, iso:IAM
-“IT Security Maintenance” and
-“Physical and environmental security”;  iso:PhysicalSecurity
+# “Protection” includes
+# “IT Security Architecture”,
+# “IT Security Administration”,
+# “Identity and access management”, iso:IAM
+# “IT Security Maintenance” and
+# “Physical and environmental security”;  iso:PhysicalSecurity
 
- “Defence” includes
- “Detection” and “Computer Security Incident Management”;
+#  “Defence” includes
+#  “Detection” and “Computer Security Incident Management”;
 
-“Resilience” includes
-“Continuity of operations” and “Crisis management”.
+# “Resilience” includes
+# “Continuity of operations” and “Crisis management”.
 
 
 iso:InformationSystemSecurityGovernance_RiskManagement a iso:GovernanceEcosystem;

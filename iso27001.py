@@ -1,3 +1,5 @@
+import math
+
 import pandas as pd
 from rdflib import DCTERMS, RDF, RDFS, Graph, Literal, Namespace, URIRef
 
@@ -8,10 +10,16 @@ NS_NIST = Namespace("http://par-tec.it/onto/nist/csf/latest/")
 
 nan = None
 
-
 def variabilize(s):
     return "".join(map(str.capitalize, s.split()))
 
+def is_nan(v):
+    if str(v) == "nan":
+        return True
+
+    return v in (
+        nan, None, math.nan
+    )
 
 OPERATIONAL_CAPABILITIES = {
     "Governance": "Governance",
@@ -106,11 +114,13 @@ def test_control():
 
 def test_all():
     g = Graph()
+    g.parse("vocabularies/iso27001-onto.ttl", format="turtle")
     df = pd.read_excel(
         "external/iso/Esempio SOA 27002 2022 doc finale - rpolli.xlsx",
         sheet_name="SoA",
         skiprows=2,
         dtype=str,
+        engine="openpyxl",
     )
     for k, control in df.transpose().to_dict(orient="dict").items():
         if not control.get("#") or str(control.get("#")) == "nan":
@@ -150,7 +160,7 @@ def parse_control(g, control):
         if k == "Control Purpose":
             g.add((uri, NS_ISO.purpose, Literal(v)))
             continue
-        if k == "Justification for inclusion/exclusion":
+        if k == "Justification for inclusion/exclusion" and not is_nan(v):
             g.add((uri, DCTERMS.description, Literal(v)))
             continue
         if k == "Correspondence with  ISO/IEC 27002:2013":
@@ -190,3 +200,13 @@ def parse_control(g, control):
                 g.add(
                     (uri, NS_ISO.hasSecurityDomain, URIRef(NS_ISO + security_domain_id))
                 )
+        if v and str(v) != "nan" and "Linked controls" == k:
+            for controls in str(v).split():
+                g.add(
+                    (
+                        uri,
+                        NS_ISO.hasRelatedControls,
+                        URIRef(NS_ISO + f"control-{controls}"),
+                    )
+                )
+            continue
