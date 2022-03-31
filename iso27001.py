@@ -2,7 +2,9 @@ import pandas as pd
 from rdflib import DCTERMS, RDF, RDFS, Graph, Literal, Namespace, URIRef
 
 NS_ISO = Namespace("http://par-tec.it/onto/iso/27001/latest/")
+NS_ISO27100 = Namespace("http://par-tec.it/onto/iso/27100/latest/")
 NS_ISO27002_2013 = Namespace("http://par-tec.it/onto/iso/27002/2013/")
+NS_NIST = Namespace("http://par-tec.it/onto/nist/csf/latest/")
 
 nan = None
 
@@ -12,6 +14,7 @@ def variabilize(s):
 
 
 OPERATIONAL_CAPABILITIES = {
+    "Governance": "Governance",
     "Asset\nmanagement": "AssetManagement",
     "Information\nprotection": "InformationProtection",
     "Human\nresource\nsecurity": "HRSecurity",
@@ -25,7 +28,6 @@ OPERATIONAL_CAPABILITIES = {
     "Supplier\nrelationships\nsecurity": "SupplierSecurity",
     "Legal and\ncompliance": "Compliance",
     "Information security\nevent management and \nInformation security assurance": "EventManangement",
-    "Governance": "Governance",
 }
 
 SECURITY_DOMAINS = {
@@ -146,7 +148,7 @@ def parse_control(g, control):
             g.add((uri, DCTERMS.description, Literal(v)))
             continue
         if k == "Control Purpose":
-            g.add((uri, NS_ISO.hasPurpose, Literal(v)))
+            g.add((uri, NS_ISO.purpose, Literal(v)))
             continue
         if k == "Justification for inclusion/exclusion":
             g.add((uri, DCTERMS.description, Literal(v)))
@@ -169,7 +171,7 @@ def parse_control(g, control):
             if v == "x":
                 g.add((uri, NS_ISO.hasInformationSecurityProperty, URIRef(NS_ISO + k)))
             continue
-        if k in ("Identify", "Protect", "Detect", "Respond", "Recover", "Governance"):
+        if k in ("Identify", "Protect", "Detect", "Respond", "Recover",):
             if v == "x":
                 g.add((uri, NS_ISO.hasCybersecurityConcept, URIRef(NS_ISO + k)))
             continue
