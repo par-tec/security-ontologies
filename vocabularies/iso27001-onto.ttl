@@ -9,11 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix iso: <http://par-tec.it/onto/iso/231/2017/iso27001/> .
+@prefix iso: <http://par-tec.it/onto/iso/27001/latest/> .
 @prefix iso27002_2013: <http://par-tec.it/onto/iso/27002/2013/> .
-@prefix control: <http://par-tec.it/onto/iso/27001/control/> .
-@prefix controlType: <http://par-tec.it/onto/iso/27001/control-type/> .
-@prefix category: <http://par-tec.it/onto/iso/27001/category/> .
 
 iso: a owl:Ontology ;
     dcterms:creator <mailto:robipolli@gmail.com> ;
@@ -42,13 +39,13 @@ iso:hasControlType a owl:ObjectProperty ;
     rdfs:label "hasControlType" ;
     rdfs:comment "The type of the control." ;
     rdfs:domain iso:Control ;
-    rdfs:range controlType:ControlType .
+    rdfs:range iso:ControlType .
 
 iso:hasControlCategory a owl:ObjectProperty ;
     rdfs:label "hasControlCategory" ;
     rdfs:comment "The category of the control." ;
     rdfs:domain iso:Control ;
-    rdfs:range category:ControlCategory .
+    rdfs:range iso:ControlCategory .
 
 iso:Preventive a iso:ControlType;
     rdfs:label "Preventive" ;
@@ -84,41 +81,58 @@ iso:Availability a iso:InformationSecurityProperty;
     rdfs:comment "Availability properties are properties that protect the availability of information."
     .
 
-iso:hasCybersecurityConcet a owl:ObjectProperty ;
+iso:hasCybersecurityConcept a owl:ObjectProperty ;
     rdfs:domain iso:Control ;
-    rdfs:range iso:CybersecurityConcepts
+    rdfs:range iso:CybersecurityConcept
 .
 
-iso:CybersecurityConcepts a owl:Class;
+iso:CybersecurityConcept a owl:Class;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Cybersecurity Concepts" ;
     rdfs:comment "Cybersecurity concepts are the different concepts that can be used in the ISO 27001 standard."
     .
 
-iso:Identify a iso:CybersecurityConcepts;
+iso:Identify a iso:CybersecurityConcept;
     rdfs:label "Identify" ;
-    rdfs:comment "Identify concepts are concepts that identify information."
+    rdfs:comment """
+    The Identify Function assists in developing an organizational understanding to managing cybersecurity risk
+    to systems, people, assets, data, and capabilities.
+    Understanding the business context, the resources that support critical functions,
+    and the related cybersecurity risks enables an organization to focus and prioritize its efforts,
+    consistent with its risk management strategy and business needs
+    """
     .
-iso:Protect a iso:CybersecurityConcepts;
+iso:Protect a iso:CybersecurityConcept;
     rdfs:label "Protect" ;
     rdfs:comment "Protect concepts are concepts that protect information."
     .
-iso:Detect a iso:CybersecurityConcepts;
+iso:Detect a iso:CybersecurityConcept;
     rdfs:label "Detect" ;
     rdfs:comment "Detect concepts are concepts that detect information."
     .
-iso:Respond a iso:CybersecurityConcepts;
+iso:Respond a iso:CybersecurityConcept;
     rdfs:label "Respond" ;
     rdfs:comment "Respond concepts are concepts that respond to information."
     .
-iso:Recover a iso:CybersecurityConcepts;
+iso:Recover a iso:CybersecurityConcept;
     rdfs:label "Recover" ;
     rdfs:comment "Recover concepts are concepts that recover information."
     .
 
+# d3f link
+iso:Detect iso:related d3f:Detect
+.
+iso:Protect iso:related [
+    d3f:Harden,
+    d3f:Isolate
+.
+iso:Respond iso:related d3f:Evict
+.
+
 iso:OperationalCapability a owl:Class;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Operational Capabilities" ;
+    skos:prefLabel "Skos Operational Capabilities" ;
     rdfs:comment "Operational capabilities are the different capabilities that can be used in the ISO 27001 standard."
     .
 

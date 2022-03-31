@@ -18,13 +18,13 @@
 iso: a owl:Ontology ;
     dcterms:creator <mailto:robipolli@gmail.com> ;
     dcterms:description "ISO27001 Controls Ontology" ;
-    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> .
+    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/>
 
 .
 iso:Control a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Control" ;
-    rdfs:comment "Controls are the basic building blocks of the ISO 27001 standard." .
+    rdfs:comment "Controls are the basic building blocks of the ISO 27001 standard."
 .
 
 iso:ControlCategory a owl:Class;
@@ -35,7 +35,7 @@ iso:ControlCategory a owl:Class;
 iso:ControlType a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Control Type" ;
-    rdfs:comment "Control types are the different types of controls that can be used in the ISO 27001 standard." .
+    rdfs:comment "Control types are the different types of controls that can be used in the ISO 27001 standard."
 .
 
 iso:hasControlType a owl:ObjectProperty ;
@@ -53,15 +53,12 @@ iso:hasControlCategory a owl:ObjectProperty ;
 iso:Preventive a iso:ControlType;
     rdfs:label "Preventive" ;
     rdfs:comment "Preventive controls are controls that prevent the occurrence of a risk." .
-.
 iso:Detective a iso:ControlType;
     rdfs:label "Detective" ;
     rdfs:comment "Detective controls are controls that detect the occurrence of a risk." .
-.
 iso:Corrective a iso:ControlType;
     rdfs:label "Corrective" ;
     rdfs:comment "Corrective controls are controls that correct a risk." .
-.
 
 iso:hasInformationSecurityProperty a owl:ObjectProperty ;
     rdfs:label "hasInformationSecurityProperty" ;
@@ -73,7 +70,6 @@ iso:InformationSecurityProperty a owl:Class;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Information Security Properties" ;
     rdfs:comment "Information security properties are the different properties that can be used in the ISO 27001 standard." .
-.
 
 iso:Confidentiality a iso:InformationSecurityProperty;
     rdfs:label "Confidentiality" ;
@@ -87,6 +83,11 @@ iso:Availability a iso:InformationSecurityProperty;
     rdfs:label "Availability" ;
     rdfs:comment "Availability properties are properties that protect the availability of information."
     .
+
+iso:hasCybersecurityConcet a owl:ObjectProperty ;
+    rdfs:domain iso:Control ;
+    rdfs:range iso:CybersecurityConcepts
+.
 
 iso:CybersecurityConcepts a owl:Class;
     rdfs:subClassOf skos:Concept ;
@@ -177,13 +178,23 @@ iso:EventManangement a iso:OperationalCapability;
     rdfs:label "Event Management and Information" ;
     rdfs:comment "Event management capabilities are capabilities that manage events."
     .
-
+#
+# Security Domains
+#
 iso:SecurityDomain a owl:Class;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Security Domains" ;
     rdfs:comment "Security domains are the different domains that can be used in the ISO 27001 standard."
     .
-iso:Governance a iso:SecurityDomain;
+
+iso:hasSecurityDomain a owl:ObjectProperty ;
+    rdfs:label "hasInformationSecurityProperty" ;
+    rdfs:comment "The information security property of the control." ;
+    rdfs:domain iso:Control ;
+    rdfs:range iso:SecurityDomain .
+
+
+iso:GovernanceEcosystem a iso:SecurityDomain;
     rdfs:label "Governance and Ecosystem" ;
     rdfs:comment "Governance and Ecosystem domain are domains that govern the operation of information systems."
     .
@@ -199,17 +210,3 @@ iso:Resilience a iso:SecurityDomain ;
     rdfs:label "Resilience and Recovery" ;
     rdfs:comment "Resilience and Recovery domain are domains that manage resilience."
     .
-
-control:5.1 a iso:Control ;
-  iso:hasCategory  category:5;
-    dcterms:identifier "5.1" ;
-    rdfs:label "Policies for information security" ;
-    dcterms:description "Information security policy and topic-specific policies should be defined, approved by management,
-published, communicated to and acknowledged by relevant personnel and relevant interested parties,
-and reviewed at planned intervals and if significant changes occur." ;
-    iso:purpose "To ensure continuing suitability, adequacy, effectiveness of management direction and support for
-information security in accordance with business requirements, legal, statutory, regulatory and
-contractual requirements." ;
-    rdfs:seeAlso iso27002_2013:05.1.1, iso27002_2013:05.1.2 ;
-    control:hasType
-.

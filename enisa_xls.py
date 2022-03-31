@@ -2,6 +2,21 @@ import pandas as pd
 from rdflib import DCAT, DCTERMS, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import OWL, RDF, RDFS
 
+NS_FOAF = Namespace("http://xmlns.com/foaf/0.1/")
+NS_PT = Namespace("https://par-tec.it/onto/enisa/threat/2016/model/")
+NS_ENISA = Namespace("https://par-tec.it/onto/enisa/threat/2016/data/")
+NS = (
+    ("dct", DCTERMS),
+    ("owl", OWL),
+    ("rdfs", RDFS),
+    ("rdf", RDF),
+    ("dcat", DCAT),
+    ("foaf", NS_FOAF),
+    ("pt", NS_PT),
+    ("enisa", NS_ENISA),
+)
+
+
 df = pd.read_excel("Threat taxonomy v 2016.xlsx")
 cols = [
     "Threat number",
@@ -37,22 +52,9 @@ def a_or_b(a, b, k):
     return a[k]
 
 
-NS_FOAF = Namespace("http://xmlns.com/foaf/0.1/")
-NS_PT = Namespace("https://par-tec.it/onto/enisa/")
-NS = (
-    ("dct", DCTERMS),
-    ("owl", OWL),
-    ("rdfs", RDFS),
-    ("rdf", RDF),
-    ("dcat", DCAT),
-    ("foaf", NS_FOAF),
-    ("pt", NS_PT),
-)
-
-
 def add_hl_threat(entry, g):
     identifier = str(int(entry["Threat number"]))
-    threat_id = URIRef(f"{NS_PT}threat/{identifier}")
+    threat_id = URIRef(f"{NS_ENISA}{identifier}")
     g.add((threat_id, RDF.type, NS_PT.ThreatCategory))
     g.add((threat_id, RDFS.label, Literal(entry["High Level Threats"])))
     g.add((threat_id, DCTERMS.identifier, Literal(identifier)))
@@ -62,20 +64,22 @@ def add_hl_threat(entry, g):
 def add_threat(entry, hlt, g, threat_class=NS_PT.Threat):
     identifier = str(int(entry["Threat number"]))
     parent_identifier = str(int(hlt["Threat number"]))
-    threat_id = URIRef(f"{NS_PT}threat/{identifier}")
-    threat_class_id = URIRef(f"{NS_PT}threat/{parent_identifier}")
+    threat_id = URIRef(f"{NS_ENISA}{identifier}")
+    threat_class_id = URIRef(f"{NS_ENISA}{parent_identifier}")
 
     if threat_class == NS_PT.Threat:
         label = entry["Threats"]
+        rel = NS_PT.hasCategory
     elif threat_class == NS_PT.ThreatDetail:
         label = entry["Threat details"]
+        rel = NS_PT.hasTreat
     else:
         raise ValueError(f"Unknown threat class {threat_class}")
     g.add((threat_id, RDFS.label, Literal(label)))
     g.add((threat_id, RDF.type, threat_class))
     g.add((threat_id, DCTERMS.identifier, Literal(identifier)))
     g.add((threat_id, DCTERMS.description, Literal(entry["Threat description"])))
-    g.add((threat_id, RDFS.subClassOf, threat_class_id))
+    g.add((threat_id, rel, threat_class_id))
 
 
 def parse_taxonomy():
@@ -94,11 +98,14 @@ def parse_taxonomy():
 
 def test_parse_xls():
     g = parse_taxonomy_xls()
-    g.serialize(format="turtle", destination="enisa-threat-modeling-2016.ttl")
+    g.serialize(
+        format="turtle", destination="vocabularies/enisa-threat-modeling-2016-data.ttl"
+    )
 
 
 def parse_taxonomy_xls():
     g = Graph()
+    g.parse("vocabularies/enisa-threat-modeling-2016-onto.ttl")
     for n in NS:
         g.bind(*n)
 
