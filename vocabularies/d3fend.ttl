@@ -260,7 +260,7 @@ d3f:DNSRecord a owl:Class ;
 
 d3f:DNSServer a owl:Class ;
     rdfs:label "DNS Server" ;
-    rdfs:comment """A Domain Name System (DNS) name server is a kind of name server.  Domain names are one of the two principal namespaces of the Internet. The most important function of DNS servers is the translation (resolution) of human-memorable domain names and hostnames into the corresponding numeric Internet Protocol (IP) addresses, the second principal name space of the Internet which is used to identify and locate computer systems and resources on the Internet. (en). 
+    rdfs:comment """A Domain Name System (DNS) name server is a kind of name server.  Domain names are one of the two principal namespaces of the Internet. The most important function of DNS servers is the translation (resolution) of human-memorable domain names and hostnames into the corresponding numeric Internet Protocol (IP) addresses, the second principal name space of the Internet which is used to identify and locate computer systems and resources on the Internet. (en).
 
 More generally, a name server is a computer application that implements a network service for providing responses to queries against a directory service. It translates an often humanly meaningful, text-based identifier to a system-internal, often numeric identification or addressing component. This service is performed by the server in response to a service protocol request.""" ;
     rdfs:isDefinedBy <http://dbpedia.org/resource/Name_server> ;
@@ -12364,6 +12364,41 @@ d3f:DomainAccountMonitoring a d3f:UserBehaviorAnalysis,
             owl:onProperty d3f:monitors ;
             owl:someValuesFrom d3f:DomainUserAccount ],
         d3f:UserBehaviorAnalysis .
+
+d3f:StaticAnalysis a d3f:FileAnalysis,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Static Analysis" ;
+    d3f:analyzes d3f:DocumentFile,
+        d3f:ExecutableFile, d3f:SourceCode ;
+    d3f:d3fend-id "D3-SA" ;
+    d3f:definition """Analyzing a file to determine 
+                      if the file is a malicious program or if the file contains insecure code.""" ;
+    d3f:kb-article """## How it works
+Analyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.
+
+## Considerations
+ * Malware often detects a fake environment, then changes its behavior accordingly. For example, it could detect that the system clock is being sped up in an effort to get it to execute commands that it would normally only execute at a later time, or that the hardware manufacturer of the machine is a virtualization provider.
+ * Malware can attempt to determine if it is being debugged, and change its behavior accordingly.
+ * For maximum fidelity, the simulated and real environments should be as similar as possible because the malware could perform differently in different environments.  
+ * Sometimes the malware behavior is triggered only under certain conditions (on a specific system date, after a certain time, or after it is sent a specific command) and can't be detected through a short execution in a virtual environment.
+
+## Implementations
+* [Cuckoo Sandbox](https://cuckoosandbox.org)""" ;
+    d3f:kb-reference d3f:Reference_MalwareAnalysisSystem_PaloAltoNetworksInc,
+        d3f:Reference_UseOfAnApplicationControllerToMonitorAndControlSoftwareFileAndApplicationEnvironments_SophosLtd ;
+    d3f:synonym "Source code analysis" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:analyzes ;
+            owl:someValuesFrom d3f:ExecutableFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:analyzes ;
+            owl:someValuesFrom d3f:DocumentFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:analyzes ;
+            owl:someValuesFrom d3f:SourceCode ],
+
+        d3f:FileAnalysis .
 
 d3f:DynamicAnalysis a d3f:FileAnalysis,
         owl:Class,
