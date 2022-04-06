@@ -161,17 +161,6 @@ iso:Recover a iso:CybersecurityConcept;
     rdfs:comment "Recover concepts are concepts that recover information."
     .
 
-#
-# Relations with d3fend
-#
-iso:Detect iso:related d3f:Detect
-.
-iso:Protect iso:related
-    d3f:Harden,
-    d3f:Isolate
-.
-iso:Respond iso:related d3f:Evict
-.
 
 #
 # Operational Capabilities

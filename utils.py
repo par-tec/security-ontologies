@@ -73,3 +73,27 @@ where {
   ?rel ?parent
 }
 """
+
+
+def hierarchy(g, node):
+    ret = g.query(f"""
+    prefix d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+
+    CONSTRUCT {{
+        ?object ?rel ?parent
+    }}
+    WHERE {{
+        ?object (rdfs:type|rdfs:subClassOf)*  {node};
+
+        ?rel ?parent
+    .
+        FILTER (
+            ! regex( str(?rel),"kb-", "i" )
+        )
+
+    . FILTER (
+        regex(str(?parent), "http://d3fend.mitre.org", "i")
+        )
+    }}
+    """)
+    return show_svg(ret.graph)
