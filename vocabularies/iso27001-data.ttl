@@ -625,27 +625,6 @@ iso:control-8.25 a iso:Control ;
     dcterms:identifier "control-8.25" ;
     dcterms:title " Secure development lifecycle" .
 
-iso:control-8.27 a iso:Control ;
-    iso:controlCategory iso:category-8 ;
-    iso:correspondsTo iso27002_2013:control-14.2.5 ;
-    iso:hasControlType iso:Preventive ;
-    iso:hasCybersecurityConcept iso:Protect ;
-    iso:hasInformationSecurityProperty iso:Availability,
-        iso:Confidentiality,
-        iso:Integrity ;
-    iso:hasOperationalCapability iso:ApplicationSecurity,
-        iso:SystemNetworkSecurity ;
-    iso:hasRelatedControls iso:control-5.12,
-        iso:control-5.16,
-        iso:control-5.17,
-        iso:control-5.18,
-        iso:control-8.2 ;
-    iso:hasSecurityDomain iso:Protection ;
-    iso:purpose "To  ensure  information  systems  are  securely  designed,  implemented  and  operated  within  the development lifecycle" ;
-    dcterms:description "Principles for engineering secure systems should be established, documented, maintained and applied to any information system development activities" ;
-    dcterms:identifier "control-8.27" ;
-    dcterms:title " Secure system architecture and engineering principles" .
-
 iso:control-8.30 a iso:Control ;
     iso:controlCategory iso:category-8 ;
     iso:correspondsTo iso27002_2013:control-14.2.7 ;
@@ -1179,6 +1158,27 @@ iso:control-8.20 a iso:Control ;
     dcterms:identifier "control-8.20" ;
     dcterms:title " Network controls" .
 
+iso:control-8.27 a iso:Control ;
+    iso:controlCategory iso:category-8 ;
+    iso:correspondsTo iso27002_2013:control-14.2.5 ;
+    iso:hasControlType iso:Preventive ;
+    iso:hasCybersecurityConcept iso:Protect ;
+    iso:hasInformationSecurityProperty iso:Availability,
+        iso:Confidentiality,
+        iso:Integrity ;
+    iso:hasOperationalCapability iso:ApplicationSecurity,
+        iso:SystemNetworkSecurity ;
+    iso:hasRelatedControls iso:control-5.12,
+        iso:control-5.16,
+        iso:control-5.17,
+        iso:control-5.18,
+        iso:control-8.2 ;
+    iso:hasSecurityDomain iso:Protection ;
+    iso:purpose "To  ensure  information  systems  are  securely  designed,  implemented  and  operated  within  the development lifecycle" ;
+    dcterms:description "Principles for engineering secure systems should be established, documented, maintained and applied to any information system development activities" ;
+    dcterms:identifier "control-8.27" ;
+    dcterms:title " Secure system architecture and engineering principles" .
+
 iso:control-8.28 a iso:Control ;
     iso:controlCategory iso:category-8 ;
     iso:correspondsTo iso27002_2013:control-New ;
@@ -1197,6 +1197,35 @@ iso:control-8.28 a iso:Control ;
     dcterms:description "Secure coding principles should be applied to software development" ;
     dcterms:identifier "control-8.28" ;
     dcterms:title " Secure coding" .
+
+iso:control-8.29 a iso:Control ;
+    iso:controlCategory iso:category-8 ;
+    iso:correspondsTo iso27002_2013:control-14.2.8,
+        iso27002_2013:control-14.2.9 ;
+    iso:hasControlType iso:Preventive ;
+    iso:hasCybersecurityConcept iso:Detect ;
+    iso:hasInformationSecurityProperty iso:Availability,
+        iso:Confidentiality,
+        iso:Integrity ;
+    iso:hasOperationalCapability iso:ApplicationSecurity,
+        iso:EventManangement,
+        iso:SystemNetworkSecurity ;
+    iso:hasRelatedControls iso:control-5.20,
+        iso:control-5.8,
+        iso:control-8.20,
+        iso:control-8.23,
+        iso:control-8.24,
+        iso:control-8.28,
+        iso:control-8.29,
+        iso:control-8.3,
+        iso:control-8.31,
+        iso:control-8.5,
+        iso:control-8.9 ;
+    iso:hasSecurityDomain iso:Protection ;
+    iso:purpose "To validate if information security requirements are met when deployed to the production environment" ;
+    dcterms:description "Security testing processes should be defined and implemented in the development lifecycle" ;
+    dcterms:identifier "control-8.29" ;
+    dcterms:title " Security testing in development and acceptance" .
 
 iso:control-8.4 a iso:Control ;
     iso:controlCategory iso:category-8 ;
@@ -1821,34 +1850,6 @@ iso:SupplierSecurity a iso:OperationalCapability ;
     rdfs:label "Supplier and Relationship Security" ;
     rdfs:comment "Supplier security capabilities are capabilities that manage supplier assets." .
 
-iso:control-8.29 a iso:Control ;
-    iso:controlCategory iso:category-8 ;
-    iso:correspondsTo iso27002_2013:control-14.2.8,
-        iso27002_2013:control-14.2.9 ;
-    iso:hasControlType iso:Preventive ;
-    iso:hasCybersecurityConcept iso:Detect ;
-    iso:hasInformationSecurityProperty iso:Availability,
-        iso:Confidentiality,
-        iso:Integrity ;
-    iso:hasOperationalCapability iso:ApplicationSecurity,
-        iso:EventManangement,
-        iso:SystemNetworkSecurity ;
-    iso:hasRelatedControls iso:control-5.20,
-        iso:control-5.8,
-        iso:control-8.20,
-        iso:control-8.23,
-        iso:control-8.24,
-        iso:control-8.28,
-        iso:control-8.29,
-        iso:control-8.3,
-        iso:control-8.31,
-        iso:control-8.5,
-        iso:control-8.9 ;
-    iso:hasSecurityDomain iso:Protection ;
-    iso:purpose "To validate if information security requirements are met when deployed to the production environment" ;
-    dcterms:description "Security testing processes should be defined and implemented in the development lifecycle" ;
-    dcterms:identifier "control-8.29" ;
-    dcterms:title " Security testing in development and acceptance" .
 
 iso:IAM a iso:OperationalCapability ;
     rdfs:label "Identity and Access Management" ;

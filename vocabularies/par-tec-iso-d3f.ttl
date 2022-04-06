@@ -1,0 +1,71 @@
+#
+# A research study on mapping ISO controls using d3fend vocabulary.
+#
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Riferimenti esterni: https://www.nist.gov/cyberframework/framework
+@prefix samm: <https://owaspsamm.org/model/> .
+@prefix iso: <http://par-tec.it/onto/iso/27001/latest/> .
+@prefix iso27002_2013: <http://par-tec.it/onto/iso/27002/2013/> .
+@prefix d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#> .
+
+# iso: rdf:type owl:Ontology ;
+#    owl:imports d3f: .
+
+
+#
+# Correlate iso:CybersecurityConcept with d3f:DefensiveTactic
+#
+iso:Detect iso:related d3f:Detect
+.
+iso:Protect iso:related
+    d3f:Harden,
+    d3f:Isolate
+.
+iso:Respond iso:related d3f:Evict
+.
+
+#
+# Correlate OperationalCapability with d3fend
+#
+# iso:Governance
+# iso:AssetManagement
+# iso:InformationProtection
+# iso:HRSecurity
+iso:PhysicalSecurity iso:related d3f:PhysicalObject, d3f:PhysicalLocation 
+.
+
+iso:SystemNetworkSecurity 
+    iso:related d3f:NetworkIsolation, d3f:MessageHardening, d3f:ExecutionIsolation,
+                d3f:PlatformHardening, 
+                d3f:Detect  # 
+.
+iso:ApplicationSecurity 
+    owl:sameAs d3f:ApplicationHardening # DefensiveTechnique
+    ;
+    iso:related d3f:ApplicationHardening
+    ;
+    d3f:hardens d3f:ApplicationConfiguration
+.
+iso:SecureConfiguration 
+    owl:sameAs d3f:ApplicationConfigurationHardening ;
+    d3f:hardens d3f:ConfigurationBearingEntity # includes ApplicationConfiguration
+.
+iso:IAM
+    iso:related d3f:CredentialHardening, d3f:UserBehaviorAnalysis
+.
+iso:ThreatManagement
+    iso:related d3f:Evict, d3f:CredentialEviction, d3f:ProcessEviction
+.
+# iso:Continuity
+# iso:SupplierSecurity
+# iso:Compliance
+# iso:EventManangement
+
+# Correlate Security Controls with d3fend DefensiveTactic

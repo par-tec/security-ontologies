@@ -161,17 +161,6 @@ iso:Recover a iso:CybersecurityConcept;
     rdfs:comment "Recover concepts are concepts that recover information."
     .
 
-#
-# Relations with d3fend
-#
-iso:Detect iso:related d3f:Detect
-.
-iso:Protect iso:related
-    d3f:Harden,
-    d3f:Isolate
-.
-iso:Respond iso:related d3f:Evict
-.
 
 #
 # Operational Capabilities
@@ -242,9 +231,14 @@ iso:Compliance a iso:OperationalCapability;
     rdfs:comment "Compliance capabilities are capabilities that manage compliance."
     .
 iso:EventManangement a iso:OperationalCapability;
-    rdfs:label "Event Management and Information" ;
+    rdfs:label "Information Security Event Management" ;
     rdfs:comment "Event management capabilities are capabilities that manage events."
     .
+iso:Assurance a iso:OperationalCapability;
+    rdfs:label "Information security Assurance" ;
+    rdfs:comment "Event management capabilities are capabilities that manage events."
+    .
+
 #
 # Security Domains
 #
