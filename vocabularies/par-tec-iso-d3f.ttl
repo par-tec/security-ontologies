@@ -69,3 +69,117 @@ iso:ThreatManagement
 # iso:EventManangement
 
 # Correlate Security Controls with d3fend DefensiveTactic
+
+
+#
+# Add d3f Techniques
+# 
+# These techniques are all under Isolate and Harden
+
+
+
+
+d3f:SecureBuild rdfs:subClassOf d3f:ApplicationHardening .
+d3f:SecureDeployment rdfs:subClassOf d3f:ApplicationHardening .
+
+d3f:SourceCodeHardening a owl:Class;
+    rdfs:subClassOf d3f:ApplicationHardening;
+    rdfs:label "Source Code Hardening" ;
+    skos:altLabel "Secure coding" ;
+    d3f:d3fend-id "D3-SCH" .
+    
+d3f:StaticAnalysis a d3f:FileAnalysis;
+  d3f:analyzes d3f:SourceCode 
+.
+
+d3f:DevelopmentGuidelines rdfs:subClassOf d3f:DefensiveTechnique
+.
+
+d3f:SecureContinuousIntegration rdfs:subClassOf d3f:DefensiveTechnique ;
+    d3f:related d3f:BuildTool 
+    .
+d3f:SecureContinuousDeployment rdfs:subClassOf d3f:DefensiveTechnique ;
+    d3f:related d3f:SoftwareDeploymentTool 
+ .
+
+
+d3f:ContainerImageVerification rdfs:subClassOf
+    d3f:FileAnalysis  ;
+    d3f:related d3f:ContainerImage;
+    d3f:analyzes d3f:ContainerImage
+.
+#
+# Test
+#
+d3f:SoftwareTesting rdfs:subClassOf d3f:DefensiveTechnique ;
+    d3f:related d3f:TestTool ;
+    d3f:verifies d3f:Software
+    .
+d3f:UnitTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
+    d3f:d3fend-comment "The practice of automating Unit Testing" ;
+    d3f:related d3f:UnitTestExecutionTool ;
+    d3f:verifies d3f:Software
+    .
+d3f:IntegrationTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
+    d3f:d3fend-comment "The practice of automating Integration Testing" ;
+    d3f:related d3f:IntegrationTestExecutionTool ;
+    d3f:verifies d3f:Software
+    .
+d3f:StressTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
+    d3f:d3fend-comment "The practice of automating Stress Testing" ;
+    d3f:related d3f:StressTestExecutionTool ;
+    d3f:verifies d3f:Software, d3f:Platform
+    .
+d3f:StressTestExecutionTool a owl:Class;
+    rdfs:label "Stress Test Execution Tool" ;
+    rdfs:comment """An stress test execution tool automatically performs stress testing.  
+    Stress testing is a software testing method by which the application and the whole platform
+    is stressed.""" ;
+    rdfs:seeAlso <http://dbpedia.org/resource/Unit_testing> ;
+    rdfs:subClassOf d3f:TestExecutionTool .
+
+#
+# Software Library Management and Verification.
+#
+d3f:SoftwareLibrary rdfs:subClassOf d3f:Software 
+.
+d3f:SoftwareLibraryVerification rdfs:subClassOf
+    d3f:FileAnalysis ;
+    d3f:related d3f:SoftwareLibrary;
+    d3f:analyzes d3f:SoftwareLibrary;
+    d3f:hardens d3f:Software;
+    d3f:d3fend-comment "Software dependency management and verification."
+.
+
+# 8.27 Secure system architecture and engineering principles.
+#  Principles for engineering secure systems should be established, documented,
+#  maintained and applied to  any information system development activities.
+
+iso:control-8.27
+  iso:related
+    d3f:PlatformHardening,
+    d3f:ApplicationHardening,
+    d3f:CredentialHardening
+    .
+
+# 8.28 Secure coding
+#  Secure coding principles should be applied to software development.
+#  To ensure software is written secvulnerabilities  in the software.
+#  * establish processes
+#  * ensure processes
+#  * monitor threats
+
+# Secure coding
+iso:control-8.28
+    iso:related 
+        d3f:DevelopmentGuidelines,
+        d3f:SoftwareUpdate,
+        d3f:ExecutionIsolation
+.
+
+# Tested coding
+iso:control-8.29
+    iso:related 
+        d3f:UnitTestExecution,
+        d3f:IntegrationTestExecution
+.

@@ -701,6 +701,7 @@ d3f:LuaScriptFile a d3f:ExecutableScript,
 d3f:M1013 a d3f:ATTACKMitigation,
         owl:NamedIndividual ;
     rdfs:label "Application Developer Guidance" ;
+    d3f:related d3f:StaticAnalysis;
     d3f:d3fend-comment "A future release of D3FEND will define a taxonomy of Source Code Hardening Techniques." .
 
 d3f:M1015 a d3f:ATTACKMitigation,
@@ -12375,19 +12376,18 @@ d3f:StaticAnalysis a d3f:FileAnalysis,
     d3f:definition """Analyzing a file to determine 
                       if the file is a malicious program or if the file contains insecure code.""" ;
     d3f:kb-article """## How it works
-Analyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.
+TBD
 
 ## Considerations
- * Malware often detects a fake environment, then changes its behavior accordingly. For example, it could detect that the system clock is being sped up in an effort to get it to execute commands that it would normally only execute at a later time, or that the hardware manufacturer of the machine is a virtualization provider.
- * Malware can attempt to determine if it is being debugged, and change its behavior accordingly.
- * For maximum fidelity, the simulated and real environments should be as similar as possible because the malware could perform differently in different environments.  
- * Sometimes the malware behavior is triggered only under certain conditions (on a specific system date, after a certain time, or after it is sent a specific command) and can't be detected through a short execution in a virtual environment.
-
+ * a
+ * b
+ * c 
+ 
 ## Implementations
-* [Cuckoo Sandbox](https://cuckoosandbox.org)""" ;
-    d3f:kb-reference d3f:Reference_MalwareAnalysisSystem_PaloAltoNetworksInc,
-        d3f:Reference_UseOfAnApplicationControllerToMonitorAndControlSoftwareFileAndApplicationEnvironments_SophosLtd ;
-    d3f:synonym "Source code analysis" ;
+* [Spectral](https://github.com/stoplight/spectral)
+""" ;
+    d3f:synonym "Source code analysis", "Linting" ;
+    rdfs:isDefinedBy <https://dbpedia.org/page/Static_program_analysis> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
             owl:someValuesFrom d3f:ExecutableFile ],
@@ -16346,6 +16346,21 @@ d3f:ApplicationHardening a d3f:DefensiveTechnique,
 
 Exploits may, for example, rely on knowledge of addresses in a process's memory, they may alter memory contents, and they may cause a program to use instructions in a way that they were not intended.  By, for example, including code that dynamically changes the memory address of data or code on each run, introducing logic to validating the memory contents before certain potentially dangerous flows are executed, or monitoring a program for unusual sequence of instructions, this makes it harder for an attacker to craft a working exploit.""" ;
     d3f:synonym "Process Hardening" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:enables ;
+            owl:someValuesFrom d3f:Harden ],
+        d3f:DefensiveTechnique .
+
+d3f:SourceCodeHardening a d3f:ApplicationHardeining, owl:Class, owl:NamedIndividual;
+    rdfs:label "Source Code Hardening" ;
+    d3f:d3fend-id "D3-SCH" ;
+    d3f:definition """Source Code Hardening ensured the development lifecycle is more resilient to a class of exploits which either introduce new code or execute unwanted existing code. 
+    These techniques may be applied at compile-time or on an application binary.""" ;
+    d3f:enables d3f:Harden ;
+    d3f:kb-article """## Technique Overview
+
+Exploits may, for example, rely on bad designed or vulnerable source code causing a program to use instructions in a way that they were not intended.""" ;
+    d3f:synonym "Secure Development" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:enables ;
             owl:someValuesFrom d3f:Harden ],
