@@ -21,8 +21,11 @@
 
 #
 # Correlate iso:CybersecurityConcept with d3f:DefensiveTactic
+#   note that iso:CyberSecurityConcept is mapped from NIST SP 800-53 controls.
 #
-iso:Detect iso:related d3f:Detect
+iso:Detect iso:related
+    d3f:Detect, 
+    d3f:Deceive
 .
 iso:Protect iso:related
     d3f:Harden,
@@ -77,22 +80,28 @@ iso:ThreatManagement
 # These techniques are all under Isolate and Harden
 
 
-
-
-d3f:SecureBuild rdfs:subClassOf d3f:ApplicationHardening .
-d3f:SecureDeployment rdfs:subClassOf d3f:ApplicationHardening .
-
 d3f:SourceCodeHardening a owl:Class;
     rdfs:subClassOf d3f:ApplicationHardening;
     rdfs:label "Source Code Hardening" ;
     skos:altLabel "Secure coding" ;
     d3f:d3fend-id "D3-SCH" .
     
-d3f:StaticAnalysis a d3f:FileAnalysis;
-  d3f:analyzes d3f:SourceCode 
+d3f:StaticApplicationSecurityTesting rdfs:subClassOf d3f:ApplicationHardening;
+    rdfs:label "Static Application Security Testing" ;
+    skos:altLabel "Static source analysis" ;
+    d3f:analyzes d3f:SourceCode , d3f:Application; 
+    d3f:d3fend-id "D3-SAST" 
 .
 
-d3f:DevelopmentGuidelines rdfs:subClassOf d3f:DefensiveTechnique
+d3f:DynamicApplicationSecurityTesting rdfs:subClassOf d3f:ApplicationHardening;
+    rdfs:label "Dynamic Application Security Testing" ;
+    skos:altLabel "Static source analysis" ;
+    d3f:analyzes d3f:SourceCode , d3f:Application;; 
+    d3f:d3fend-id "D3-DAST" 
+.
+
+d3f:DevelopmentGuidelines rdfs:subClassOf d3f:DefensiveTechnique;
+    d3f:enables d3f:Harden
 .
 
 d3f:SecureContinuousIntegration rdfs:subClassOf d3f:DefensiveTechnique ;
@@ -113,19 +122,31 @@ d3f:ContainerImageVerification rdfs:subClassOf
 #
 d3f:SoftwareTesting rdfs:subClassOf d3f:DefensiveTechnique ;
     d3f:related d3f:TestTool ;
-    d3f:verifies d3f:Software
+    d3f:verifies d3f:Software ;
+    d3f:enables d3f:Harden;
+    d3f:d3fend-id "D3-ST" ;
+    d3f:definition """Testing software ensures its quality and reliability.""" ;
+    d3f:enables d3f:Harden ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:enables ;
+            owl:someValuesFrom d3f:Harden ],
+        d3f:DefensiveTechnique 
     .
+
 d3f:UnitTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
+    d3f:d3fend-id "D3-UTE" ;
     d3f:d3fend-comment "The practice of automating Unit Testing" ;
     d3f:related d3f:UnitTestExecutionTool ;
     d3f:verifies d3f:Software
     .
 d3f:IntegrationTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
+    d3f:d3fend-id "D3-ITE" ;
     d3f:d3fend-comment "The practice of automating Integration Testing" ;
     d3f:related d3f:IntegrationTestExecutionTool ;
     d3f:verifies d3f:Software
     .
 d3f:StressTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
+    d3f:d3fend-id "D3-STE" ;
     d3f:d3fend-comment "The practice of automating Stress Testing" ;
     d3f:related d3f:StressTestExecutionTool ;
     d3f:verifies d3f:Software, d3f:Platform
@@ -138,6 +159,13 @@ d3f:StressTestExecutionTool a owl:Class;
     rdfs:seeAlso <http://dbpedia.org/resource/Unit_testing> ;
     rdfs:subClassOf d3f:TestExecutionTool .
 
+d3f:docker-claim a d3f:ContainerRuntime-claim
+.
+d3f:UnitTestExecutionTool-claim a d3f:DefensiveTechniqueClaim;
+    d3f:comment "The practice of automating Unit Testing" ;
+    d3f:claims :UnitTestExecution;
+    d3f:implemented-by d3f:UnitTestExecutionTool
+.
 #
 # Software Library Management and Verification.
 #
