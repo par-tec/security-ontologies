@@ -6,3 +6,5 @@ pydotplus
 networkx
 sparqlwrapper
 sparql_dataframe
+requests
+pyyaml

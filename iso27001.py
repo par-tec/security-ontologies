@@ -10,16 +10,17 @@ NS_NIST = Namespace("http://par-tec.it/onto/nist/csf/latest/")
 
 nan = None
 
+
 def variabilize(s):
     return "".join(map(str.capitalize, s.split()))
+
 
 def is_nan(v):
     if str(v) == "nan":
         return True
 
-    return v in (
-        nan, None, math.nan
-    )
+    return v in (nan, None, math.nan)
+
 
 OPERATIONAL_CAPABILITIES = {
     "Governance": "Governance",
@@ -181,7 +182,13 @@ def parse_control(g, control):
             if v == "x":
                 g.add((uri, NS_ISO.hasInformationSecurityProperty, URIRef(NS_ISO + k)))
             continue
-        if k in ("Identify", "Protect", "Detect", "Respond", "Recover",):
+        if k in (
+            "Identify",
+            "Protect",
+            "Detect",
+            "Respond",
+            "Recover",
+        ):
             if v == "x":
                 g.add((uri, NS_ISO.hasCybersecurityConcept, URIRef(NS_ISO + k)))
             continue

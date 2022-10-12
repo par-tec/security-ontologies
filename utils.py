@@ -30,6 +30,7 @@ def visualize(g):
     png = dg.create_svg()
     display(Image(png))
 
+
 def show_svg(g):
     stream = io.StringIO()
     rdf2dot(g, stream, opts={display})
@@ -76,7 +77,8 @@ where {
 
 
 def hierarchy(g, node):
-    ret = g.query(f"""
+    ret = g.query(
+        f"""
     prefix d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
 
     CONSTRUCT {{
@@ -95,5 +97,6 @@ def hierarchy(g, node):
         regex(str(?parent), "http://d3fend.mitre.org", "i")
         )
     }}
-    """)
+    """
+    )
     return show_svg(ret.graph)
