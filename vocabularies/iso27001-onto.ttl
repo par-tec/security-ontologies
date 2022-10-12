@@ -1,16 +1,22 @@
 #
-# Mapping iso 27001
+# Mapping iso 27002:2022
+# ISO/IEC 27002:2022
+# Information security, cybersecurity and privacy protection — Information security controls
+
 #
 
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <https://owaspsamm.org/model/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Riferimenti esterni: https://www.nist.gov/cyberframework/framework
+@prefix samm: <https://owaspsamm.org/model/> .
 @prefix iso: <http://par-tec.it/onto/iso/27001/latest/> .
 @prefix iso27002_2013: <http://par-tec.it/onto/iso/27002/2013/> .
+@prefix d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#> .
 
 iso: a owl:Ontology ;
     dcterms:creator <mailto:robipolli@gmail.com> ;
@@ -18,21 +24,45 @@ iso: a owl:Ontology ;
     dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/>
 
 .
-iso:Control a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
+iso:Control a owl:Class, skos:Concept ;
     rdfs:label "Control" ;
-    rdfs:comment "Controls are the basic building blocks of the ISO 27001 standard."
+    rdfs:comment "Controls are the basic building blocks of the ISO 27001 standard." ;
+
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty iso:purpose ;
+        owl:someValuesFrom xsd:string ;
+    ]
+    # rdfs:subClassOf [
+    #     a owl:Restriction ;
+    #     owl:onProperty iso:hasSecurityDomain ;
+    #     owl:someValuesFrom iso:SecurityDomain
+    # ],
+    # [ a owl:Restriction ;
+    #     owl:onProperty iso:hasControlCategory ;
+    #     owl:someValuesFrom iso:ControlCategory
+    # ],
+    # [ a owl:Restriction ;
+    #     owl:onProperty iso:hasControlType ;
+    #     owl:someValuesFrom iso:ControlType
+    # ],
+    # [ a owl:Restriction ;
+    #     owl:onProperty iso:hasInformationSecurityProperty ;
+    #     owl:someValuesFrom iso:InformationSecurityProperty
+    # ]
+
 .
 
-iso:ControlCategory a owl:Class;
-    rdfs:subClassOf skos:Concept ;
+iso:ControlCategory a owl:Class, skos:Concept ;
     rdfs:label "Control Category" ;
     rdfs:comment "Control categories are the basic building blocks of the ISO 27001 standard."
 .
-iso:ControlType a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
+iso:ControlType a owl:Class, skos:Concept ;
     rdfs:label "Control Type" ;
-    rdfs:comment "Control types are the different types of controls that can be used in the ISO 27001 standard."
+    rdfs:comment """
+    Control type is an attribute to view controls from the perspective of when and how the control
+    modifies the risk with regard to the occurrence of an information security incident.
+    """
 .
 
 iso:hasControlType a owl:ObjectProperty ;
@@ -49,48 +79,60 @@ iso:hasControlCategory a owl:ObjectProperty ;
 
 iso:Preventive a iso:ControlType;
     rdfs:label "Preventive" ;
-    rdfs:comment "Preventive controls are controls that prevent the occurrence of a risk." .
+    rdfs:comment "Preventive controls are controls that prevent an incident." .
 iso:Detective a iso:ControlType;
     rdfs:label "Detective" ;
-    rdfs:comment "Detective controls are controls that detect the occurrence of a risk." .
+    rdfs:comment "Detective controls are controls that detect an incident." .
 iso:Corrective a iso:ControlType;
     rdfs:label "Corrective" ;
-    rdfs:comment "Corrective controls are controls that correct a risk." .
+    rdfs:comment "Corrective controls are controls after an incident." .
+
+#
+#
+#
+
+iso:InformationSecurityProperty a owl:Class, skos:Concept ;
+    rdfs:label "Information Security Properties" ;
+    rdfs:seeAlso <https://dbpedia.org/page/Information_security> ;
+    rdfs:comment "Information security properties are the different properties of information." .
 
 iso:hasInformationSecurityProperty a owl:ObjectProperty ;
     rdfs:label "hasInformationSecurityProperty" ;
-    rdfs:comment "The information security property of the control." ;
+    rdfs:comment "The information security property." ;
     rdfs:domain iso:Control ;
     rdfs:range iso:InformationSecurityProperty .
 
-iso:InformationSecurityProperty a owl:Class;
-    rdfs:subClassOf skos:Concept ;
-    rdfs:label "Information Security Properties" ;
-    rdfs:comment "Information security properties are the different properties that can be used in the ISO 27001 standard." .
 
 iso:Confidentiality a iso:InformationSecurityProperty;
     rdfs:label "Confidentiality" ;
-    rdfs:comment "Confidentiality properties are properties that protect the confidentiality of information."
+    rdfs:comment "Confidentiality of information."
     .
 iso:Integrity a iso:InformationSecurityProperty;
     rdfs:label "Integrity" ;
-    rdfs:comment "Integrity properties are properties that protect the integrity of information."
+    rdfs:comment "Integrity of information."
     .
 iso:Availability a iso:InformationSecurityProperty;
     rdfs:label "Availability" ;
-    rdfs:comment "Availability properties are properties that protect the availability of information."
+    rdfs:comment "Availability of information."
+    .
+
+#
+# Cybersecurity Concepts ISO/IEC TS 27110
+#
+iso:CybersecurityConcept a owl:Class, skos:Concept ;
+    rdfs:label "Cybersecurity Concepts" ;
+    rdfs:comment """Cybersecurity frameworks based on ISO/IEC TS 27110
+        provide a way to organize and communicate
+        cybersecurity activities through 5 concepts:
+        Identify, Protect, Detect, Respond, and Recover.""" ;
+    rdfs:seeAlso <https://www.nist.gov/cyberframework>
     .
 
 iso:hasCybersecurityConcept a owl:ObjectProperty ;
     rdfs:domain iso:Control ;
-    rdfs:range iso:CybersecurityConcept
+    rdfs:range iso:CybersecurityConcept ;
+    rdfs:comment """Associates an ISO Control to a NIST Cybersecurity Function."""
 .
-
-iso:CybersecurityConcept a owl:Class;
-    rdfs:subClassOf skos:Concept ;
-    rdfs:label "Cybersecurity Concepts" ;
-    rdfs:comment "Cybersecurity concepts are the different concepts that can be used in the ISO 27001 standard."
-    .
 
 iso:Identify a iso:CybersecurityConcept;
     rdfs:label "Identify" ;
@@ -119,21 +161,21 @@ iso:Recover a iso:CybersecurityConcept;
     rdfs:comment "Recover concepts are concepts that recover information."
     .
 
-# d3f link
-iso:Detect iso:related d3f:Detect
-.
-iso:Protect iso:related [
-    d3f:Harden,
-    d3f:Isolate
-.
-iso:Respond iso:related d3f:Evict
-.
 
-iso:OperationalCapability a owl:Class;
-    rdfs:subClassOf skos:Concept ;
+#
+# Operational Capabilities
+#
+iso:OperationalCapability a owl:Class, skos:Concept ;
     rdfs:label "Operational Capabilities" ;
     skos:prefLabel "Skos Operational Capabilities" ;
-    rdfs:comment "Operational capabilities are the different capabilities that can be used in the ISO 27001 standard."
+    rdfs:comment "Operational capabilities correlate controls with the perspective of the practitioners."
+    .
+
+iso:hasOperationalCapability a owl:ObjectProperty ;
+    rdfs:label "hasOperationalCapability" ;
+    rdfs:comment "The operational capability." ;
+    rdfs:domain iso:Control ;
+    rdfs:range iso:OperationalCapability
     .
 
 iso:Governance a iso:OperationalCapability;
@@ -189,14 +231,18 @@ iso:Compliance a iso:OperationalCapability;
     rdfs:comment "Compliance capabilities are capabilities that manage compliance."
     .
 iso:EventManangement a iso:OperationalCapability;
-    rdfs:label "Event Management and Information" ;
+    rdfs:label "Information Security Event Management" ;
     rdfs:comment "Event management capabilities are capabilities that manage events."
     .
+iso:Assurance a iso:OperationalCapability;
+    rdfs:label "Information security Assurance" ;
+    rdfs:comment "Event management capabilities are capabilities that manage events."
+    .
+
 #
 # Security Domains
 #
-iso:SecurityDomain a owl:Class;
-    rdfs:subClassOf skos:Concept ;
+iso:SecurityDomain a owl:Class, skos:Concept ;
     rdfs:label "Security Domains" ;
     rdfs:comment "Security domains are the different domains that can be used in the ISO 27001 standard."
     .
@@ -223,4 +269,46 @@ iso:Defence a iso:SecurityDomain ;
 iso:Resilience a iso:SecurityDomain ;
     rdfs:label "Resilience and Recovery" ;
     rdfs:comment "Resilience and Recovery domain are domains that manage resilience."
+    .
+
+#
+#
+#
+
+# Security domains is an attribute to view controls from the perspective of four information security
+# domains:
+# “Governance and Ecosystem” includes
+# - “Information System Security Governance & Risk Management”
+# - and “Ecosystem cybersecurity management” (including internal and external
+# stakeholders);
+
+# “Protection” includes
+# “IT Security Architecture”,
+# “IT Security Administration”,
+# “Identity and access management”, iso:IAM
+# “IT Security Maintenance” and
+# “Physical and environmental security”;  iso:PhysicalSecurity
+
+#  “Defence” includes
+#  “Detection” and “Computer Security Incident Management”;
+
+# “Resilience” includes
+# “Continuity of operations” and “Crisis management”.
+
+
+iso:InformationSystemSecurityGovernance_RiskManagement a iso:GovernanceEcosystem;
+    rdfs:label "Information System Security Governance and Risk Management" ;
+    rdfs:comment "Information system security governance and risk management domain is a domain that manages information system security governance and risk management."
+    .
+iso:EcosystemCybersecurityManagement a iso:GovernanceEcosystem;
+    rdfs:label "Ecosystem Cybersecurity Management" ;
+    rdfs:comment "Ecosystem cybersecurity management domain is a domain that manages ecosystem cybersecurity."
+    .
+iso:ITSecurityArchitecture a iso:Protection;
+    rdfs:label "IT Security Architecture" ;
+    rdfs:comment "IT security architecture domain is a domain that manages IT security architecture."
+    .
+iso:ITSecurityAdministration a iso:Protection;
+    rdfs:label "IT Security Administration" ;
+    rdfs:comment "IT security administration domain is a domain that manages IT security administration."
     .

@@ -134,3 +134,142 @@ artifact_to_offensive:
     }
 
     ORDER BY ?off_artifact_label
+iso_d3fend:
+  description: Map ISO Controls to D3FEND Techniques.
+  sparql: |-
+    prefix iso: <http://par-tec.it/onto/iso/27001/latest/>
+    prefix iso27002_2013: <http://par-tec.it/onto/iso/27002/2013/>
+    prefix d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+    prefix dct: <http://purl.org/dc/terms/>
+    select distinct
+        ?control_id, ?technique_l, ?subtech_l, ?subtech_c
+    where  {
+        ?control a iso:Control;
+        iso:related ?technique;
+        dct:identifier ?control_id
+
+        . ?technique (rdf:type|rdfs:subClassOf)+ d3f:DefensiveTechnique;
+        rdfs:label ?technique_l
+
+        . ?subtech (rdf:type|rdfs:subClassOf) ?technique;
+        rdfs:label ?subtech_l
+        . OPTIONAL {
+        ?subtech (rdfs:comment|d3f:d3fend-comment|d3f:definition) ?subtech_c
+        }
+    }
+    ORDER BY ?control_id ?technique_l ?subtech_l ?subtech_c
+
+tools_to_technique:
+    description: Associate defensive artifacts to defensive techniques
+    sparql: |-
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+
+        SELECT DISTINCT *
+        WHERE {
+            # DefensiveTechniqueClaims map CapabilityImplementations < Artifacts
+            #   to DefensiveTechniques.
+            _:claim d3f:claims ?technique;
+                    d3f:implemented-by ?tool
+            .
+            # To associate Tactic and Techniques, I need to follow the first parent
+            #   having the d3f:enables property.
+            ?technique rdfs:subClassOf+ ?parent
+            .
+            ?parent a d3f:DefensiveTechnique;
+                        d3f:enables ?tactic
+
+        }
+iso_control_to_tools:
+    description: Associate iso:Control to d3f:CapabilityImplementation
+    sparql: |-
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        prefix iso: <http://par-tec.it/onto/iso/27001/latest/>
+        prefix iso27002_2013: <http://par-tec.it/onto/iso/27002/2013/>
+        prefix d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+        prefix dct: <http://purl.org/dc/terms/>
+
+        SELECT DISTINCT ?control_id, ?technique_l, ?subtech_l, ?subtech_c, ?tool_l
+        WHERE {
+            # DefensiveTechniqueClaims map CapabilityImplementations < Artifacts
+            #   to DefensiveTechniques.
+            _:claim d3f:claims ?technique;
+                    d3f:implemented-by ?tool
+            .
+            # To associate Tactic and Techniques, I need to follow the first parent
+            #   having the d3f:enables property.
+            ?technique rdfs:subClassOf+ ?parent;
+                       rdfs:label ?technique_l
+            .
+            ?parent a d3f:DefensiveTechnique;
+                        d3f:enables ?tactic
+            .
+
+            # I then correlate parent d3f:DefensiveTechnique with iso:Control
+            ?control a iso:Control;
+                    iso:related ?parent;
+                    dct:identifier ?control_id
+            .
+
+            # Get labels/comments.
+            ?tool rdfs:label ?tool_l
+
+            . OPTIONAL {
+                ?subtech (rdf:type|rdfs:subClassOf)+ ?technique;
+                        rdfs:label ?subtech_l;
+                     (rdfs:comment|d3f:d3fend-comment|d3f:definition) ?subtech_c
+            }
+
+        }
+
+tactics:
+    description: list tactics
+    sparql: |-
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+
+        SELECT DISTINCT ?tactic
+        WHERE {
+
+            ?url rdfs:subClassOf+ d3f:DefensiveTactic ;
+            rdfs:label ?tactic
+
+        }
+
+tactics_techniques:
+    description: list tactics and top-level techniques
+    sparql: |-
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+
+        SELECT DISTINCT
+        ?tactic, ?technique
+        WHERE {
+            ?parent a d3f:DefensiveTechnique;
+                        d3f:enables [ rdfs:label ?tactic];
+                        rdfs:label ?technique
+
+        }
+        ORDER BY ?tactic
+
+tactics_subtechniques:
+    description: list tactics and techniques
+    sparql: |-
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+
+        SELECT DISTINCT *
+        WHERE {
+            # To associate Tactic and Techniques, I need to follow the first parent
+            #   having the d3f:enables property.
+            ?subtechnique rdfs:subClassOf+ ?technique
+            .
+            ?technique a d3f:DefensiveTechnique;
+                        d3f:enables ?tactic
+
+        }
