@@ -24,7 +24,7 @@
 #   note that iso:CyberSecurityConcept is mapped from NIST SP 800-53 controls.
 #
 iso:Detect iso:related
-    d3f:Detect, 
+    d3f:Detect,
     d3f:Deceive
 .
 iso:Protect iso:related
@@ -41,22 +41,22 @@ iso:Respond iso:related d3f:Evict
 # iso:AssetManagement
 # iso:InformationProtection
 # iso:HRSecurity
-iso:PhysicalSecurity iso:related d3f:PhysicalObject, d3f:PhysicalLocation 
+iso:PhysicalSecurity iso:related d3f:PhysicalObject, d3f:PhysicalLocation
 .
 
-iso:SystemNetworkSecurity 
+iso:SystemNetworkSecurity
     iso:related d3f:NetworkIsolation, d3f:MessageHardening, d3f:ExecutionIsolation,
-                d3f:PlatformHardening, 
-                d3f:Detect  # 
+                d3f:PlatformHardening,
+                d3f:Detect  #
 .
-iso:ApplicationSecurity 
+iso:ApplicationSecurity
     owl:sameAs d3f:ApplicationHardening # DefensiveTechnique
     ;
     iso:related d3f:ApplicationHardening
     ;
     d3f:hardens d3f:ApplicationConfiguration
 .
-iso:SecureConfiguration 
+iso:SecureConfiguration
     owl:sameAs d3f:ApplicationConfigurationHardening ;
     d3f:hardens d3f:ConfigurationBearingEntity # includes ApplicationConfiguration
 .
@@ -76,7 +76,7 @@ iso:ThreatManagement
 
 #
 # Add d3f Techniques
-# 
+#
 # These techniques are all under Isolate and Harden
 
 
@@ -85,19 +85,19 @@ d3f:SourceCodeHardening a owl:Class;
     rdfs:label "Source Code Hardening" ;
     skos:altLabel "Secure coding" ;
     d3f:d3fend-id "D3-SCH" .
-    
+
 d3f:StaticApplicationSecurityTesting rdfs:subClassOf d3f:ApplicationHardening;
     rdfs:label "Static Application Security Testing" ;
     skos:altLabel "Static source analysis" ;
-    d3f:analyzes d3f:SourceCode , d3f:Application; 
-    d3f:d3fend-id "D3-SAST" 
+    d3f:analyzes d3f:SourceCode , d3f:Application;
+    d3f:d3fend-id "D3-SAST"
 .
 
 d3f:DynamicApplicationSecurityTesting rdfs:subClassOf d3f:ApplicationHardening;
     rdfs:label "Dynamic Application Security Testing" ;
     skos:altLabel "Static source analysis" ;
-    d3f:analyzes d3f:SourceCode , d3f:Application;; 
-    d3f:d3fend-id "D3-DAST" 
+    d3f:analyzes d3f:SourceCode , d3f:Application;;
+    d3f:d3fend-id "D3-DAST"
 .
 
 d3f:DevelopmentGuidelines rdfs:subClassOf d3f:DefensiveTechnique;
@@ -105,10 +105,10 @@ d3f:DevelopmentGuidelines rdfs:subClassOf d3f:DefensiveTechnique;
 .
 
 d3f:SecureContinuousIntegration rdfs:subClassOf d3f:DefensiveTechnique ;
-    d3f:related d3f:BuildTool 
+    d3f:related d3f:BuildTool
     .
 d3f:SecureContinuousDeployment rdfs:subClassOf d3f:DefensiveTechnique ;
-    d3f:related d3f:SoftwareDeploymentTool 
+    d3f:related d3f:SoftwareDeploymentTool
  .
 
 
@@ -130,7 +130,7 @@ d3f:SoftwareTesting rdfs:subClassOf d3f:DefensiveTechnique ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:enables ;
             owl:someValuesFrom d3f:Harden ],
-        d3f:DefensiveTechnique 
+        d3f:DefensiveTechnique
     .
 
 d3f:UnitTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
@@ -153,7 +153,7 @@ d3f:StressTestExecution rdfs:subClassOf d3f:SoftwareTesting ;
     .
 d3f:StressTestExecutionTool a owl:Class;
     rdfs:label "Stress Test Execution Tool" ;
-    rdfs:comment """An stress test execution tool automatically performs stress testing.  
+    rdfs:comment """An stress test execution tool automatically performs stress testing.
     Stress testing is a software testing method by which the application and the whole platform
     is stressed.""" ;
     rdfs:seeAlso <http://dbpedia.org/resource/Unit_testing> ;
@@ -169,7 +169,7 @@ d3f:UnitTestExecutionTool-claim a d3f:DefensiveTechniqueClaim;
 #
 # Software Library Management and Verification.
 #
-d3f:SoftwareLibrary rdfs:subClassOf d3f:Software 
+d3f:SoftwareLibrary rdfs:subClassOf d3f:Software
 .
 d3f:SoftwareLibraryVerification rdfs:subClassOf
     d3f:FileAnalysis ;
@@ -199,7 +199,7 @@ iso:control-8.27
 
 # Secure coding
 iso:control-8.28
-    iso:related 
+    iso:related
         d3f:DevelopmentGuidelines,
         d3f:SoftwareUpdate,
         d3f:ExecutionIsolation
@@ -207,7 +207,7 @@ iso:control-8.28
 
 # Tested coding
 iso:control-8.29
-    iso:related 
+    iso:related
         d3f:UnitTestExecution,
         d3f:IntegrationTestExecution
 .
