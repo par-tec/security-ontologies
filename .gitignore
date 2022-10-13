@@ -1,5 +1,6 @@
 # External repos
 external/d3fend-ontology/
+external/iso/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

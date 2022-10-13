@@ -3,9 +3,10 @@ import math
 import pandas as pd
 from rdflib import DCTERMS, RDF, RDFS, Graph, Literal, Namespace, URIRef
 
-NS_ISO = Namespace("http://par-tec.it/onto/iso/27001/latest/")
-NS_ISO27100 = Namespace("http://par-tec.it/onto/iso/27100/latest/")
-NS_ISO27002_2013 = Namespace("http://par-tec.it/onto/iso/27002/2013/")
+baseurl = "https://par-tec.github.io/security-ontologies/onto/"
+NS_ISO = Namespace(baseurl + "iso#")
+NS_ISO27100 = Namespace(baseurl + "iso27001-2013#")
+NS_ISO27002_2013 = Namespace(baseurl + "iso27002-2013#")
 NS_NIST = Namespace("http://par-tec.it/onto/nist/csf/latest/")
 
 nan = None
@@ -113,9 +114,81 @@ def test_control():
     g.serialize(format="text/turtle", destination="vocabularies/test-iso27001.ttl")
 
 
+def test_original_control():
+    Graph()
+
+
+def parse_iso_controls(g):
+    df = pd.read_excel(
+        "external/iso/ISMS06005-Statement-of-Applicability-V1.4-EN-1.xlsx",
+        # sheet_name="SoA",
+        skiprows=0,
+        dtype=str,
+        engine="openpyxl",
+    )
+    for k, control in df.transpose().to_dict(orient="dict").items():
+        area = control.get("Area")
+        if area and not is_nan(area):
+            area_id, area_label = control["Area"].split(" ", 1)
+            area_id = area_id.strip("A.")
+            area_uri = URIRef(NS_ISO + "27001/2013/category-" + area_id)
+            area_label = Literal(area_label)
+            g.add((area_uri, RDFS.label, area_label))
+            g.add((area_uri, RDF.type, NS_ISO.ControlCategory))
+            continue
+        section = control.get("Section")
+        if section and not is_nan(section):
+            section_id, section_label = control["Section"].split(" ", 1)
+            section_id = section_id.strip("A.")
+            section_uri = URIRef(NS_ISO + "27001/2013/section-" + section_id)
+            section_label = Literal(section_label)
+            g.add((section_uri, RDFS.label, section_label))
+            g.add((section_uri, RDF.type, NS_ISO["Section"]))
+            area_id = section_id.split(".")[0]
+            area_uri = URIRef(NS_ISO + "27001/2013/category-" + area_id)
+            g.add((section_uri, NS_ISO.controlCategory, area_uri))
+
+        control_ = control.get("Control")
+        if control_ and not is_nan(control_):
+            if control_.startswith("Total"):
+                continue
+
+            control_id, control_label = control_.split(" ", 1)
+            control_id = control_id.strip("A.")
+            control_uri = URIRef(NS_ISO + "27001/2013/control-" + control_id)
+            control_label = Literal(control_label)
+
+            g.add((control_uri, DCTERMS.title, control_label))
+            g.add((control_uri, RDF.type, NS_ISO.Control))
+            g.add((control_uri, DCTERMS.identifier, Literal(control_id)))
+            assert control.get("Control Description")
+            g.add(
+                (
+                    control_uri,
+                    DCTERMS.description,
+                    Literal(control.get("Control Description")),
+                )
+            )
+            section_id = ".".join(control_id.split(".")[0:2])
+            section_uri = URIRef(NS_ISO + "27001/2013/section-" + section_id)
+            g.add((control_uri, NS_ISO.controlSection, section_uri))
+            area_id = section_id.split(".")[0]
+            area_uri = URIRef(NS_ISO + "27001/2013/category-" + area_id)
+            g.add((section_uri, NS_ISO.controlCategory, area_uri))
+
+            continue
+    g.serialize(format="text/turtle", destination="vocabularies/iso27001-controls.ttl")
+
+
 def test_all():
     g = Graph()
     g.parse("vocabularies/iso27001-onto.ttl", format="turtle")
+    parse_27002(g)
+    parse_iso_controls(g)
+    g.serialize(format="text/turtle", destination="vocabularies/iso27001-data.ttl")
+
+
+def parse_27002(g):
     df = pd.read_excel(
         "external/iso/Esempio SOA 27002 2022 doc finale - rpolli.xlsx",
         sheet_name="SoA",
@@ -127,7 +200,6 @@ def test_all():
         if not control.get("#") or str(control.get("#")) == "nan":
             continue
         parse_control(g, control)
-    g.serialize(format="text/turtle", destination="vocabularies/iso27001-data.ttl")
 
 
 def parse_control(g, control):
@@ -140,7 +212,7 @@ def parse_control(g, control):
             g.add((control_category, RDFS.label, label))
             continue
         if k == "Control number":
-            control_id = "control-{}".format(v)
+            control_id = "27002/2022/control-{}".format(v)
             uri = URIRef(NS_ISO + control_id)
             g.add((uri, RDF.type, NS_ISO.Control))
             g.add((uri, DCTERMS.identifier, Literal(control_id)))
@@ -166,11 +238,22 @@ def parse_control(g, control):
             continue
         if k == "Correspondence with  ISO/IEC 27002:2013":
             for controls in v.split(", "):
+                controls_uri = URIRef(
+                    NS_ISO + "27001/2013/control-{}".format(controls.strip("0"))
+                )
+
                 g.add(
                     (
                         uri,
                         NS_ISO.correspondsTo,
-                        URIRef(NS_ISO27002_2013 + "control-{}".format(controls)),
+                        controls_uri,
+                    )
+                )
+                g.add(
+                    (
+                        controls_uri,
+                        NS_ISO.correspondsTo,
+                        uri,
                     )
                 )
             continue
@@ -213,7 +296,7 @@ def parse_control(g, control):
                     (
                         uri,
                         NS_ISO.hasRelatedControls,
-                        URIRef(NS_ISO + f"control-{controls}"),
+                        URIRef(NS_ISO + f"27002/2022/control-{controls}"),
                     )
                 )
             continue

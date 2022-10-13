@@ -14,8 +14,8 @@
 
 # Riferimenti esterni: https://www.nist.gov/cyberframework/framework
 @prefix samm: <https://owaspsamm.org/model/> .
-@prefix iso: <http://par-tec.it/onto/iso/27001/latest/> .
-@prefix iso27002_2013: <http://par-tec.it/onto/iso/27002/2013/> .
+@prefix iso: <https://par-tec.github.io/security-ontologies/onto/iso#> .
+@prefix iso27002_2013: <https://par-tec.github.io/security-ontologies/onto/iso27002-2022#> .
 @prefix d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#> .
 
 iso: a owl:Ontology ;

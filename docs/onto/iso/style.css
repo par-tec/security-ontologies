@@ -4,16 +4,17 @@ body {
 
 .rdf_obj {
 	margin-top: 4%;
-	margin-left: 20%;
-	margin-right: 20%;
-	text-align: center;
+/*	text-align: center; */
 }
 
 .full_info {
-	display: none;
+
 }
 
-
+.title {
+	background-color: blue;
+	color: white;
+}
 .show_more {
 	cursor: pointer;
 	text-decoration: underline;
@@ -32,7 +33,6 @@ table {
 
 h1 {
 	font-size: 24px;
-	text-align: center;
 	margin: 0px;
 }
 
@@ -60,14 +60,9 @@ tr:nth-child(even) {
 }
 
 td {
-	overflow: hidden;
-	text-overflow: ellipsis;
 	max-width: 100%;
 }
 
 td a {
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
 	max-width: 100%;
 }
