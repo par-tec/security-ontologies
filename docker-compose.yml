@@ -67,6 +67,8 @@ services:
   virtuoso:
     # user: "1000:1000"
     image: tenforce/virtuoso
+    ports:
+    - "18890:8890/tcp"
     volumes:
     - .:/code
     - ./vocabularies:/usr/local/virtuoso-opensource/share/virtuoso/vad/vocabularies

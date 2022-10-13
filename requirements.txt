@@ -8,3 +8,6 @@ sparqlwrapper
 sparql_dataframe
 requests
 pyyaml
+xlwt
+openpyxl
+/home/rpolli/workspace-py/RDFtoHTML

@@ -3,7 +3,9 @@ from builtins import NotImplementedError
 from pathlib import Path
 
 import requests
+import sparql_dataframe
 import yaml
+from pandas import ExcelWriter
 from rdflib import DCAT, DCTERMS, SKOS, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import OWL, RDF, RDFS
 
@@ -132,6 +134,7 @@ def parse_activity(g, activity_name, activity, subdimension_uri):
 
     g.add((activity_uri, RDFS.comment, Literal(activity.get("description", ""))))
     g.add((activity_uri, NS_DSOMM.Measure, Literal(activity.get("measure", ""))))
+    g.add((activity_uri, NS_DSOMM.assessment, Literal(activity.get("assessment", ""))))
     for i in activity.get("implementation", []):
         if "url" not in i:
             continue
@@ -214,12 +217,175 @@ def parse_references(references):
                 yield parse_samm(samm2)
         elif k == "iso27001-2017":
             for iso27001 in v:
-                if str(iso27001).isnumeric():
+                if not " " in str(iso27001):
                     yield URIRef(NS_ISO27100 + "controls/" + str(iso27001))
                 else:
                     yield Literal(iso27001)
         else:
             raise ValueError("Unknown reference: {}".format(k))
+
+
+def format_link(link):
+    import re
+
+    if not "http" in str(link):
+        return link
+    re_findurl = re.compile(r"(?P<url>https?://[^\s]+)")
+    ret = ""
+    for url in re_findurl.findall(link):
+        if "owaspsamm" in url:
+            specref = "samm2 "
+            specref += url.split("/")[-2]
+            specref += " " + url.split("/")[-1]
+
+        elif "2700" in url:
+            specref = "iso27001:  "
+            specref += url.split("/")[-1]
+
+        else:
+            specref = "Comment: "
+            specref += url.split("/")[-1]
+
+        ret += f""" <a href="{url}">{specref}</a>&nbsp;;"""
+    return f"<p>{ret}</p>"
+
+
+def test_format_link():
+    ret = format_link(
+        """
+    http://par-tec.it/onto/iso/27002/2013/controls/12.1.1
+- http://par-tec.it/onto/iso/27002/2013/controls/14.2.2
+- https://owaspsamm.org/model/implementation/secure-build/stream-a#1
+    """
+    )
+    assert ret == (
+        ' <a href="http://par-tec.it/onto/iso/27002/2013/controls/12.1.1">Comment: '
+        "12.1.1</a>\n <a "
+        'href="http://par-tec.it/onto/iso/27002/2013/controls/14.2.2">Comment: '
+        "14.2.2</a>\n <a "
+        'href="https://owaspsamm.org/model/implementation/secure-build/stream-a#1">samm2 '
+        "stream-a#1</a>\n"
+    )
+
+
+def make_hyperlink_xls(url):
+    if not "http" in str(url):
+        return url
+    if "owaspsamm" in url:
+        specref = "samm2 "
+        specref += url.split("/")[-2]
+        specref += " " + url.split("/")[-1]
+
+    elif "2700" in url:
+        specref = "iso27001:  "
+        specref += url.split("/")[-1]
+
+    else:
+        specref = "Comment: "
+        specref += url.split("/")[-1]
+
+    return f'=HYPERLINK("{url}", "{specref}")'
+
+
+def test_sparql_activity():
+    QUERY = """
+    prefix dm: <https://github.com/wurstbrot/DevSecOps-MaturityModel/>
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    select distinct
+      ?Dimension, ?Subdimension, ?Activity,
+      ?Measure,
+      (?ref as ?Reference)
+
+    where {
+
+    ?activity a dm:Activity;
+      dm:SubDimension ?sub;
+      rdfs:label ?Activity;
+      dm:Measure ?Measure
+    .
+    OPTIONAL { ?activity dm:hasReference ?ref}
+    .
+    ?sub
+      rdfs:label ?Subdimension;
+      dm:Dimension ?dim
+    .
+    ?dim rdfs:label ?Dimension
+
+    }
+    GROUP BY ?Dimension ?Subdimension ?Activity ?Measure
+"""
+    endpoint = "http://localhost:18890/sparql"
+    df = sparql_dataframe.get(endpoint, QUERY, post=True)
+    import html2text
+    import pandas
+    from styleframe import StyleFrame, Styler, utils
+
+    initframe = pandas.DataFrame(data=[["Uno"]])
+    default_style = Styler(
+        font=utils.fonts.calibri,
+        font_size=8,
+        font_color=utils.colors.black,
+        bg_color=utils.colors.white,
+        horizontal_alignment=utils.horizontal_alignments.left,
+        shrink_to_fit=True,
+    )
+    header_style = Styler(bold=True, font_size=10)
+    with ExcelWriter("/tmp/foo.xlsx", engine="openpyxl") as writer:
+
+        initframe.to_excel(writer, sheet_name="Uno", index=False)
+        df = df.sort_values(by=["Dimension", "Subdimension", "Activity"])
+        df.Measure = df.Measure.apply(lambda x: html2text.html2text(x))
+        df.Reference = df.Reference.apply(make_hyperlink_xls)
+        for dimension in df["Dimension"].unique():
+            dfw = df[df["Dimension"] == dimension]
+            dfw.to_html(
+                f"/tmp/{dimension}.html",
+                escape=False,
+                render_links=False,
+                justify="left",
+                formatters={
+                    "Reference": make_hyperlink_xls,
+                    "Measure": lambda x: x.replace("\n", "").strip(),
+                },
+            )
+
+            gdfw = (
+                dfw.groupby(["Dimension", "Subdimension", "Activity", "Measure"])[
+                    "Reference"
+                ]
+                .apply(lambda x: x.reset_index(drop=True))
+                .unstack()
+                .reset_index()
+            )
+            gdfw.to_excel("/tmp/bar.xlsx", sheet_name=dimension)
+            # To Excel
+            log.warning("Dimension: %s", dimension)
+            sf = StyleFrame(gdfw, styler_obj=default_style)
+            sf.apply_headers_style(styler_obj=header_style)
+            all_rows = sf.row_indexes
+            sf.set_row_height_dict(
+                row_height_dict={
+                    row: max(
+                        1, max(str(x).count("\n") for x in dfw.to_records()[row - 2])
+                    )
+                    * 12
+                    for row in all_rows[1:]
+                }
+            )
+            # sf.set_column_width(columns=["Dimension", "Subdimension"], width=24)
+            # sf.set_column_width(columns=["Activity"], width=32)
+            # sf.set_column_width(columns=["Measure"], width=60)
+            sf.to_excel(writer, sheet_name=dimension, row_to_add_filters=0, index=True)
+
+
+def test_renderize():
+    import xlsxwriter
+
+    workbook = xlsxwriter.Workbook("/tmp/foo.xlsx")
+    for worksheet in workbook.worksheets():
+        worksheet.autofilter(0, 0, 0, 4)
+    raise NotImplementedError
 
 
 if __name__ == "__main__":
