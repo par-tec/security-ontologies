@@ -5,7 +5,7 @@ from pathlib import Path
 import requests
 import sparql_dataframe
 import yaml
-from pandas import ExcelWriter
+from pandas import DataFrame, ExcelWriter
 from rdflib import DCAT, DCTERMS, SKOS, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import OWL, RDF, RDFS
 
@@ -24,7 +24,7 @@ def a_or_b(a, b, k):
 NS_FOAF = Namespace("http://xmlns.com/foaf/0.1/")
 NS_OS = Namespace("https://owaspsamm.org/model/")
 NS_DSOMM = Namespace("https://github.com/wurstbrot/DevSecOps-MaturityModel/")
-NS_ISO27100 = Namespace("http://par-tec.it/onto/iso/27002/2013/")
+NS_ISO = Namespace("https://par-tec.github.io/security-ontologies/onto/iso#")
 NS = (
     ("dct", DCTERMS),
     ("owl", OWL),
@@ -35,7 +35,7 @@ NS = (
     ("foaf", NS_FOAF),
     ("os", NS_OS),
     ("dsomm", NS_DSOMM),
-    ("iso27100", NS_ISO27100),
+    ("iso", NS_ISO),
 )
 
 
@@ -53,8 +53,8 @@ def test_parse_dsomm():
     activities = get_dsomm()
     g = Graph()
     parse_dsomm(activities, g)
+    query_rdflib(g)
     g.serialize(format="text/turtle", destination="vocabularies/dsomm.ttl")
-    raise NotImplementedError
 
 
 def test_parse_activity():
@@ -218,7 +218,7 @@ def parse_references(references):
         elif k == "iso27001-2017":
             for iso27001 in v:
                 if not " " in str(iso27001):
-                    yield URIRef(NS_ISO27100 + "controls/" + str(iso27001))
+                    yield URIRef(NS_ISO + "27001/2013/control-" + str(iso27001))
                 else:
                     yield Literal(iso27001)
         else:
@@ -287,41 +287,62 @@ def make_hyperlink_xls(url):
     return f'=HYPERLINK("{url}", "{specref}")'
 
 
-def test_sparql_activity():
+def query_data(graph=None):
     QUERY = """
-    prefix dm: <https://github.com/wurstbrot/DevSecOps-MaturityModel/>
-    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        prefix dm: <https://github.com/wurstbrot/DevSecOps-MaturityModel/>
+        prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    select distinct
-      ?Dimension, ?Subdimension, ?Activity,
-      ?Measure,
-      (?ref as ?Reference)
+        select distinct
+        ?Dimension ?Subdimension ?Activity
+        ?Measure
+        (?ref as ?Reference)
 
-    where {
+        where {
 
-    ?activity a dm:Activity;
-      dm:SubDimension ?sub;
-      rdfs:label ?Activity;
-      dm:Measure ?Measure
-    .
-    OPTIONAL { ?activity dm:hasReference ?ref}
-    .
-    ?sub
-      rdfs:label ?Subdimension;
-      dm:Dimension ?dim
-    .
-    ?dim rdfs:label ?Dimension
+        ?activity a dm:Activity;
+        dm:SubDimension ?sub;
+        rdfs:label ?Activity;
+        dm:Measure ?Measure
+        .
+        OPTIONAL { ?activity dm:hasReference ?ref}
+        .
+        ?sub
+        rdfs:label ?Subdimension;
+        dm:Dimension ?dim
+        .
+        ?dim rdfs:label ?Dimension
 
-    }
-    GROUP BY ?Dimension ?Subdimension ?Activity ?Measure
-"""
-    endpoint = "http://localhost:18890/sparql"
-    df = sparql_dataframe.get(endpoint, QUERY, post=True)
+        }
+    """
+    # GROUP BY ?Dimension ?Subdimension ?Activity ?Measure
+    if not graph:
+        endpoint = "http://localhost:18890/sparql"
+        return sparql_dataframe.get(endpoint, QUERY, post=True)
+    rows = g.query(QUERY)
+    return DataFrame(data=list(map(str, x) for x in rows), columns=map(str, rows.vars))
+
+
+def test_sparql_activity():
+    df = query_data()
+    create_excel(df)
+
+
+def create_excel(df, outfile="/tmp/foo.xlsx"):
     import html2text
-    import pandas
     from styleframe import StyleFrame, Styler, utils
 
-    initframe = pandas.DataFrame(data=[["Uno"]])
+    INTRO = """
+    This is a DevSecOps Maturity Model Questionnaire that can be used to assess the current maturity level of a single project.
+
+    Differently from other strategies, DSOMM is based on activities, not on threats. It thus verifies which activities are implemented, and associates activities to various kind of references and threats.
+
+    Since DSOMM is oriented to devops folks, risks’ descriptions and measures tend to be concrete.
+
+    On each row you can see the online references to ISO and SAMM2 controls that you can use to get further information.
+
+    On each row you can provide some information about how your project/organization is addressing the specific activity.
+    """
+    initframe = DataFrame(data=[[INTRO]])
     default_style = Styler(
         font=utils.fonts.calibri,
         font_size=8,
@@ -331,7 +352,7 @@ def test_sparql_activity():
         shrink_to_fit=True,
     )
     header_style = Styler(bold=True, font_size=10)
-    with ExcelWriter("/tmp/foo.xlsx", engine="openpyxl") as writer:
+    with ExcelWriter(outfile, engine="openpyxl") as writer:
 
         initframe.to_excel(writer, sheet_name="Uno", index=False)
         df = df.sort_values(by=["Dimension", "Subdimension", "Activity"])
@@ -339,17 +360,6 @@ def test_sparql_activity():
         df.Reference = df.Reference.apply(make_hyperlink_xls)
         for dimension in df["Dimension"].unique():
             dfw = df[df["Dimension"] == dimension]
-            dfw.to_html(
-                f"/tmp/{dimension}.html",
-                escape=False,
-                render_links=False,
-                justify="left",
-                formatters={
-                    "Reference": make_hyperlink_xls,
-                    "Measure": lambda x: x.replace("\n", "").strip(),
-                },
-            )
-
             gdfw = (
                 dfw.groupby(["Dimension", "Subdimension", "Activity", "Measure"])[
                     "Reference"
@@ -373,19 +383,10 @@ def test_sparql_activity():
                     for row in all_rows[1:]
                 }
             )
-            # sf.set_column_width(columns=["Dimension", "Subdimension"], width=24)
-            # sf.set_column_width(columns=["Activity"], width=32)
-            # sf.set_column_width(columns=["Measure"], width=60)
+            sf.set_column_width(columns=["Dimension", "Subdimension"], width=24)
+            sf.set_column_width(columns=["Activity"], width=32)
+            sf.set_column_width(columns=["Measure"], width=60)
             sf.to_excel(writer, sheet_name=dimension, row_to_add_filters=0, index=True)
-
-
-def test_renderize():
-    import xlsxwriter
-
-    workbook = xlsxwriter.Workbook("/tmp/foo.xlsx")
-    for worksheet in workbook.worksheets():
-        worksheet.autofilter(0, 0, 0, 4)
-    raise NotImplementedError
 
 
 if __name__ == "__main__":
@@ -393,3 +394,6 @@ if __name__ == "__main__":
     g = Graph()
     parse_dsomm(activities, g)
     g.serialize(format="text/turtle", destination="vocabularies/dsomm.ttl")
+
+    df = query_data(None)
+    create_excel(df)
