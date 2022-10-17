@@ -10,4 +10,4 @@ requests
 pyyaml
 xlwt
 openpyxl
-/home/rpolli/workspace-py/RDFtoHTML
+git+https://github.com/ioggstream/RDFtoHTML@ioggstream-py3

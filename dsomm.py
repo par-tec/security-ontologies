@@ -1,5 +1,5 @@
 import logging
-from builtins import NotImplementedError
+import re
 from pathlib import Path
 
 import requests
@@ -53,8 +53,8 @@ def test_parse_dsomm():
     activities = get_dsomm()
     g = Graph()
     parse_dsomm(activities, g)
-    query_rdflib(g)
-    g.serialize(format="text/turtle", destination="vocabularies/dsomm.ttl")
+    query_data(g)
+    g.serialize(format="text/turtle", destination="tests/out/dsomm-t2.ttl")
 
 
 def test_parse_activity():
@@ -64,8 +64,9 @@ def test_parse_activity():
             for a_n, a in activity.items():
                 g = Graph()
                 parse_activity(g, a_n, a, URIRef("https://example.org"))
-                g.serialize(format="text/turtle", destination="vocabularies/dsomm.ttl")
-                raise NotImplementedError
+                g.serialize(
+                    format="text/turtle", destination="tests/out/dsomm-test.ttl"
+                )
 
 
 def parse_dsomm(activities, g):
@@ -206,6 +207,7 @@ def parse_samm(s):
 
 
 def parse_references(references):
+    """Parse the references from the yaml file."""
     if not isinstance(references, dict):
         raise ValueError("Reference must be a dict")
     for k, v in references.items():
@@ -217,18 +219,17 @@ def parse_references(references):
                 yield parse_samm(samm2)
         elif k == "iso27001-2017":
             for iso27001 in v:
-                if not " " in str(iso27001):
+                if " " not in str(iso27001):
                     yield URIRef(NS_ISO + "27001/2013/control-" + str(iso27001))
                 else:
                     yield Literal(iso27001)
         else:
-            raise ValueError("Unknown reference: {}".format(k))
+            raise ValueError(f"Unknown reference: {k}")
 
 
 def format_link(link):
-    import re
 
-    if not "http" in str(link):
+    if "http" not in str(link):
         return link
     re_findurl = re.compile(r"(?P<url>https?://[^\s]+)")
     ret = ""
@@ -258,18 +259,14 @@ def test_format_link():
 - https://owaspsamm.org/model/implementation/secure-build/stream-a#1
     """
     )
-    assert ret == (
-        ' <a href="http://par-tec.it/onto/iso/27002/2013/controls/12.1.1">Comment: '
-        "12.1.1</a>\n <a "
-        'href="http://par-tec.it/onto/iso/27002/2013/controls/14.2.2">Comment: '
-        "14.2.2</a>\n <a "
-        'href="https://owaspsamm.org/model/implementation/secure-build/stream-a#1">samm2 '
-        "stream-a#1</a>\n"
+    assert (
+        '<a href="http://par-tec.it/onto/iso/27002/2013/controls/12.1.1">iso27001:  12.1.1</a>'
+        in ret
     )
 
 
 def make_hyperlink_xls(url):
-    if not "http" in str(url):
+    if "http" not in str(url):
         return url
     if "owaspsamm" in url:
         specref = "samm2 "
@@ -300,15 +297,15 @@ def query_data(graph=None):
         where {
 
         ?activity a dm:Activity;
-        dm:SubDimension ?sub;
-        rdfs:label ?Activity;
-        dm:Measure ?Measure
+            dm:SubDimension ?sub;
+            rdfs:label ?Activity;
+            dm:Measure ?Measure
         .
         OPTIONAL { ?activity dm:hasReference ?ref}
         .
         ?sub
-        rdfs:label ?Subdimension;
-        dm:Dimension ?dim
+            rdfs:label ?Subdimension;
+            dm:Dimension ?dim
         .
         ?dim rdfs:label ?Dimension
 
@@ -318,16 +315,16 @@ def query_data(graph=None):
     if not graph:
         endpoint = "http://localhost:18890/sparql"
         return sparql_dataframe.get(endpoint, QUERY, post=True)
-    rows = g.query(QUERY)
+    rows = graph.query(QUERY)
     return DataFrame(data=list(map(str, x) for x in rows), columns=map(str, rows.vars))
 
 
 def test_sparql_activity():
     df = query_data()
-    create_excel(df)
+    create_excel(df, "tests/out/test_sparql_activity.xlsx")
 
 
-def create_excel(df, outfile="/tmp/foo.xlsx"):
+def create_excel(df, outfile):
     import html2text
     from styleframe import StyleFrame, Styler, utils
 
@@ -356,10 +353,16 @@ def create_excel(df, outfile="/tmp/foo.xlsx"):
 
         initframe.to_excel(writer, sheet_name="Uno", index=False)
         df = df.sort_values(by=["Dimension", "Subdimension", "Activity"])
-        df.Measure = df.Measure.apply(lambda x: html2text.html2text(x))
+
+        # Format specific columns, e.g. providing hyperlinks.
+        df.Measure = df.Measure.apply(html2text.html2text)
         df.Reference = df.Reference.apply(make_hyperlink_xls)
+
+        # Create a sheet for each dimension.
         for dimension in df["Dimension"].unique():
             dfw = df[df["Dimension"] == dimension]
+
+            # Transpose only reference values for ease of reading.
             gdfw = (
                 dfw.groupby(["Dimension", "Subdimension", "Activity", "Measure"])[
                     "Reference"
@@ -368,11 +371,14 @@ def create_excel(df, outfile="/tmp/foo.xlsx"):
                 .unstack()
                 .reset_index()
             )
-            gdfw.to_excel("/tmp/bar.xlsx", sheet_name=dimension)
-            # To Excel
+
+            # Format cells and other boring stuff that
+            #  you should otherwise do manually.
             log.warning("Dimension: %s", dimension)
             sf = StyleFrame(gdfw, styler_obj=default_style)
             sf.apply_headers_style(styler_obj=header_style)
+
+            # Compute optimal cell height.
             all_rows = sf.row_indexes
             sf.set_row_height_dict(
                 row_height_dict={
@@ -386,6 +392,8 @@ def create_excel(df, outfile="/tmp/foo.xlsx"):
             sf.set_column_width(columns=["Dimension", "Subdimension"], width=24)
             sf.set_column_width(columns=["Activity"], width=32)
             sf.set_column_width(columns=["Measure"], width=60)
+
+            # Write to excel.
             sf.to_excel(writer, sheet_name=dimension, row_to_add_filters=0, index=True)
 
 
@@ -396,4 +404,4 @@ if __name__ == "__main__":
     g.serialize(format="text/turtle", destination="vocabularies/dsomm.ttl")
 
     df = query_data(None)
-    create_excel(df)
+    create_excel(df, "tests/out/dsomm-questionnaire.xlsx")

@@ -1,0 +1,68 @@
+body {
+	margin: 20px 5%;
+}
+
+.rdf_obj {
+	margin-top: 4%;
+/*	text-align: center; */
+}
+
+.full_info {
+
+}
+
+.title {
+	background-color: blue;
+	color: white;
+}
+.show_more {
+	cursor: pointer;
+	text-decoration: underline;
+	color: blue;
+}
+
+table {
+	display: block;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+h1 {
+	font-size: 24px;
+	margin: 0px;
+}
+
+h2 {
+	font-size: 16px;
+	text-align: center;
+	margin: 0px;
+}
+
+.desc {
+	margin-top: 10px;
+	text-align: justify;
+}
+
+h1 a, h2 a, h3 a {
+	text-decoration: none;
+}
+
+tr:nth-child(odd) {
+	background: #EEE;
+}
+
+tr:nth-child(even) {
+	background: #FFF;
+}
+
+td {
+	max-width: 100%;
+}
+
+td a {
+	max-width: 100%;
+}
