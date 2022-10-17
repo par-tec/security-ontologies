@@ -23,7 +23,7 @@ def a_or_b(a, b, k):
 
 NS_FOAF = Namespace("http://xmlns.com/foaf/0.1/")
 NS_OS = Namespace("https://owaspsamm.org/model/")
-NS_DSOMM = Namespace("https://github.com/wurstbrot/DevSecOps-MaturityModel/")
+NS_DSOMM = Namespace("https://owasp.org/www-project-devsecops-maturity-model/")
 NS_ISO = Namespace("https://par-tec.github.io/security-ontologies/onto/iso#")
 NS = (
     ("dct", DCTERMS),
@@ -81,7 +81,7 @@ def parse_dsomm(activities, g):
             )
             g.add((subdimension_uri, RDF.type, NS_DSOMM.SubDimension))
             g.add((subdimension_uri, RDFS.label, Literal(subdimension)))
-            g.add((subdimension_uri, NS_DSOMM.Dimension, dimension_uri))
+            g.add((subdimension_uri, NS_DSOMM.hasDimension, dimension_uri))
             for activity_name, activity in activity.items():
                 parse_activity(g, activity_name, activity, subdimension_uri)
 
@@ -130,7 +130,7 @@ def parse_activity(g, activity_name, activity, subdimension_uri):
     activity_uri = URIRef(NS_DSOMM + activity_name.title().replace(" ", ""))
     g.add((activity_uri, RDF.type, NS_DSOMM.Activity))
     g.add((activity_uri, RDFS.label, Literal(activity_name)))
-    g.add((activity_uri, NS_DSOMM.SubDimension, subdimension_uri))
+    g.add((activity_uri, NS_DSOMM.hasSubdimension, subdimension_uri))
 
     g.add((activity_uri, RDFS.comment, Literal(activity.get("description", ""))))
     g.add((activity_uri, NS_DSOMM.Measure, Literal(activity.get("measure", ""))))
@@ -289,7 +289,7 @@ def make_hyperlink_xls(url):
 
 def query_data(graph=None):
     QUERY = """
-        prefix dm: <https://github.com/wurstbrot/DevSecOps-MaturityModel/>
+        prefix dm: <https://owasp.org/www-project-devsecops-maturity-model/>
         prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
         select distinct
