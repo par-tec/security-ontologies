@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+      - typing_extensions
+      - rdflib
+      - pandas
+      - paths:
+        - dsomm.ttl
+        - iso27001-data.ttl
+        - samm.ttl
+        - sparql.py
+    </py-env>
+    <style type="text/css">
+      .col {
+        width: 50%;
+        border: solid 1px;
+        vertical-align: top;
+      }
+      textarea {
+        box-sizing: content-box;
+        font-family: monospace;
+        font-size: 14px;
+        border: solid 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <h1>Client-side sparql endpoint</h1>
+        <p>
+            Query the security knowledge graph.
+            Default namespaces are:
+      <table>
+        <tr><td>skos</td><td> http//www.w3.org/2004/02/skos/core#
+        </tr><tr><td>dct</td><td> http//purl.org/dc/terms/
+        </tr><tr><td>dc </td><td>http//purl.org/dc/elements/1.1/
+        </tr><tr><td>rdf</td><td> http//www.w3.org/1999/02/22-rdf-syntax-ns#
+        </tr><tr><td>rdfs</td><td> http//www.w3.org/2000/01/rdf-schema#
+        </tr><tr><td>dm </td><td>https//owasp.org/www-project-devsecops-maturity-model/
+        </tr><tr><td>iso</td><td> https//par-tec.github.io/security-ontologies/onto/iso#
+    </tr></<table>
+
+    </table>
+        </p>
+    </div>
+    <div>
+        <textarea id="code" style="width: 100%; height: 20em;">
+SELECT
+  ?activity
+  ?iso_control_id
+  ?iso_control
+
+WHERE {
+?a a dm:Activity;
+   rdfs:label ?activity;
+   dm:hasReference ?r
+.
+?r a iso:Control;
+   dct:description ?iso_control;
+   dct:identifier ?iso_control_id
+.
+} LIMIT 5
+</textarea>
+    </div>
+    <button id="apply" style="color: white; background-color: blue; width: 100%">Query.</button>
+    <div>
+        <pre id="query-result" style="border-color: blue">
+            Results.
+        </pre>
+    </div>
+
+<py-script>
+import logging
+log = logging.getLogger()
+from pyodide import create_proxy
+from rdflib import Graph
+import sparql
+
+initns = {
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "dct": "http://purl.org/dc/terms/",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dm": "https://owasp.org/www-project-devsecops-maturity-model/",
+        "iso": "https://par-tec.github.io/security-ontologies/onto/iso#",
+    }
+
+graph = Graph()
+graph.parse("./dsomm.ttl", format="turtle")
+graph.parse("./iso27001-data.ttl", format="turtle")
+graph.parse("./samm.ttl", format="turtle")
+
+
+def on_apply(event):
+  global code, button, graph
+  text = code.value
+  ret = sparql.query(graph, text, initns)
+  Element("query-result").write(ret )
+
+
+code = Element("code")
+button = document.querySelector("button")
+button.addEventListener("click", create_proxy(on_apply))
+
+
+    </py-script>
+    </body>
+</html>

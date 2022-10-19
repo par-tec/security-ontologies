@@ -297,17 +297,18 @@ def query_data(graph=None):
         where {
 
         ?activity a dm:Activity;
-            dm:SubDimension ?sub;
+            dm:hasSubdimension ?sub;
             rdfs:label ?Activity;
             dm:Measure ?Measure
         .
         OPTIONAL { ?activity dm:hasReference ?ref}
         .
-        ?sub
+        ?sub a dm:Subdimension;
             rdfs:label ?Subdimension;
-            dm:Dimension ?dim
+            dm:hasDimension ?dim
         .
-        ?dim rdfs:label ?Dimension
+        ?dim a dm:Dimension;
+            rdfs:label ?Dimension
 
         }
     """
@@ -315,12 +316,69 @@ def query_data(graph=None):
     if not graph:
         endpoint = "http://localhost:18890/sparql"
         return sparql_dataframe.get(endpoint, QUERY, post=True)
-    rows = graph.query(QUERY)
+    rows = graph.query(
+        QUERY,
+        initNs={
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "dm": "https://owasp.org/www-project-devsecops-maturity-model/",
+            "iso": "https://par-tec.github.io/security-ontologies/onto/iso#",
+        },
+    )
     return DataFrame(data=list(map(str, x) for x in rows), columns=map(str, rows.vars))
+
+
+def replace_prefix(url, prefix_dict):
+    """given a dict of namespaces with associated urls,
+    replace the url string with the namespace"""
+    for ns, nsurl in prefix_dict.items():
+        if url.startswith(nsurl):
+            return url.replace(nsurl, ns + ":")
+
+
+def test_query_data():
+    activities = get_dsomm()
+    g = Graph()
+    parse_dsomm(activities, g)
+    Q1 = """
+        prefix dm: <https://owasp.org/www-project-devsecops-maturity-model/>
+        prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+        select distinct
+        ?Dimension ?Subdimension ?Activity
+        ?Measure
+        (?ref as ?Reference)
+
+        where {
+
+
+        ?activity a dm:Activity;
+            dm:hasSubdimension ?sub;
+            rdfs:label ?Activity;
+            dm:Measure ?Measure
+        .
+        OPTIONAL { ?activity dm:hasReference ?ref}
+        .
+        ?dim a dm:Dimension;
+            rdfs:label ?Dimension
+        .
+        ?sub dm:hasDimension ?dim;
+            rdfs:label ?Subdimension
+        .
+
+
+        }
+        LIMIT 2
+
+    """
+    ret = g.query(Q1)
+    assert len(ret.result) == 2
+    assert len(ret.vars) == 5
+    assert len(ret.result[0]) == 5
 
 
 def test_sparql_activity():
     df = query_data()
+    raise NotImplementedError
     create_excel(df, "tests/out/test_sparql_activity.xlsx")
 
 
@@ -331,7 +389,8 @@ def create_excel(df, outfile):
     INTRO = """
     This is a DevSecOps Maturity Model Questionnaire that can be used to assess the current maturity level of a single project.
 
-    Differently from other strategies, DSOMM is based on activities, not on threats. It thus verifies which activities are implemented, and associates activities to various kind of references and threats.
+    Differently from other strategies, DSOMM is based on activities, not on threats. It thus verifies which activities are implemented,
+    and associates activities to various kind of references and threats.
 
     Since DSOMM is oriented to devops folks, risks’ descriptions and measures tend to be concrete.
 

@@ -1,0 +1,2365 @@
+@prefix ns1: <https://owasp.org/www-project-devsecops-maturity-model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+### Annotations
+
+<https://attack.mitre.org/matrices/enterprise/cloud/> a ns1:Implementation ;
+    rdfs:label "Attack Matrix Cloud",
+        "Attack Matrix Containers" ;
+    rdfs:comment "Attack matrix for cloud",
+        "Attack matrix for containers" ;
+    ns1:hasTag "mitre" .
+
+<https://blog.sonarsource.com/in-depth-linting-of-your-typescript-while-coding> a ns1:Implementation ;
+    rdfs:label "In-Depth Linting of Your TypeScript While Coding" ;
+    rdfs:comment "" ;
+    ns1:hasTag "ide",
+        "linting" .
+
+<https://builditbreakit.org/> a ns1:Implementation ;
+    rdfs:label "Build it Break it Fix it Contest" ;
+    rdfs:comment "" .
+
+<https://cheatsheetseries.owasp.org/> a ns1:Implementation ;
+    rdfs:label "https://cheatsheetseries.owasp.org/",
+        "OWASP Cheatsheet Series" ;
+    rdfs:comment "" ;
+    ns1:hasTag "secure coding",
+        "training" .
+
+<https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html> a ns1:Implementation ;
+    rdfs:label "OWASP Logging CheatSheet" ;
+    rdfs:comment "" ;
+    ns1:hasTag "documentation",
+        "logging" .
+
+<https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin> a ns1:Implementation ;
+    rdfs:label "Setting Up the Visual Studio Code Extension Plugin" ;
+    rdfs:comment "" ;
+    ns1:hasTag "ide",
+        "sast" .
+
+<https://curity.io/resources/learn/the-api-security-maturity-model/> a ns1:Implementation ;
+    rdfs:label "API Security Maturity Model for Authorization" ;
+    rdfs:comment "" ;
+    ns1:hasTag "api" .
+
+<https://cwe.mitre.org/top25/archive/2020/2020_cwe_top25.html> a ns1:Implementation ;
+    rdfs:label "CWE Top 25 Most Dangerous Software Weaknesses" ;
+    rdfs:comment "" ;
+    ns1:hasTag "documentation",
+        "threat" .
+
+<https://dependabot.com/> a ns1:Implementation ;
+    rdfs:label "dependabot" ;
+    rdfs:comment "" .
+
+<https://docs.docker.com/notary/getting_started/> a ns1:Implementation ;
+    rdfs:label "Docker Content Trust" ;
+    rdfs:comment "" .
+
+<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches> a ns1:Implementation ;
+    rdfs:label "About protected branches" ;
+    rdfs:comment "" ;
+    ns1:hasTag "scm",
+        "source-code-protection" .
+
+<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule> a ns1:Implementation ;
+    rdfs:label "Enforcement of commit signing" ;
+    rdfs:comment "Usage of branch protection rules" ;
+    ns1:hasTag "signing" .
+
+<https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/devsecops-controls#plan-and-develop> a ns1:Implementation ;
+    rdfs:label "DevSecOps control Pre-commit" ;
+    rdfs:comment "" ;
+    ns1:hasTag "pre-commit" .
+
+<https://docs.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops> a ns1:Implementation ;
+    rdfs:label "Improve code quality with branch policies" ;
+    rdfs:comment "" ;
+    ns1:hasTag "scm",
+        "source-code-protection" .
+
+<https://docs.npmjs.com/cli/audit> a ns1:Implementation ;
+    rdfs:label "npm audit" ;
+    rdfs:comment "" .
+
+<https://en.wikipedia.org/wiki/Whiteboard> a ns1:Implementation ;
+    rdfs:label "Whiteboard" ;
+    rdfs:comment "" ;
+    ns1:hasTag "collaboration",
+        "defender",
+        "threat-modeling",
+        "whiteboard" .
+
+<https://getfedora.org/coreos> a ns1:Implementation ;
+    rdfs:label "Fedora CoreOS" ;
+    rdfs:comment "" .
+
+<https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work> a ns1:Implementation ;
+    rdfs:label "Signing of commits" ;
+    rdfs:comment "Signing of commits in git" ;
+    ns1:hasTag "signing" .
+
+<https://github.com/aquasecurity/kube-bench> a ns1:Implementation ;
+    rdfs:label "kube-bench" ;
+    rdfs:comment "" .
+
+<https://github.com/aquasecurity/kube-hunter> a ns1:Implementation ;
+    rdfs:label "kube-hunter" ;
+    rdfs:comment "" .
+
+<https://github.com/aquasecurity/trivy> a ns1:Implementation ;
+    rdfs:label "https://github.com/aquasecurity/trivy" ;
+    rdfs:comment "" .
+
+<https://github.com/armosec/kubescape> a ns1:Implementation ;
+    rdfs:label "kubescape" ;
+    rdfs:comment "_Testing if Kubernetes is deployed securely as defined in Kubernetes Hardening Guidance by to NSA and CISA_" ;
+    ns1:hasTag "kubernetes",
+        "misconfiguration",
+        "vulnerability" .
+
+<https://github.com/bkimminich/juice-shop> a ns1:Implementation ;
+    rdfs:label "OWASP Juice Shop",
+        "OWASP JuiceShop" ;
+    rdfs:comment """In case you do not have the budget to hire an external security expert, an option
+is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "hacking Friday\"""",
+        "In case you do not have the budget to hire an external security expert, an option is to use the OWASP JuiceShop on a \"hacking Friday\"" ;
+    ns1:hasTag "training" .
+
+<https://github.com/c0rdis/security-champions-playbook> a ns1:Implementation ;
+    rdfs:label "OWASP Security Champions Playbook" ;
+    rdfs:comment "" ;
+    ns1:hasTag "security champions" .
+
+<https://github.com/controlplaneio/netassert> a ns1:Implementation ;
+    rdfs:label "netassert" ;
+    rdfs:comment "" .
+
+<https://github.com/DefectDojo/django-DefectDojo> a ns1:Implementation ;
+    rdfs:label "OWASP Defect Dojo",
+        "OWASP DefectDojo" ;
+    rdfs:comment "",
+        """DefectDojo is a security program and vulnerability management tool. DefectDojo allows you to manage your application security program, maintain product and application information, triage vulnerabilities and push findings into defect trackers. Consolidate your findings into one source of truth with DefectDojo.
+""" ;
+    ns1:hasTag "owasp",
+        "vulnerability management system" .
+
+<https://github.com/DependencyTrack/dependency-track> a ns1:Implementation ;
+    rdfs:label "Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain. Dependency-Track takes a unique and highly beneficial approach by leveraging the capabilities of Software Bill of Materials (SBOM)." ;
+    rdfs:comment "" ;
+    ns1:hasTag "inventory",
+        "sca" .
+
+<https://github.com/dxa4481/truffleHog> a ns1:Implementation ;
+    rdfs:label "truffleHog" ;
+    rdfs:comment "" .
+
+<https://github.com/faloker/purify/> a ns1:Implementation ;
+    rdfs:label "Purify" ;
+    rdfs:comment """The goal of Purify to be an easy-in-use and efficient tool to simplify a workflow of managing vulnerabilities delivered from various (even custom) tools.
+""" ;
+    ns1:hasTag "vulnerability management system" .
+
+<https://github.com/future-architect/vuls> a ns1:Implementation ;
+    rdfs:label "Vuls" ;
+    rdfs:comment "" .
+
+<https://github.com/GoogleContainerTools/distroless> a ns1:Implementation ;
+    rdfs:label "Distroless" ;
+    rdfs:comment "" .
+
+<https://github.com/hadolint/hadolint> a ns1:Implementation ;
+    rdfs:label "Dockerfile with hadolint" ;
+    rdfs:comment "" .
+
+<https://github.com/ing-bank/bdd-mobile-security-automation-framework> a ns1:Implementation ;
+    rdfs:label "[bdd-mobile-security" ;
+    rdfs:comment "[bdd-mobile-security-automation-framework](https://github.com/ing-bank/bdd-mobile-security-automation-framework)" .
+
+<https://github.com/jgraph/drawio-desktop> a ns1:Implementation ;
+    rdfs:label "Draw.io" ;
+    rdfs:comment "" ;
+    ns1:hasTag "defender",
+        "threat-modeling",
+        "whiteboard" .
+
+<https://github.com/moby/moby> a ns1:Implementation ;
+    rdfs:label "Docker" ;
+    rdfs:comment "" .
+
+<https://github.com/nccgroup/go-pillage-registries> a ns1:Implementation ;
+    rdfs:label "go-pillage-registries" ;
+    rdfs:comment "" .
+
+<https://github.com/OWASP/Amass> a ns1:Implementation ;
+    rdfs:label "OWASP Amass" ;
+    rdfs:comment "" .
+
+<https://github.com/OWASP/owasp-masvs> a ns1:Implementation ;
+    rdfs:label "OWASP MASVS" ;
+    rdfs:comment "" .
+
+<https://github.com/replicatedhq/dockerfilelint> a ns1:Implementation ;
+    rdfs:label "dockerfilelint" ;
+    rdfs:comment "dockerfilelint is an node module that analyzes a Dockerfile and looks for common traps, mistakes and helps enforce best practices." ;
+    ns1:hasTag "docker",
+        "dockerfile",
+        "sast" .
+
+<https://github.com/RetireJS/retire.js/> a ns1:Implementation ;
+    rdfs:label "retire.js" ;
+    rdfs:comment "" .
+
+<https://github.com/SDA-SE/clusterscanner> a ns1:Implementation ;
+    rdfs:label "ClusterScanner" ;
+    rdfs:comment "Discover vulnerabilities and container image misconfiguration in production environments." ;
+    ns1:hasTag "container",
+        "docker",
+        "image",
+        "misconfiguration",
+        "scanning",
+        "securiity-tools",
+        "vulnerability" .
+
+<https://github.com/secureCodeBox/secureCodeBox> a ns1:Implementation ;
+    rdfs:label "OWASP secureCodeBox" ;
+    rdfs:comment """secureCodeBox is a kubernetes based, modularized toolchain for continuous security scans of your software project. Its goal is to orchestrate and easily automate a bunch of security-testing tools out of the box.
+""" ;
+    ns1:hasTag "scanner-orchestration",
+        "vulnerability" .
+
+<https://github.com/SigmaHQ/sigma> a ns1:Implementation ;
+    rdfs:label "SigmaHQ" ;
+    rdfs:comment "" .
+
+<https://github.com/Threagile/threagile> a ns1:Implementation ;
+    rdfs:label "Threagile" ;
+    rdfs:comment "" ;
+    ns1:hasTag "threat-modeling" .
+
+<https://github.com/Toreon/threat-model-playbook> a ns1:Implementation ;
+    rdfs:label "Threat Modeling Playbook" ;
+    rdfs:comment "" ;
+    ns1:hasTag "defender",
+        "owasp",
+        "threat-modeling",
+        "whiteboard" .
+
+<https://github.com/wagoodman/dive> a ns1:Implementation ;
+    rdfs:label "Dive to inspect a container images" ;
+    rdfs:comment "" .
+
+<https://github.com/wurstbrot/security-pins> a ns1:Implementation ;
+    rdfs:label "Motivate people" ;
+    rdfs:comment """Enhance motivation can be performed with the distribution of pins
+as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/security-pins)""" ;
+    ns1:hasTag "gamification",
+        "nudging",
+        "security champions" .
+
+<https://github.com/yogeshkk/K8sPurger> a ns1:Implementation ;
+    rdfs:label "K8sPurger" ;
+    rdfs:comment """Hunt Unused Resources In Kubernetes.
+""" ;
+    ns1:hasTag "dast",
+        "infrastrcture",
+        "scanner",
+        "vulnerability" .
+
+<https://github.com/zaproxy/zaproxy> a ns1:Implementation ;
+    rdfs:label "OWASP Zap" ;
+    rdfs:comment """The OWASP Zed Attack Proxy (ZAP) is one of the world's most popular free security tools and is actively maintained by a dedicated international team of ...
+""" ;
+    ns1:hasTag "scanner",
+        "vulnerability" .
+
+<https://github.com/zegl/kube-score> a ns1:Implementation ;
+    rdfs:label "Deployment with kube-score" ;
+    rdfs:comment "" .
+
+<https://ht.transparencytoolkit.org/FileServer/FileServer/OLD> a ns1:Implementation ;
+    rdfs:label "https://ht.transpare" ;
+    rdfs:comment "https://ht.transparencytoolkit.org/FileServer/FileServer/OLD%20Fileserver/books/SICUREZZA/Addison.Wesley.Security.Metrics.Mar.2007.pdf" .
+
+<https://in-toto.github.io/> a ns1:Implementation ;
+    rdfs:label "in-toto" ;
+    rdfs:comment "" .
+
+<https://karma-runner.github.io> a ns1:Implementation ;
+    rdfs:label "Karma" ;
+    rdfs:comment "" .
+
+<https://kubesec.io> a ns1:Implementation ;
+    rdfs:label "kubesec" ;
+    rdfs:comment "" .
+
+<https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code> a ns1:Implementation ;
+    rdfs:label "Fortify Extension for Visual Studio Code" ;
+    rdfs:comment "" ;
+    ns1:hasTag "ide",
+        "sast" .
+
+<https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> a ns1:Implementation ;
+    rdfs:label "HCL AppScan CodeSweep" ;
+    rdfs:comment "" ;
+    ns1:hasTag "ide",
+        "sast" .
+
+<https://martinfowler.com/articles/continuousIntegration.html> a ns1:Implementation ;
+    rdfs:label "CI/CD tools" ;
+    rdfs:comment "CI/CD tools such as jenkins, gitlab-ci or github-actions" ;
+    ns1:hasTag "ci-cd" .
+
+<https://martinfowler.com/bliki/BlueGreenDeployment.html> a ns1:Implementation ;
+    rdfs:label "Blue/Green Deployments" ;
+    rdfs:comment "" .
+
+<https://medium.com/uber-security-privacy/business-friendly-vulnerability-management-metrics-cfd702fd7705> a ns1:Implementation ;
+    rdfs:label "Business friendly vulnerability management metrics" ;
+    rdfs:comment "" ;
+    ns1:hasTag "documentation",
+        "vulnerability",
+        "vulnerability management system" .
+
+<https://miro.com/> a ns1:Implementation ;
+    rdfs:label "Miro (or any other collaborative board)" ;
+    rdfs:comment "" ;
+    ns1:hasTag "collaboration",
+        "defender",
+        "threat-modeling",
+        "whiteboard" .
+
+<https://owasp.org/www-project-application-security-verification-standard/> a ns1:Implementation ;
+    rdfs:label "OWASP ASVS" ;
+    rdfs:comment "" .
+
+<https://owasp.org/www-project-devsecops-maturity-model/Blue/GreenDeployment> a ns1:Activity ;
+    rdfs:label "Blue/Green Deployment" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://martinfowler.com/bliki/BlueGreenDeployment.html> ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.5.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.9>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.2.1> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "By having multiple production environments, a deployment can be performant on the first environment to spot possible defects before it is deployment in the production environment(s)" .
+
+<https://owasp.org/www-project-devsecops-maturity-model/ConductionOfBuild-It,Break-It,Fix-ItContests> a ns1:Activity ;
+    rdfs:label "Conduction of build-it, break-it, fix-it contests" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://builditbreakit.org/> ;
+    ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "The build-it, break-it, fix-it contest allows to train people with security related roles like security champions the build, break and fix part of a secure application. This increases the learning of building secure components." .
+
+<https://owasp.org/www-project-devsecops-maturity-model/LocalDevelopmentLinting&StyleChecksPerformed> a ns1:Activity ;
+    rdfs:label "Local development linting & style checks performed" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://blog.sonarsource.com/in-depth-linting-of-your-typescript-while-coding>,
+        <https://www.meziantou.net/how-to-enforce-a-consistent-coding-style-in-your-projects.htm> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-1#A> ;
+    ns1:hasSubdimension ns1:DevelopmentSourceControl ;
+    ns1:Measure """Integration of quality and linting plugins with interactive development environment (IDEs).
+""" .
+
+<https://owasp.org/www-project-devsecops-maturity-model/StaticAnalysisForAllComponents/Libraries> a ns1:Activity ;
+    rdfs:label "Static analysis for all components/libraries" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Usage of a static analysis for all used components." .
+
+<https://owaspsamm.org/model/design/threat-assessment/stream-b/> a ns1:Implementation ;
+    rdfs:label "OWASP SAMM" ;
+    rdfs:comment "" ;
+    ns1:hasTag "defender",
+        "owasp",
+        "threat-modeling" .
+
+<https://owaspsamm.org/presentations/OWASP_Top_10_Maturity_Categories_for_Security_Champions.pptx> a ns1:Implementation ;
+    rdfs:label "OWASP Top 10 Maturity Categories for Security Champions" ;
+    rdfs:comment "" ;
+    ns1:hasTag "security champions" .
+
+<https://thenewstack.io/defend-the-core-kubernetes-security-at-every-layer/> a ns1:Implementation ;
+    rdfs:label "Defend the core kubernetes security at every layer" ;
+    rdfs:comment "" ;
+    ns1:hasTag "cluster",
+        "documentation",
+        "kubernetes" .
+
+<https://www.cisecurity.org/cis-benchmarks/> a ns1:Implementation ;
+    rdfs:label "CIS Docker Bench for Security",
+        "CIS Kubernetes Bench for Security" ;
+    rdfs:comment "" .
+
+<https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html> a ns1:Implementation ;
+    rdfs:label "logstash" ;
+    rdfs:comment "" ;
+    ns1:hasTag "logging",
+        "tool" .
+
+<https://www.meziantou.net/how-to-enforce-a-consistent-coding-style-in-your-projects.htm> a ns1:Implementation ;
+    rdfs:label "How to enforce a consistent coding style in your projects" ;
+    rdfs:comment "" ;
+    ns1:hasTag "ide",
+        "linting" .
+
+<https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/> a ns1:Implementation ;
+    rdfs:label "Attack Matrix Kubernetes" ;
+    rdfs:comment "Attack matrix for kubernetes" ;
+    ns1:hasTag "mitre" .
+
+<https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/> a ns1:Implementation ;
+    rdfs:label "Threat Matrix for Storage" ;
+    rdfs:comment "" ;
+    ns1:hasTag "cluster",
+        "documentation",
+        "kubernetes",
+        "storage" .
+
+<https://www.owasp.org/index.php/Agile_Software_Development> a ns1:Implementation ;
+    rdfs:label "[Don't Forget EVIL U" ;
+    rdfs:comment "[Do not Forget EVIL User Stories](https://www.owasp.org/index.php/Agile_Software_Development:_Don%27t_Forget_EVIL_User_Stories) and [Practical Security Stories and Security Tasks for Agile Development Environments](http://safecode.org/publication/SAFECode_Agile_Dev_Security0712.pdf)" .
+
+<https://www.rsyslog.com/> a ns1:Implementation ;
+    rdfs:label "rsyslog" ;
+    rdfs:comment "" ;
+    ns1:hasTag "logging",
+        "tool" .
+
+<https://www.synopsys.com/blogs/software-security/devsecops-pipeline-checklist/> a ns1:Implementation ;
+    rdfs:label "Building your DevSecOps pipeline 5 essential activities" ;
+    rdfs:comment "" ;
+    ns1:hasTag "pre-commit" .
+
+<https://www.zaproxy.org/docs/desktop/addons/zest/> a ns1:Implementation ;
+    rdfs:label "Zest" ;
+    rdfs:comment """Zest is an experimental specialized scripting language (also known as a domain-specific language) originally developed by the Mozilla security team and is intended to be used in web oriented security tools.
+""" ;
+    ns1:hasTag "zap" .
+
+ns1:2Fa a ns1:Activity ;
+    rdfs:label "2FA" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Two factor authentication for all privileged accounts on systems and applications" .
+
+ns1:Ad-HocSecurityTrainingsForSoftwareDevelopers a ns1:Activity ;
+    rdfs:label "Ad-Hoc Security trainings for software developers" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org/>,
+        <https://github.com/bkimminich/juice-shop> ;
+    ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Provide security awareness training for all personnel involved in software development Ad-Hoc." .
+
+ns1:AdvancedAvailabilityAndStabilityMetrics a ns1:Activity ;
+    rdfs:label "Advanced availability and stability metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Advanced metrics are gathered in relation to availability and stability. For example unplanned downtime's per year." .
+
+ns1:AdvancedVisualizationOfDefects a ns1:Activity ;
+    rdfs:label "Advanced visualization of defects" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
+        <https://github.com/faloker/purify/>,
+        <https://medium.com/uber-security-privacy/business-friendly-vulnerability-management-metrics-cfd702fd7705> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "Findings are visualized per component/project/team." .
+
+ns1:AdvancedWebapplicationMetrics a ns1:Activity ;
+    rdfs:label "Advanced webapplication metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "All defects from the dimension Test- and Verification are instrumented." .
+
+ns1:Alerting a ns1:Activity ;
+    rdfs:label "Alerting" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure """Thresholds for metrics are set. In case the thresholds are reached, alarms are send out. Which should get attention due to the critically.
+""" .
+
+ns1:AligningSecurityInTeams a ns1:Activity ;
+    rdfs:label "Aligning security in teams" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.1.1> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "By aligning security SME with project teams, a higher security standard can be achieved." .
+
+ns1:AnalyzeLogs a ns1:Activity ;
+    rdfs:label "Analyze logs" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/SigmaHQ/sigma> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Check logs for keywords." .
+
+ns1:APatchPolicyIsDefined a ns1:Activity ;
+    rdfs:label "A patch policy is defined" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-b#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.5.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:PatchManagement ;
+    ns1:Measure "A patch policy for all artifacts (e.g. in images) is defined. How often is an image rebuilt?" .
+
+ns1:App.HardeningLevel2 a ns1:Activity ;
+    rdfs:label "App. Hardening Level 2" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/OWASP/owasp-masvs>,
+        <https://owasp.org/www-project-application-security-verification-standard/> ;
+    ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/design/security-requirements/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:ApplicationHardening ;
+    ns1:Measure """Following frameworks like the
+  <ul>
+    <li>OWASP Application Security Verification Standard Level 2</li>
+    <li>OWASP Mobile Application Security Verification Standard Level 2</li>
+  </ul>
+""" .
+
+ns1:App.HardeningLevel3 a ns1:Activity ;
+    rdfs:label "App. Hardening Level 3" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/OWASP/owasp-masvs>,
+        <https://owasp.org/www-project-application-security-verification-standard/> ;
+    ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/design/security-requirements/stream-a#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:ApplicationHardening ;
+    ns1:Measure """Following frameworks like the
+  <ul>
+    <li>OWASP Application Security Verification Standard Level 3</li>
+    <li>OWASP Mobile Application Security Verification Standard Maturity Requirements</li>
+  </ul>
+  and gain around 75% coverage of both.
+""" .
+
+ns1:ApplicationHardening a ns1:SubDimension ;
+    rdfs:label "Application Hardening" ;
+    ns1:hasDimension ns1:Implementation .
+
+ns1:ApplicationHardeningLevel1 a ns1:Activity ;
+    rdfs:label "Application Hardening Level 1" ;
+    rdfs:comment """To tackle the security of code developed in-house, OWASP offers an extensive collection of [Cheatsheets](https://cheatsheetseries.owasp.org/) demonstrating how to implement features securely. Moreover, the Security Knowledge Framework[1] offers an extensive library of code patterns spanning several programming languages. These patterns can be used to not only jumpstart the development process, but also do so securely.
+
+[...]
+
+### Planning aka Requirements Gathering & Analysis
+The Requirements gathering process tries to answer the question: _"What is the system going to do?"_ At this stage, the [SAMM project](https://owaspsamm.org/model/) offers 3 distinct maturity levels covering both [in-house](https://owaspsamm.org/model/design/security-requirements/stream-a/) software development and [third party](https://owaspsamm.org/model/design/security-requirements/stream-b/) supplier security.
+
+![SAMM Requirements](https://github.com/OWASP/www-project-integration-standards/raw/master/writeups/owasp_in_sdlc/images/OWASP-in0.png)
+
+Organizations can use these to add solid security considerations at the start of the Software Development or Procurement process.
+
+These general security considerations can be audited by using a subsection of the ASVS controls in section V1 as a questionnaire. This process attempts to ensure that every feature has concrete security considerations.
+
+In case of internal development and if the organization maps Features to Epics, the [Security Knowledge Framework](https://securityknowledgeframework.org/) can be used to facilitate this process by leveraging its questionnaire function, shown below.
+
+Source: [OWASP Project Integration](https://raw.githubusercontent.com/OWASP/www-project-integration-standards/master/writeups/owasp_in_sdlc/index.md)
+""" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://curity.io/resources/learn/the-api-security-maturity-model/>,
+        <https://github.com/OWASP/owasp-masvs>,
+        <https://owasp.org/www-project-application-security-verification-standard/> ;
+    ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/design/security-requirements/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:ApplicationHardening ;
+    ns1:Measure """Following frameworks like the
+  <ul>
+    <li>OWASP Application Security Verification Standard Level 1</li>
+    <li>OWASP Mobile Application Security Verification Standard Level 1</li>
+  </ul>
+
+in all applications provides a good baseline.
+""" .
+
+ns1:ApplicationsAreRunningInVirtualizedEnvironments a ns1:Activity ;
+    rdfs:label "Applications are running in virtualized environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "virtual environments are not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Applications are running in a dedicated and isolated virtualized environments." .
+
+ns1:Applicationtests a ns1:SubDimension ;
+    rdfs:label "Application tests" ;
+    ns1:hasDimension ns1:TestVerification .
+
+ns1:ApprovalByReviewingAnyNewVersion a ns1:Activity ;
+    rdfs:label "Approval by reviewing any new version" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "peer review - four eyes principle is not explicitly required by ISO 27001",
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:Process ;
+    ns1:Measure "On each new version (e.g. Pull Request) of source code or infrastructure components a security peer review of the changes is performed (two eyes principle) and approval given by the reviewer." .
+
+ns1:AutomatedPrsForPatches a ns1:Activity ;
+    rdfs:label "Automated PRs for patches" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://dependabot.com/> ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-b#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:PatchManagement ;
+    ns1:Measure "Fast patching of third party component is needed. The DevOps way is to have an automated pull request for new components. This includes <ul> <li>Applications</li><li>Virtualized operating system components (e.g. container images)</li> <li>Operating Systems</li><li>Infrastructure as Code/GitOps (e.g. argocd)</li> </ul>" .
+
+ns1:Backup a ns1:Activity ;
+    rdfs:label "Backup" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Performing automated periodical backups are used. Backup before deployment can help facilitate deployments whilst testing the backup restore processes." .
+
+ns1:Build a ns1:SubDimension ;
+    rdfs:label "Build" ;
+    ns1:hasDimension ns1:BuildDeployment .
+
+ns1:BuildDeployment a ns1:Dimension ;
+    rdfs:label "Build and Deployment" .
+
+ns1:BuildingAndTestingOfArtifactsInVirtualEnvironments a ns1:Activity ;
+    rdfs:label "Building and testing of artifacts in virtual environments" ;
+    rdfs:comment """While building and testing artifacts, third party systems, application frameworks
+and 3rd party libraries are used. These might be malicious as a result of
+vulnerable libraries or because they are altered during the delivery phase.""" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://martinfowler.com/articles/continuousIntegration.html> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
+    ns1:hasSubdimension ns1:Build ;
+    ns1:Measure "Each step during within the build and testing phase is performed in a separate virtual environments, which is destroyed afterward." .
+
+ns1:CentralizedApplicationLogging a ns1:Activity ;
+    rdfs:label "Centralized application logging" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
+    ns1:hasSubdimension ns1:Logging ;
+    ns1:Measure "A centralized logging system is used and applications logs (including application exceptions) are shipped to it." .
+
+ns1:CentralizedSystemLogging a ns1:Activity ;
+    rdfs:label "Centralized system logging" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html>,
+        <https://www.rsyslog.com/> ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
+    ns1:hasSubdimension ns1:Logging ;
+    ns1:Measure "By using centralized logging logs are protected against unauthorized modification." .
+
+ns1:CheckForImageLifetime a ns1:Activity ;
+    rdfs:label "Check for image lifetime" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/SDA-SE/clusterscanner> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Check the image age of containers in production." .
+
+ns1:CheckForKnownVulnerabilities a ns1:Activity ;
+    rdfs:label "Check for known vulnerabilities" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/aquasecurity/trivy> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Check for known vulnerabilities" .
+
+ns1:CheckForMalware a ns1:Activity ;
+    rdfs:label "Check for malware" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/SDA-SE/clusterscanner> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.2.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Check for malware in components (e.g. container images, VM baseline images, libraries)." .
+
+ns1:CheckForNewImageVersion a ns1:Activity ;
+    rdfs:label "Check for new image version" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Check for new images of containers in production." .
+
+ns1:CheckingTheSourcesOfUsedLibraries a ns1:Activity ;
+    rdfs:label "Checking the sources of used libraries" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Each libraries source is checked to have a trusted source." .
+
+ns1:ConductionOfAdvancedThreatModeling a ns1:Activity ;
+    rdfs:label "Conduction of advanced threat modeling" ;
+    rdfs:comment """**Example High Maturity Scenario:**
+
+Based on a detailed threat model defined and updated through code, the team decides the following:
+
+* Local encrypted caches need to expire and auto-purged.
+* Communication channels encrypted and authenticated.
+* All secrets persisted in shared secrets store.
+* Frontend designed with permissions model integration.
+* Permissions matrix defined.
+* Input is escaped output is encoded appropriately using well established libraries.
+
+Source: OWASP Project Integration Project
+""" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://en.wikipedia.org/wiki/Whiteboard>,
+        <https://github.com/jgraph/drawio-desktop>,
+        <https://github.com/Threagile/threagile>,
+        <https://github.com/Toreon/threat-model-playbook>,
+        <https://miro.com/>,
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b/>,
+        <https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/> ;
+    ns1:hasReference "may be part of risk assessment",
+        "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:Design ;
+    ns1:Measure "Threat modeling is performed by using reviewing user stories and producing security driven data flow diagrams." .
+
+ns1:ConductionOfCollaborativeSecurityChecksWithDevelopersAndSystemAdministrators a ns1:Activity ;
+    rdfs:label "Conduction of collaborative security checks with developers and system administrators" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "Mutual review of source code is not explicitly required in ISO 27001 may be",
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.7.1> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Periodically security reviews of source code (SCA), in which security SME, developers and operations are involved, are effective at increasing the robustness of software and the security knowledge of the teams involved." .
+
+ns1:ConductionOfCollaborativeTeamSecurityChecks a ns1:Activity ;
+    rdfs:label "Conduction of collaborative team security checks" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "Mutual security testing is not explicitly required in ISO 27001 may be",
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Mutual security testing the security of other teams project enhances security awareness and knowledge." .
+
+ns1:ConductionOfSimpleThreatModelingOnBusinessLevel a ns1:Activity ;
+    rdfs:label "Conduction of simple threat modeling on business level" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "may be part of risk assessment",
+        "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:Design ;
+    ns1:Measure "Threat modeling of business functionality is performed during the product backlog creation to facilitate early detection of security defects." .
+
+ns1:ConductionOfSimpleThreatModelingOnTechnicalLevel a ns1:Activity ;
+    rdfs:label "Conduction of simple threat modeling on technical level" ;
+    rdfs:comment """# OWASP SAMM Description
+Threat modeling is a structured activity for identifying, evaluating, and managing system threats, architectural design flaws, and recommended security mitigations. It is typically done as part of the design phase or as part of a security assessment.
+
+Threat modeling is a team exercise, including product owners, architects, security champions, and security testers. At this maturity level, expose teams and stakeholders to threat modeling to increase security awareness and to create a shared vision on the security of the system.
+
+At maturity level 1, you perform threat modeling ad-hoc for high-risk applications and use simple threat checklists, such as STRIDE. Avoid lengthy workshops and overly detailed lists of low-relevant threats. Perform threat modeling iteratively to align to more iterative development paradigms. If you add new functionality to an existing application, look only into the newly added functions instead of trying to cover the entire scope. A good starting point is the existing diagrams that you annotate during discussion workshops. Always make sure to persist the outcome of a threat modeling discussion for later use.
+
+Your most important tool to start threat modeling is a whiteboard, smartboard, or a piece of paper. Aim for security awareness, a simple process, and actionable outcomes that you agree upon with your team.      Once requirements are gathered and analysis is performed, implementation specifics need to be defined. The outcome of this stage is usually a diagram outlining data flows and a general system architecture. This presents an opportunity for both threat modeling and attaching security considerations to every ticket and epic that is the outcome of this stage.
+
+Source: https://owaspsamm.org/model/design/threat-assessment/stream-b/
+# OWASP Project Integration Description
+There is some great advice on threat modeling out there *e.g.* [this](https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/) article or [this](https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling) one.
+
+A bite sized primer by Adam Shostack himself can be found [here](https://adam.shostack.org/blog/2018/03/threat-modeling-panel-at-appsec-cali-2018/).
+
+OWASP includes a short [article](https://wiki.owasp.org/index.php/Category:Threat_Modeling) on Threat Modeling along with a relevant [Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html). Moreover, if you're following OWASP SAMM, it has a short section on [Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/).
+
+There's a few projects that can help with creating Threat Models at this stage, [PyTM](https://github.com/izar/pytm) is one, [ThreatSpec](https://github.com/threatspec/threatspec) is another.
+
+> Note: _A threat model can be as simple as a data flow diagram with attack vectors on every flow and asset and equivalent remediations. An example can be found below._
+
+![Threat Model](https://github.com/OWASP/www-project-integration-standards/raw/master/writeups/owasp_in_sdlc/images/threat_model.png "Threat Model")
+
+Last, if the organizations maps Features to Epics, the Security Knowledge Framework (SKF) can be used to facilitate this process by leveraging it's questionnaire function.
+
+![SKF](https://github.com/OWASP/www-project-integration-standards/raw/master/writeups/owasp_in_sdlc/images/skf_qs.png "SKF")
+
+This practice has the side effect that it trains non-security specialists to think like attackers.
+
+The outcomes of this stage should help lay the foundation of secure design and considerations.
+
+**Example Low Maturity Scenario:**
+
+Following vague feature requirements the design includes caching data to a local unencrypted database with a hardcoded password.
+
+Remote data store access secrets are hardcoded in the configuration files. All communication between backend systems is plaintext.
+
+Frontend serves data over GraphQL as a thin layer between caching system and end user.
+
+GraphQL queries are dynamically translated to SQL, Elasticsearch and NoSQL queries. Access to data is protected with basic auth set to _1234:1234_ for development purposes.
+
+Source: OWASP Project Integration Project
+""" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://en.wikipedia.org/wiki/Whiteboard>,
+        <https://github.com/jgraph/drawio-desktop>,
+        <https://github.com/Toreon/threat-model-playbook>,
+        <https://miro.com/>,
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b/>,
+        <https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/> ;
+    ns1:hasReference "may be part of risk assessment",
+        "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:Design ;
+    ns1:Measure "Threat modeling of technical features is performed during the product sprint planning." .
+
+ns1:ConductionOfWarGames a ns1:Activity ;
+    rdfs:label "Conduction of war games" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "ware games are not explicitly required in ISO 27001 may be",
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.5> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "War Games like activities help train for incidents. Security SMEs create attack scenarios in a testing environment enabling the trainees to learn how to react in case of an incident." .
+
+ns1:Consolidation a ns1:SubDimension ;
+    rdfs:label "Consolidation" ;
+    ns1:hasDimension ns1:TestVerification .
+
+ns1:CorrelateKnownVulnerabilitiesInInfrastructureWithNewImageVersions a ns1:Activity ;
+    rdfs:label "Correlate known vulnerabilities in infrastructure with new image versions" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/future-architect/vuls> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "TODO" .
+
+ns1:CorrelationOfSecurityEvents a ns1:Activity ;
+    rdfs:label "Correlation of security events" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
+    ns1:hasSubdimension ns1:Logging ;
+    ns1:Measure "Events are correlated on one system. For example the correlation and visualization of failed login attempts combined with successful login attempts." .
+
+ns1:CoverageAnalysis a ns1:Activity ;
+    rdfs:label "Coverage analysis" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        "part of periodic review, PDCA",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#2> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Check that there are no missing paths in the application with coverage-tools." .
+
+ns1:CoverageAndControlMetrics a ns1:Activity ;
+    rdfs:label "Coverage and control metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://ht.transparencytoolkit.org/FileServer/FileServer/OLD> ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#2> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure """Usage of Coverage- and control-metrics to show the effectiveness of the security program. Coverage is the degree in
+        which a specific security control for a specific target group is applied with all resources.
+        The control degree shows the actual application of security standards and security-guidelines. Examples are gathering information on anti-virus, anti-rootkits, patch management, server configuration and vulnerability management.""" .
+
+ns1:CoverageOfClientSideDynamicComponents a ns1:Activity ;
+    rdfs:label "Coverage of client side dynamic components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Usage of a spider which executes dynamic content like JavaScript, e.g. via Selenium." .
+
+ns1:CoverageOfHiddenEndpoints a ns1:Activity ;
+    rdfs:label "Coverage of hidden endpoints" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#2> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Hidden endpoints are getting detected and included in the vulnerability scan." .
+
+ns1:CoverageOfMoreInputVectors a ns1:Activity ;
+    rdfs:label "Coverage of more input vectors" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#2> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Special parameter and special encodings are defined, so that they get fuzzed by the used vulnerability scanners." .
+
+ns1:CoverageOfSequentialOperations a ns1:Activity ;
+    rdfs:label "Coverage of sequential operations" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Sequential operations are defined and checked by the vulnerability scanner in the defined order." .
+
+ns1:CoverageOfServiceToServiceCommunication a ns1:Activity ;
+    rdfs:label "Coverage of service to service communication" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Service to service communication is dumped and checked." .
+
+ns1:CreationAndApplicationOfATestingConcept a ns1:Activity ;
+    rdfs:label "Creation and application of a testing concept" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Test-Intensity ;
+    ns1:Measure "A testing concept considering the amount of time per scan/intensity is created and applied. A dynamic analysis needs more time than a static analysis. The dynamic scan, depending on the test intensity might be performed on every commit, every night, every week or once in a month." .
+
+ns1:CreationOfAdvancedAbuseStories a ns1:Activity ;
+    rdfs:label "Creation of advanced abuse stories" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://www.owasp.org/index.php/Agile_Software_Development> ;
+    ns1:hasReference "may be part of project management",
+        "may be part of risk assessment",
+        "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.5>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.1.2> ;
+    ns1:hasSubdimension ns1:Design ;
+    ns1:Measure "Advanced abuse stories are created as part of threat modeling activities." .
+
+ns1:CreationOfSimpleAbuseStories a ns1:Activity ;
+    rdfs:label "Creation of simple abuse stories" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://www.owasp.org/index.php/Agile_Software_Development> ;
+    ns1:hasReference "may be part of project management",
+        "may be part of risk assessment",
+        "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.5>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.1.2> ;
+    ns1:hasSubdimension ns1:Design ;
+    ns1:Measure "Abuse stories are created during the creation of user stories." .
+
+ns1:CreationOfThreatModelingProcessesAndStandards a ns1:Activity ;
+    rdfs:label "Creation of threat modeling processes and standards" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/Toreon/threat-model-playbook>,
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b/> ;
+    ns1:hasReference "may be part of risk assessment",
+        "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:Design ;
+    ns1:Measure "Creation of threat modeling processes and standards through the organization helps to enhance the security culture and provide more structure to the threat model exercises." .
+
+ns1:CultureOrganization a ns1:Dimension ;
+    rdfs:label "Culture and Organization" .
+
+ns1:DeactivatingOfUnneededTests a ns1:Activity ;
+    rdfs:label "Deactivating of unneeded tests" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Test-Intensity ;
+    ns1:Measure "Unneeded tests are deactivated. For example in case the service is using a Mongo database and no mysql database, the dynamic scan doesn't need to test for sql injections." .
+
+ns1:DeactivationOfUnusedMetrics a ns1:Activity ;
+    rdfs:label "Deactivation of unused metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Deactivation of unused metrics helps to free resources." .
+
+ns1:DefaultSettingsForIntensity a ns1:Activity ;
+    rdfs:label "Default settings for intensity" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Test-Intensity ;
+    ns1:Measure "The intensity of the used tools are not modified to safe time." .
+
+ns1:DefenseMetrics a ns1:Activity ;
+    rdfs:label "Defense metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.1> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure """Gathering of defense metrics like TCP/UDP sources enables to assume the geographic location of the request.
+Assuming a Kubernetes cluster with an egress-traffic filter (e.g. IP/domain based), an alert might be send out in case of every violation. For ingress-traffic, alerting might not even be considered.
+""" .
+
+ns1:DefinedBuildProcess a ns1:Activity ;
+    rdfs:label "Defined build process" ;
+    rdfs:comment """Sample evidence as an attribute in the yaml: The build process is defined in <a href="REPLACE-ME">REPLACE-ME Pipeline</a>
+in the folder <i>vars</>. Projects are using a <i>Jenkinsfile</i> to use the
+defined process.
+""" ;
+    ns1:assessment """- Show your build pipeline and an exemplary job (build + test).
+- Show that every team member has access.
+- Show that failed jobs are fixed.
+
+Credits: AppSecure-nrw [Security Belts](https://github.com/AppSecure-nrw/security-belts/)
+""" ;
+    ns1:hasImplementation <https://martinfowler.com/articles/continuousIntegration.html> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2> ;
+    ns1:hasSubdimension ns1:Build ;
+    ns1:Measure "A well defined build process lowers the possibility of errors during the build process." .
+
+ns1:DefinedDecommissioningProcess a ns1:Activity ;
+    rdfs:label "Defined decommissioning process" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/operational-management/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-11.2.7> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "By having a clear decommissioning process, applicaitons not used are not running anymore and can therefore not be explointed." .
+
+ns1:DefinedDeploymentProcess a ns1:Activity ;
+    rdfs:label "Defined deployment process" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/moby/moby>,
+        <https://martinfowler.com/articles/continuousIntegration.html> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "A defined deployment process significantly lowers the likelihood of errors during the deployment phase." .
+
+ns1:DefinitionOfAChangeManagementProcess a ns1:Activity ;
+    rdfs:label "Definition of a change management process" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2> ;
+    ns1:hasSubdimension ns1:Process ;
+    ns1:Measure "Each change of a system is automatically recorded and adequately logged." .
+
+ns1:DefinitionOfQualityGates a ns1:Activity ;
+    rdfs:label "Definition of quality gates" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/implementation/defect-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure """Quality gates for found vulnerabilities are defined.
+In the beginning it is important to not overload the security analyst,
+therefore the recommendation
+is to start with alerting of high critical vulnerabilities.""" .
+
+ns1:DefinitionOfSimpleBcdrPracticesForCriticalComponents a ns1:Activity ;
+    rdfs:label "Definition of simple BCDR practices for critical components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.1.1> ;
+    ns1:hasSubdimension ns1:Process ;
+    ns1:Measure "By understanding and documenting a business continuity and disaster recovery (BCDR) plan, the overall availability of systems and applications is increased. Success factors like responsibilities, Service Level Agreements, Recovery Point Objectives, Recovery Time Objectives or Failover must be fully documented and understood." .
+
+ns1:Deployment a ns1:SubDimension ;
+    rdfs:label "Deployment" ;
+    ns1:hasDimension ns1:BuildDeployment .
+
+ns1:Design a ns1:SubDimension ;
+    rdfs:label "Design" ;
+    ns1:hasDimension ns1:CultureOrganization .
+
+ns1:DevelopmentSourceControl a ns1:SubDimension ;
+    rdfs:label "Development and Source Control" ;
+    ns1:hasDimension ns1:Implementation .
+
+ns1:Dynamicdepthforapplications a ns1:SubDimension ;
+    rdfs:label "Dynamic depth for applications" ;
+    ns1:hasDimension ns1:TestVerification .
+
+ns1:Dynamicdepthforinfrastructure a ns1:SubDimension ;
+    rdfs:label "Dynamic depth for infrastructure" ;
+    ns1:hasDimension ns1:TestVerification .
+
+ns1:EachTeamHasASecurityChampion a ns1:Activity ;
+    rdfs:label "Each team has a security champion" ;
+    rdfs:comment """Implement a program where each software development team has a member considered a “Security Champion” who is the liaison between Information Security and developers. Depending on the size and structure of the team the “Security Champion” may be a software developer, tester, or a product manager. The “Security Champion” has a set number of hours per week for Information Security related activities. They participate in periodic briefings to increase awareness and expertise in different security disciplines. “Security Champions” have additional training to help develop these roles as Software Security subject-matter experts. You may need to customize the way you create and support “Security Champions” for cultural reasons.
+
+The goals of the position are to increase effectiveness and efficiency of application security and compliance and to strengthen the relationship between various teams and Information Security. To achieve these objectives, “Security Champions” assist with researching, verifying, and prioritizing security and compliance related software defects. They are involved in all Risk Assessments, Threat Assessments, and Architectural Reviews to help identify opportunities to remediate security defects by making the architecture of the application more resilient and reducing the attack threat surface.
+Source: [OWASP SAMM](https://owaspsamm.org/model/governance/education-and-guidance/stream-b/)
+""" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/c0rdis/security-champions-playbook> ;
+    ns1:hasReference "security champions are missing in ISO 27001 most likely",
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-b#1>,
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Each team defines an individual to be responsible for security. These individuals are often referred to as 'security champions'" .
+
+ns1:EducationGuidance a ns1:SubDimension ;
+    rdfs:label "Education and Guidance" ;
+    ns1:hasDimension ns1:CultureOrganization .
+
+ns1:EnvironmentDependingConfigurationParameters\(Secrets\) a ns1:Activity ;
+    rdfs:label "Environment depending configuration parameters (secrets)" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-b#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.5>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure """Configuration parameters are set for each environment not in the source code.
+By using encryption, it is harder to read credentials , e.g. from the file system. Also, the usage of a credential management system can help protect credentials.
+""" .
+
+ns1:ExclusionOfSourceCodeDuplicates a ns1:Activity ;
+    rdfs:label "Exclusion of source code duplicates" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Automatic Detection and manual removal of duplicates in source code." .
+
+ns1:FilterOutgoingTraffic a ns1:Activity ;
+    rdfs:label "Filter outgoing traffic" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "virtual environments are not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Having a whitelist and explicitly allowing egress traffic provides the ability to stop unauthorized data leakage." .
+
+ns1:FullCoverageOfApp.HardeningLevel3 a ns1:Activity ;
+    rdfs:label "Full Coverage of App. Hardening Level 3" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/OWASP/owasp-masvs>,
+        <https://owasp.org/www-project-application-security-verification-standard/> ;
+    ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/design/security-requirements/stream-a#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:ApplicationHardening ;
+    ns1:Measure """Following frameworks like the
+  <ul>
+    <li>OWASP Application Security Verification Standard Level 3</li>
+    <li>OWASP Mobile Application Security Verification Standard Maturity Requirements</li>
+  </ul>
+  and gain around 95% coverage of both.
+""" .
+
+ns1:GroupingOfMetrics a ns1:Activity ;
+    rdfs:label "Grouping of metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Meaningful grouping of metrics helps to speed up analysis." .
+
+ns1:HandoverOfConfidentialParameters a ns1:Activity ;
+    rdfs:label "Handover of confidential parameters" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-10.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.1.3> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "By using encryption, it is harder to read credentials , e.g. from the file system. Also, the usage of a credential management system can help protect credentials." .
+
+ns1:HighCoverageOfSecurityRelatedModuleAndIntegrationTests a ns1:Activity ;
+    rdfs:label "High coverage of security related module and integration tests" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Applicationtests ;
+    ns1:Measure "Implementation of security related tests via unit tests and integration tests. Including the test of libraries, in case the are not tested already." .
+
+ns1:HighTestIntensity a ns1:Activity ;
+    rdfs:label "High test intensity" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Test-Intensity ;
+    ns1:Measure "A deep scan with high test intensity and a low confidence threshold is performed." .
+
+ns1:ImmutableInfrastructure a ns1:Activity ;
+    rdfs:label "Immutable Infrastructure" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.2.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Redundancies in the IT systems" .
+
+ns1:Implementation a ns1:Dimension ;
+    rdfs:label "Implementation" .
+
+ns1:InformationGathering a ns1:Dimension ;
+    rdfs:label "Information Gathering" .
+
+ns1:InformationSecurityTargetsAreCommunicated a ns1:Activity ;
+    rdfs:label "Information security targets are communicated" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-5.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.1> ;
+    ns1:hasSubdimension ns1:Design ;
+    ns1:Measure "Transparent and timely communication of the security targets by senior management is essential to ensure teams' buy-in and support." .
+
+ns1:InfrastructureAsCode a ns1:Activity ;
+    rdfs:label "Infrastructure as Code" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.2> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Systems are setup by code. A full environment can be provisioned. In addition, software like Jenkins 2 can be setup and configured in in code too. The code should be stored in a version control system." .
+
+ns1:InfrastructureHardening a ns1:SubDimension ;
+    rdfs:label "Infrastructure Hardening" ;
+    ns1:hasDimension ns1:Implementation .
+
+ns1:IntegrationOfVulnerabilityIssuesIntoTheDevelopmentProcess a ns1:Activity ;
+    rdfs:label "Integration of vulnerability issues into the development process" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/implementation/defect-management/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.5>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.6> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "Vulnerabilities are tracked in the teams issue system (e.g. jira)." .
+
+ns1:InventoryOfDependencies a ns1:Activity ;
+    rdfs:label "Inventory of dependencies" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/DependencyTrack/dependency-track> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "A documented inventory of dependencies used in images and containers exists." .
+
+ns1:InventoryOfRunningArtifacts a ns1:Activity ;
+    rdfs:label "Inventory of running artifacts" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "A documented inventory or a possibility to gather the needed information." .
+
+ns1:IsolatedNetworksForVirtualEnvironments a ns1:Activity ;
+    rdfs:label "Isolated networks for virtual environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "virtual environments are not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "The communication between virtual environments is controlled and regulated." .
+
+ns1:LimitationOfSystemCallsInVirtualEnvironments a ns1:Activity ;
+    rdfs:label "Limitation of system calls in virtual environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "System calls in virtual environments like docker are audited and limited." .
+
+ns1:LoadTests a ns1:Activity ;
+    rdfs:label "Load tests" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforinfrastructure ;
+    ns1:Measure "Load test against the production system or a production near system is performed." .
+
+ns1:LocalDevelopmentSecurityChecksPerformed a ns1:Activity ;
+    rdfs:label "Local development security checks performed" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin>,
+        <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
+        <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
+    ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-1#A>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure """Integration of quality and linting plugins with interactive development environment (IDEs).
+""" .
+
+ns1:Logging a ns1:SubDimension ;
+    rdfs:label "Logging" ;
+    ns1:hasDimension ns1:InformationGathering .
+
+ns1:LoggingOfSecurityEvents a ns1:Activity ;
+    rdfs:label "Logging of security events" ;
+    rdfs:comment """Implement logging of security relevant events. The following events tend to be security relevant:
+  - successful/failed login/logout
+  - creation, change, and deletion of users
+  - errors during input validation and output creation
+  - exceptions and errors with security in their name
+  - transactions of value (e.g., financial transactions, costly operations)
+  - :unicorn: (special things of your application)
+""" ;
+    ns1:assessment """- Show which events are logged.
+- Show a test for one event logging.
+""" ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html>,
+        <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html> ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
+    ns1:hasSubdimension ns1:Logging ;
+    ns1:Measure "Security-relevant events like login/logout or creation, change, deletion of users should be logged." .
+
+ns1:MetricsAreCombinedWithTests a ns1:Activity ;
+    rdfs:label "Metrics are combined with tests" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#2> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Metrics during tests helps to identify programming errors." .
+
+ns1:Microservice-Architecture a ns1:Activity ;
+    rdfs:label "Microservice-Architecture" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "A microservice-architecture helps to have small components, which are more easy to test." .
+
+ns1:Monitoring a ns1:SubDimension ;
+    rdfs:label "Monitoring" ;
+    ns1:hasDimension ns1:InformationGathering .
+
+ns1:MonitoringOfCosts a ns1:Activity ;
+    rdfs:label "Monitoring of costs" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Implement cost budgets" .
+
+ns1:NightlyBuildOfImages\(BaseImages\) a ns1:Activity ;
+    rdfs:label "Nightly build of images (base images)" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-b#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:PatchManagement ;
+    ns1:Measure "Custom base images are getting build at least nightly. In case the packages in the base image e.g. <i>centos</i> has changed, the build server triggers the build of depending images." .
+
+ns1:PatchManagement a ns1:SubDimension ;
+    rdfs:label "Patch Management" ;
+    ns1:hasDimension ns1:BuildDeployment .
+
+ns1:PiiLoggingConcept a ns1:Activity ;
+    rdfs:label "PII logging concept" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html>,
+        <https://www.rsyslog.com/> ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-18.1.1> ;
+    ns1:hasSubdimension ns1:Logging ;
+    ns1:Measure "A concept how to log PII is documented and applied." .
+
+ns1:PinningOfArtifacts a ns1:Activity ;
+    rdfs:label "Pinning of artifacts" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
+    ns1:hasSubdimension ns1:Build ;
+    ns1:Measure "Pinning of artifacts ensure that changes are performed only when intended." .
+
+ns1:Pre-CommitChecksAndValidations a ns1:Activity ;
+    rdfs:label "Pre-Commit checks and validations" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/devsecops-controls#plan-and-develop>,
+        <https://www.synopsys.com/blogs/software-security/devsecops-pipeline-checklist/> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-1#A> ;
+    ns1:hasSubdimension ns1:DevelopmentSourceControl ;
+    ns1:Measure """Implement pre-commit validations to prevent secrets & other security issues being commit to source code.
+""" .
+
+ns1:PreventionOfUnauthorizedInstallation a ns1:Activity ;
+    rdfs:label "Prevention of unauthorized installation" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.5.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Process ;
+    ns1:Measure "Components must be whitelisted. Regular scans on the docker infrastructure (e.g. cluster) need to be performed, to verify that only standardized base images are used." .
+
+ns1:Process a ns1:SubDimension ;
+    rdfs:label "Process" ;
+    ns1:hasDimension ns1:CultureOrganization .
+
+ns1:ProductionNearEnvironmentsAreUsedByDevelopers a ns1:Activity ;
+    rdfs:label "Production near environments are used by developers" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.2.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Usage of infrastructure as code helps to create a production near environment. The developer needs to be trained in order to setup a local development environment. In addition, it should be possible to create production like test data. Often personal identifiable information is anonymized in order to comply with data protection laws." .
+
+ns1:ReductionOfTheAttackSurface a ns1:Activity ;
+    rdfs:label "Reduction of the attack surface" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://getfedora.org/coreos>,
+        <https://github.com/GoogleContainerTools/distroless> ;
+    ns1:hasReference "hardening is missing in ISO 27001",
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:PatchManagement ;
+    ns1:Measure "Removal of unneeded components, dependencies, files or file access rights. For container images the usage of distroless images is recommended." .
+
+ns1:RegularSecurityTrainingForAll a ns1:Activity ;
+    rdfs:label "Regular security training for all" ;
+    rdfs:comment """Conduct security awareness training for all roles currently involved in the management, development, testing, or auditing of the software. The goal is to increase the awareness of application security threats and risks, security best practices, and secure software design principles. Develop training internally or procure it externally. Ideally, deliver training in person so participants can have discussions as a team, but Computer-Based Training (CBT) is also an option.
+
+Course content should include a range of topics relevant to application security and privacy, while remaining accessible to a non-technical audience. Suitable concepts are secure design principles including Least Privilege, Defense-in-Depth, Fail Secure (Safe), Complete Mediation, Session Management, Open Design, and Psychological Acceptability. Additionally, the training should include references to any organization-wide standards, policies, and procedures defined to improve application security. The OWASP Top 10 vulnerabilities should be covered at a high level.
+
+Training is mandatory for all employees and contractors involved with software development and includes an auditable sign-off to demonstrate compliance. Consider incorporating innovative ways of delivery (such as gamification) to maximize its effectiveness and combat desensitization.
+
+[Source: OWASP SAMM 2](https://owaspsamm.org/model/governance/education-and-guidance/stream-a/)
+""" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org/>,
+        <https://github.com/bkimminich/juice-shop> ;
+    ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Provide security awareness training for all internal personnel involved in software development on a regular basis like twice in a year for 1-3 days." .
+
+ns1:RegularSecurityTrainingForExternals a ns1:Activity ;
+    rdfs:label "Regular security training for externals" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org/>,
+        <https://github.com/bkimminich/juice-shop> ;
+    ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Provide security awareness training for all personnel including externals involved in software development on a regular basis." .
+
+ns1:RegularSecurityTrainingOfSecurityChampions a ns1:Activity ;
+    rdfs:label "Regular security training of security champions" ;
+    rdfs:comment "" ;
+    ns1:assessment """- Process Documentation: TODO
+- Training Content: TOODO
+""" ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org/> ;
+    ns1:hasReference "security champions are missing in ISO 27001",
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Regular security training of security champions." .
+
+ns1:RegularTests a ns1:Activity ;
+    rdfs:label "Regular tests" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.9> ;
+    ns1:hasSubdimension ns1:Test-Intensity ;
+    ns1:Measure "On each push and/or at given intervals automatic security tests are performed." .
+
+ns1:ReproducibleDefectTickets a ns1:Activity ;
+    rdfs:label "Reproducible defect tickets" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "Vulnerabilities include the test procedure to give the staff from operations and development the ability to reproduce vulnerabilities. This enhances the understanding of vulnerabilities and therefore the fix have a higher quality." .
+
+ns1:RewardOfGoodCommunication a ns1:Activity ;
+    rdfs:label "Reward of good communication" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/wurstbrot/security-pins>,
+        <https://owaspsamm.org/presentations/OWASP_Top_10_Maturity_Categories_for_Security_Champions.pptx> ;
+    ns1:hasReference "interestingly enough A7.2.3 is requiring a process to handle misconduct but nothing to promote good behavior.",
+        "not required by ISO 27001",
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-b#1> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Good communication and transparency encourages cross-organizational support. Gamification of security is also known to help, examples include T-Shirts, mugs, cups, giftcards and 'High-Fives'." .
+
+ns1:RoleBasedAuthenticationAndAuthorization a ns1:Activity ;
+    rdfs:label "Role based authentication and authorization" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "The usage of a (role based) access control helps to restrict system access to authorized users." .
+
+ns1:RollingUpdateOnDeployment a ns1:Activity ;
+    rdfs:label "Rolling update on deployment" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/moby/moby> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.5.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.2.1> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "A deployment without downtime is performed*." .
+
+ns1:SameArtifactForEnvironments a ns1:Activity ;
+    rdfs:label "Same artifact for environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/moby/moby> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.3.1> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "Building an artifact once and deploying it to different environments means that only tested artifacts are allowed to reach the production environment" .
+
+ns1:SbomOfComponents a ns1:Activity ;
+    rdfs:label "SBOM of components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2> ;
+    ns1:hasSubdimension ns1:Build ;
+    ns1:Measure "Creation of an SBOM of components (e.g. application and container image content) during build." .
+
+ns1:ScreensWithMetricVisualization a ns1:Activity ;
+    rdfs:label "Screens with metric visualization" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.5> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "By having an internal accessible screen with a security related dashboards helps to visualize incidents." .
+
+ns1:Security-Lessoned-Learned a ns1:Activity ;
+    rdfs:label "Security-Lessoned-Learned" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.6> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Running a 'lessons learned' session after an incident helps drive continuous improvement. Regular meetings with security champions are a good place to share and discuss lessons learned." .
+
+ns1:SecurityCodeReview a ns1:Activity ;
+    rdfs:label "Security code review" ;
+    rdfs:comment """### Benefits
+- New vulnerabilities may be found before reaching production.
+- Old vulnerabilities are found and fixed.
+""" ;
+    ns1:assessment """- Present the performed reviews (including participants, findings, consequences) and assess whether it is reasonable.
+""" ;
+    ns1:hasImplementation <https://cwe.mitre.org/top25/archive/2020/2020_cwe_top25.html> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-b#1> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure """The following areas of code tend to have a high-risk of containing security vulnerabilities:
+  - Crypto implementations / usage
+  - Parser, unparser
+  - System configuration
+  - Authentication, authorization
+  - Session management
+  - Request throttling
+  - :unicorn: (self-developed code, only used in that one software)
+""" .
+
+ns1:SecurityConsultingOnRequest a ns1:Activity ;
+    rdfs:label "Security consulting on request" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org/> ;
+    ns1:hasReference "security consulting is missing in ISO 27001 may be",
+        <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.5> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure "Security consulting to teams is given on request. The security consultants can be internal or external." .
+
+ns1:SecurityIntegrationTestsForImportantComponents a ns1:Activity ;
+    rdfs:label "Security integration tests for important components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Applicationtests ;
+    ns1:Measure "Implementation of essential security related integration tests. For example for authentication and authorization." .
+
+ns1:SecurityUnitTestsForImportantComponents a ns1:Activity ;
+    rdfs:label "Security unit tests for important components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://karma-runner.github.io> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Applicationtests ;
+    ns1:Measure "Usage of unit tests to test important security related features like authentication and authorization." .
+
+ns1:SigningOfArtifacts a ns1:Activity ;
+    rdfs:label "Signing of artifacts" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://docs.docker.com/notary/getting_started/>,
+        <https://in-toto.github.io/> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
+    ns1:hasSubdimension ns1:Build ;
+    ns1:Measure "Digitally signing artifacts for all steps during the build and especially docker images, helps to ensure their integrity." .
+
+ns1:SigningOfCode a ns1:Activity ;
+    rdfs:label "Signing of code" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule>,
+        <https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
+    ns1:hasSubdimension ns1:Build ;
+    ns1:Measure "Digitally signing commits helps to prevent unauthorized manipulation of source code." .
+
+ns1:SimpleAccessControlForSystems a ns1:Activity ;
+    rdfs:label "Simple access control for systems" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "All internal systems are using simple authentication" .
+
+ns1:SimpleApplicationMetrics a ns1:Activity ;
+    rdfs:label "Simple application metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Gathering of application metrics helps to identify incidents like brute force attacks, login/logout." .
+
+ns1:SimpleBudgetMetrics a ns1:Activity ;
+    rdfs:label "Simple budget metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Cloud providers often provide insight into budgets. A threshold and alarming for the budget is set." .
+
+ns1:SimpleFalsePositiveTreatment a ns1:Activity ;
+    rdfs:label "Simple false positive treatment" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
+        <https://github.com/faloker/purify/> ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/implementation/defect-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.6> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "False positives are suppressed so they will not show up on the next tests again. Most security tools have the possibility to suppress false positives. A Vulnerability Management System might be used." .
+
+ns1:SimpleMobHacking a ns1:Activity ;
+    rdfs:label "Simple mob hacking" ;
+    rdfs:comment """### Guidelines for your simple mob hacking session
+- All exploits happen via the user interface.
+- No need for security/hacking tools.
+- No need for deep technical or security knowledge.
+- Use an insecure training app, e.g., [DVWA](https://dvwa.co.uk/) or [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/).
+- Encourage active participation, e.g., use small groups.
+- Allow enough time for everyone to run at least one exploit.
+
+### Benefits
+- The team gets an idea of how exploits can look like and how easy applications can be attacked.
+- The team understands functional correct working software can be highly insecure and easy to exploit.
+""" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/bkimminich/juice-shop> ;
+    ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
+    ns1:hasSubdimension ns1:EducationGuidance ;
+    ns1:Measure """Participate with your whole team in a simple mob hacking session organized by the Security Champion Guild.
+In the session the guild presents a vulnerable application and together you look at possible exploits.
+Just like in mob programming there is one driver and several navigators.
+""" .
+
+ns1:SimpleScan a ns1:Activity ;
+    rdfs:label "Simple Scan" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/zaproxy/zaproxy> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "A simple scan is performed to get a security baseline. In case the test is done in under 10 minutes, it should be part of the build and deployment process." .
+
+ns1:SimpleSystemMetrics a ns1:Activity ;
+    rdfs:label "Simple system metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment """Are system metrics gathered?
+""" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Gathering of system metrics helps to identify incidents and specially bottlenecks like in CPU usage, memory usage and hard disk usage." .
+
+ns1:SimpleVisualizationOfDefects a ns1:Activity ;
+    rdfs:label "Simple visualization of defects" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
+        <https://github.com/faloker/purify/> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "Vulnerabilities are simple visualized." .
+
+ns1:SmokeTest a ns1:Activity ;
+    rdfs:label "Smoke Test" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-b#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Applicationtests ;
+    ns1:Measure "Integration tests are performed against the production environment after each deployment." .
+
+ns1:SourceControlProtection a ns1:Activity ;
+    rdfs:label "Source Control Protection" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches>,
+        <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule>,
+        <https://docs.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops> ;
+    ns1:hasReference "peer review - four eyes principle is not explicitly required by ISO 27001",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:DevelopmentSourceControl ;
+    ns1:Measure "Enabled protections on the source code management system preventing committed directly to an important branch." .
+
+ns1:StaticAnalysisForAllSelfWrittenComponents a ns1:Activity ;
+    rdfs:label "Static analysis for all self written components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin>,
+        <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
+        <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Usage of static analysis tools for all parts of the middleware and frontend. Static analysis uses for example string matching algorithms and/or dataflow analysis." .
+
+ns1:StaticAnalysisForImportantClientSideComponents a ns1:Activity ;
+    rdfs:label "Static analysis for important client side components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin>,
+        <https://github.com/ing-bank/bdd-mobile-security-automation-framework>,
+        <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
+        <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Usage of static analysis tools for important parts of the frontend are used. Static analysis uses for example string matching algorithms and/or dataflow analysis." .
+
+ns1:StaticAnalysisForImportantServerSideComponents a ns1:Activity ;
+    rdfs:label "Static analysis for important server side components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin>,
+        <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
+        <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Usage of static analysis tools for important parts of the middleware are used. Static analysis uses for example string matching algorithms and/or dataflow analysis." .
+
+ns1:Staticdepthforapplications a ns1:SubDimension ;
+    rdfs:label "Static depth for applications" ;
+    ns1:hasDimension ns1:TestVerification .
+
+ns1:Staticdepthforinfrastructure a ns1:SubDimension ;
+    rdfs:label "Static depth for infrastructure" ;
+    ns1:hasDimension ns1:TestVerification .
+
+ns1:StoredSecrets a ns1:Activity ;
+    rdfs:label "Stored Secrets" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/dxa4481/truffleHog>,
+        <https://github.com/nccgroup/go-pillage-registries> ;
+    ns1:hasReference "vcs usage is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-10.1.2> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Test for secrets in code, container images and history" .
+
+ns1:StylisticAnalysis a ns1:Activity ;
+    rdfs:label "Stylistic analysis" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://blog.sonarsource.com/in-depth-linting-of-your-typescript-while-coding>,
+        <https://www.meziantou.net/how-to-enforce-a-consistent-coding-style-in-your-projects.htm> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Analysis of compliance to style guides of the source code ensures that source code indenting rules are met." .
+
+ns1:TargetedAlerting a ns1:Activity ;
+    rdfs:label "Targeted alerting" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.5> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "By the definition of target groups for incidents people are only getting alarms for incidents they are in charge for." .
+
+ns1:Test-Intensity a ns1:SubDimension ;
+    rdfs:label "Test-Intensity" ;
+    ns1:hasDimension ns1:TestVerification .
+
+ns1:TestClusterDeploymentResources a ns1:Activity ;
+    rdfs:label "Test cluster deployment resources" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://kubesec.io> ;
+    ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Test the deployment configuration for virtualized environments for unsecured configurations." .
+
+ns1:TestForExposedServices a ns1:Activity ;
+    rdfs:label "Test for exposed services" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/OWASP/Amass> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforinfrastructure ;
+    ns1:Measure "With the help of tools the network configuration of unintentional exposed cluster(s) are tested. To identify clusters, all subdomains might need to be identified with a tool like OWASP Amass to perform portscans based o the result." .
+
+ns1:TestForUnusedResources a ns1:Activity ;
+    rdfs:label "Test for unused Resources" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/yogeshkk/K8sPurger> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforinfrastructure ;
+    ns1:Measure "Test for unused resources helps to identify unused resources." .
+
+ns1:TestNetworkSegmentation a ns1:Activity ;
+    rdfs:label "Test network segmentation" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/controlplaneio/netassert> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforinfrastructure ;
+    ns1:Measure "Cluster internal test needs to be performed. Integration of fine granulated network segmentation (also between pods in the same namespace)." .
+
+ns1:TestOfClientSideComponentsWithKnownVulnerabilities a ns1:Activity ;
+    rdfs:label "Test of client side components with known vulnerabilities" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://docs.npmjs.com/cli/audit>,
+        <https://github.com/RetireJS/retire.js/> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Tests for known vulnerabilities in components of the frontend are performed." .
+
+ns1:TestOfInfrastructureComponentsForKnownVulnerabilities a ns1:Activity ;
+    rdfs:label "Test of infrastructure components for known vulnerabilities" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/future-architect/vuls> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Test for known vulnerabilities in infrastructure components. Often, the only way to respond to known vulnerabilities in operating system packages is to accept the risk and wait for a patch. As the patch needs to be applied fast when it is available, this activity depends on 'Usage of a maximum life for images'." .
+
+ns1:TestOfServerSideComponentsWithKnownVulnerabilities a ns1:Activity ;
+    rdfs:label "Test of server side components with known vulnerabilities" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Tests for known vulnerabilities in server side components (e.g. backend/middleware) are performed." .
+
+ns1:TestOfTheConfigurationOfCloudEnvironments a ns1:Activity ;
+    rdfs:label "Test of the configuration of cloud environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/aquasecurity/kube-hunter>,
+        <https://github.com/armosec/kubescape> ;
+    ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforinfrastructure ;
+    ns1:Measure "With the help of tools the configuration of virtual environments are tested." .
+
+ns1:TestOfVirtualizedEnvironments a ns1:Activity ;
+    rdfs:label "Test of virtualized environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/SDA-SE/clusterscanner>,
+        <https://github.com/wagoodman/dive> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Test virtualized environments for unsecured configurations." .
+
+ns1:TestTheCloudConfiguration a ns1:Activity ;
+    rdfs:label "Test the cloud configuration" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/aquasecurity/kube-bench> ;
+    ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "With the help of tools, the configuration of virtual environments are tested." .
+
+ns1:TestTheDefinitionOfVirtualizedEnvironments a ns1:Activity ;
+    rdfs:label "Test the definition of virtualized environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/hadolint/hadolint>,
+        <https://github.com/replicatedhq/dockerfilelint>,
+        <https://github.com/zegl/kube-score> ;
+    ns1:hasReference "system hardening, virtual environments are not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Staticdepthforinfrastructure ;
+    ns1:Measure "Test the definition of virtualized environments for unsecured configurations." .
+
+ns1:TestVerification a ns1:Dimension ;
+    rdfs:label "Test and Verification" .
+
+ns1:TheEnvironmentIsHardened a ns1:Activity ;
+    rdfs:label "The environment is hardened" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://attack.mitre.org/matrices/enterprise/cloud/>,
+        <https://thenewstack.io/defend-the-core-kubernetes-security-at-every-layer/>,
+        <https://www.cisecurity.org/cis-benchmarks/>,
+        <https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/> ;
+    ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Harden cluster environments according to best practices. Level 1 and partially level 2 from hardening practices like 'CIS Kubernetes Bench for Security' should considered." .
+
+ns1:TreatmentOfAllDefects a ns1:Activity ;
+    rdfs:label "Treatment of all defects" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "All vulnerabilities are added to the quality gate." .
+
+ns1:TreatmentOfDefectsWithSeverityHighOrHigher a ns1:Activity ;
+    rdfs:label "Treatment of defects with severity high or higher" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "Vulnerabilities with severity high or higher are added to the quality gate." .
+
+ns1:TreatmentOfDefectsWithSeverityMiddle a ns1:Activity ;
+    rdfs:label "Treatment of defects with severity middle" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "Vulnerabilities with severity middle are added to the quality gate." .
+
+ns1:UsageOfAChaosMonkey a ns1:Activity ;
+    rdfs:label "Usage of a chaos monkey" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.1.3> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "A randomized periodically shutdown of systems makes sure, that nobody will perform manual changes to a system." .
+
+ns1:UsageOfAMaximumLifetimeForImages a ns1:Activity ;
+    rdfs:label "Usage of a maximum lifetime for images" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-b#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:PatchManagement ;
+    ns1:Measure "A short maximum lifetime for images is defined, e.g. 30 days. The project images, based on the nightly builded images, are deployed at leased once within the defined lifetime. Third Party images are deployed at leased once within the defined lifetime." .
+
+ns1:UsageOfAnSecurityAccount a ns1:Activity ;
+    rdfs:label "Usage of an security account" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-10.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Usage of a seperate account dedicated for security activities." .
+
+ns1:UsageOfAShortMaximumLifetimeForImages a ns1:Activity ;
+    rdfs:label "Usage of a short maximum lifetime for images" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
+    ns1:hasSubdimension ns1:PatchManagement ;
+    ns1:Measure """A good practice is to perform the build and deployment daily or even just-in-time, when a new component (e.g. package) for the image is available.
+""" .
+
+ns1:UsageOfAVulnerabilityManagementSystem a ns1:Activity ;
+    rdfs:label "Usage of a vulnerability management system" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
+        <https://github.com/faloker/purify/> ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.5>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.6> ;
+    ns1:hasSubdimension ns1:Consolidation ;
+    ns1:Measure "Aggregation of vulnerabilities in one tool reduce the workload to mark false positives." .
+
+ns1:UsageOfDifferentRoles a ns1:Activity ;
+    rdfs:label "Usage of different roles" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://www.zaproxy.org/docs/desktop/addons/zest/> ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Integration of authentication with all roles used in the service." .
+
+ns1:UsageOfEdgeEncryptionAtTransit a ns1:Activity ;
+    rdfs:label "Usage of edge encryption at transit" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-10.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "By using encryption at the edge of traffic in transit, it is impossible or at least harder to sniff credentials beeing outside of the organization." .
+
+ns1:UsageOfEncryptionAtRest a ns1:Activity ;
+    rdfs:label "Usage of encryption at rest" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-10.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "By using encryption at trdt, it is impossible or at least harder to to read information." .
+
+ns1:UsageOfFeatureToggles a ns1:Activity ;
+    rdfs:label "Usage of feature toggles" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/moby/moby> ;
+    ns1:hasReference <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.9>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.3.1> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "Usage of environment independent configuration parameter, called feature toggles, helps to enhance the test coverage. Only what has been tested, goes to production." .
+
+ns1:UsageOfInternalEncryptionAtTansit a ns1:Activity ;
+    rdfs:label "Usage of internal encryption at tansit" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-b#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-10.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "By using encryption internally, e.g. inside of a cluster, it is impossible or at least harder to sniff credentials." .
+
+ns1:UsageOfMultipleAnalyzers a ns1:Activity ;
+    rdfs:label "Usage of multiple analyzers" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Usage of multiple static tools to find more vulnerabilities." .
+
+ns1:UsageOfMultipleScanners a ns1:Activity ;
+    rdfs:label "Usage of multiple scanners" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/secureCodeBox/secureCodeBox> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
+    ns1:Measure "Usage of multiple spiders and scanner enhance the coverage and the vulnerabilities." .
+
+ns1:UsageOfSecurityByDefaultForComponents a ns1:Activity ;
+    rdfs:label "Usage of security by default for components" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "Hardening of components is important, specially for image on which other teams base on. Hardening should be performed on the operation system and on the services inside (e.g. Nginx or a Java-Application)." .
+
+ns1:UsageOfTestAndProductionEnvironments a ns1:Activity ;
+    rdfs:label "Usage of test and production environments" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.4>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.2.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "A production and a production like environment is used" .
+
+ns1:UsageOfTrustedImages a ns1:Activity ;
+    rdfs:label "Usage of trusted images" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-15.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-15.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-15.1.3> ;
+    ns1:hasSubdimension ns1:Deployment ;
+    ns1:Measure "Create image assessment criteria, perform an evaluation of images and create a whitelist of artifacts/container images/virtual machine images." .
+
+ns1:Versioning a ns1:Activity ;
+    rdfs:label "Versioning" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2> ;
+    ns1:hasSubdimension ns1:DevelopmentSourceControl ;
+    ns1:Measure "versioning of artifacts related to production environments. For example Jenkins configuration, docker images, (system provisioning) code." .
+
+ns1:VirtualEnvironmentsAreLimited a ns1:Activity ;
+    rdfs:label "Virtual environments are limited" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "virtual environments are not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.2.1> ;
+    ns1:hasSubdimension ns1:InfrastructureHardening ;
+    ns1:Measure "All virtual environments are using resource limits on hard disks, memory and CPU" .
+
+ns1:VisualizedLogging a ns1:Activity ;
+    rdfs:label "Visualized logging" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
+    ns1:hasSubdimension ns1:Logging ;
+    ns1:Measure "Protocols are visualized in a simple to use real time monitoring system. The GUI gives the ability to search for special attributes in the protocol." .
+
+ns1:VisualizedMetrics a ns1:Activity ;
+    rdfs:label "Visualized metrics" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
+    ns1:hasSubdimension ns1:Monitoring ;
+    ns1:Measure "Metrics are visualized in real time in a user friendly way." .
+
+ns1:WeakPasswordTest a ns1:Activity ;
+    rdfs:label "Weak password test" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.3> ;
+    ns1:hasSubdimension ns1:Dynamicdepthforinfrastructure ;
+    ns1:Measure "Automatic brute force attacks are performed. Specially the usage of standard accounts like 'admin' and employee user-ids is recommended." .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
