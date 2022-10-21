@@ -24,13 +24,30 @@
         font-size: 14px;
         border: solid 1px;
       }
+      .result {
+        width: 100%;
+      }
+      .dataframe {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
+    <h1>Client-side sparql endpoint. Query the security knowledge graph.</h1>
+
+    <div style="float: left; width: 50%; height: 200px; border: solid 2px">
+      <h2>Sample queries</h2>
+      <ul>
+        <li><a id="query1">Query 1</a></li>
+        <li><a id="query2">Query 1</a></li>
+        <li><a id="query3">Query 1</a></li>
+        <li><a id="query4">Query 1</a></li>
+        <li><a id="query5">Query 1</a></li>
+        <li><a id="query6">Query 1</a></li>
+      </ul>
+    </div>
     <div>
-        <h1>Client-side sparql endpoint</h1>
         <p>
-            Query the security knowledge graph.
             Default namespaces are:
       <table>
         <tr><td>skos</td><td> http//www.w3.org/2004/02/skos/core#
@@ -65,8 +82,8 @@ WHERE {
 </textarea>
     </div>
     <button id="apply" style="color: white; background-color: blue; width: 100%">Query.</button>
-    <div>
-        <pre id="query-result" style="border-color: blue">
+    <div >
+        <pre class="result" id="query-result" style="border-color: blue">
             Results.
         </pre>
     </div>
@@ -78,15 +95,6 @@ from pyodide import create_proxy
 from rdflib import Graph
 import sparql
 
-initns = {
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "dct": "http://purl.org/dc/terms/",
-        "dc": "http://purl.org/dc/elements/1.1/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "dm": "https://owasp.org/www-project-devsecops-maturity-model/",
-        "iso": "https://par-tec.github.io/security-ontologies/onto/iso#",
-    }
 
 graph = Graph()
 graph.parse("./dsomm.ttl", format="turtle")
@@ -95,16 +103,29 @@ graph.parse("./samm.ttl", format="turtle")
 
 
 def on_apply(event):
-  global code, button, graph
+  global code, graph
   text = code.value
-  ret = sparql.query(graph, text, initns)
-  Element("query-result").write(ret )
+  ret = sparql.query(graph, text, sparql.INITNS)
+  Element("query-result").write(ret)
 
+
+def create_f(query):
+  return lambda event: Element("code").write(query)
 
 code = Element("code")
 button = document.querySelector("button")
 button.addEventListener("click", create_proxy(on_apply))
 
+if True:
+  for button_id, query in sparql.QUERIES.items():
+    log.info("button_id" + button_id)
+    b = document.querySelector(f'#{button_id}')
+    if not b:
+      log.info("button not found")
+      continue
+    # log.warning("Button %r", dir(b))
+    b.innerHTML = query["label"]
+    b.addEventListener("click", create_proxy(create_f(query["query"])))
 
     </py-script>
     </body>

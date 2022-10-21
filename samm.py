@@ -69,7 +69,7 @@ def parse_maturity(g):
         hr_uri = URIRef(f"{NS_OS}maturity/{data['number']}")
         g.add((hr_uri, RDF.type, NS_OS.MaturityLevel))
         g.add((hr_uri, DCTERMS.identifier, Literal(id_)))
-        g.add((hr_uri, DCAT.seeAlso, uri))
+        g.add((hr_uri, OWL.sameAs, uri))
 
 
 def test_parse_stream():
@@ -158,7 +158,8 @@ def parse_practice(g):
 
         # Relation solver.
         if function_name := g.value(function_uri, SKOS.altLabel):
-            g.add((uri, RDFS.seeAlso, URIRef(f"{NS_OS}{function_name}/{practice_uri}")))
+            aliasURI = URIRef(f"{NS_OS}{function_name}/{practice_uri}")
+            g.add((uri, OWL.sameAs, aliasURI))
 
 
 def test_parse_activity():
@@ -237,8 +238,12 @@ def parse_activity(g):
         if stream_name := g.value(stream_uri, NS_OS.hasLetter):
             stream_suffix = f"stream-{stream_name}".lower()
             if practice_uri := g.value(stream_uri, NS_OS.hasPractice):
-                practice_url = g.value(practice_uri, RDFS.seeAlso)
-                g.add((uri, RDFS.seeAlso, URIRef(practice_url + f"/{stream_suffix}")))
+                practice_url = g.value(practice_uri, OWL.sameAs)
+                _, _, maturity, _ = f.name.replace(".yml", "").split("-")
+                alias_uri = URIRef(practice_url + f"/{stream_suffix}#{maturity}")
+                g.add((uri, OWL.sameAs, alias_uri))
+                g.add((alias_uri, RDF.type, NS_OS.Activity))
+                g.add((alias_uri, OWL.sameAs, uri))
 
 
 def test_parse_all():
