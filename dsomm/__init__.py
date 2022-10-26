@@ -2,14 +2,15 @@ import logging
 import re
 from pathlib import Path
 
+import html2text
+import pandas as pd
 import requests
 import sparql_dataframe
 import yaml
 from pandas import DataFrame, ExcelWriter
 from rdflib import DCAT, DCTERMS, SKOS, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import OWL, RDF, RDFS
-
-# from urllib.parse import quote
+from styleframe import StyleFrame, Styler, utils
 
 log = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
@@ -25,6 +26,7 @@ NS_FOAF = Namespace("http://xmlns.com/foaf/0.1/")
 NS_OS = Namespace("https://owaspsamm.org/model/")
 NS_DSOMM = Namespace("https://owasp.org/www-project-devsecops-maturity-model/")
 NS_ISO = Namespace("https://par-tec.github.io/security-ontologies/onto/iso#")
+NS_D3F = Namespace("http://d3fend.mitre.org/ontologies/d3fend.owl#")
 NS = (
     ("dct", DCTERMS),
     ("owl", OWL),
@@ -36,6 +38,7 @@ NS = (
     ("os", NS_OS),
     ("dsomm", NS_DSOMM),
     ("iso", NS_ISO),
+    ("d3f", NS_D3F),
 )
 
 
@@ -47,26 +50,6 @@ def get_dsomm():
         dsomm_yaml.write_text(r.text)
         return yaml.safe_load(r.text)
     return yaml.safe_load(dsomm_yaml.read_text())
-
-
-def test_parse_dsomm():
-    activities = get_dsomm()
-    g = Graph()
-    parse_dsomm(activities, g)
-    query_data(g)
-    g.serialize(format="text/turtle", destination="tests/out/dsomm-t2.ttl")
-
-
-def test_parse_activity():
-    activities = get_dsomm()
-    for dimension, dvalue in activities.items():
-        for subdimension, activity in dvalue.items():
-            for a_n, a in activity.items():
-                g = Graph()
-                parse_activity(g, a_n, a, URIRef("https://example.org"))
-                g.serialize(
-                    format="text/turtle", destination="tests/out/dsomm-test.ttl"
-                )
 
 
 def parse_dsomm(activities, g):
@@ -139,7 +122,7 @@ def parse_activity(g, activity_name, activity, subdimension_uri):
     for i in activity.get("implementation", []):
         if "url" not in i:
             continue
-        implementation_url = URIRef(i["url"])
+        implementation_url = URIRef(i["url"].strip("/"))
         g.add((activity_uri, NS_DSOMM.hasImplementation, implementation_url))
         g.add((implementation_url, RDF.type, NS_DSOMM.Implementation))
         g.add((implementation_url, RDFS.label, Literal(i["name"])))
@@ -223,6 +206,9 @@ def parse_references(references):
                     yield URIRef(NS_ISO + "27001/2013/control-" + str(iso27001))
                 else:
                     yield Literal(iso27001)
+        elif k == "d3f":
+            for d3f in v:
+                yield URIRef(NS_D3F + d3f.strip("/"))
         else:
             raise ValueError(f"Unknown reference: {k}")
 
@@ -242,27 +228,12 @@ def format_link(link):
         elif "2700" in url:
             specref = "iso27001:  "
             specref += url.split("/")[-1]
-
         else:
             specref = "Comment: "
             specref += url.split("/")[-1]
 
         ret += f""" <a href="{url}">{specref}</a>&nbsp;;"""
     return f"<p>{ret}</p>"
-
-
-def test_format_link():
-    ret = format_link(
-        """
-    http://par-tec.it/onto/iso/27002/2013/controls/12.1.1
-- http://par-tec.it/onto/iso/27002/2013/controls/14.2.2
-- https://owaspsamm.org/model/implementation/secure-build/stream-a#1
-    """
-    )
-    assert (
-        '<a href="http://par-tec.it/onto/iso/27002/2013/controls/12.1.1">iso27001:  12.1.1</a>'
-        in ret
-    )
 
 
 def make_hyperlink_xls(url):
@@ -284,34 +255,41 @@ def make_hyperlink_xls(url):
     return f'=HYPERLINK("{url}", "{specref}")'
 
 
+def make_hyperlink_dsomm_activity(activity, url):
+    return f'=HYPERLINK("https://par-tec.github.io/security-ontologies/onto/dsomm/#{url}", "{activity}")'
+
+
+QUERY = """
+    prefix dm: <https://owasp.org/www-project-devsecops-maturity-model/>
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    select distinct
+    ?Dimension ?Subdimension ?Activity
+    ?Measure
+    (?ref as ?Reference)
+    (?activity as ?activity_uri)
+
+    where {
+
+    ?activity a dm:Activity;
+        dm:hasSubdimension ?sub;
+        rdfs:label ?Activity;
+        dm:Measure ?Measure
+    .
+    OPTIONAL { ?activity dm:hasReference ?ref}
+    .
+    ?sub
+        rdfs:label ?Subdimension;
+        dm:hasDimension ?dim
+    .
+    ?dim a dm:Dimension;
+        rdfs:label ?Dimension
+
+    }
+"""
+
+
 def query_data(graph=None):
-    QUERY = """
-        prefix dm: <https://owasp.org/www-project-devsecops-maturity-model/>
-        prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-        select distinct
-        ?Dimension ?Subdimension ?Activity
-        ?Measure
-        (?ref as ?Reference)
-
-        where {
-
-        ?activity a dm:Activity;
-            dm:hasSubdimension ?sub;
-            rdfs:label ?Activity;
-            dm:Measure ?Measure
-        .
-        OPTIONAL { ?activity dm:hasReference ?ref}
-        .
-        ?sub a dm:Subdimension;
-            rdfs:label ?Subdimension;
-            dm:hasDimension ?dim
-        .
-        ?dim a dm:Dimension;
-            rdfs:label ?Dimension
-
-        }
-    """
     # GROUP BY ?Dimension ?Subdimension ?Activity ?Measure
     if not graph:
         endpoint = "http://localhost:18890/sparql"
@@ -335,70 +313,42 @@ def replace_prefix(url, prefix_dict):
             return url.replace(nsurl, ns + ":")
 
 
-def test_query_data():
-    activities = get_dsomm()
-    g = Graph()
-    parse_dsomm(activities, g)
-    Q1 = """
-        prefix dm: <https://owasp.org/www-project-devsecops-maturity-model/>
-        prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+def create_excel(df, outfile, infile=None):
+    """Create an excel file from the dataframe"""
 
-        select distinct
-        ?Dimension ?Subdimension ?Activity
-        ?Measure
-        (?ref as ?Reference)
-
-        where {
-
-
-        ?activity a dm:Activity;
-            dm:hasSubdimension ?sub;
-            rdfs:label ?Activity;
-            dm:Measure ?Measure
-        .
-        OPTIONAL { ?activity dm:hasReference ?ref}
-        .
-        ?dim a dm:Dimension;
-            rdfs:label ?Dimension
-        .
-        ?sub dm:hasDimension ?dim;
-            rdfs:label ?Subdimension
-        .
-
-
+    initframe = DataFrame(
+        data={
+            0: {
+                0: (
+                    "\n    This is a DevSecOps Maturity Model Questionnaire that can be used to assess the current maturity level of a single project.\n\n"
+                    "Differently from other strategies, DSOMM is based on activities, not on threats. It thus verifies which activities are implemented,\n"
+                    "    and associates activities to various kind of references and threats.\n\n"
+                    "    Since DSOMM is oriented to devops folks, risks’ descriptions and measures tend to be concrete.\n\n"
+                    "    On each row you can see the online references to ISO and SAMM2 controls that you can use to get further information.\n\n"
+                    "    On each row you can provide some information about how your project/organization is addressing the specific activity.\n    "
+                ),
+                1: "",
+                2: "",
+                3: "Dimension",
+                4: "Subdimension",
+                5: "Activity",
+                6: "Measure",
+                7: "Implemented",
+                8: "Comments",
+            },
+            "Unnamed: 1": {
+                0: "",
+                1: "",
+                2: "",
+                3: "The DSOMM Dimension: this is related to the DevOps Pillars",
+                4: "The specific subdimension.",
+                5: "The Activity to implement",
+                6: "The description of the specific measures relevant to the activity",
+                7: "Yes/No",
+                8: "Describe how the measure is implemented, which tools you are using, ...",
+            },
         }
-        LIMIT 2
-
-    """
-    ret = g.query(Q1)
-    assert len(ret.result) == 2
-    assert len(ret.vars) == 5
-    assert len(ret.result[0]) == 5
-
-
-def test_sparql_activity():
-    df = query_data()
-    raise NotImplementedError
-    create_excel(df, "tests/out/test_sparql_activity.xlsx")
-
-
-def create_excel(df, outfile):
-    import html2text
-    from styleframe import StyleFrame, Styler, utils
-
-    INTRO = """
-    This is a DevSecOps Maturity Model Questionnaire that can be used to assess the current maturity level of a single project.
-
-    Differently from other strategies, DSOMM is based on activities, not on threats. It thus verifies which activities are implemented,
-    and associates activities to various kind of references and threats.
-
-    Since DSOMM is oriented to devops folks, risks’ descriptions and measures tend to be concrete.
-
-    On each row you can see the online references to ISO and SAMM2 controls that you can use to get further information.
-
-    On each row you can provide some information about how your project/organization is addressing the specific activity.
-    """
-    initframe = DataFrame(data=[[INTRO]])
+    )
     default_style = Styler(
         font=utils.fonts.calibri,
         font_size=8,
@@ -410,12 +360,17 @@ def create_excel(df, outfile):
     header_style = Styler(bold=True, font_size=10)
     with ExcelWriter(outfile, engine="openpyxl") as writer:
 
+        if infile:
+            answers = pd.read_excel(infile, sheet_name=None, engine="openpyxl")
         initframe.to_excel(writer, sheet_name="Uno", index=False)
         df = df.sort_values(by=["Dimension", "Subdimension", "Activity"])
 
         # Format specific columns, e.g. providing hyperlinks.
         df.Measure = df.Measure.apply(html2text.html2text)
         df.Reference = df.Reference.apply(make_hyperlink_xls)
+        df.Activity = df.apply(
+            lambda x: make_hyperlink_dsomm_activity(x.Activity, x.activity_uri), axis=1
+        )
 
         # Create a sheet for each dimension.
         for dimension in df["Dimension"].unique():
@@ -431,6 +386,20 @@ def create_excel(df, outfile):
                 .reset_index()
             )
 
+            df_answers = answers.get(dimension, None)
+            if df_answers is not None:
+                # Merge the answers with the reference values.
+                # This is done by matching the activity name, and
+                # including unanswered questions using `how="left"`.
+                df_answers = df_answers[
+                    ["Dimension", "Subdimension", "Activity", "Implemented", "Comments"]
+                ]
+                gdfw = gdfw.merge(
+                    df_answers, on=["Dimension", "Subdimension", "Activity"], how="left"
+                )
+            else:
+                gdfw.insert(4, "Implemented", "")
+                gdfw.insert(5, "Comments", "")
             # Format cells and other boring stuff that
             #  you should otherwise do manually.
             log.warning("Dimension: %s", dimension)
@@ -448,19 +417,21 @@ def create_excel(df, outfile):
                     for row in all_rows[1:]
                 }
             )
-            sf.set_column_width(columns=["Dimension", "Subdimension"], width=24)
+            sf.set_column_width(columns=["Dimension", "Subdimension"], width=16)
             sf.set_column_width(columns=["Activity"], width=32)
-            sf.set_column_width(columns=["Measure"], width=60)
+            sf.set_column_width(columns=["Measure"], width=48)
+            sf.set_column_width(columns=["Implemented"], width=12)
+            sf.set_column_width(columns=["Comments"], width=48)
 
             # Write to excel.
             sf.to_excel(writer, sheet_name=dimension, row_to_add_filters=0, index=True)
 
 
-if __name__ == "__main__":
+def generate_excel(outfile="tests/out/dsomm-questionnaire.xlsx", infile=None):
     activities = get_dsomm()
     g = Graph()
     parse_dsomm(activities, g)
     g.serialize(format="text/turtle", destination="vocabularies/dsomm.ttl")
 
-    df = query_data(None)
-    create_excel(df, "tests/out/dsomm-questionnaire.xlsx")
+    df = query_data(g)
+    create_excel(df, outfile=outfile, infile=infile)

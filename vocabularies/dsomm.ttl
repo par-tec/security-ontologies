@@ -3,7 +3,11 @@
 
 ### Annotations
 
-<https://attack.mitre.org/matrices/enterprise/cloud/> a ns1:Implementation ;
+<https://anchore.com> a ns1:Implementation ;
+    rdfs:label "Anchore.io" ;
+    rdfs:comment "" .
+
+<https://attack.mitre.org/matrices/enterprise/cloud> a ns1:Implementation ;
     rdfs:label "Attack Matrix Cloud",
         "Attack Matrix Containers" ;
     rdfs:comment "Attack matrix for cloud",
@@ -16,11 +20,11 @@
     ns1:hasTag "ide",
         "linting" .
 
-<https://builditbreakit.org/> a ns1:Implementation ;
+<https://builditbreakit.org> a ns1:Implementation ;
     rdfs:label "Build it Break it Fix it Contest" ;
     rdfs:comment "" .
 
-<https://cheatsheetseries.owasp.org/> a ns1:Implementation ;
+<https://cheatsheetseries.owasp.org> a ns1:Implementation ;
     rdfs:label "https://cheatsheetseries.owasp.org/",
         "OWASP Cheatsheet Series" ;
     rdfs:comment "" ;
@@ -39,10 +43,14 @@
     ns1:hasTag "ide",
         "sast" .
 
-<https://curity.io/resources/learn/the-api-security-maturity-model/> a ns1:Implementation ;
+<https://curity.io/resources/learn/the-api-security-maturity-model> a ns1:Implementation ;
     rdfs:label "API Security Maturity Model for Authorization" ;
     rdfs:comment "" ;
     ns1:hasTag "api" .
+
+<https://curl.se> a ns1:Implementation ;
+    rdfs:label "cURL" ;
+    rdfs:comment "" .
 
 <https://cwe.mitre.org/top25/archive/2020/2020_cwe_top25.html> a ns1:Implementation ;
     rdfs:label "CWE Top 25 Most Dangerous Software Weaknesses" ;
@@ -50,11 +58,64 @@
     ns1:hasTag "documentation",
         "threat" .
 
-<https://dependabot.com/> a ns1:Implementation ;
+<https://d3fend.mitre.org/dao/artifact/d3f:Authentication> a ns1:Implementation ;
+    rdfs:label "authentication" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:ContainerOrchestrationSoftware> a ns1:Implementation ;
+    rdfs:label "Container technologies and orchestration like Docker, Kubernetes" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:DirectoryService> a ns1:Implementation ;
+    rdfs:label "Directory Service" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:DynamicAnalysisTool> a ns1:Implementation ;
+    rdfs:label "DAST" ;
+    rdfs:comment "At DAST (Dynamic Application Security Testing): vulnerabilities are classified and can be assigned to server-side and client-side teams." .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:Firewall> a ns1:Implementation ;
+    rdfs:label "firewalls" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:StaticAnalysisTool> a ns1:Implementation ;
+    rdfs:label "SAST" ;
+    rdfs:comment "At SAST (Static Application Security Testing): Server-side / client-side teams can easily be recorded. With microservice architecture individual microservices can be used usually Teams." .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:VPN> a ns1:Implementation ;
+    rdfs:label "VPN" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:WebAuthentication> a ns1:Implementation ;
+    rdfs:label "HTTP-Basic Authentication" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/dao/artifact/d3f:WebServer> a ns1:Implementation ;
+    rdfs:label "Webserver" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/technique/d3f:CredentialHardening> a ns1:Implementation ;
+    rdfs:label "managing secrets" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/technique/d3f:ExecutionIsolation> a ns1:Implementation ;
+    rdfs:label "For example for Cont" ;
+    rdfs:comment "For example for Containers: Deny running containers as root, deny using advanced privileges, deny mounting of the hole filesystem, ..." .
+
+<https://d3fend.mitre.org/technique/d3f:Multi-factorAuthentication> a ns1:Implementation ;
+    rdfs:label "Smartcard",
+        "YubiKey" ;
+    rdfs:comment "" .
+
+<https://d3fend.mitre.org/technique/d3f:One-timePassword> a ns1:Implementation ;
+    rdfs:label "TOTP" ;
+    rdfs:comment "" .
+
+<https://dependabot.com> a ns1:Implementation ;
     rdfs:label "dependabot" ;
     rdfs:comment "" .
 
-<https://docs.docker.com/notary/getting_started/> a ns1:Implementation ;
+<https://docs.docker.com/notary/getting_started> a ns1:Implementation ;
     rdfs:label "Docker Content Trust" ;
     rdfs:comment "" .
 
@@ -92,6 +153,10 @@
         "threat-modeling",
         "whiteboard" .
 
+<https://eslint.org> a ns1:Implementation ;
+    rdfs:label "eslint" ;
+    rdfs:comment "" .
+
 <https://getfedora.org/coreos> a ns1:Implementation ;
     rdfs:label "Fedora CoreOS" ;
     rdfs:comment "" .
@@ -100,6 +165,10 @@
     rdfs:label "Signing of commits" ;
     rdfs:comment "Signing of commits in git" ;
     ns1:hasTag "signing" .
+
+<https://github.com/ansible/ansible> a ns1:Implementation ;
+    rdfs:label "Ansible" ;
+    rdfs:comment "" .
 
 <https://github.com/aquasecurity/kube-bench> a ns1:Implementation ;
     rdfs:label "kube-bench" ;
@@ -111,6 +180,10 @@
 
 <https://github.com/aquasecurity/trivy> a ns1:Implementation ;
     rdfs:label "https://github.com/aquasecurity/trivy" ;
+    rdfs:comment "" .
+
+<https://github.com/Arachni/arachni> a ns1:Implementation ;
+    rdfs:label "Arachni" ;
     rdfs:comment "" .
 
 <https://github.com/armosec/kubescape> a ns1:Implementation ;
@@ -133,6 +206,10 @@ is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "
     rdfs:comment "" ;
     ns1:hasTag "security champions" .
 
+<https://github.com/chef/chef> a ns1:Implementation ;
+    rdfs:label "Chef" ;
+    rdfs:comment "" .
+
 <https://github.com/controlplaneio/netassert> a ns1:Implementation ;
     rdfs:label "netassert" ;
     rdfs:comment "" .
@@ -146,17 +223,29 @@ is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "
     ns1:hasTag "owasp",
         "vulnerability management system" .
 
+<https://github.com/dependabot/dependabot-core> a ns1:Implementation ;
+    rdfs:label "Dependabot" ;
+    rdfs:comment """Dependabot creates pull requests to keep your dependencies secure and up-to-date.
+""" ;
+    ns1:hasTag "dependency",
+        "dependency-management",
+        "scm" .
+
 <https://github.com/DependencyTrack/dependency-track> a ns1:Implementation ;
     rdfs:label "Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain. Dependency-Track takes a unique and highly beneficial approach by leveraging the capabilities of Software Bill of Materials (SBOM)." ;
     rdfs:comment "" ;
     ns1:hasTag "inventory",
         "sca" .
 
+<https://github.com/dpnishant/jsprime> a ns1:Implementation ;
+    rdfs:label "jsprime" ;
+    rdfs:comment "" .
+
 <https://github.com/dxa4481/truffleHog> a ns1:Implementation ;
     rdfs:label "truffleHog" ;
     rdfs:comment "" .
 
-<https://github.com/faloker/purify/> a ns1:Implementation ;
+<https://github.com/faloker/purify> a ns1:Implementation ;
     rdfs:label "Purify" ;
     rdfs:comment """The goal of Purify to be an easy-in-use and efficient tool to simplify a workflow of managing vulnerabilities delivered from various (even custom) tools.
 """ ;
@@ -165,6 +254,13 @@ is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "
 <https://github.com/future-architect/vuls> a ns1:Implementation ;
     rdfs:label "Vuls" ;
     rdfs:comment "" .
+
+<https://github.com/github/super-linter> a ns1:Implementation ;
+    rdfs:label "Super-Linter" ;
+    rdfs:comment """Lint code bases to catch common errors and enforce code style
+""" ;
+    ns1:hasTag "linting",
+        "scm" .
 
 <https://github.com/GoogleContainerTools/distroless> a ns1:Implementation ;
     rdfs:label "Distroless" ;
@@ -177,6 +273,15 @@ is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "
 <https://github.com/ing-bank/bdd-mobile-security-automation-framework> a ns1:Implementation ;
     rdfs:label "[bdd-mobile-security" ;
     rdfs:comment "[bdd-mobile-security-automation-framework](https://github.com/ing-bank/bdd-mobile-security-automation-framework)" .
+
+<https://github.com/italia/api-oas-checker> a ns1:Implementation ;
+    rdfs:label "API OAS Checker" ;
+    rdfs:comment """A tool to check OpenAPI specifications using a comprehensive ruleset based
+on API best practices.
+""" ;
+    ns1:hasTag "api",
+        "documentation",
+        "linting" .
 
 <https://github.com/jgraph/drawio-desktop> a ns1:Implementation ;
     rdfs:label "Draw.io" ;
@@ -193,12 +298,27 @@ is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "
     rdfs:label "go-pillage-registries" ;
     rdfs:comment "" .
 
+<https://github.com/nedbat/coveragepy> a ns1:Implementation ;
+    rdfs:label "Coverage.py" ;
+    rdfs:comment """Code coverage measurement for Python
+""" ;
+    ns1:hasTag "coverage",
+        "testing" .
+
 <https://github.com/OWASP/Amass> a ns1:Implementation ;
     rdfs:label "OWASP Amass" ;
     rdfs:comment "" .
 
 <https://github.com/OWASP/owasp-masvs> a ns1:Implementation ;
     rdfs:label "OWASP MASVS" ;
+    rdfs:comment "" .
+
+<https://github.com/puppetlabs/puppet> a ns1:Implementation ;
+    rdfs:label "Puppet" ;
+    rdfs:comment "" .
+
+<https://github.com/quay/clair> a ns1:Implementation ;
+    rdfs:label "Clair" ;
     rdfs:comment "" .
 
 <https://github.com/replicatedhq/dockerfilelint> a ns1:Implementation ;
@@ -208,9 +328,16 @@ is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "
         "dockerfile",
         "sast" .
 
-<https://github.com/RetireJS/retire.js/> a ns1:Implementation ;
+<https://github.com/RetireJS/retire.js> a ns1:Implementation ;
     rdfs:label "retire.js" ;
     rdfs:comment "" .
+
+<https://github.com/schemathesis/schemathesis> a ns1:Implementation ;
+    rdfs:label "Schemathesis" ;
+    rdfs:comment "Schemathesis is a tool for testing web applications and services by sending requests based on the Open API / Swagger schema." ;
+    ns1:hasTag "api",
+        "documentation",
+        "testing" .
 
 <https://github.com/SDA-SE/clusterscanner> a ns1:Implementation ;
     rdfs:label "ClusterScanner" ;
@@ -233,6 +360,15 @@ is to use the [OWASP JuiceShop](https://github.com/bkimminich/juice-shop) on a "
 <https://github.com/SigmaHQ/sigma> a ns1:Implementation ;
     rdfs:label "SigmaHQ" ;
     rdfs:comment "" .
+
+<https://github.com/stoplightio/spectral> a ns1:Implementation ;
+    rdfs:label "Spectral" ;
+    rdfs:comment """Spectral is a flexible JSON/YAML linter built with extensibility in mind.
+It uses JSON/YAML path rules to describe the problems you want to find.
+""" ;
+    ns1:hasTag "api",
+        "documentation",
+        "linting" .
 
 <https://github.com/Threagile/threagile> a ns1:Implementation ;
     rdfs:label "Threagile" ;
@@ -264,7 +400,7 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
     rdfs:comment """Hunt Unused Resources In Kubernetes.
 """ ;
     ns1:hasTag "dast",
-        "infrastrcture",
+        "infrastructure",
         "scanner",
         "vulnerability" .
 
@@ -283,9 +419,18 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
     rdfs:label "https://ht.transpare" ;
     rdfs:comment "https://ht.transparencytoolkit.org/FileServer/FileServer/OLD%20Fileserver/books/SICUREZZA/Addison.Wesley.Security.Metrics.Mar.2007.pdf" .
 
-<https://in-toto.github.io/> a ns1:Implementation ;
+<https://in-toto.github.io> a ns1:Implementation ;
     rdfs:label "in-toto" ;
     rdfs:comment "" .
+
+<https://istio.io> a ns1:Implementation ;
+    rdfs:label "istio" ;
+    rdfs:comment "" .
+
+<https://junit.org/junit5> a ns1:Implementation ;
+    rdfs:label "JUnit" ;
+    rdfs:comment "" ;
+    ns1:hasTag "unittest" .
 
 <https://karma-runner.github.io> a ns1:Implementation ;
     rdfs:label "Karma" ;
@@ -293,6 +438,14 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
 
 <https://kubesec.io> a ns1:Implementation ;
     rdfs:label "kubesec" ;
+    rdfs:comment "" .
+
+<https://man7.org/linux/man-pages/man1/strace.1.html> a ns1:Implementation ;
+    rdfs:label "strace" ;
+    rdfs:comment "" .
+
+<https://man7.org/linux/man-pages/man2/seccomp.2.html> a ns1:Implementation ;
+    rdfs:label "seccomp" ;
     rdfs:comment "" .
 
 <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code> a ns1:Implementation ;
@@ -323,7 +476,7 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
         "vulnerability",
         "vulnerability management system" .
 
-<https://miro.com/> a ns1:Implementation ;
+<https://miro.com> a ns1:Implementation ;
     rdfs:label "Miro (or any other collaborative board)" ;
     rdfs:comment "" ;
     ns1:hasTag "collaboration",
@@ -331,8 +484,16 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
         "threat-modeling",
         "whiteboard" .
 
-<https://owasp.org/www-project-application-security-verification-standard/> a ns1:Implementation ;
+<https://nmap.org> a ns1:Implementation ;
+    rdfs:label "nmap" ;
+    rdfs:comment "" .
+
+<https://owasp.org/www-project-application-security-verification-standard> a ns1:Implementation ;
     rdfs:label "OWASP ASVS" ;
+    rdfs:comment "" .
+
+<https://owasp.org/www-project-dependency-check> a ns1:Implementation ;
+    rdfs:label "OWASP Dependency Check" ;
     rdfs:comment "" .
 
 <https://owasp.org/www-project-devsecops-maturity-model/Blue/GreenDeployment> a ns1:Activity ;
@@ -347,13 +508,14 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.9>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-17.2.1> ;
     ns1:hasSubdimension ns1:Deployment ;
-    ns1:Measure "By having multiple production environments, a deployment can be performant on the first environment to spot possible defects before it is deployment in the production environment(s)" .
+    ns1:Measure """Using a blue/green deployment strategy increases application availability
+and reduces deployment risk by simplifying the rollback process if a deployment fails.""" .
 
 <https://owasp.org/www-project-devsecops-maturity-model/ConductionOfBuild-It,Break-It,Fix-ItContests> a ns1:Activity ;
     rdfs:label "Conduction of build-it, break-it, fix-it contests" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://builditbreakit.org/> ;
+    ns1:hasImplementation <https://builditbreakit.org> ;
     ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
     ns1:hasSubdimension ns1:EducationGuidance ;
@@ -365,10 +527,9 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
     ns1:assessment "" ;
     ns1:hasImplementation <https://blog.sonarsource.com/in-depth-linting-of-your-typescript-while-coding>,
         <https://www.meziantou.net/how-to-enforce-a-consistent-coding-style-in-your-projects.htm> ;
-    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-1#A> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1> ;
     ns1:hasSubdimension ns1:DevelopmentSourceControl ;
-    ns1:Measure """Integration of quality and linting plugins with interactive development environment (IDEs).
-""" .
+    ns1:Measure "Integrate static code analysis tools in IDEs." .
 
 <https://owasp.org/www-project-devsecops-maturity-model/StaticAnalysisForAllComponents/Libraries> a ns1:Activity ;
     rdfs:label "Static analysis for all components/libraries" ;
@@ -379,7 +540,7 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
     ns1:hasSubdimension ns1:Staticdepthforapplications ;
     ns1:Measure "Usage of a static analysis for all used components." .
 
-<https://owaspsamm.org/model/design/threat-assessment/stream-b/> a ns1:Implementation ;
+<https://owaspsamm.org/model/design/threat-assessment/stream-b> a ns1:Implementation ;
     rdfs:label "OWASP SAMM" ;
     rdfs:comment "" ;
     ns1:hasTag "defender",
@@ -391,16 +552,28 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
     rdfs:comment "" ;
     ns1:hasTag "security champions" .
 
-<https://thenewstack.io/defend-the-core-kubernetes-security-at-every-layer/> a ns1:Implementation ;
+<https://prometheus.io> a ns1:Implementation ;
+    rdfs:label "Prometheus" ;
+    rdfs:comment "" .
+
+<https://spec.openapis.org> a ns1:Implementation ;
+    rdfs:label "OpenAPI Specifications" ;
+    rdfs:comment "" .
+
+<https://thenewstack.io/defend-the-core-kubernetes-security-at-every-layer> a ns1:Implementation ;
     rdfs:label "Defend the core kubernetes security at every layer" ;
     rdfs:comment "" ;
     ns1:hasTag "cluster",
         "documentation",
         "kubernetes" .
 
-<https://www.cisecurity.org/cis-benchmarks/> a ns1:Implementation ;
+<https://www.cisecurity.org/cis-benchmarks> a ns1:Implementation ;
     rdfs:label "CIS Docker Bench for Security",
         "CIS Kubernetes Bench for Security" ;
+    rdfs:comment "" .
+
+<https://www.elastic.co/elk-stack> a ns1:Implementation ;
+    rdfs:label "ELK-Stack" ;
     rdfs:comment "" .
 
 <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html> a ns1:Implementation ;
@@ -409,18 +582,41 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
     ns1:hasTag "logging",
         "tool" .
 
+<https://www.fluentd.org> a ns1:Implementation ;
+    rdfs:label "fluentd" ;
+    rdfs:comment "" ;
+    ns1:hasTag "tool" .
+
+<https://www.gnu.org/software/bash> a ns1:Implementation ;
+    rdfs:label "bash" ;
+    rdfs:comment "" ;
+    ns1:hasTag "tool" .
+
+<https://www.htc-cs.com/en/products/htc-hydra> a ns1:Implementation ;
+    rdfs:label "HTC Hydra" ;
+    rdfs:comment "" ;
+    ns1:hasTag "password" .
+
+<https://www.jenkins.io> a ns1:Implementation ;
+    rdfs:label "Jenkins" ;
+    rdfs:comment "" .
+
+<https://www.jenkins.io/doc/book/pipeline/jenkinsfile> a ns1:Implementation ;
+    rdfs:label "Jenkinsfile" ;
+    rdfs:comment "" .
+
 <https://www.meziantou.net/how-to-enforce-a-consistent-coding-style-in-your-projects.htm> a ns1:Implementation ;
     rdfs:label "How to enforce a consistent coding style in your projects" ;
     rdfs:comment "" ;
     ns1:hasTag "ide",
         "linting" .
 
-<https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/> a ns1:Implementation ;
+<https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes> a ns1:Implementation ;
     rdfs:label "Attack Matrix Kubernetes" ;
     rdfs:comment "Attack matrix for kubernetes" ;
     ns1:hasTag "mitre" .
 
-<https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/> a ns1:Implementation ;
+<https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage> a ns1:Implementation ;
     rdfs:label "Threat Matrix for Storage" ;
     rdfs:comment "" ;
     ns1:hasTag "cluster",
@@ -428,22 +624,46 @@ as a reward, see [OWASP Security Pins Project](https://github.com/wurstbrot/secu
         "kubernetes",
         "storage" .
 
+<https://www.open-scap.org> a ns1:Implementation ;
+    rdfs:label "OpenSCAP" ;
+    rdfs:comment "" .
+
+<https://www.openpolicyagent.org> a ns1:Implementation ;
+    rdfs:label "Open Policy Agent" ;
+    rdfs:comment "" .
+
+<https://www.openvas.org> a ns1:Implementation ;
+    rdfs:label "openVAS" ;
+    rdfs:comment "" .
+
 <https://www.owasp.org/index.php/Agile_Software_Development> a ns1:Implementation ;
     rdfs:label "[Don't Forget EVIL U" ;
     rdfs:comment "[Do not Forget EVIL User Stories](https://www.owasp.org/index.php/Agile_Software_Development:_Don%27t_Forget_EVIL_User_Stories) and [Practical Security Stories and Security Tasks for Agile Development Environments](http://safecode.org/publication/SAFECode_Agile_Dev_Security0712.pdf)" .
 
-<https://www.rsyslog.com/> a ns1:Implementation ;
+<https://www.owasp.org/index.php/OWASP_Code_Pulse> a ns1:Implementation ;
+    rdfs:label "OWASP Code Pulse" ;
+    rdfs:comment "" .
+
+<https://www.redhat.com/en/topics/devops/what-is-gitops> a ns1:Implementation ;
+    rdfs:label "GitOps" ;
+    rdfs:comment "" .
+
+<https://www.rsyslog.com> a ns1:Implementation ;
     rdfs:label "rsyslog" ;
     rdfs:comment "" ;
     ns1:hasTag "logging",
         "tool" .
 
-<https://www.synopsys.com/blogs/software-security/devsecops-pipeline-checklist/> a ns1:Implementation ;
+<https://www.synopsys.com/blogs/software-security/devsecops-pipeline-checklist> a ns1:Implementation ;
     rdfs:label "Building your DevSecOps pipeline 5 essential activities" ;
     rdfs:comment "" ;
     ns1:hasTag "pre-commit" .
 
-<https://www.zaproxy.org/docs/desktop/addons/zest/> a ns1:Implementation ;
+<https://www.zaproxy.org/docs/desktop/addons/ajax-spider> a ns1:Implementation ;
+    rdfs:label "Ajax Spider" ;
+    rdfs:comment "" .
+
+<https://www.zaproxy.org/docs/desktop/addons/zest> a ns1:Implementation ;
     rdfs:label "Zest" ;
     rdfs:comment """Zest is an experimental specialized scripting language (also known as a domain-specific language) originally developed by the Mozilla security team and is intended to be used in web oriented security tools.
 """ ;
@@ -453,6 +673,8 @@ ns1:2Fa a ns1:Activity ;
     rdfs:label "2FA" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/technique/d3f:Multi-factorAuthentication>,
+        <https://d3fend.mitre.org/technique/d3f:One-timePassword> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.1.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.2>,
@@ -464,7 +686,7 @@ ns1:Ad-HocSecurityTrainingsForSoftwareDevelopers a ns1:Activity ;
     rdfs:label "Ad-Hoc Security trainings for software developers" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://cheatsheetseries.owasp.org/>,
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org>,
         <https://github.com/bkimminich/juice-shop> ;
     ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
@@ -485,7 +707,7 @@ ns1:AdvancedVisualizationOfDefects a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
-        <https://github.com/faloker/purify/>,
+        <https://github.com/faloker/purify>,
         <https://medium.com/uber-security-privacy/business-friendly-vulnerability-management-metrics-cfd702fd7705> ;
     ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
@@ -543,12 +765,29 @@ ns1:APatchPolicyIsDefined a ns1:Activity ;
     ns1:hasSubdimension ns1:PatchManagement ;
     ns1:Measure "A patch policy for all artifacts (e.g. in images) is defined. How often is an image rebuilt?" .
 
+ns1:ApiDesignValidation a ns1:Activity ;
+    rdfs:label "API design validation" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/italia/api-oas-checker>,
+        <https://github.com/stoplightio/spectral> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.25>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.27>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.28> ;
+    ns1:hasSubdimension ns1:DevelopmentSourceControl,
+        ns1:Staticdepthforapplications ;
+    ns1:Measure """Design contract-first APIs using an interface description language such as OpenAPI, AsyncAPI or SOAP
+and validate the specification using specific tools.
+Checks should be integrated in IDEs and CI/CD pipelines.
+""" .
+
 ns1:App.HardeningLevel2 a ns1:Activity ;
     rdfs:label "App. Hardening Level 2" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/OWASP/owasp-masvs>,
-        <https://owasp.org/www-project-application-security-verification-standard/> ;
+        <https://owasp.org/www-project-application-security-verification-standard> ;
     ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/design/security-requirements/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
@@ -565,7 +804,7 @@ ns1:App.HardeningLevel3 a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/OWASP/owasp-masvs>,
-        <https://owasp.org/www-project-application-security-verification-standard/> ;
+        <https://owasp.org/www-project-application-security-verification-standard> ;
     ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/design/security-requirements/stream-a#3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
@@ -602,9 +841,9 @@ In case of internal development and if the organization maps Features to Epics, 
 Source: [OWASP Project Integration](https://raw.githubusercontent.com/OWASP/www-project-integration-standards/master/writeups/owasp_in_sdlc/index.md)
 """ ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://curity.io/resources/learn/the-api-security-maturity-model/>,
+    ns1:hasImplementation <https://curity.io/resources/learn/the-api-security-maturity-model>,
         <https://github.com/OWASP/owasp-masvs>,
-        <https://owasp.org/www-project-application-security-verification-standard/> ;
+        <https://owasp.org/www-project-application-security-verification-standard> ;
     ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/design/security-requirements/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
@@ -646,7 +885,8 @@ ns1:AutomatedPrsForPatches a ns1:Activity ;
     rdfs:label "Automated PRs for patches" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://dependabot.com/> ;
+    ns1:hasImplementation <https://dependabot.com>,
+        <https://www.jenkins.io> ;
     ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-b#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
@@ -675,7 +915,8 @@ ns1:BuildingAndTestingOfArtifactsInVirtualEnvironments a ns1:Activity ;
 and 3rd party libraries are used. These might be malicious as a result of
 vulnerable libraries or because they are altered during the delivery phase.""" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://martinfowler.com/articles/continuousIntegration.html> ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:ContainerOrchestrationSoftware>,
+        <https://martinfowler.com/articles/continuousIntegration.html> ;
     ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
     ns1:hasSubdimension ns1:Build ;
@@ -696,7 +937,7 @@ ns1:CentralizedSystemLogging a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html>,
-        <https://www.rsyslog.com/> ;
+        <https://www.rsyslog.com> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
@@ -776,9 +1017,9 @@ Source: OWASP Project Integration Project
         <https://github.com/jgraph/drawio-desktop>,
         <https://github.com/Threagile/threagile>,
         <https://github.com/Toreon/threat-model-playbook>,
-        <https://miro.com/>,
-        <https://owaspsamm.org/model/design/threat-assessment/stream-b/>,
-        <https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/> ;
+        <https://miro.com>,
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b>,
+        <https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage> ;
     ns1:hasReference "may be part of risk assessment",
         "not explicitly covered by ISO 27001",
         <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
@@ -871,9 +1112,9 @@ Source: OWASP Project Integration Project
     ns1:hasImplementation <https://en.wikipedia.org/wiki/Whiteboard>,
         <https://github.com/jgraph/drawio-desktop>,
         <https://github.com/Toreon/threat-model-playbook>,
-        <https://miro.com/>,
-        <https://owaspsamm.org/model/design/threat-assessment/stream-b/>,
-        <https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/> ;
+        <https://miro.com>,
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b>,
+        <https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage> ;
     ns1:hasReference "may be part of risk assessment",
         "not explicitly covered by ISO 27001",
         <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
@@ -902,7 +1143,10 @@ ns1:CorrelateKnownVulnerabilitiesInInfrastructureWithNewImageVersions a ns1:Acti
     rdfs:label "Correlate known vulnerabilities in infrastructure with new image versions" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://github.com/future-architect/vuls> ;
+    ns1:hasImplementation <https://anchore.com>,
+        <https://github.com/future-architect/vuls>,
+        <https://github.com/quay/clair>,
+        <https://www.open-scap.org> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
@@ -923,6 +1167,8 @@ ns1:CoverageAnalysis a ns1:Activity ;
     rdfs:label "Coverage analysis" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/nedbat/coveragepy>,
+        <https://www.owasp.org/index.php/OWASP_Code_Pulse> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         "part of periodic review, PDCA",
         <https://owaspsamm.org/model/verification/security-testing/stream-a#2> ;
@@ -945,6 +1191,7 @@ ns1:CoverageOfClientSideDynamicComponents a ns1:Activity ;
     rdfs:label "Coverage of client side dynamic components" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://www.zaproxy.org/docs/desktop/addons/ajax-spider> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
@@ -955,6 +1202,10 @@ ns1:CoverageOfHiddenEndpoints a ns1:Activity ;
     rdfs:label "Coverage of hidden endpoints" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://curl.se>,
+        <https://github.com/schemathesis/schemathesis>,
+        <https://github.com/zaproxy/zaproxy>,
+        <https://spec.openapis.org> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/verification/security-testing/stream-a#2> ;
     ns1:hasSubdimension ns1:Dynamicdepthforapplications ;
@@ -973,6 +1224,7 @@ ns1:CoverageOfSequentialOperations a ns1:Activity ;
     rdfs:label "Coverage of sequential operations" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://curl.se> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
@@ -1035,7 +1287,7 @@ ns1:CreationOfThreatModelingProcessesAndStandards a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/Toreon/threat-model-playbook>,
-        <https://owaspsamm.org/model/design/threat-assessment/stream-b/> ;
+        <https://owaspsamm.org/model/design/threat-assessment/stream-b> ;
     ns1:hasReference "may be part of risk assessment",
         "not explicitly covered by ISO 27001",
         <https://owaspsamm.org/model/design/threat-assessment/stream-b#3>,
@@ -1067,6 +1319,17 @@ ns1:DeactivationOfUnusedMetrics a ns1:Activity ;
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.3> ;
     ns1:hasSubdimension ns1:Monitoring ;
     ns1:Measure "Deactivation of unused metrics helps to free resources." .
+
+ns1:DeadCodeElimination a ns1:Activity ;
+    rdfs:label "Dead code elimination" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
+    ns1:hasSubdimension ns1:Staticdepthforapplications ;
+    ns1:Measure "Collection of unused code and then manual removal of unused code." .
 
 ns1:DefaultSettingsForIntensity a ns1:Activity ;
     rdfs:label "Default settings for intensity" ;
@@ -1103,7 +1366,8 @@ defined process.
 
 Credits: AppSecure-nrw [Security Belts](https://github.com/AppSecure-nrw/security-belts/)
 """ ;
-    ns1:hasImplementation <https://martinfowler.com/articles/continuousIntegration.html> ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:ContainerOrchestrationSoftware>,
+        <https://martinfowler.com/articles/continuousIntegration.html> ;
     ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2> ;
@@ -1117,7 +1381,7 @@ ns1:DefinedDecommissioningProcess a ns1:Activity ;
     ns1:hasReference <https://owaspsamm.org/model/operations/operational-management/stream-b#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-11.2.7> ;
     ns1:hasSubdimension ns1:Deployment ;
-    ns1:Measure "By having a clear decommissioning process, applicaitons not used are not running anymore and can therefore not be explointed." .
+    ns1:Measure "A clear decommissioning process ensures the removal of unused applications." .
 
 ns1:DefinedDeploymentProcess a ns1:Activity ;
     rdfs:label "Defined deployment process" ;
@@ -1129,7 +1393,7 @@ ns1:DefinedDeploymentProcess a ns1:Activity ;
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2> ;
     ns1:hasSubdimension ns1:Deployment ;
-    ns1:Measure "A defined deployment process significantly lowers the likelihood of errors during the deployment phase." .
+    ns1:Measure "Defining a deployment process ensures that there are established criteria in terms of functionalities, security, compliance, and performance, and that the artifacts meet them." .
 
 ns1:DefinitionOfAChangeManagementProcess a ns1:Activity ;
     rdfs:label "Definition of a change management process" ;
@@ -1212,9 +1476,7 @@ ns1:EnvironmentDependingConfigurationParameters\(Secrets\) a ns1:Activity ;
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.5>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
     ns1:hasSubdimension ns1:Deployment ;
-    ns1:Measure """Configuration parameters are set for each environment not in the source code.
-By using encryption, it is harder to read credentials , e.g. from the file system. Also, the usage of a credential management system can help protect credentials.
-""" .
+    ns1:Measure "Set configuration parameters via environment variables  stored using specific platform functionalities or secrets management systems (e.g. Kubernetes secrets or Hashicorp Vault)." .
 
 ns1:ExclusionOfSourceCodeDuplicates a ns1:Activity ;
     rdfs:label "Exclusion of source code duplicates" ;
@@ -1231,6 +1493,8 @@ ns1:FilterOutgoingTraffic a ns1:Activity ;
     rdfs:label "Filter outgoing traffic" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:Firewall>,
+        <https://www.openpolicyagent.org> ;
     ns1:hasReference "virtual environments are not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
@@ -1242,7 +1506,7 @@ ns1:FullCoverageOfApp.HardeningLevel3 a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/OWASP/owasp-masvs>,
-        <https://owasp.org/www-project-application-security-verification-standard/> ;
+        <https://owasp.org/www-project-application-security-verification-standard> ;
     ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/design/security-requirements/stream-a#3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
@@ -1276,7 +1540,7 @@ ns1:HandoverOfConfidentialParameters a ns1:Activity ;
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.1.3> ;
     ns1:hasSubdimension ns1:Deployment ;
-    ns1:Measure "By using encryption, it is harder to read credentials , e.g. from the file system. Also, the usage of a credential management system can help protect credentials." .
+    ns1:Measure "Encryption ensures confidentiality of credentials e.g. from unauthorized access on the file system. Also, the usage of a credential management system can help protect credentials." .
 
 ns1:HighCoverageOfSecurityRelatedModuleAndIntegrationTests a ns1:Activity ;
     rdfs:label "High coverage of security related module and integration tests" ;
@@ -1328,6 +1592,11 @@ ns1:InfrastructureAsCode a ns1:Activity ;
     rdfs:label "Infrastructure as Code" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://github.com/ansible/ansible>,
+        <https://github.com/chef/chef>,
+        <https://github.com/puppetlabs/puppet>,
+        <https://www.jenkins.io/doc/book/pipeline/jenkinsfile>,
+        <https://www.redhat.com/en/topics/devops/what-is-gitops> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.1.1>,
@@ -1343,6 +1612,8 @@ ns1:IntegrationOfVulnerabilityIssuesIntoTheDevelopmentProcess a ns1:Activity ;
     rdfs:label "Integration of vulnerability issues into the development process" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:DynamicAnalysisTool>,
+        <https://d3fend.mitre.org/dao/artifact/d3f:StaticAnalysisTool> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/implementation/defect-management/stream-b#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.4>,
@@ -1376,6 +1647,8 @@ ns1:IsolatedNetworksForVirtualEnvironments a ns1:Activity ;
     rdfs:label "Isolated networks for virtual environments" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:Firewall>,
+        <https://istio.io> ;
     ns1:hasReference "virtual environments are not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
@@ -1386,6 +1659,8 @@ ns1:LimitationOfSystemCallsInVirtualEnvironments a ns1:Activity ;
     rdfs:label "Limitation of system calls in virtual environments" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://man7.org/linux/man-pages/man1/strace.1.html>,
+        <https://man7.org/linux/man-pages/man2/seccomp.2.html> ;
     ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/environment-management/stream-a#1> ;
     ns1:hasSubdimension ns1:InfrastructureHardening ;
@@ -1410,7 +1685,7 @@ ns1:LocalDevelopmentSecurityChecksPerformed a ns1:Activity ;
         <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
         <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
     ns1:hasReference "hardening is not explicitly covered by ISO 27001 - too specific",
-        <https://owaspsamm.org/model/verification/security-testing/stream-1#A>,
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
     ns1:hasSubdimension ns1:Staticdepthforapplications ;
     ns1:Measure """Integration of quality and linting plugins with interactive development environment (IDEs).
@@ -1434,7 +1709,9 @@ ns1:LoggingOfSecurityEvents a ns1:Activity ;
 - Show a test for one event logging.
 """ ;
     ns1:hasImplementation <https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html>,
-        <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html> ;
+        <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html>,
+        <https://www.fluentd.org>,
+        <https://www.gnu.org/software/bash> ;
     ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
     ns1:hasSubdimension ns1:Logging ;
@@ -1448,6 +1725,20 @@ ns1:MetricsAreCombinedWithTests a ns1:Activity ;
         <https://owaspsamm.org/model/operations/incident-management/stream-a#2> ;
     ns1:hasSubdimension ns1:Monitoring ;
     ns1:Measure "Metrics during tests helps to identify programming errors." .
+
+ns1:MfaToScm a ns1:Activity ;
+    rdfs:label "MFA to SCM" ;
+    rdfs:comment "" ;
+    ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/technique/d3f:Multi-factorAuthentication>,
+        <https://d3fend.mitre.org/technique/d3f:One-timePassword> ;
+    ns1:hasReference <http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication>,
+        <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-5.17>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.2>,
+        <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
+    ns1:hasSubdimension ns1:DevelopmentSourceControl ;
+    ns1:Measure "Enforce Multi-Factor authentication to source code management platforms. These policies can be implemented at repository level or organization level, depending on the source code management system." .
 
 ns1:Microservice-Architecture a ns1:Activity ;
     rdfs:label "Microservice-Architecture" ;
@@ -1489,7 +1780,9 @@ ns1:PiiLoggingConcept a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html>,
-        <https://www.rsyslog.com/> ;
+        <https://www.fluentd.org>,
+        <https://www.gnu.org/software/bash>,
+        <https://www.rsyslog.com> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1>,
@@ -1511,10 +1804,10 @@ ns1:Pre-CommitChecksAndValidations a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/secure/devsecops-controls#plan-and-develop>,
-        <https://www.synopsys.com/blogs/software-security/devsecops-pipeline-checklist/> ;
-    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-1#A> ;
+        <https://www.synopsys.com/blogs/software-security/devsecops-pipeline-checklist> ;
+    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1> ;
     ns1:hasSubdimension ns1:DevelopmentSourceControl ;
-    ns1:Measure """Implement pre-commit validations to prevent secrets & other security issues being commit to source code.
+    ns1:Measure """Implement pre-commit checks to prevent secrets & other security issues being commit to source code.
 """ .
 
 ns1:PreventionOfUnauthorizedInstallation a ns1:Activity ;
@@ -1562,7 +1855,7 @@ Training is mandatory for all employees and contractors involved with software d
 [Source: OWASP SAMM 2](https://owaspsamm.org/model/governance/education-and-guidance/stream-a/)
 """ ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://cheatsheetseries.owasp.org/>,
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org>,
         <https://github.com/bkimminich/juice-shop> ;
     ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
@@ -1573,7 +1866,7 @@ ns1:RegularSecurityTrainingForExternals a ns1:Activity ;
     rdfs:label "Regular security training for externals" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://cheatsheetseries.owasp.org/>,
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org>,
         <https://github.com/bkimminich/juice-shop> ;
     ns1:hasReference <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-7.2.2> ;
@@ -1586,7 +1879,7 @@ ns1:RegularSecurityTrainingOfSecurityChampions a ns1:Activity ;
     ns1:assessment """- Process Documentation: TODO
 - Training Content: TOODO
 """ ;
-    ns1:hasImplementation <https://cheatsheetseries.owasp.org/> ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org> ;
     ns1:hasReference "security champions are missing in ISO 27001",
         <https://owaspsamm.org/model/design/threat-assessment/stream-b#2>,
         <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
@@ -1633,6 +1926,7 @@ ns1:RoleBasedAuthenticationAndAuthorization a ns1:Activity ;
     rdfs:label "Role based authentication and authorization" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:DirectoryService> ;
     ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.1> ;
     ns1:hasSubdimension ns1:InfrastructureHardening ;
@@ -1642,7 +1936,8 @@ ns1:RollingUpdateOnDeployment a ns1:Activity ;
     rdfs:label "Rolling update on deployment" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://github.com/moby/moby> ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:WebServer>,
+        <https://github.com/moby/moby> ;
     ns1:hasReference <https://owaspsamm.org/model/implementation/secure-deployment/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.5.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.2>,
@@ -1715,7 +2010,7 @@ ns1:SecurityConsultingOnRequest a ns1:Activity ;
     rdfs:label "Security consulting on request" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://cheatsheetseries.owasp.org/> ;
+    ns1:hasImplementation <https://cheatsheetseries.owasp.org> ;
     ns1:hasReference "security consulting is missing in ISO 27001 may be",
         <https://owaspsamm.org/model/governance/education-and-guidance/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.1>,
@@ -1738,7 +2033,8 @@ ns1:SecurityUnitTestsForImportantComponents a ns1:Activity ;
     rdfs:label "Security unit tests for important components" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://karma-runner.github.io> ;
+    ns1:hasImplementation <https://junit.org/junit5>,
+        <https://karma-runner.github.io> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-b#3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
@@ -1749,12 +2045,12 @@ ns1:SigningOfArtifacts a ns1:Activity ;
     rdfs:label "Signing of artifacts" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://docs.docker.com/notary/getting_started/>,
-        <https://in-toto.github.io/> ;
+    ns1:hasImplementation <https://docs.docker.com/notary/getting_started>,
+        <https://in-toto.github.io> ;
     ns1:hasReference <https://owaspsamm.org/model/implementation/secure-build/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.6> ;
     ns1:hasSubdimension ns1:Build ;
-    ns1:Measure "Digitally signing artifacts for all steps during the build and especially docker images, helps to ensure their integrity." .
+    ns1:Measure "Digitally signing artifacts for all steps during the build and especially docker images, helps to ensure their integrity and autenticity." .
 
 ns1:SigningOfCode a ns1:Activity ;
     rdfs:label "Signing of code" ;
@@ -1771,6 +2067,8 @@ ns1:SimpleAccessControlForSystems a ns1:Activity ;
     rdfs:label "Simple access control for systems" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:VPN>,
+        <https://d3fend.mitre.org/dao/artifact/d3f:WebAuthentication> ;
     ns1:hasReference <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.1> ;
     ns1:hasSubdimension ns1:InfrastructureHardening ;
@@ -1780,6 +2078,7 @@ ns1:SimpleApplicationMetrics a ns1:Activity ;
     rdfs:label "Simple application metrics" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://prometheus.io> ;
     ns1:hasReference <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
     ns1:hasSubdimension ns1:Monitoring ;
@@ -1799,7 +2098,7 @@ ns1:SimpleFalsePositiveTreatment a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
-        <https://github.com/faloker/purify/> ;
+        <https://github.com/faloker/purify> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/implementation/defect-management/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.6> ;
@@ -1834,7 +2133,8 @@ ns1:SimpleScan a ns1:Activity ;
     rdfs:label "Simple Scan" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://github.com/zaproxy/zaproxy> ;
+    ns1:hasImplementation <https://github.com/Arachni/arachni>,
+        <https://github.com/zaproxy/zaproxy> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.8> ;
@@ -1856,7 +2156,8 @@ ns1:SimpleVisualizationOfDefects a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
-        <https://github.com/faloker/purify/> ;
+        <https://github.com/faloker/purify>,
+        <https://owasp.org/www-project-dependency-check> ;
     ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.2.2>,
@@ -1887,13 +2188,15 @@ ns1:SourceControlProtection a ns1:Activity ;
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-6.1.2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
     ns1:hasSubdimension ns1:DevelopmentSourceControl ;
-    ns1:Measure "Enabled protections on the source code management system preventing committed directly to an important branch." .
+    ns1:Measure "Define source code management system policies (e.g. branch protection rules, mandatory code reviews, ...) to ensure that changes to critical branches are only possible under defined conditions. These policies can be implemented at repository level or organization level, depending on the source code management system." .
 
 ns1:StaticAnalysisForAllSelfWrittenComponents a ns1:Activity ;
     rdfs:label "Static analysis for all self written components" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin>,
+        <https://eslint.org>,
+        <https://github.com/dpnishant/jsprime>,
         <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
         <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
@@ -1906,6 +2209,8 @@ ns1:StaticAnalysisForImportantClientSideComponents a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin>,
+        <https://eslint.org>,
+        <https://github.com/dpnishant/jsprime>,
         <https://github.com/ing-bank/bdd-mobile-security-automation-framework>,
         <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
         <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
@@ -1919,6 +2224,8 @@ ns1:StaticAnalysisForImportantServerSideComponents a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://checkmarx.atlassian.net/wiki/spaces/SD/pages/1759216424/Setting+Up+the+Visual+Studio+Code+Extension+Plugin>,
+        <https://eslint.org>,
+        <https://github.com/dpnishant/jsprime>,
         <https://marketplace.visualstudio.com/items?itemName=fortifyvsts.fortify-extension-for-vs-code>,
         <https://marketplace.visualstudio.com/items?itemName=HCLTechnologies.hclappscancodesweep> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
@@ -1952,13 +2259,14 @@ ns1:StylisticAnalysis a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://blog.sonarsource.com/in-depth-linting-of-your-typescript-while-coding>,
+        <https://github.com/github/super-linter>,
         <https://www.meziantou.net/how-to-enforce-a-consistent-coding-style-in-your-projects.htm> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.5> ;
     ns1:hasSubdimension ns1:Staticdepthforapplications ;
-    ns1:Measure "Analysis of compliance to style guides of the source code ensures that source code indenting rules are met." .
+    ns1:Measure "Analysis of compliance to style guides of the source code ensures that source code formatting rules are met (e.g. indentation, loops, ...)." .
 
 ns1:TargetedAlerting a ns1:Activity ;
     rdfs:label "Targeted alerting" ;
@@ -1990,7 +2298,8 @@ ns1:TestForExposedServices a ns1:Activity ;
     rdfs:label "Test for exposed services" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://github.com/OWASP/Amass> ;
+    ns1:hasImplementation <https://github.com/OWASP/Amass>,
+        <https://nmap.org> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
@@ -2027,17 +2336,22 @@ ns1:TestOfClientSideComponentsWithKnownVulnerabilities a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://docs.npmjs.com/cli/audit>,
-        <https://github.com/RetireJS/retire.js/> ;
+        <https://github.com/dependabot/dependabot-core>,
+        <https://github.com/DependencyTrack/dependency-track>,
+        <https://github.com/RetireJS/retire.js> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
     ns1:hasSubdimension ns1:Staticdepthforapplications ;
-    ns1:Measure "Tests for known vulnerabilities in components of the frontend are performed." .
+    ns1:Measure "Tests for known vulnerabilities in components via Software Composition Analysis of the frontend are performed." .
 
 ns1:TestOfInfrastructureComponentsForKnownVulnerabilities a ns1:Activity ;
     rdfs:label "Test of infrastructure components for known vulnerabilities" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://github.com/future-architect/vuls> ;
+    ns1:hasImplementation <https://anchore.com>,
+        <https://github.com/future-architect/vuls>,
+        <https://github.com/quay/clair>,
+        <https://www.open-scap.org> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.1> ;
@@ -2048,6 +2362,11 @@ ns1:TestOfServerSideComponentsWithKnownVulnerabilities a ns1:Activity ;
     rdfs:label "Test of server side components with known vulnerabilities" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://docs.npmjs.com/cli/audit>,
+        <https://github.com/dependabot/dependabot-core>,
+        <https://github.com/DependencyTrack/dependency-track>,
+        <https://github.com/RetireJS/retire.js>,
+        <https://owasp.org/www-project-dependency-check> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1> ;
     ns1:hasSubdimension ns1:Staticdepthforapplications ;
@@ -2058,7 +2377,8 @@ ns1:TestOfTheConfigurationOfCloudEnvironments a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/aquasecurity/kube-hunter>,
-        <https://github.com/armosec/kubescape> ;
+        <https://github.com/armosec/kubescape>,
+        <https://www.openvas.org> ;
     ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
@@ -2112,10 +2432,11 @@ ns1:TheEnvironmentIsHardened a ns1:Activity ;
     rdfs:label "The environment is hardened" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
-    ns1:hasImplementation <https://attack.mitre.org/matrices/enterprise/cloud/>,
-        <https://thenewstack.io/defend-the-core-kubernetes-security-at-every-layer/>,
-        <https://www.cisecurity.org/cis-benchmarks/>,
-        <https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/> ;
+    ns1:hasImplementation <https://attack.mitre.org/matrices/enterprise/cloud>,
+        <https://d3fend.mitre.org/technique/d3f:ExecutionIsolation>,
+        <https://thenewstack.io/defend-the-core-kubernetes-security-at-every-layer>,
+        <https://www.cisecurity.org/cis-benchmarks>,
+        <https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes> ;
     ns1:hasReference "system hardening is not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/environment-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-13.1.3> ;
@@ -2195,7 +2516,7 @@ ns1:UsageOfAVulnerabilityManagementSystem a ns1:Activity ;
     rdfs:comment "" ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/DefectDojo/django-DefectDojo>,
-        <https://github.com/faloker/purify/> ;
+        <https://github.com/faloker/purify> ;
     ns1:hasReference <https://owaspsamm.org/model/implementation/defect-management/stream-b#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.6.1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-16.1.3>,
@@ -2208,8 +2529,8 @@ ns1:UsageOfAVulnerabilityManagementSystem a ns1:Activity ;
 ns1:UsageOfDifferentRoles a ns1:Activity ;
     rdfs:label "Usage of different roles" ;
     rdfs:comment "" ;
-    ns1:assessment "" ;
-    ns1:hasImplementation <https://www.zaproxy.org/docs/desktop/addons/zest/> ;
+    ns1:assessment "For REST APIs, multiple OAuth2 scopes are used." ;
+    ns1:hasImplementation <https://www.zaproxy.org/docs/desktop/addons/zest> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-14.2.3>,
@@ -2282,6 +2603,8 @@ ns1:UsageOfSecurityByDefaultForComponents a ns1:Activity ;
     rdfs:label "Usage of security by default for components" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://d3fend.mitre.org/dao/artifact/d3f:Authentication>,
+        <https://d3fend.mitre.org/technique/d3f:CredentialHardening> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/environment-management/stream-a#1> ;
     ns1:hasSubdimension ns1:InfrastructureHardening ;
@@ -2338,6 +2661,7 @@ ns1:VisualizedLogging a ns1:Activity ;
     rdfs:label "Visualized logging" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://www.elastic.co/elk-stack> ;
     ns1:hasReference "not explicitly covered by ISO 27001 - too specific",
         <https://owaspsamm.org/model/operations/incident-management/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-12.4.1> ;
@@ -2357,6 +2681,7 @@ ns1:WeakPasswordTest a ns1:Activity ;
     rdfs:label "Weak password test" ;
     rdfs:comment "" ;
     ns1:assessment "" ;
+    ns1:hasImplementation <https://www.htc-cs.com/en/products/htc-hydra> ;
     ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#2>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-9.4.3> ;
     ns1:hasSubdimension ns1:Dynamicdepthforinfrastructure ;
