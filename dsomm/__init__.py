@@ -128,6 +128,9 @@ def parse_activity(g, activity_name, activity, subdimension_uri):
         g.add((implementation_url, RDFS.label, Literal(i["name"])))
         g.add((implementation_url, RDFS.comment, Literal(i.get("description", ""))))
         for t in i.get("tags", []):
+            if t.startswith("d3f:"):
+                g.add((implementation_url, NS_DSOMM.hasTag, URIRef(NS_D3F + t[4:])))
+                continue
             g.add((implementation_url, NS_DSOMM.hasTag, Literal(t)))
 
     for reference in parse_references(activity.get("references", {})):
