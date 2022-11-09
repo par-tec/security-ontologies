@@ -112,7 +112,8 @@
 <https://d3fend.mitre.org/technique/d3f:Multi-factorAuthentication> a ns1:Implementation ;
     rdfs:label "Smartcard",
         "YubiKey" ;
-    rdfs:comment "" .
+    rdfs:comment "" ;
+    ns1:hasTag <http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication> .
 
 <https://d3fend.mitre.org/technique/d3f:One-timePassword> a ns1:Implementation ;
     rdfs:label "TOTP" ;
@@ -395,7 +396,8 @@ on API best practices.
 
 <https://github.com/spotbugs/spotbugs> a ns1:Implementation ;
     rdfs:label "SpotBugs" ;
-    rdfs:comment "SpotBugs is a program which uses static analysis to look for bugs in Java code." ;
+    rdfs:comment """SpotBugs is a program which uses static analysis to look for bugs in Java code.
+""" ;
     ns1:hasTag "java",
         "static-analysis",
         <http://d3fend.mitre.org/ontologies/d3fend.owl#StaticAnalysisTool> .
@@ -842,7 +844,9 @@ ns1:ApiDesignValidation a ns1:Activity ;
     ns1:assessment "" ;
     ns1:hasImplementation <https://github.com/italia/api-oas-checker>,
         <https://github.com/stoplightio/spectral> ;
-    ns1:hasReference <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
+    ns1:hasReference <http://d3fend.mitre.org/ontologies/d3fend.owl#AccessModeling>,
+        <http://d3fend.mitre.org/ontologies/d3fend.owl#DataExchangeMapping>,
+        <https://owaspsamm.org/model/verification/security-testing/stream-a#1>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.25>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.27>,
         <https://par-tec.github.io/security-ontologies/onto/iso#27001/2013/control-8.28> ;
