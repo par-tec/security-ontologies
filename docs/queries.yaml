@@ -1,0 +1,139 @@
+# A list of sparql queries
+
+queries:
+
+  attack_defend_implementation:
+    query: |
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+      SELECT DISTINCT  ?activity ?implementationLabel ?artifact ?technique ?defend
+      WHERE {
+
+          # VALUES ?artifact { d3f:UserAccount}
+
+          # Get the technique that is used to defend the artifact
+          ?attack rdfs:subClassOf*/rdfs:subClassOf ?technique;
+                  d3f:attack-id _:b0 .
+          ?technique rdfs:subClassOf d3f:OffensiveTechnique .
+          ?attack ?attacks ?artifact .
+          ?artifact rdfs:subClassOf*/rdfs:subClassOf d3f:DigitalArtifact .
+
+          ?defend rdfs:subClassOf+/rdfs:subClassOf d3f:DefensiveTechnique .
+          ?defend ?protects ?artifact .
+
+          # Get the activity that implements the technique
+          ?activity a dsomm:Activity ;
+              dsomm:hasReference ?defend ;
+              dsomm:hasImplementation ?implementation
+              .
+
+          ?implementation rdfs:label ?implementationLabel .
+      }
+      #LIMIT 100
+  attack_defend:
+    query: |
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+      SELECT DISTINCT ?technique ?attacks ?defend ?protects ?artifact
+      WHERE {
+
+          ?attack rdfs:subClassOf* ?technique;
+                  d3f:attack-id _:b0 .
+          ?technique rdfs:subClassOf d3f:OffensiveTechnique .
+          ?attack ?attacks ?artifact .
+          ?artifact rdfs:subClassOf* d3f:DigitalArtifact .
+
+          ?defend rdfs:subClassOf d3f:DefensiveTechnique .
+          ?defend ?protects ?artifact .
+
+      }
+
+  implementations_src_target:
+    name: "Implementations with source and target"
+    description: "List of implementations with source and target"
+    query: |
+
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+
+
+      SELECT DISTINCT * WHERE {
+
+        ?implementation a dsomm:Implementation ;
+        dsomm:hasTag ?implementation_tag .
+        ?implementation_tag rdfs:subClassOf* d3f:DigitalArtifact .
+
+        OPTIONAL {
+            ?implementation dsomm:hasTag ?implementation_tag2 .
+            ?implementation_tag2 rdfs:subClassOf* d3f:DefensiveTechnique .
+        }
+      }
+  implementations_by_d3f:
+    name: implementations_by_d3f
+    query: |-
+
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+
+
+      SELECT DISTINCT * WHERE {
+      ?activity
+          a dsomm:Activity ;
+          dsomm:hasImplementation ?implementation ;
+          dsomm:hasReference ?d3fReference .
+
+      ?d3fReference rdfs:subClassOf* d3f:DefensiveTechnique .
+      }
+  implementations_techniques:
+    name: implementations_by_d3f
+    query: |-
+
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+
+
+      SELECT DISTINCT * WHERE {
+
+      ?implementation a dsomm:Implementation ;
+        dsomm:hasTag ?implementation_tag .
+
+      ?implementation_tag rdfs:subClassOf* d3f:DefensiveTechnique .
+
+      }
+
+
+  activity_d3f_reference_implementation:
+    name: "activity_d3f_reference_implementation"
+    query: |-
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+
+      SELECT DISTINCT * WHERE {
+
+      ?activity
+          a dsomm:Activity ;
+          dsomm:hasImplementation ?implementation ;
+          dsomm:hasReference ?d3fReference .
+
+      ?d3fReference rdfs:subClassOf* d3f:DefensiveTechnique .
+
+      }
+    description: "Get all persons"
