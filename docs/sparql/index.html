@@ -6,10 +6,12 @@
       - typing_extensions
       - rdflib
       - pandas
+      - oxrdflib
       - paths:
         - dsomm.ttl
         - iso27001-data.ttl
         - samm.ttl
+        - d3fend.ttl
         - sparql.py
     </py-env>
     <style type="text/css">
@@ -46,20 +48,10 @@
         <li><a id="query6">Query 1</a></li>
       </ul>
     </div>
-    <div>
+    <div id="initns">
         <p>
             Default namespaces are:
-      <table>
-        <tr><td>skos</td><td> http//www.w3.org/2004/02/skos/core#
-        </tr><tr><td>dct</td><td> http//purl.org/dc/terms/
-        </tr><tr><td>dc </td><td>http//purl.org/dc/elements/1.1/
-        </tr><tr><td>rdf</td><td> http//www.w3.org/1999/02/22-rdf-syntax-ns#
-        </tr><tr><td>rdfs</td><td> http//www.w3.org/2000/01/rdf-schema#
-        </tr><tr><td>dm </td><td>https//owasp.org/www-project-devsecops-maturity-model/
-        </tr><tr><td>iso</td><td> https//par-tec.github.io/security-ontologies/onto/iso#
-    </tr></<table>
 
-    </table>
         </p>
     </div>
     <div>
@@ -96,10 +88,12 @@ from rdflib import Graph
 import sparql
 
 
-graph = Graph()
-graph.parse("./dsomm.ttl", format="turtle")
-graph.parse("./iso27001-data.ttl", format="turtle")
-graph.parse("./samm.ttl", format="turtle")
+graph = Graph(store="oxrdflib")
+for dataset_ttl in ("dsomm.ttl", "iso27001-data.ttl", "samm.ttl", "d3fend.ttl",
+):
+  log.info(f"Loading {dataset_ttl}")
+  graph.parse(f"./{dataset_ttl}", format="turtle")
+  log.info(f"Dataset {dataset_ttl} loaded")
 
 
 def on_apply(event):
@@ -116,7 +110,25 @@ code = Element("code")
 button = document.querySelector("button")
 button.addEventListener("click", create_proxy(on_apply))
 
+
+def initns_table()
+  initns_table = document.createElement("table")
+  initns = document.querySelector("#initns")
+  for ns, url in sparql.INITNS.items():
+    row = document.createElement("tr")
+    cell_ns = document.createElement("td")
+    cell_ns.textContent = ns
+    cell_url = document.createElement("td")
+    cell_url.textContent = url
+    row.appendChild(cell_ns)
+    row.appendChild(cell_url)
+    initns_table.appendChild(row)
+  initns.append(initns_table)
+
+
 if True:
+  initns_table()
+
   for button_id, query in sparql.QUERIES.items():
     log.info("button_id" + button_id)
     b = document.querySelector(f'#{button_id}')

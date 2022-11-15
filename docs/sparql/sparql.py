@@ -12,6 +12,7 @@ INITNS = {
     "iso": "https://par-tec.github.io/security-ontologies/onto/iso#",
     "samm": "https://owaspsamm.org/model/",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
 }
 
 QUERIES = {

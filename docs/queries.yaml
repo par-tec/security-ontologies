@@ -2,6 +2,129 @@
 
 queries:
 
+  defend_by_artifact:
+    query: |
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+      SELECT DISTINCT
+      # ?_attack
+      # ?_attacks
+      # ?_artifact
+      ?_defend
+      ?_protects
+      ?_artifactParents
+      WHERE {
+
+        VALUES ?artifactX { d3f:AccessToken}
+
+        # Get the technique that is used to defend the artifact
+        ?attack rdfs:subClassOf*/rdfs:subClassOf d3f:OffensiveTechnique;
+                d3f:attack-id _:b0 .
+        ?attack ?attacks ?artifact .
+        ?artifact rdfs:subClassOf* ?artifactX .
+
+        # Get labels.
+        ?attack rdfs:label ?_attack .
+        ?artifact rdfs:label ?_artifact .
+        ?attacks rdfs:label ?_attacks .
+
+
+        # Get defensive techniques.
+        ?defend rdfs:subClassOf+/rdfs:subClassOf d3f:DefensiveTechnique .
+        ?defend ?protects ?artifactParents .
+        ?artifact rdfs:subClassOf* ?artifactParents .
+
+        # Get labels.
+        ?defend rdfs:label ?_defend .
+        ?protects rdfs:label ?_protects .
+        ?artifactParents rdfs:label ?_artifactParents .
+      }
+      #LIMIT 100
+      ORDER BY ?_attack
+  attack_by_artifact:
+    description: >-
+      Find all attacks that affect a specific artifact (e.g. AccessToken.)
+    query: |
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+      SELECT DISTINCT
+      ?_attack
+      ?_attacks
+      ?_artifact
+      WHERE {
+
+        VALUES ?artifactX { d3f:AccessToken}
+
+        # Get the technique that is used to defend the artifact
+        ?attack rdfs:subClassOf*/rdfs:subClassOf d3f:OffensiveTechnique;
+                d3f:attack-id _:b0 .
+
+
+        ?attack ?attacks ?artifact .
+        ?artifact rdfs:subClassOf* ?artifactX .
+
+        # Get labels.
+        ?attack rdfs:label ?_attack .
+        ?artifact rdfs:label ?_artifact .
+        ?attacks rdfs:label ?_attacks .
+
+      }
+      #LIMIT 100
+      ORDER BY ?_attack
+
+  attack_defend_implementation_secure:
+    query: |
+      PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
+      PREFIX samm: <https://owaspsamm.org/model/>
+      PREFIX iso: <http://par-tec.it/onto/iso/27001/latest/>
+      PREFIX dsomm: <https://owasp.org/www-project-devsecops-maturity-model/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+      SELECT DISTINCT
+      ?attackTechniqueLabel
+      ?activity
+      ?implementationLabel
+      ?artifactC
+      ?defend
+      WHERE {
+
+          # VALUES ?artifactC { d3f:AccessToken}
+
+          # Get the technique that is used to defend the artifact
+          ?attack rdfs:subClassOf*/rdfs:subClassOf ?attackTechnique;
+                  d3f:attack-id _:b0 .
+
+          # Get the parent technique.
+          ?attackTechnique rdfs:subClassOf [ rdfs:subClassOf d3f:OffensiveTechnique] ;
+                          rdfs:label ?attackTechniqueLabel .
+
+          ?attack ?attacks ?artifactC .
+          ?artifactC rdfs:subClassOf*/rdfs:subClassOf d3f:DigitalArtifact .
+
+          ?defend rdfs:subClassOf+/rdfs:subClassOf d3f:DefensiveTechnique .
+          ?defend ?protects ?artifactC .
+
+          OPTIONAL {
+              # Get the activity that implements the technique
+              ?activity a dsomm:Activity ;
+                  dsomm:hasReference ?defend ;
+                  dsomm:hasImplementation [ rdfs:label ?implementationLabel ] .
+          }
+      }
+      #LIMIT 100
+      ORDER BY ?attackTechniqueLabel
+
   attack_defend_implementation:
     query: |
       PREFIX d3f: <http://d3fend.mitre.org/ontologies/d3fend.owl#>
