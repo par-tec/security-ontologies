@@ -1,0 +1,135 @@
+---
+# An OCP deploymentConfig for openlink/virtuoso-opensource-7
+# including a persistent volume for the database, a service and a route.
+# The route exposes the sparql interface on port 8890.
+# The database is not exposed on the host's port 1111.
+---
+# A persistent volume claim for the database
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: &sparql-claim sparql-claim
+  labels:
+    name: virtuoso-d3fend
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: &sparql-settings sparql-settings
+  labels:
+    name: virtuoso-d3fend
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+kind: DeploymentConfig
+apiVersion: v1
+metadata:
+  name: &metadata-name virtuoso-d3fend
+spec:
+  replicas: 1
+  selector:
+    name: *metadata-name
+  template:
+      metadata:
+        labels:
+          name: *metadata-name
+      spec:
+        containers:
+        - image: ghcr.io/ioggstream/docker-yasgui:20221223-4-c49a55c
+          imagePullPolicy: IfNotPresent
+          name: yasgui
+          ports:
+          - containerPort: 8080
+          env:
+          - name: DEFAULT_SPARQL_ENDPOINT
+            value: "https://virtuoso-d3fend.apps.ocp.partec.lab/sparql"
+        - image: openlink/virtuoso-opensource-7:latest
+          imagePullPolicy: IfNotPresent
+          name: *metadata-name
+          ports:
+          - containerPort: 8890
+          env:
+          # - name: DBA_PASSWORD
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: virtuoso-d3fend
+          #       key: dba-password
+          - name: DEFAULT_GRAPH
+            value: "http://par-tec.github.io/security-ontologies/"
+          volumeMounts:
+            - name: &sparql-volume sparql-volume
+              mountPath: /database
+            - name: &sparql-config-volume sparql-config-volume
+              mountPath: /settings
+        volumes:
+        - name: *sparql-volume
+          persistentVolumeClaim:
+            claimName: sparql-claim
+        - name: *sparql-config-volume
+          persistentVolumeClaim:
+            claimName: sparql-settings
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: &metadata-name virtuoso-d3fend
+  labels:
+    name: *metadata-name
+spec:
+  selector:
+    name: *metadata-name
+  ports:
+  - name: sparql
+    port: 8890
+    targetPort: 8890
+  - name: web
+    port: 8080
+    targetPort: 8080
+---
+kind: Route
+apiVersion: v1
+metadata:
+  name: &metadata-name virtuoso-d3fend
+  labels:
+    name: *metadata-name
+spec:
+  host: virtuoso-d3fend.apps.ocp.partec.lab
+  to:
+    kind: Service
+    name: *metadata-name
+  port:
+    targetPort: 8890
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+---
+kind: Route
+apiVersion: v1
+metadata:
+  name: &metadata-name virtuoso-d3fend-ui
+  labels:
+    name: *metadata-name
+  annotations:
+    haproxy.router.openshift.io/rewrite-target: /
+spec:
+  host: virtuoso-d3fend.apps.ocp.partec.lab
+  path: /ui
+  to:
+    kind: Service
+    name: virtuoso-d3fend
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
