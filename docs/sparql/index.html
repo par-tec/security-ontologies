@@ -1,17 +1,7 @@
 <html>
   <head>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <py-env>
-      - typing_extensions
-      - rdflib
-      - pandas
-      - paths:
-        - dsomm.ttl
-        - iso27001-data.ttl
-        - samm.ttl
-        - sparql.py
-    </py-env>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
     <style type="text/css">
       .col {
         width: 50%;
@@ -30,9 +20,46 @@
       .dataframe {
         width: 100%;
       }
+      .dataframe thead th {
+        text-align: center;
+      }
+      #loading-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .spinner {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .loading-text {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
     </style>
   </head>
   <body>
+    <div id="loading-indicator">
+      <div class="spinner"></div>
+      <div class="loading-text">Loading PyScript and datasets...</div>
+    </div>
     <h1>Client-side sparql endpoint. Query the security knowledge graph.</h1>
 
     <div style="float: left; width: 50%; height: 200px; border: solid 2px">
@@ -46,20 +73,10 @@
         <li><a id="query6">Query 1</a></li>
       </ul>
     </div>
-    <div>
+    <div id="initns">
         <p>
             Default namespaces are:
-      <table>
-        <tr><td>skos</td><td> http//www.w3.org/2004/02/skos/core#
-        </tr><tr><td>dct</td><td> http//purl.org/dc/terms/
-        </tr><tr><td>dc </td><td>http//purl.org/dc/elements/1.1/
-        </tr><tr><td>rdf</td><td> http//www.w3.org/1999/02/22-rdf-syntax-ns#
-        </tr><tr><td>rdfs</td><td> http//www.w3.org/2000/01/rdf-schema#
-        </tr><tr><td>dm </td><td>https//owasp.org/www-project-devsecops-maturity-model/
-        </tr><tr><td>iso</td><td> https//par-tec.github.io/security-ontologies/onto/iso#
-    </tr></<table>
 
-    </table>
         </p>
     </div>
     <div>
@@ -88,35 +105,81 @@ WHERE {
         </pre>
     </div>
 
-<py-script>
+<script type="py" config='{
+        "packages": ["rdflib", "pandas"],
+        "files": {
+          "./dsomm.ttl": "./dsomm.ttl",
+          "./iso27001-data.ttl": "./iso27001-data.ttl",
+          "./samm.ttl": "./samm.ttl",
+          "./d3fend.ttl": "./d3fend.ttl",
+          "./sparql.py": "./sparql.py"
+        }
+      }'>
 import logging
 log = logging.getLogger()
-from pyodide import create_proxy
+from pyscript import display
+from pyodide.ffi import create_proxy
+from pyscript import document
 from rdflib import Graph
 import sparql
+import pandas as pd
+
+# Helper function to access elements
+def Element(id):
+    return document.querySelector(f"#{id}")
+
+# Configure pandas to display all rows
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', None)
 
 
 graph = Graph()
-graph.parse("./dsomm.ttl", format="turtle")
-graph.parse("./iso27001-data.ttl", format="turtle")
-graph.parse("./samm.ttl", format="turtle")
+for dataset_ttl in ("dsomm.ttl", "iso27001-data.ttl", "samm.ttl", "d3fend.ttl",
+):
+  log.info(f"Loading {dataset_ttl}")
+  graph.parse(f"./{dataset_ttl}", format="turtle")
+  log.info(f"Dataset {dataset_ttl} loaded")
 
 
 def on_apply(event):
   global code, graph
   text = code.value
   ret = sparql.query(graph, text, sparql.INITNS)
-  Element("query-result").write(ret)
+  # Clear the target element before displaying new content
+  result_element = Element("query-result")
+  result_element.innerHTML = ""
+  display(ret, target="query-result")
 
 
 def create_f(query):
-  return lambda event: Element("code").write(query)
+  return lambda event: setattr(Element("code"), 'value', query)
+
 
 code = Element("code")
 button = document.querySelector("button")
 button.addEventListener("click", create_proxy(on_apply))
 
+
+def initns_table():
+  initns_table = document.createElement("table")
+  initns = document.querySelector("#initns")
+  for ns, url in sparql.INITNS.items():
+    row = document.createElement("tr")
+    cell_ns = document.createElement("td")
+    cell_ns.textContent = ns
+    cell_url = document.createElement("td")
+    cell_url.textContent = url
+    row.appendChild(cell_ns)
+    row.appendChild(cell_url)
+    initns_table.appendChild(row)
+  initns.append(initns_table)
+
+
 if True:
+  initns_table()
+
   for button_id, query in sparql.QUERIES.items():
     log.info("button_id" + button_id)
     b = document.querySelector(f'#{button_id}')
@@ -127,6 +190,11 @@ if True:
     b.innerHTML = query["label"]
     b.addEventListener("click", create_proxy(create_f(query["query"])))
 
-    </py-script>
+  # Hide loading indicator after everything is loaded
+  loading_indicator = document.querySelector("#loading-indicator")
+  if loading_indicator:
+    loading_indicator.style.display = "none"
+
+</script>
     </body>
 </html>

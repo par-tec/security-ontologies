@@ -12,6 +12,7 @@ INITNS = {
     "iso": "https://par-tec.github.io/security-ontologies/onto/iso#",
     "samm": "https://owaspsamm.org/model/",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
 }
 
 QUERIES = {
@@ -138,7 +139,7 @@ def query(graph, text, prefixes):
     rows = [[format_cell(c, prefixes) for c in x] for x in ret]
 
     df = pandas.DataFrame(data=rows, columns=headers)
-    return df.to_html(index=False, justify="left", border=1, classes="col")
+    return df  # .to_html(index=False, justify="left", border=1, classes="col")
 
 
 def test_query():
@@ -163,4 +164,5 @@ def test_query():
     """,
         initns,
     )
-    assert len(ret)
+    if not len(ret):
+        raise Exception

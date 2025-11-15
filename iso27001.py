@@ -161,7 +161,8 @@ def parse_iso_controls(g):
             g.add((control_uri, DCTERMS.title, control_label))
             g.add((control_uri, RDF.type, NS_ISO.Control))
             g.add((control_uri, DCTERMS.identifier, Literal(control_id)))
-            assert control.get("Control Description")
+            if not control.get("Control Description"):
+                raise Exception("Missing description for control " + control_id)
             g.add(
                 (
                     control_uri,

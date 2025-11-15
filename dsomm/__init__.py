@@ -46,7 +46,7 @@ def get_dsomm():
     dsomm_yaml = Path("vocabularies/dsomm.yaml")
     if not dsomm_yaml.exists():
         url = "https://raw.githubusercontent.com/wurstbrot/DevSecOps-MaturityModel/master/src/assets/YAML/generated/generated.yaml"
-        r = requests.get(url)
+        r = requests.get(url, timeout=3)
         dsomm_yaml.write_text(r.text)
         return yaml.safe_load(r.text)
     return yaml.safe_load(dsomm_yaml.read_text())
@@ -217,7 +217,6 @@ def parse_references(references):
 
 
 def format_link(link):
-
     if "http" not in str(link):
         return link
     re_findurl = re.compile(r"(?P<url>https?://[^\s]+)")
@@ -362,7 +361,6 @@ def create_excel(df, outfile, infile=None):
     )
     header_style = Styler(bold=True, font_size=10)
     with ExcelWriter(outfile, engine="openpyxl") as writer:
-
         if infile:
             answers = pd.read_excel(infile, sheet_name=None, engine="openpyxl")
         initframe.to_excel(writer, sheet_name="Uno", index=False)
