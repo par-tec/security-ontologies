@@ -33,7 +33,7 @@ QUERIES = {
                 dct:description ?iso_control;
                 dct:identifier ?iso_control_id
                 .
-                } LIMIT 5"}
+                } LIMIT 5
                 """,
     },
     "query2": {
