@@ -13,3 +13,6 @@ exclude_dirs:
  - .github
  - venv
  - tests
+
+exclude:
+ - .*.ipynb

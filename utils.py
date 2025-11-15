@@ -18,7 +18,6 @@ def from_sparql(query):
 
 
 def xvisualize(g, **kwargs):
-
     nx_g = rdflib_to_networkx_graph(g)
     nx.draw(nx_g, **kwargs)
 
