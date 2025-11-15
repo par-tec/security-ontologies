@@ -45,12 +45,22 @@
         width: 100%;
       }
       .CodeMirror {
-        height: 20em;
+        height: auto;
+        min-height: 200px;
         border: solid 1px #ddd;
         font-size: 14px;
+        resize: vertical;
+        overflow: auto;
       }
       #code-container {
         margin-bottom: 10px;
+        resize: vertical;
+        overflow: hidden;
+        min-height: 200px;
+        height: 300px;
+      }
+      #code-container .CodeMirror {
+        height: 100%;
       }
       .result {
         width: 100%;
@@ -194,6 +204,8 @@ WHERE {
 let editor;
 document.addEventListener('DOMContentLoaded', function() {
   const textarea = document.getElementById('code');
+  const container = document.getElementById('code-container');
+
   editor = CodeMirror.fromTextArea(textarea, {
     mode: 'application/sparql-query',
     theme: 'monokai',
@@ -204,6 +216,14 @@ document.addEventListener('DOMContentLoaded', function() {
     tabSize: 2,
     autofocus: true
   });
+
+  // Refresh editor when container is resized
+  const resizeObserver = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      editor.refresh();
+    }
+  });
+  resizeObserver.observe(container);
 
   // Make editor globally accessible for PyScript
   window.editor = editor;
@@ -266,7 +286,10 @@ def on_apply(event):
 def create_f(query):
   def set_query(event):
     from js import window
-    window.editor.setValue(query)
+    import textwrap
+    # Remove leading whitespace from each line
+    cleaned_query = textwrap.dedent(query).strip()
+    window.editor.setValue(cleaned_query)
   return set_query
 
 
