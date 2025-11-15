@@ -76,7 +76,6 @@
     <div id="initns">
         <p>
             Default namespaces are:
-
         </p>
     </div>
     <div>
@@ -111,10 +110,10 @@ WHERE {
           "./dsomm.ttl": "./dsomm.ttl",
           "./iso27001-data.ttl": "./iso27001-data.ttl",
           "./samm.ttl": "./samm.ttl",
-          "./d3fend.ttl": "./d3fend.ttl",
           "./sparql.py": "./sparql.py"
         }
       }'>
+<!--          "./d3fend.ttl": "./d3fend.ttl", -->
 import logging
 log = logging.getLogger()
 from pyscript import display
@@ -136,7 +135,11 @@ pd.set_option('display.max_colwidth', None)
 
 
 graph = Graph()
-for dataset_ttl in ("dsomm.ttl", "iso27001-data.ttl", "samm.ttl", "d3fend.ttl",
+for dataset_ttl in (
+  "dsomm.ttl",
+  "iso27001-data.ttl",
+  "samm.ttl",
+  # "d3fend.ttl",
 ):
   log.info(f"Loading {dataset_ttl}")
   graph.parse(f"./{dataset_ttl}", format="turtle")
