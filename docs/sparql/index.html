@@ -1,5 +1,7 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
 
@@ -65,6 +67,35 @@
       .result {
         width: 100%;
       }
+      .result-container {
+        position: relative;
+      }
+      .copy-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: all 0.2s ease;
+        z-index: 100;
+      }
+      .copy-button:hover {
+        background-color: #357abd;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      }
+      .copy-button:active {
+        transform: scale(0.95);
+      }
+      .copy-button.copied {
+        background-color: #28a745;
+      }
       .dataframe {
         width: 100%;
         border-collapse: collapse;
@@ -76,13 +107,16 @@
       .dataframe thead th {
         background: linear-gradient(to bottom, #4a90e2 0%, #357abd 100%);
         color: white;
-        text-align: center;
+        text-align: center !important;
         padding: 12px 8px;
         font-weight: 600;
         border: 1px solid #2e6da4;
         position: sticky;
         top: 0;
         z-index: 10;
+      }
+      .dataframe th {
+        text-align: center !important;
       }
       .dataframe tbody tr {
         border-bottom: 1px solid #e0e0e0;
@@ -211,7 +245,8 @@ WHERE {
 </textarea>
         </div>
         <button id="apply" style="color: white; background-color: blue; width: 100%">Query.</button>
-        <div>
+        <div class="result-container">
+          <button id="copy-button" class="copy-button" style="display: none;">📋 Copy Table</button>
           <pre class="result" id="query-result" style="border-color: blue">
             Results.
           </pre>
@@ -268,6 +303,46 @@ document.addEventListener('DOMContentLoaded', function() {
   // Make editor globally accessible for PyScript
   window.editor = editor;
 });
+
+// Copy button functionality
+function copyDataframeToClipboard() {
+  const table = document.querySelector('.dataframe');
+  if (!table) {
+    alert('No dataframe to copy');
+    return;
+  }
+
+  let text = '';
+  const rows = table.querySelectorAll('tr');
+
+  rows.forEach((row, rowIndex) => {
+    const cells = row.querySelectorAll('th, td');
+    const rowText = Array.from(cells).map(cell => cell.textContent.trim()).join('\t');
+    text += rowText + '\n';
+  });
+
+  navigator.clipboard.writeText(text).then(() => {
+    const button = document.getElementById('copy-button');
+    const originalText = button.textContent;
+    button.textContent = '✓ Copied!';
+    button.classList.add('copied');
+
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.classList.remove('copied');
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+    alert('Failed to copy to clipboard');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const copyButton = document.getElementById('copy-button');
+  if (copyButton) {
+    copyButton.addEventListener('click', copyDataframeToClipboard);
+  }
+});
 </script>
 
 <script type="py" config='{
@@ -321,6 +396,13 @@ def on_apply(event):
   result_element = Element("query-result")
   result_element.innerHTML = ""
   display(ret, target="query-result")
+
+  # Show copy button if there's a dataframe
+  copy_button = Element("copy-button")
+  if copy_button:
+    # Check if a dataframe was rendered
+    has_dataframe = result_element.querySelector(".dataframe") is not None
+    copy_button.style.display = "block" if has_dataframe else "none"
 
 
 def create_f(query):
