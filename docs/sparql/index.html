@@ -214,9 +214,27 @@
         font-size: 18px;
         color: #333;
       }
+      .github-link {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+      }
+      .github-link:hover {
+        opacity: 1;
+      }
+      .github-link img {
+        width: 40px;
+        height: 40px;
+      }
     </style>
   </head>
   <body>
+    <a href="https://github.com/par-tec/security-ontologies" target="_blank" class="github-link" title="View on GitHub">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+    </a>
     <div id="loading-indicator">
       <div class="spinner"></div>
       <div class="loading-text">Loading PyScript and datasets...</div>
