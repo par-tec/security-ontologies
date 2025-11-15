@@ -2,6 +2,15 @@
   <head>
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/monokai.min.css" />
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/sparql/sparql.min.js"></script>
+
     <style type="text/css">
       body {
         margin: 0;
@@ -34,6 +43,14 @@
         font-size: 14px;
         border: solid 1px;
         width: 100%;
+      }
+      .CodeMirror {
+        height: 20em;
+        border: solid 1px #ddd;
+        font-size: 14px;
+      }
+      #code-container {
+        margin-bottom: 10px;
       }
       .result {
         width: 100%;
@@ -124,8 +141,8 @@
 
     <div class="container">
       <div class="main-panel">
-        <div>
-          <textarea id="code" style="height: 20em;">
+        <div id="code-container">
+          <textarea id="code" style="display: none;">
 SELECT
   ?activity
   ?iso_control_id
@@ -172,6 +189,27 @@ WHERE {
     </div>
 
 <!--          "./d3fend.ttl": "./d3fend.ttl", -->
+<script type="text/javascript">
+// Initialize CodeMirror
+let editor;
+document.addEventListener('DOMContentLoaded', function() {
+  const textarea = document.getElementById('code');
+  editor = CodeMirror.fromTextArea(textarea, {
+    mode: 'application/sparql-query',
+    theme: 'monokai',
+    lineNumbers: true,
+    lineWrapping: true,
+    indentWithTabs: false,
+    indentUnit: 2,
+    tabSize: 2,
+    autofocus: true
+  });
+
+  // Make editor globally accessible for PyScript
+  window.editor = editor;
+});
+</script>
+
 <script type="py" config='{
         "packages": ["rdflib", "pandas"],
         "files": {
@@ -214,8 +252,10 @@ for dataset_ttl in (
 
 
 def on_apply(event):
-  global code, graph
-  text = code.value
+  global graph
+  # Get value from CodeMirror editor
+  from js import window
+  text = window.editor.getValue()
   ret = sparql.query(graph, text, sparql.INITNS)
   # Clear the target element before displaying new content
   result_element = Element("query-result")
@@ -224,7 +264,10 @@ def on_apply(event):
 
 
 def create_f(query):
-  return lambda event: setattr(Element("code"), 'value', query)
+  def set_query(event):
+    from js import window
+    window.editor.setValue(query)
+  return set_query
 
 
 code = Element("code")
